@@ -324,6 +324,51 @@ h3 { font-weight: 600; font-size: var(--step-2); }
   border: 1px solid var(--line);
   border-radius: 8px;
 }
+.shot-link { display: block; line-height: 0; }
+.shot-link .feature-shot { cursor: zoom-in; }
+
+/* Enlarged screenshot dialog */
+.shot-lightbox {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: min(94vw, 1400px);
+  position: relative;
+}
+.shot-lightbox::backdrop { background: rgba(18, 22, 29, 0.88); }
+.shot-lightbox img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.shot-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--coal);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.shot-close:hover { background: var(--coal-raise); }
+.shot-lightbox :focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
+
+/* QCI section: two register shots side by side. */
+.qci-shots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+@media (max-width: 46em) {
+  .qci-shots { grid-template-columns: 1fr; }
+}
 
 /* ---- Checklists (Almoner, services) ---- */
 
