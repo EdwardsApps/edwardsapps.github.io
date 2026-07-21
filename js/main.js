@@ -6,9 +6,13 @@
 
   var dlg = document.createElement('dialog');
   dlg.className = 'shot-lightbox';
-  dlg.innerHTML = '<button class="shot-close" aria-label="Close enlarged screenshot">×</button><img alt="">';
+  dlg.innerHTML = '<div class="shot-frame">' +
+    '<button class="shot-close" aria-label="Close enlarged screenshot">×</button>' +
+    '<img alt=""></div>';
   document.body.appendChild(dlg);
   var img = dlg.querySelector('img');
+  var opener = null;
+  var scrollY = 0;
 
   links.forEach(function (a) {
     a.addEventListener('click', function (e) {
@@ -16,11 +20,19 @@
       var thumb = a.querySelector('img');
       img.src = a.href;
       img.alt = thumb ? thumb.alt : '';
+      opener = a;
+      scrollY = window.scrollY;
       dlg.showModal();
     });
   });
   dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
   dlg.querySelector('.shot-close').addEventListener('click', function () { dlg.close(); });
+
+  // Put the reader back exactly where they were reading.
+  dlg.addEventListener('close', function () {
+    if (opener) opener.focus({ preventScroll: true });
+    if (window.scrollY !== scrollY) window.scrollTo(0, scrollY);
+  });
 })();
 
 // Mobile nav toggle.
