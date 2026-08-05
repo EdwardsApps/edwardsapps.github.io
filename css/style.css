@@ -404,6 +404,86 @@ h3 { font-weight: 600; font-size: var(--step-2); }
   background: var(--green);
 }
 
+/* ---- About page: chapter cards ---- */
+
+/* Each card carries the brand colour of the business it tells the story of —
+   the one place on the site where outside brands get their own accent. */
+.chapter-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0 0;
+  padding: 0;
+}
+.chapter {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--chapter, var(--green));
+  border-radius: 12px;
+  padding: 1.6rem 1.5rem 1.7rem;
+}
+.chapter-es { --chapter: #A31D23; }
+.chapter-ib { --chapter: #ED7117; }
+.chapter-mitre { --chapter: var(--coal); }
+
+.chapter-mark {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.15rem;
+}
+.chapter-mark svg { display: block; height: 100%; width: auto; }
+
+.chapter h3 { font-size: var(--step-2); margin-bottom: 0.15em; }
+.chapter .daybook-tag { margin-bottom: 0.85rem; }
+.chapter p { font-size: 0.98rem; }
+
+/* ---- About page: timeline ---- */
+
+/* Milestone markers reuse the site's lit-tile motif; the rail threads them. */
+.timeline {
+  list-style: none;
+  position: relative;
+  margin: 2.25rem 0 0;
+  padding: 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.6em;
+  bottom: 0.6em;
+  width: 1px;
+  background: var(--green);
+  opacity: 0.45;
+}
+.timeline li {
+  position: relative;
+  padding-left: 2.3rem;
+  max-width: 58ch;
+}
+.timeline li + li { margin-top: 1.9rem; }
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 9px;
+  height: 9px;
+  border-radius: 2.5px;
+  background: var(--green);
+  box-shadow: 0 0 0 4px var(--panel);
+}
+.tl-year {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin-bottom: 0.3em;
+}
+
 /* ---- Contact band: closes the page into the footer's coal ---- */
 
 .band-contact {
@@ -479,6 +559,7 @@ h3 { font-weight: 600; font-size: var(--step-2); }
   .nav-links .nav-cta { margin-top: 0.4rem; }
 
   .daybook-features > li { grid-template-columns: 1fr; }
+  .chapter-grid { grid-template-columns: 1fr; }
   .product-icon { width: 56px; height: 56px; border-radius: 12px; }
   .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .section { padding: 2.75rem 0; }
