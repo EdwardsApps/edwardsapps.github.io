@@ -427,15 +427,16 @@ h3 { font-weight: 600; font-size: var(--step-2); }
 .chapter-ib { --chapter: #ED7117; }
 .chapter-mitre { --chapter: var(--coal); }
 
+/* The logo is the card's heading: an h3 whose accessible name is the img alt. */
 .chapter-mark {
-  height: 96px;
+  height: 158px;
   display: flex;
   align-items: center;
-  margin-bottom: 1.15rem;
+  justify-content: center;
+  margin: 0 0 1.15rem;
 }
-.chapter-mark svg { display: block; height: 100%; width: auto; }
+.chapter-mark img { display: block; max-height: 100%; width: auto; max-width: 100%; }
 
-.chapter h3 { font-size: var(--step-2); margin-bottom: 0.15em; }
 .chapter p { font-size: 0.98rem; }
 .chapter .daybook-tag { font-size: 0.85rem; margin-bottom: 0.85rem; }
 
