@@ -1,9 +1,8 @@
-/* EdwardsApps — Google Consent Mode v2 + Google Tag Manager + cookie banner.
-   Replace GTM_ID below with your container ID from tagmanager.google.com. */
+/* EdwardsApps — Google Analytics 4 (gtag.js) with Consent Mode v2 + cookie banner. */
 (function () {
   'use strict';
 
-  var GTM_ID = 'GTM-XXXXXXX'; // <-- your Google Tag Manager container ID
+  var GA_ID = 'G-Y93B250536';
   var STORAGE_KEY = 'ea-consent';
 
   window.dataLayer = window.dataLayer || [];
@@ -19,13 +18,13 @@
     wait_for_update: 500
   });
 
-  function loadGTM() {
-    if (GTM_ID.indexOf('XXXXXXX') !== -1) return; // placeholder not replaced yet
-    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+  function loadGA() {
     var s = document.createElement('script');
     s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
     document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', GA_ID);
   }
 
   function applyChoice(granted) {
@@ -43,7 +42,7 @@
   if (saved === 'granted' || saved === 'denied') {
     applyChoice(saved === 'granted');
   }
-  loadGTM();
+  loadGA();
 
   function saveChoice(granted) {
     try { localStorage.setItem(STORAGE_KEY, granted ? 'granted' : 'denied'); } catch (e) {}
