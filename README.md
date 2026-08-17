@@ -4,5 +4,24 @@ The EdwardsApps marketing site — static HTML/CSS/JS served by GitHub Pages fro
 
 - No framework, no build step. Edit the HTML/CSS directly and push.
 - Shared styles live in `css/style.css` (design tokens at the top); the only JS is the mobile nav toggle in `js/main.js`.
-- Pages: `index.html`, `crewbook.html`, `ourspace.html`, `almoner.html`, `services.html`, plus `404.html`.
+- Analytics and the consent controls live in `js/consent.js`; Google Analytics loads only after a visitor accepts analytics.
+- Pages: `index.html`, `crewbook.html`, `ourspace.html`, `almoner.html`, `services.html`, `about.html`, `privacy.html`, `cookies.html`, plus `404.html`.
 - Custom domain: edwardsapps.co.uk (CNAME added once DNS is live at IONOS).
+
+## Preview and checks
+
+Serve the repository locally so root-relative links and the 404 page behave as they do on GitHub Pages:
+
+```sh
+python -m http.server 8000
+```
+
+Before pushing, run the dependency-free site check and JavaScript syntax checks:
+
+```sh
+python scripts/check_site.py
+node --check js/main.js
+node --check js/consent.js
+```
+
+The same checks run automatically for pull requests and changes to `main`.

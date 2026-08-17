@@ -15,13 +15,25 @@
   <meta property="og:image" content="https://edwardsapps.co.uk/img/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#12161D">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://edwardsapps.co.uk/#organization",
+    "name": "EdwardsApps",
+    "url": "https://edwardsapps.co.uk/",
+    "logo": "https://edwardsapps.co.uk/img/logo.png",
+    "email": "peter@edwardsapps.co.uk",
+    "founder": { "@type": "Person", "name": "Peter Edwards" }
+  }
+  </script>
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=4">
-  <script src="js/consent.js"></script>
+  <link rel="stylesheet" href="css/style.css?v=5">
+  <script src="js/consent.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -54,6 +66,25 @@
         </div>
       </div>
     </section>
+
+    <aside class="proof-strip" aria-label="Products proven in real use">
+      <div class="wrap">
+        <ul class="proof-grid" role="list">
+          <li>
+            <strong>Runs a working contractor</strong>
+            <span>CrewBook is used every working day inside Edwards Surfacing.</span>
+          </li>
+          <li>
+            <strong>Built from charity work</strong>
+            <span>Almoner grew from the records needed to run a registered charity properly.</span>
+          </li>
+          <li>
+            <strong>Available in the App Store</strong>
+            <span>OurSpace is live for households that want to share the mental load.</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
 
     <section class="section" aria-labelledby="products-heading">
       <div class="wrap">
@@ -140,7 +171,7 @@
       </nav>
     </div>
     <div class="wrap">
-      <p class="fineprint">© 2026 EdwardsApps. CrewBook, OurSpace and Almoner are EdwardsApps products.</p>
+      <p class="fineprint">© 2026 EdwardsApps. CrewBook, OurSpace and Almoner are EdwardsApps products. <a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a>.</p>
     </div>
   </footer>
 
