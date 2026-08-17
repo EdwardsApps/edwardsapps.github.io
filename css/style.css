@@ -470,8 +470,35 @@ h3 { font-weight: 600; font-size: var(--step-2); }
 .product-card-featured .product-card-media { padding: clamp(1.2rem, 3vw, 2.4rem); }
 .product-card-featured .product-card-media img { height: auto; border-radius: 8px; box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.28); }
 .product-card-grid .product-card-media { margin-top: auto; height: 18rem; }
-.phone-product-media { background: linear-gradient(135deg, var(--coal), #24333b); }
-.phone-product-media img { width: auto; max-width: 55%; padding-top: 1rem; object-position: center top; }
+.phone-product-media {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: clamp(0.55rem, 2vw, 1rem);
+  padding: 1.35rem 1.1rem 0;
+  background:
+    radial-gradient(circle at 50% 115%, rgba(170, 236, 88, 0.2), transparent 48%),
+    linear-gradient(135deg, var(--coal), #24333b);
+}
+.phone-card-shot {
+  display: block;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 0;
+  border-radius: 14px 14px 0 0;
+  background: #fff;
+  box-shadow: 0 0.9rem 1.8rem rgba(0, 0, 0, 0.3);
+  line-height: 0;
+}
+.phone-card-shot:nth-child(2) { transform: translateY(-1rem); }
+.phone-card-shot img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  padding: 0;
+  object-fit: initial;
+}
 
 /* Homepage custom-build path */
 .custom-home { padding-block: 5rem; }
