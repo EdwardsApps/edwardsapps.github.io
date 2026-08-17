@@ -182,6 +182,57 @@ a:hover { color: var(--green-ink); text-decoration-thickness: 2px; }
 }
 .hero a { color: #fff; text-decoration-color: var(--lime); }
 
+/* Homepage hero: real product screens make the promise tangible before the
+   visitor has to read any feature copy. */
+.hero-home { padding: 3.5rem 0 5rem; }
+.hero-home-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(24rem, 0.9fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+.hero-home h1 { max-width: 15ch; }
+.hero-home .lede { max-width: 53ch; }
+.hero-note {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.9rem;
+}
+.home-showcase {
+  position: relative;
+  min-height: 31rem;
+}
+.showcase-card {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.42);
+  line-height: 0;
+  text-decoration: none;
+}
+.showcase-card img { display: block; width: 100%; height: auto; }
+.showcase-card > span {
+  position: absolute;
+  left: 0.65rem;
+  bottom: 0.65rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 6px;
+  background: rgba(18, 22, 29, 0.92);
+  color: #fff;
+  font-size: 0.72rem;
+  line-height: 1.25;
+}
+.showcase-card > span strong { display: block; color: var(--lime); font-size: 0.8rem; }
+.showcase-card:hover { border-color: var(--lime); }
+.showcase-crewbook { z-index: 1; top: 2.2rem; left: 0; width: 86%; }
+.showcase-almoner { z-index: 2; left: 8%; bottom: 0; width: 68%; }
+.showcase-ourspace { z-index: 3; top: 0; right: 0; width: 27%; }
+.showcase-ourspace > span { left: 0.4rem; right: 0.4rem; bottom: 0.4rem; }
+
 /* The flagship page earns the spare hero space with the product itself. */
 .hero-product {
   display: grid;
@@ -269,6 +320,14 @@ a:hover { color: var(--green-ink); text-decoration-thickness: 2px; }
 
 .section { padding: 3.5rem 0; }
 .section-alt { background: var(--panel); }
+.section-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.7fr);
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.section-intro > p { color: var(--muted); max-width: 48ch; }
 
 /* Compact proof immediately after the homepage promise. */
 .proof-strip { background: #fff; border-bottom: 1px solid var(--line); }
@@ -350,6 +409,104 @@ h3 { font-weight: 600; font-size: var(--step-2); }
   border-radius: 16px;
   display: block;
 }
+
+/* Homepage product cards */
+.products-section { padding-block: 5rem; }
+.product-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 0.8rem 2.2rem rgba(18, 22, 29, 0.07);
+}
+.product-card-featured {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(25rem, 1.14fr);
+  align-items: stretch;
+}
+.product-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.product-card-copy { padding: clamp(1.5rem, 3vw, 2.25rem); }
+.product-title-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+.product-title-row .product-icon { width: 58px; height: 58px; border-radius: 13px; }
+.product-title-row h3 { font-size: 1.65rem; margin: 0; }
+.product-eyebrow {
+  margin: 0 0 0.15rem;
+  color: var(--green-ink);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+.product-promise {
+  max-width: 28ch;
+  margin-bottom: 0.65rem;
+  font: 600 1.24rem/1.35 var(--font-display);
+}
+.product-card-copy > p:not(.product-eyebrow):not(.product-promise) { color: var(--muted); }
+.product-card .cta-row { align-items: center; margin-top: 1.5rem; }
+.product-card .button { padding: 0.6em 1.05em; }
+.text-link { font-weight: 700; text-decoration: none; }
+.text-link:hover { text-decoration: underline; text-decoration-color: var(--green); }
+.feature-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin: 1.25rem 0 0; padding: 0; }
+.feature-pills li { border: 1px solid var(--line); border-radius: 999px; padding: 0.3rem 0.65rem; color: var(--muted); font-size: 0.78rem; font-weight: 600; }
+.product-card-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 16rem;
+  overflow: hidden;
+  background: var(--coal);
+  line-height: 0;
+}
+.product-card-media img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.product-card-featured .product-card-media { padding: clamp(1.2rem, 3vw, 2.4rem); }
+.product-card-featured .product-card-media img { height: auto; border-radius: 8px; box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.28); }
+.product-card-grid .product-card-media { margin-top: auto; height: 18rem; }
+.phone-product-media { background: linear-gradient(135deg, var(--coal), #24333b); }
+.phone-product-media img { width: auto; max-width: 55%; padding-top: 1rem; object-position: center top; }
+
+/* Homepage custom-build path */
+.custom-home { padding-block: 5rem; }
+.custom-home-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(24rem, 1.1fr); gap: clamp(2.5rem, 7vw, 6rem); align-items: center; }
+.custom-lede { max-width: 56ch; color: var(--muted); font-size: 1.08rem; }
+.starting-price {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  width: fit-content;
+  margin: 1.5rem 0 0;
+  padding: 1rem 1.1rem;
+  border-left: 4px solid var(--green);
+  background: #fff;
+  box-shadow: 0 0.5rem 1.5rem rgba(18, 22, 29, 0.06);
+}
+.starting-price > span:first-child { grid-column: 1; color: var(--muted); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.045em; }
+.starting-price strong { grid-column: 2; grid-row: 1 / span 2; margin-left: 1.25rem; font: 700 2rem/1 var(--font-display); color: var(--green-ink); }
+.starting-price > span:last-child { grid-column: 1; font-size: 0.82rem; color: var(--muted); }
+.custom-home .cta-row { align-items: center; }
+.reassurance { margin-top: 1rem; color: var(--muted); font-size: 0.9rem; }
+.build-steps { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.build-steps li { display: grid; grid-template-columns: auto 1fr; gap: 1.15rem; padding: 1.35rem 0; border-bottom: 1px solid var(--line); }
+.build-steps li > span { font: 700 0.82rem/1 var(--font-display); color: var(--green-ink); padding-top: 0.35rem; }
+.build-steps h3 { margin: 0 0 0.25rem; font-size: 1.05rem; }
+.build-steps p { color: var(--muted); font-size: 0.93rem; }
+
+/* Homepage founder proof */
+.operator-section { padding-block: 5rem; }
+.operator-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(24rem, 1.1fr); gap: clamp(2.5rem, 7vw, 6rem); }
+.operator-copy > p { max-width: 58ch; font-size: 1.08rem; }
+.operator-proof { list-style: none; margin: 1.7rem 0; padding: 0; display: grid; gap: 0.8rem; }
+.operator-proof li { display: grid; grid-template-columns: minmax(9rem, 0.4fr) 1fr; gap: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--line); }
+.operator-proof strong { font-family: var(--font-display); font-size: 0.93rem; }
+.operator-proof span { color: var(--muted); font-size: 0.93rem; }
 
 /* App icon atop each product page hero. */
 .app-icon {
@@ -553,6 +710,20 @@ h3 { font-weight: 600; font-size: var(--step-2); }
 .band-contact a { color: #fff; text-decoration-color: var(--lime); }
 .band-contact a.button-accent { text-decoration: none; color: var(--coal); }
 
+.home-contact { padding-block: 5rem; }
+.home-contact .kicker { color: rgba(255, 255, 255, 0.7); }
+.home-contact .kicker::before { background: #fff; box-shadow: 14px 0 0 #fff, 28px 0 0 var(--lime); }
+.home-contact h2 { max-width: 20ch; font-size: clamp(2rem, 1.25rem + 2.5vw, 3rem); }
+.contact-lede { max-width: 55ch; font-size: 1.08rem; }
+.contact-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+.contact-option { display: flex; flex-direction: column; min-height: 12rem; padding: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.24); border-radius: 12px; background: rgba(255, 255, 255, 0.055); color: #fff; text-decoration: none; }
+.contact-option:hover { border-color: var(--lime); background: rgba(170, 236, 88, 0.08); color: #fff; }
+.contact-option-label { color: var(--lime); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.055em; text-transform: uppercase; }
+.contact-option strong { margin: 0.65rem 0 0.45rem; font: 600 1.3rem/1.3 var(--font-display); }
+.contact-option > span:last-child { margin-top: auto; color: rgba(255, 255, 255, 0.75); font-size: 0.92rem; }
+.contact-option b { color: var(--lime); }
+.contact-direct { margin-top: 1.25rem; font-size: 0.9rem; }
+
 /* ---- Footer ---- */
 
 /* Every page ends in a coal element (contact band, or the 404's hero), so the
@@ -617,13 +788,39 @@ h3 { font-weight: 600; font-size: var(--step-2); }
   .chapter-grid { grid-template-columns: 1fr; }
   .hero-product { grid-template-columns: 1fr; gap: 2rem; }
   .hero-product h1 { max-width: 26ch; }
+  .hero-home-grid { grid-template-columns: 1fr; }
+  .hero-home h1 { max-width: 18ch; }
+  .home-showcase { min-height: 23rem; max-width: 31rem; width: 100%; margin-inline: auto; }
+  .showcase-crewbook { top: 1.5rem; width: 85%; }
+  .showcase-almoner { left: 4%; width: 70%; }
+  .showcase-ourspace { width: 27%; }
   .proof-grid { grid-template-columns: 1fr; padding-block: 0.4rem; }
   .proof-grid li { padding: 1rem 0; }
   .proof-grid li + li { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
   .product-icon { width: 56px; height: 56px; border-radius: 12px; }
+  .section-intro,
+  .product-card-featured,
+  .product-card-grid,
+  .custom-home-grid,
+  .operator-grid,
+  .contact-options { grid-template-columns: 1fr; }
+  .section-intro { align-items: start; gap: 0.75rem; }
+  .product-card-featured .product-card-media { min-height: 13rem; }
+  .operator-proof li { grid-template-columns: 1fr; gap: 0.25rem; }
+  .products-section,
+  .custom-home,
+  .operator-section,
+  .home-contact { padding-block: 3.5rem; }
   .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .section { padding: 2.75rem 0; }
   .hero { padding: 2.5rem 0 3.5rem; }
+}
+
+@media (max-width: 28em) {
+  .home-showcase { min-height: 19rem; }
+  .showcase-card > span { display: none; }
+  .product-title-row { align-items: flex-start; }
+  .product-card-copy { padding: 1.25rem; }
 }
 
 /* Cookie consent banner */
