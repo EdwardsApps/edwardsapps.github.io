@@ -1,9 +1,10 @@
-/* EdwardsApps — Google Analytics 4 (gtag.js) with Consent Mode v2 + cookie banner. */
+/* EdwardsApps — consent-first Google Analytics 4 and cookie controls. */
 (function () {
   'use strict';
 
   var GA_ID = 'G-Y93B250536';
   var STORAGE_KEY = 'ea-consent';
+  var gaLoaded = false;
 
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
@@ -14,11 +15,12 @@
     ad_storage: 'denied',
     ad_user_data: 'denied',
     ad_personalization: 'denied',
-    analytics_storage: 'denied',
-    wait_for_update: 500
+    analytics_storage: 'denied'
   });
 
   function loadGA() {
+    if (gaLoaded) return;
+    gaLoaded = true;
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
@@ -29,11 +31,12 @@
 
   function applyChoice(granted) {
     gtag('consent', 'update', {
-      ad_storage: granted ? 'granted' : 'denied',
-      ad_user_data: granted ? 'granted' : 'denied',
-      ad_personalization: granted ? 'granted' : 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
       analytics_storage: granted ? 'granted' : 'denied'
     });
+    if (granted) loadGA();
   }
 
   var saved = null;
@@ -42,24 +45,36 @@
   if (saved === 'granted' || saved === 'denied') {
     applyChoice(saved === 'granted');
   }
-  loadGA();
 
   function saveChoice(granted) {
     try { localStorage.setItem(STORAGE_KEY, granted ? 'granted' : 'denied'); } catch (e) {}
     applyChoice(granted);
+    // If analytics was already running, reload into the consent-first state so
+    // declining also removes the Google script from the current page.
+    if (!granted && gaLoaded) window.location.reload();
   }
 
-  function showBanner() {
+  function showBanner(focusChoice) {
+    var existing = document.getElementById('ea-consent-banner');
+    if (existing) {
+      if (focusChoice) existing.querySelector('.consent-accept').focus();
+      return;
+    }
+
     var banner = document.createElement('div');
+    banner.id = 'ea-consent-banner';
     banner.className = 'consent-banner';
     banner.setAttribute('role', 'dialog');
-    banner.setAttribute('aria-label', 'Cookie consent');
+    banner.setAttribute('aria-modal', 'false');
+    banner.setAttribute('aria-labelledby', 'ea-consent-title');
     banner.innerHTML =
-      '<p>We use cookies to understand how the site is used and to improve it. ' +
-      'You can accept or decline — the site works either way.</p>' +
+      '<p id="ea-consent-title"><strong>Optional analytics</strong><br>' +
+      'With your permission, we use Google Analytics to understand how the site is used. ' +
+      'You can accept or decline — the site works either way. ' +
+      '<a href="/cookies.html">Read the cookie notice</a>.</p>' +
       '<div class="consent-actions">' +
-      '<button type="button" class="consent-btn consent-accept">Accept</button>' +
-      '<button type="button" class="consent-btn consent-decline">Decline</button>' +
+      '<button type="button" class="consent-btn consent-accept">Accept analytics</button>' +
+      '<button type="button" class="consent-btn consent-decline">Decline analytics</button>' +
       '</div>';
     document.body.appendChild(banner);
 
@@ -71,17 +86,24 @@
       saveChoice(false);
       banner.remove();
     });
+
+    if (focusChoice) banner.querySelector('.consent-accept').focus();
   }
 
-  // Let visitors change their mind later, e.g. a "Cookie settings" link:
-  // <a href="#" onclick="EAConsent.open(); return false;">Cookie settings</a>
-  window.EAConsent = { open: showBanner };
+  window.EAConsent = { open: function () { showBanner(true); } };
+
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('[data-consent-settings]');
+    if (!link) return;
+    event.preventDefault();
+    showBanner(true);
+  });
 
   if (saved !== 'granted' && saved !== 'denied') {
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', showBanner);
+      document.addEventListener('DOMContentLoaded', function () { showBanner(false); });
     } else {
-      showBanner();
+      showBanner(false);
     }
   }
 })();
