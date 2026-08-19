@@ -59,3 +59,32 @@
     }
   });
 })();
+
+/* Outbound app clicks — the hub's one conversion.
+   Fires a GA4 event naming which app the visitor left for; consent.js
+   defines window.gtag, and consent mode drops the event if analytics
+   consent was refused. Beacon transport survives the navigation. */
+(function () {
+  'use strict';
+
+  var APP_HOSTS = {
+    'almoner.app': 'Almoner',
+    'crewbook.me': 'CrewBook',
+    'crew-qci.com': 'CrewQCI',
+    'www.crew-qci.com': 'CrewQCI',
+    'our-space.me': 'OurSpace'
+  };
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('a[href^="https://"]');
+    if (!link || typeof window.gtag !== 'function') return;
+    var app = APP_HOSTS[new URL(link.href).hostname];
+    if (!app) return;
+    window.gtag('event', 'app_click', {
+      app_name: app,
+      link_url: link.href,
+      page_path: location.pathname,
+      transport_type: 'beacon'
+    });
+  });
+})();
