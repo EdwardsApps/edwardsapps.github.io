@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add('js')</script>
+  <title>CrewQCI user guide — every page, step by step</title>
+  <meta name="description" content="The complete CrewQCI user guide: accounts and teams, leads, quotes, contracts, invoicing with CIS reverse charge, proformas and applications, retentions, credit control, statements, reports and settings — with troubleshooting for the common snags.">
+  <link rel="canonical" href="https://edwardsapps.co.uk/crewqci-guide.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EdwardsApps">
+  <meta property="og:title" content="CrewQCI user guide — every page, step by step">
+  <meta property="og:description" content="Every page of CrewQCI explained step by step, from first sign-in to automatic debt chasing — read online or download as a PDF.">
+  <meta property="og:url" content="https://edwardsapps.co.uk/crewqci-guide.html">
+  <meta property="og:image" content="https://edwardsapps.co.uk/img/og-crewqci.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="CrewQCI's credit control and quotes screens beside the headline: the work you won is only worth what you actually collect.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#12161D">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=8">
+  <link rel="stylesheet" href="css/guide.css?v=1">
+  <script src="js/consent.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="index.html"><img src="img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="crewbook.html">CrewBook</a></li>
+        <li><a href="crewqci.html">CrewQCI</a></li>
+        <li><a href="ourspace.html">OurSpace</a></li>
+        <li><a href="almoner.html">Almoner</a></li>
+        <li><a href="services.html">Custom builds</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="nav-cta" href="mailto:peter@edwardsapps.co.uk">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="hero guide-hero">
+      <div class="wrap">
+        <img class="app-icon" src="img/product-crewqci.png" alt="" width="72" height="72">
+        <p class="kicker">CrewQCI · User guide</p>
+        <h1>How to use CrewQCI.</h1>
+        <p class="lede">Every page of the app, step by step — from your first sign-in to invoices, applications for payment, retentions and the credit control that chases the money for you. Each chapter ends with fixes for the things that trip people up.</p>
+        <p class="guide-meta"><span>Updated <strong>August 2026</strong></span><span>Applies to <strong>CrewQCI on the web and installed</strong></span><span>Also available in print — download below</span></p>
+        <div class="cta-row">
+          <a class="button button-primary" href="downloads/crewqci-user-guide.pdf">Download as PDF</a>
+          <a class="button button-ghost" href="https://crew-qci.com" rel="noopener">Open CrewQCI</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap guide-shell">
+      <nav class="guide-toc" aria-label="Guide contents">
+        <h2>In this guide</h2>
+        <div class="guide-search">
+          <input type="search" id="guide-search" aria-label="Search this guide" placeholder="Find a topic…" autocomplete="off">
+        </div>
+        <p class="toc-empty">Nothing matches — try another word.</p>
+        <div class="toc-group">
+          <strong>Getting started</strong>
+          <ul>
+            <li><a href="#what-is-crewqci">What CrewQCI is</a></li>
+            <li><a href="#create-account">Accounts &amp; signing in</a></li>
+            <li><a href="#company-setup">Company, trial &amp; subscribing</a></li>
+            <li><a href="#team-access">Your team &amp; access tiers</a></li>
+            <li><a href="#install-app">Installing the app</a></li>
+            <li><a href="#finding-your-way">Finding your way &amp; search</a></li>
+            <li><a href="#registers">Working the registers</a></li>
+          </ul>
+        </div>
+        <div class="toc-group">
+          <strong>Winning the work</strong>
+          <ul>
+            <li><a href="#leads">Leads</a></li>
+            <li><a href="#quotes">Quotes</a></li>
+            <li><a href="#contracts">Contracts</a></li>
+            <li><a href="#prospecting">Prospecting</a></li>
+          </ul>
+        </div>
+        <div class="toc-group">
+          <strong>Billing the work</strong>
+          <ul>
+            <li><a href="#invoicing">Invoicing</a></li>
+            <li><a href="#documents">Print, email &amp; SharePoint</a></li>
+            <li><a href="#proformas-applications">Proformas &amp; applications</a></li>
+            <li><a href="#retentions">Retentions</a></li>
+          </ul>
+        </div>
+        <div class="toc-group">
+          <strong>Getting paid</strong>
+          <ul>
+            <li><a href="#credit-control">How chasing works</a></li>
+            <li><a href="#chase-settings">Switching it on safely</a></li>
+            <li><a href="#statements">Statements</a></li>
+            <li><a href="#retention-chasing">Retention release requests</a></li>
+            <li><a href="#thank-yous">Thank-yous</a></li>
+            <li><a href="#credit-limits">Credit limits</a></li>
+          </ul>
+        </div>
+        <div class="toc-group">
+          <strong>Records &amp; admin</strong>
+          <ul>
+            <li><a href="#clients">The client register</a></li>
+            <li><a href="#reports">Reports</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#sage-export">Exporting to Sage</a></li>
+            <li><a href="#settings">Settings</a></li>
+          </ul>
+        </div>
+        <div class="toc-group">
+          <strong>When you're stuck</strong>
+          <ul>
+            <li><a href="#troubleshooting">Troubleshooting index</a></li>
+            <li><a href="#faq">Questions people ask</a></li>
+            <li><a href="#get-help">Getting help</a></li>
+          </ul>
+        </div>
+        <p class="toc-note">Prefer paper? <a href="downloads/crewqci-user-guide.pdf">Download the PDF</a>. Running the whole firm? See the <a href="crewbook-guide.html">CrewBook guide</a>.</p>
+      </nav>
+
+      <article class="guide-article">
+      <section id="what-is-crewqci" aria-labelledby="what-is-crewqci-h">
+        <h2 id="what-is-crewqci-h">What CrewQCI is<a class="anchor-link" href="#what-is-crewqci" aria-label="Link to this section">#</a></h2>
+        <p>CrewQCI runs the commercial side of a construction or trade business from first enquiry to cleared payment. One chain of records carries the whole story: a <strong>lead</strong> (an enquiry) becomes a <strong>quote</strong> (a price), a won quote becomes a <strong>contract</strong> (the job), and against the contract you raise <strong>invoices, credit notes, proformas and applications for payment</strong> as branded PDFs. From there, <strong>credit control</strong> chases the money for you — reminders, chasers, statements and retention requests, on a ladder you set.</p>
+        <p>Because it's one chain, nothing is retyped: details entered on the lead flow to the quote, the contract and every document, and a correction made once is pushed everywhere. Everyone in your company works from the same registers at the same time — two people can be in it at once without overwriting each other.</p>
+        <figure class="guide-shot">
+          <a class="shot-link" href="img/shots/crewqci-overview.webp"><img class="feature-shot" src="img/shots/crewqci-overview.webp" width="1400" height="470" loading="lazy" alt="CrewQCI's overview: tiles for leads, quotes, contracts, invoicing, proformas and applications, retentions, clients and credit control"></a>
+          <figcaption>The Overview — every part of the pipeline one click away.</figcaption>
+        </figure>
+        <div class="callout"><strong>Reading this guide</strong>Names in boxes, like <span class="ui">Add Quote</span>, are the exact buttons and fields you'll see in the app. Paths like <span class="path">Settings → Prospecting</span> mean: open Settings, then find the Prospecting card. Use the search box in the contents panel to jump straight to any topic — it searches everything, including the troubleshooting entries.</div>
+      </section>
+
+      <section id="create-account" aria-labelledby="create-account-h">
+        <h2 id="create-account-h">Creating your account and signing in<a class="anchor-link" href="#create-account" aria-label="Link to this section">#</a></h2>
+        <p>Everyone gets their own personal login. There are two ways in: <span class="ui">Continue with Google</span> (one step, no password to remember) or an email address and password.</p>
+
+        <h3 id="register-email">Registering with an email address<a class="anchor-link" href="#register-email" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Go to <a href="https://crew-qci.com" rel="noopener">crew-qci.com</a> and click <span class="ui">Start Free Trial</span>, then <span class="ui">Create one</span> on the sign-in page.</li>
+          <li>Enter your <span class="ui">Email</span>, <span class="ui">Password</span> and <span class="ui">Confirm Password</span>, then click <span class="ui">Create account</span>.</li>
+          <li>On the <span class="ui">Verify your email</span> screen, type the 6-digit code from the email you've been sent. <span class="step-detail">Didn't get it? Click <span class="ui">Resend</span> — and check your spam folder.</span></li>
+          <li>Click <span class="ui">Verify</span> — you're signed in and taken into the app.</li>
+        </ol>
+
+        <h3 id="sign-in-out">Signing in and out<a class="anchor-link" href="#sign-in-out" aria-label="Link to this section">#</a></h3>
+        <p>Open the app while signed out and the <span class="ui">Welcome back</span> page appears: use <span class="ui">Continue with Google</span>, or your email and password. To sign out, click the log-out icon at the top right of the header, or open the <strong>Account</strong> page (the round person icon) and click <span class="ui">Logout</span>.</p>
+
+        <h3 id="forgot-password">Forgotten your password?<a class="anchor-link" href="#forgot-password" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>On the sign-in page, click <span class="ui">Forgot password?</span>.</li>
+          <li>Enter your <span class="ui">Email address</span> and click <span class="ui">Send reset link</span>, then check your inbox.</li>
+          <li>Open the link, fill in <span class="ui">New Password</span> and <span class="ui">Confirm Password</span>, and click <span class="ui">Reset password</span>. Sign in with the new password.</li>
+        </ol>
+        <div class="callout"><strong>Signed up with Google?</strong>There's no CrewQCI password on your account to reset — just use <span class="ui">Continue with Google</span> every time.</div>
+
+        <h3 id="account-fix">If something's not right<a class="anchor-link" href="#account-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-login-invalid">
+            <summary>"Invalid email or password" when logging in</summary>
+            <div class="ts-body"><p>Re-type both carefully, or click <span class="ui">Forgot password?</span> to set a new one. If you originally registered with Google, use <span class="ui">Continue with Google</span> instead — there's no password on the account.</p></div>
+          </details>
+          <details class="ts-item" id="ts-verify-invalid">
+            <summary>"Invalid verification code" when registering</summary>
+            <div class="ts-body"><p class="ts-cause">The code was mistyped, or an older code was entered after a new one was requested.</p><p>Use the code from the <em>most recent</em> email, or click <span class="ui">Resend</span> for a fresh one.</p></div>
+          </details>
+          <details class="ts-item" id="ts-no-reset-email">
+            <summary>No password-reset email arrives</summary>
+            <div class="ts-body"><p class="ts-cause">The page shows the same confirmation whether or not the address has an account (for security) — so a typo, a Google-only account or a spam filter all look the same.</p><p>Check spam, confirm you typed the address you registered with, and remember Google sign-ins don't have a CrewQCI password.</p></div>
+          </details>
+          <details class="ts-item" id="ts-reset-link-invalid">
+            <summary>"Invalid reset link" or "Failed to reset password"</summary>
+            <div class="ts-body"><p class="ts-cause">The link was cut short by email software, has expired, or was already used.</p><p>Click <span class="ui">Request a new link</span> and use the fresh email — copy the whole link into the address bar if clicking doesn't work.</p></div>
+          </details>
+          <details class="ts-item" id="ts-access-restricted">
+            <summary>"Access Restricted — you are not registered to use this application"</summary>
+            <div class="ts-body"><p class="ts-cause">The login you're using isn't registered for the app.</p><p>Check you're signed in with the right account (work vs personal Google accounts are the usual culprit), try logging out and back in, or contact your administrator for access.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="company-setup" aria-labelledby="company-setup-h">
+        <h2 id="company-setup-h">Your company, the trial and subscribing<a class="anchor-link" href="#company-setup" aria-label="Link to this section">#</a></h2>
+        <p>Every login belongs to one company workspace, and all your registers are private to your company. The <em>first</em> person from a business creates the company; everyone else joins it by invite. Creating a company also starts the whole team's card-free 14-day trial, and makes you the company Owner with full access.</p>
+
+        <h3 id="company-create">Creating the company (first person only)<a class="anchor-link" href="#company-create" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Sign in for the first time — the <span class="ui">Create your company</span> page appears automatically.</li>
+          <li>Type your business name in <span class="ui">Company name</span> and click <span class="ui">Create company</span>.</li>
+          <li>You're in, and the 14-day trial has started for your whole team — no card details taken.</li>
+          <li>Head to <strong>Settings</strong> and fill in your company details, so they print on your documents from day one.</li>
+        </ol>
+        <div class="callout callout-warn"><strong>Joining an existing company?</strong>Don't create a new one — that gives you a separate, empty workspace. Ask your administrator to invite your email address first, then just sign in with that exact address: the invite is claimed automatically and you land in your company's app.</div>
+
+        <h3 id="subscribe">When the trial ends<a class="anchor-link" href="#subscribe" aria-label="Link to this section">#</a></h3>
+        <p>When neither the trial nor a subscription is active, the app shows the subscription page until someone on the team subscribes. One subscription covers the whole company — £55/month or £550/year (two months free), unlimited users.</p>
+        <ol class="step-list">
+          <li>On the subscription page, click the <span class="ui">Monthly</span> or <span class="ui">Annual</span> plan box, then <span class="ui">Start free trial</span>.</li>
+          <li>Complete the secure checkout page you're redirected to.</li>
+          <li>You return to a confirmation — "Confirming your payment…", then "You're all set". Click <span class="ui">Go to the pipeline</span>. <span class="step-detail">As soon as one person's payment confirms, the whole team is let in.</span></li>
+        </ol>
+
+        <h3 id="company-fix">If something's not right<a class="anchor-link" href="#company-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-invited-create">
+            <summary>You were invited, but you see "Create your company"</summary>
+            <div class="ts-body"><p class="ts-cause">No pending invite was found for the email you signed in with — it may have been sent to a different address, or not sent yet.</p><p>Don't create a company. Confirm with your administrator exactly which email was invited, and sign in with that address. Invites are matched on the email address, so the two must match.</p></div>
+          </details>
+          <details class="ts-item" id="ts-already-company">
+            <summary>"You already belong to a company"</summary>
+            <div class="ts-body"><p class="ts-cause">Your login is already attached to a workspace.</p><p>Sign out and back in — you should land in your existing company.</p></div>
+          </details>
+          <details class="ts-item" id="ts-confirming-payment">
+            <summary>The page stays on "Confirming your payment…"</summary>
+            <div class="ts-body"><p class="ts-cause">Payment confirmation can lag a little behind the redirect; the page keeps checking for about 45 seconds.</p><p>As the page itself says, you can safely leave — the subscription finishes setting up either way. Sign in again a few minutes later; if you're still shown the subscription page, email Peter.</p></div>
+          </details>
+          <details class="ts-item" id="ts-sub-page-paid">
+            <summary>The team keeps seeing the subscription page after paying</summary>
+            <div class="ts-body"><p class="ts-cause">No active subscription or live trial is being found for the company.</p><p>Ask whoever paid to confirm they reached "You're all set". If they did, sign out and back in; if it persists, email Peter.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="team-access" aria-labelledby="team-access-h">
+        <h2 id="team-access-h">Your team and who sees what<a class="anchor-link" href="#team-access" aria-label="Link to this section">#</a></h2>
+        <p>Colleagues are added by invitation, so everyone shares the same registers. An invite carries the access the person will get — their <strong>access tier</strong> and, optionally, a custom list of pages. The invited person simply registers (or signs in) with the invited email address and lands straight in the company.</p>
+        <div class="guide-table-scroll">
+          <table class="guide-table">
+            <thead><tr><th scope="col">Access tier</th><th scope="col">What they see</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Super Admin</th><td>Everything. Given automatically to the person who created the company.</td></tr>
+              <tr><th scope="row">Admin</th><td>Everything, including the money pages — credit control, aged debt, reports and insights.</td></tr>
+              <tr><th scope="row">Sales</th><td>The pipeline without company-wide money figures: Overview, Leads, Quotes, Contracts, Proformas &amp; Applications, Clients, Search and Account.</td></tr>
+              <tr><th scope="row">Viewer</th><td>Looking, not running: Overview, Leads, Quotes, Contracts, Search and Account.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Separately from the tier, a user can be an <strong>admin</strong> — able to manage users and settings, and the only ones who can send invites. Your own tier is shown on the <strong>Account</strong> page under <span class="ui">Access tier</span>.</p>
+        <div class="callout"><strong>Tip</strong>If a page or report you expect is missing, nothing has been lost — it's just not shown at your tier. Ask your administrator to check your access tier or allowed pages.</div>
+      </section>
+
+      <section id="install-app" aria-labelledby="install-app-h">
+        <h2 id="install-app-h">Installing CrewQCI on your phone or desktop<a class="anchor-link" href="#install-app" aria-label="Link to this section">#</a></h2>
+        <p>CrewQCI installs straight from the browser — no app store needed — and then works like a normal app from your home screen or taskbar.</p>
+        <ol class="step-list">
+          <li>Click <span class="ui">Install App</span> — on the website, or on the <strong>Account</strong> page's <span class="ui">Install CrewQCI</span> card.</li>
+          <li>Accept the browser's prompt.</li>
+          <li>On iPhone or iPad, use Safari instead: tap the Share icon, then <span class="ui">Add to Home Screen</span>.</li>
+          <li>No prompt? In Chrome or Edge it's under <span class="path">Menu → Install CrewQCI</span>; in Safari, <span class="path">File → Add to Home Screen</span>.</li>
+        </ol>
+        <p>Installing changes nothing about your account or data — it's the same app, just quicker to reach.</p>
+      </section>
+      <section id="finding-your-way" aria-labelledby="finding-your-way-h">
+        <h2 id="finding-your-way-h">Finding your way around<a class="anchor-link" href="#finding-your-way" aria-label="Link to this section">#</a></h2>
+        <p>After signing in you land on the <strong>Sales Pipeline</strong> overview — the flow "Lead → Quote → Contract → Invoice / Proforma → Retention" with a tile for every area: Leads, Quotes, Contracts, Invoicing, Proformas/Applications, Retentions, Clients, Credit Control, Settings and Reports, plus a <span class="ui">View insights</span> button for the charts. The same pages are always available from the navigation, and which tiles work for you depends on your <a href="#team-access">access tier</a>.</p>
+
+        <h3 id="search">Search: one box for everything<a class="anchor-link" href="#search" aria-label="Link to this section">#</a></h3>
+        <p>The header search box — "Search the pipeline… use # to be exact" — finds leads, quotes, contracts, invoices, proformas, retentions and client accounts from one place. Press Enter for the results page, split into <span class="ui">Pipeline references</span> and <span class="ui">Client accounts</span>; click any result to jump straight to the record on its own page.</p>
+        <ul>
+          <li>An ordinary search matches anywhere: reference numbers, client names, sites, sectors, contacts, emails, notes and feedback.</li>
+          <li>Prefix with <strong>#</strong> (e.g. <span class="ui">#6532</span>) for an exact reference search — it matches the whole number only, so #653 will not return 6532.</li>
+          <li>Searching a contract number also surfaces the quote it came from. Draft documents are excluded until issued.</li>
+        </ul>
+        <div class="callout"><strong>Tip</strong>To pull together everything on one job — contract, source quote, invoices, retentions, the original lead — search its number with #. One search, the whole story.</div>
+      </section>
+      <section id="registers" aria-labelledby="registers-h">
+        <h2 id="registers-h">Working the registers<a class="anchor-link" href="#registers" aria-label="Link to this section">#</a></h2>
+        <p>Leads, Quotes, Contracts, Invoicing and Proformas all share the same spreadsheet-style table, so one set of habits works everywhere.</p>
+        <ul>
+          <li><strong>Search</strong> — type in the search box above the table. On the bigger registers the first search quietly fetches the complete history ("Loading all records…"), so results cover everything, not just recent rows.</li>
+          <li><strong>Filter</strong> — click any column header to filter its values, Excel-style: tick the values to show, or <span class="ui">Show all</span> to clear. Active filters appear as gold chips above the table; click a chip to remove it, or <span class="ui">Clear all filters</span>. Date columns filter by UK financial year (e.g. "FY 2025/26").</li>
+          <li><strong>Columns</strong> — the <span class="ui">Columns</span> button switches columns on and off (several, like Phone, Email and Chase-ups, start hidden). Your choice is remembered per table on this device.</li>
+          <li><strong>Row actions</strong> — the icons at the right of each row (hover to see what each does). On a phone they collapse into a single <span class="ui">⋮</span> button that opens a sheet of larger buttons.</li>
+          <li><strong>Long lists</strong> — tables render 200 rows at a time; the footer offers <span class="ui">Show more</span> and <span class="ui">Show all</span>.</li>
+        </ul>
+        <div class="callout"><strong>Tip</strong>Followed a link and now the register shows a single record? That's the focus filter — a banner reads "Showing quote #…" or similar. Click <span class="ui">Clear filter</span> to get the full register back.</div>
+      </section>
+      <section id="leads" aria-labelledby="leads-h">
+        <h2 id="leads-h">Leads<a class="anchor-link" href="#leads" aria-label="Link to this section">#</a></h2>
+        <p>The Leads page is your register of incoming enquiries: who asked, what for, where, who's handling it, and what happened to it. Nothing here is a price yet — a lead becomes a quote with one click, and from then on its status advances by itself as the deal progresses.</p>
+
+        <h3 id="leads-add">Adding a lead<a class="anchor-link" href="#leads-add" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Open <span class="ui">Leads</span> and click <span class="ui">Add Lead</span> (top right).</li>
+          <li>Fill in <span class="ui">Customer name</span> — the only required field. You can pick an existing client or type a new name. <span class="step-detail">The <span class="ui">Save</span> button stays greyed out until there's a name.</span></li>
+          <li>Add anything else you know: <span class="ui">Date received</span>, contact details, <span class="ui">Job location</span>, <span class="ui">Subject</span>, <span class="ui">Lead source</span>, <span class="ui">Assigned to</span>, <span class="ui">Estimated value (£)</span> and <span class="ui">Notes</span>.</li>
+          <li>Click <span class="ui">Save</span> — you'll see "Lead added."</li>
+        </ol>
+        <div class="callout"><strong>Tip</strong>Contact details you type on a lead travel forward automatically: when the lead becomes a quote and then a contract, any blank contact fields are filled in from here — without ever overwriting something already entered.</div>
+
+        <h3 id="leads-convert">Converting a lead to a quote<a class="anchor-link" href="#leads-convert" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Click the arrow icon on the lead's row (tooltip <span class="ui">Convert to quote</span>), or open the lead and click <span class="ui">Convert to quote</span>.</li>
+          <li>You land on the Quotes page with the <span class="ui">Add quote</span> dialog open and pre-filled from the lead — client, site, source, salesperson, value and contacts — with today's date and the next quote number already allocated.</li>
+          <li>Adjust anything, then click <span class="ui">Save</span>. <span class="step-detail">Nothing is created until you save — closing the dialog abandons the conversion harmlessly.</span></li>
+          <li>On save, the lead links to the new quote and its status moves to <span class="ui">Quoted</span> by itself.</li>
+        </ol>
+        <p>Once a lead has a quote, the same row button reads <span class="ui">Go to quote</span> — and the <span class="ui">Quote #</span> and <span class="ui">Contract # (won)</span> columns are clickable links straight to those records. When a contract is eventually raised from the quote, the lead marks itself <span class="ui">Won</span> and the contract number is stamped onto it.</p>
+
+        <h3 id="leads-statuses">Lead statuses and row colours<a class="anchor-link" href="#leads-statuses" aria-label="Link to this section">#</a></h3>
+        <div class="guide-table-scroll">
+          <table class="guide-table">
+            <thead><tr><th scope="col">Status</th><th scope="col">Row colour</th><th scope="col">Meaning</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">New</th><td><span class="swatch" style="background:#fff"></span>White</td><td>Just arrived — nobody has priced it yet</td></tr>
+              <tr><th scope="row">Quoted</th><td><span class="swatch" style="background:#ccfbf1"></span>Light teal</td><td>A quote has gone out (set automatically on conversion)</td></tr>
+              <tr><th scope="row">Emailed / Called Follow Up</th><td><span class="swatch" style="background:#fde68a"></span>Amber</td><td>Chased, waiting on the client</td></tr>
+              <tr><th scope="row">Won</th><td><span class="swatch" style="background:#bbf7d0"></span>Green</td><td>A contract has been raised (set automatically)</td></tr>
+              <tr><th scope="row">Lost</th><td><span class="swatch" style="background:#fecaca"></span>Red</td><td>Went elsewhere</td></tr>
+              <tr><th scope="row">Not Our Service / Not Our Area</th><td><span class="swatch" style="background:#fef3c7"></span>Pale amber</td><td>Declined — wrong kind of work or too far away</td></tr>
+              <tr><th scope="row">Dead</th><td><span class="swatch" style="background:#e5e7eb"></span>Grey</td><td>Gone quiet for good</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="leads-fix">If something's not right<a class="anchor-link" href="#leads-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-leads-save-greyed">
+            <summary>The Save button is greyed out in the lead dialog</summary>
+            <div class="ts-body"><p class="ts-cause"><span class="ui">Customer name</span> is empty — it's the only required field.</p><p>Type or pick a customer name and Save enables immediately.</p></div>
+          </details>
+          <details class="ts-item" id="ts-leads-failed-save">
+            <summary>"Failed to add lead." / "Failed to save." / "Failed to delete."</summary>
+            <div class="ts-body"><p class="ts-cause">The save or delete couldn't reach the server.</p><p>Check your internet connection and try again. If it keeps happening, contact your administrator.</p></div>
+          </details>
+          <details class="ts-item" id="ts-leads-no-leads">
+            <summary>The table says "No leads yet" but leads exist</summary>
+            <div class="ts-body"><p class="ts-cause">Your search text or a column filter is excluding everything.</p><p>Clear the search box, and click <span class="ui">Clear all filters</span> if any gold filter chips are showing above the table.</p></div>
+          </details>
+          <details class="ts-item" id="ts-leads-entity">
+            <summary>Amber banner: "Couldn't load leads…"</summary>
+            <div class="ts-body"><p class="ts-cause">First-time setup: the leads data table isn't published in the app's back end yet.</p><p>This only appears on a brand-new installation — ask whoever set up the app (or email Peter) to publish it, then reload the page.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="quotes" aria-labelledby="quotes-h">
+        <h2 id="quotes-h">Quotes<a class="anchor-link" href="#quotes" aria-label="Link to this section">#</a></h2>
+        <p>The quote register holds every price you've given: who quoted it, what it's worth, where it stands, and a log of every chase. The whole register is colour-coded by status, so anything gone cold is visible from across the office.</p>
+        <figure class="guide-shot">
+          <a class="shot-link" href="img/shots/crewqci-quotes.webp"><img class="feature-shot" src="img/shots/crewqci-quotes.webp" width="1400" height="470" loading="lazy" alt="CrewQCI's quotes register: four quotes with values, quoted-by, chase-up counts and statuses colour-coded from quoted through to won and lost"></a>
+          <figcaption>The quotes register — status chips and row tints make the state of every quote readable at a glance.</figcaption>
+        </figure>
+
+        <h3 id="quotes-add">Adding a quote<a class="anchor-link" href="#quotes-add" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Click <span class="ui">Add Quote</span> (top right). The dialog opens with today's date, and <span class="ui">Quote number</span> briefly shows "Allocating…" while the next number in sequence is fetched. <span class="step-detail">It fills in by itself — or you can overtype your own number at any time.</span></li>
+          <li>Complete the required fields (marked *): <span class="ui">Quote number</span>, <span class="ui">Client</span>, <span class="ui">Sector</span>, <span class="ui">Lead source</span>, <span class="ui">Quoted by</span>, <span class="ui">Status</span> and <span class="ui">Value (£)</span> — the value must be greater than zero.</li>
+          <li>Optionally add <span class="ui">Site</span>, contact details and <span class="ui">Feedback</span>.</li>
+          <li>Click <span class="ui">Save</span>. <span class="step-detail">If anything required is missing, the dialog footer lists it ("Required: …") and the save is refused with "Please complete: …" naming exactly what's needed.</span></li>
+        </ol>
+
+        <h3 id="quotes-chase">Recording chase-ups<a class="anchor-link" href="#quotes-chase" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Open the quote (click its row) to see <span class="ui">Edit quote</span>.</li>
+          <li>In the <span class="ui">Follow-ups / chase-ups</span> section at the bottom, fill in the date, <span class="ui">By</span> (who chased) and <span class="ui">Outcome</span>, then click <span class="ui">+</span> to add it to the log.</li>
+          <li>Click <span class="ui">Save</span>. The <span class="ui">Chase-ups</span> column (switch it on under <span class="ui">Columns</span>) shows the count per quote.</li>
+        </ol>
+
+        <h3 id="quotes-win">Turning a won quote into a contract<a class="anchor-link" href="#quotes-win" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Open the quote and click <span class="ui">Create contract</span> (bottom left of the dialog).</li>
+          <li>The Contracts page opens with <span class="ui">Add contract</span> pre-filled from the quote — client, site, sector, source, salesperson, value, contacts — and the next contract number allocated.</li>
+          <li>Click <span class="ui">Save</span>. Any lead carrying this quote number moves itself to <span class="ui">Won</span> and is stamped with the new contract number.</li>
+        </ol>
+
+        <h3 id="quotes-statuses">Quote statuses<a class="anchor-link" href="#quotes-statuses" aria-label="Link to this section">#</a></h3>
+        <div class="guide-table-scroll">
+          <table class="guide-table">
+            <thead><tr><th scope="col">Status</th><th scope="col">Chip</th><th scope="col">When to use it</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Quoted</th><td><span class="swatch" style="background:#6366f1"></span>Indigo</td><td>The price has gone out; row tinted light teal</td></tr>
+              <tr><th scope="row">Emailed Follow Up</th><td><span class="swatch" style="background:#f59e0b"></span>Amber</td><td>Chased by email; row tinted amber</td></tr>
+              <tr><th scope="row">Called Follow Up</th><td><span class="swatch" style="background:#f59e0b"></span>Amber</td><td>Chased by phone; row tinted amber</td></tr>
+              <tr><th scope="row">Won</th><td><span class="swatch" style="background:#22c55e"></span>Green</td><td>The job's yours — create the contract</td></tr>
+              <tr><th scope="row">Lost</th><td><span class="swatch" style="background:#ef4444"></span>Red</td><td>Went to someone else</td></tr>
+              <tr><th scope="row">Not Our Service / Not Our Area</th><td><span class="swatch" style="background:#9ca3af"></span>Grey</td><td>Declined to quote properly</td></tr>
+              <tr><th scope="row">Dead</th><td><span class="swatch" style="background:#6b7280"></span>Dark grey</td><td>No answer, ever</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The status list itself is yours to change under <span class="path">Settings → Quote Statuses</span>. A brand-new quote saved without picking a status shows a neutral grey "Issued" chip — pick one of the listed statuses to get the proper colour.</p>
+
+        <h3 id="quotes-fix">If something's not right<a class="anchor-link" href="#quotes-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-quotes-complete">
+            <summary>"Please complete: …" when saving a quote</summary>
+            <div class="ts-body"><p class="ts-cause">A required field is blank, or <span class="ui">Value (£)</span> isn't greater than zero.</p><p>The message lists exactly what's missing — fill in each named field and save again.</p></div>
+          </details>
+          <details class="ts-item" id="ts-quotes-allocating">
+            <summary>The quote number shows "Allocating…" and stays empty</summary>
+            <div class="ts-body"><p class="ts-cause">The automatic numbering couldn't fetch the next number (usually a connection blip).</p><p>Just type the number yourself — the field accepts manual entry at any time, and the sequence picks up from whatever you enter.</p></div>
+          </details>
+          <details class="ts-item" id="ts-quotes-filtered">
+            <summary>Only one quote is showing</summary>
+            <div class="ts-body"><p class="ts-cause">You followed a link from another page, so the register is focused on that one record — there's a banner reading "Showing quote #…".</p><p>Click <span class="ui">Clear filter</span> in the banner to see the full register.</p></div>
+          </details>
+          <details class="ts-item" id="ts-quotes-failed">
+            <summary>"Failed to save quote." / "Failed to delete."</summary>
+            <div class="ts-body"><p class="ts-cause">The server request failed.</p><p>Check your connection and try again; if it persists, contact your administrator.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="contracts" aria-labelledby="contracts-h">
+        <h2 id="contracts-h">Contracts<a class="anchor-link" href="#contracts" aria-label="Link to this section">#</a></h2>
+        <p>A contract is one confirmed piece of work for one client at one site. It's the record everything else hangs off: invoices, proformas and credit notes are raised against it, and its client, site and contact details are the master copy shared across every related record.</p>
+
+        <h3 id="contracts-add">Adding a contract<a class="anchor-link" href="#contracts-add" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Click <span class="ui">Add Contract</span> — or better, open the won quote and click <span class="ui">Create contract</span> so everything is pre-filled.</li>
+          <li><span class="ui">Contract number</span> shows "Allocating…" then fills with the next number in sequence. You can overtype it.</li>
+          <li>Pick the <span class="ui">Quote number</span> if the work was quoted — <span class="ui">Contract value (£)</span> auto-fills from the quote's value. <span class="step-detail">A figure you type yourself is never overwritten by the auto-fill.</span></li>
+          <li>Complete client, site, sector, source and contact fields, and tick <span class="ui">VAT zero-rated</span> and <span class="ui">VAT form returned</span> if they apply.</li>
+          <li>Click <span class="ui">Save</span>.</li>
+        </ol>
+        <div class="callout"><strong>Good to know</strong>If you type a client name that isn't set up yet, the contract still saves — and a new-client request is raised for you automatically, with the approvers emailed. You'll see the confirmation in a toast.</div>
+
+        <h3 id="contracts-docs">Raising documents and seeing what's billed<a class="anchor-link" href="#contracts-docs" aria-label="Link to this section">#</a></h3>
+        <p>Open any contract and use the buttons at the bottom left — <span class="ui">Invoice</span>, <span class="ui">Proforma</span> or <span class="ui">Credit note</span> — to start a new document pre-filled from the contract. The <span class="ui">Documents raised</span> panel in the same dialog lists everything already billed, newest first, each with a status badge (grey <em>Draft</em>, red <em>Not Paid</em>, orange <em>Part Paid</em>, green <em>Paid</em>, purple <em>Credit</em>); click a line to jump straight to that document.</p>
+
+        <h3 id="contracts-propagation">One correction, everywhere<a class="anchor-link" href="#contracts-propagation" aria-label="Link to this section">#</a></h3>
+        <p>Fix a client name, site or phone number on the contract and save — the correction is pushed to the contract's quote, its invoices and proformas, the originating lead and the job diary. A toast confirms it: "Details updated on N other records for this contract." Enter details once, correct them once.</p>
+
+        <h3 id="contracts-vat">VAT zero-rated jobs<a class="anchor-link" href="#contracts-vat" aria-label="Link to this section">#</a></h3>
+        <p>Tick <span class="ui">VAT zero-rated</span> on jobs that qualify for zero rating. Until you also tick <span class="ui">VAT form returned</span>, the contract's row is highlighted amber and the <span class="ui">VAT form</span> column shows a <span class="ui">Pending</span> badge — a standing reminder to chase the client's certificate. Once returned, the badge flips and the highlight clears.</p>
+
+        <h3 id="contracts-fix">If something's not right<a class="anchor-link" href="#contracts-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-contracts-amber">
+            <summary>A contract row is highlighted amber</summary>
+            <div class="ts-body"><p class="ts-cause">The contract is VAT zero-rated and the client's VAT form hasn't been recorded as returned.</p><p>Chase the client for the form, then open the contract and tick <span class="ui">VAT form returned</span>.</p></div>
+          </details>
+          <details class="ts-item" id="ts-contracts-value">
+            <summary>The contract value keeps showing the quote's figure</summary>
+            <div class="ts-body"><p class="ts-cause">The value auto-fills from the linked quote whenever the field is empty.</p><p>Type your own figure over it — a manually entered value is never overwritten.</p></div>
+          </details>
+          <details class="ts-item" id="ts-contracts-save">
+            <summary>Save is greyed out in the contract dialog</summary>
+            <div class="ts-body"><p class="ts-cause"><span class="ui">Contract number</span> is still blank.</p><p>Wait a moment for the automatic number to land, or type one yourself.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="prospecting" aria-labelledby="prospecting-h">
+        <h2 id="prospecting-h">Prospecting<a class="anchor-link" href="#prospecting" aria-label="Link to this section">#</a></h2>
+        <p>Prospecting is a call list that builds itself. Any client you've invoiced before but haven't worked for within your prospecting period (six months, unless you change it) appears automatically, biggest spenders first. Ring them, log the call, and when a contract is raised they drop off the list on their own — nothing to tidy up.</p>
+
+        <h3 id="prospecting-work">Working the list<a class="anchor-link" href="#prospecting-work" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Read the four boxes across the top: <span class="ui">Prospects</span>, <span class="ui">Past work</span> (total historic £), <span class="ui">Due a call</span> and <span class="ui">Never contacted</span>.</li>
+          <li>Narrow the list with the filter buttons — <span class="ui">All</span>, <span class="ui">Due a call</span>, <span class="ui">Never contacted</span>, <span class="ui">Quoted in period</span>, <span class="ui">New prospects</span> — or the search box.</li>
+          <li>Read the cards by colour: white means nobody has rung them yet; amber means contact made and in hand; rose means a follow-up is now due; green means they're back on the books.</li>
+          <li>Click <span class="ui">Log contact</span> after each call (next section), and <span class="ui">Quotes / contracts / invoices</span> to see a prospect's full history before you dial.</li>
+        </ol>
+
+        <h3 id="prospecting-log">Logging a call<a class="anchor-link" href="#prospecting-log" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Click <span class="ui">Log contact</span> on the prospect's card.</li>
+          <li>Fill in the <span class="ui">Date</span> (defaults to today), <span class="ui">How</span> (Call, Email, Visit, Letter, WhatsApp or Other), <span class="ui">Spoke to</span>, <span class="ui">Outcome</span> and <span class="ui">Status now</span>.</li>
+          <li>Leave <span class="ui">Follow up on</span> at its default of two weeks ahead — or clear it if no follow-up is needed.</li>
+          <li>Click <span class="ui">Save contact</span>. When the follow-up date arrives, the card gains a rose <span class="ui">Due</span> badge and jumps to the top of the list.</li>
+        </ol>
+        <p>Brand-new companies (not past clients) are added with <span class="ui">New prospect</span> — they carry a gold <span class="ui">New</span> badge and always show on the list. <span class="ui">Remove</span> takes a prospect off the list without deleting anything — it stays on file and can come back.</p>
+
+        <h3 id="prospecting-email">The Monday-morning email<a class="anchor-link" href="#prospecting-email" aria-label="Link to this section">#</a></h3>
+        <p>Optionally, CrewQCI emails a "Top prospects this week" digest every Monday: follow-ups promised for the week (overdue ones flagged red) plus the best-value clients nobody has rung. Set it up under <span class="path">Settings → Prospecting</span>:</p>
+        <ol class="step-list">
+          <li>Set the <span class="ui">Prospecting period (months)</span> — not worked for in this long means due a call — plus <span class="ui">Ignore below (£ historic work)</span> and <span class="ui">Top prospects in the email</span>.</li>
+          <li>Turn on <span class="ui">Send Monday email</span> and fill in <span class="ui">Email goes to</span> (no address here means no email is sent) and optionally <span class="ui">Copied to</span>.</li>
+          <li>Click <span class="ui">Test</span> to send yourself a sample, then <span class="ui">Save changes</span>.</li>
+        </ol>
+        <div class="callout"><strong>Tip</strong>The email and the page use the same engine, so Monday's list always matches what you find when you open Prospecting. If there's genuinely nothing to chase, no email is sent at all — an empty digest is deliberately never delivered.</div>
+
+        <h3 id="prospecting-fix">If something's not right<a class="anchor-link" href="#prospecting-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-prospecting-no-email">
+            <summary>No Monday email arrives</summary>
+            <div class="ts-body"><p class="ts-cause">Either <span class="ui">Send Monday email</span> is off, <span class="ui">Email goes to</span> is blank, or there was nothing to chase that week — an empty email is never sent.</p><p>In <span class="path">Settings → Prospecting</span>, switch the email on, fill in the recipient, click <span class="ui">Save changes</span>, then use <span class="ui">Test</span> to confirm delivery.</p></div>
+          </details>
+          <details class="ts-item" id="ts-prospecting-forbidden">
+            <summary>The Test button reports "Forbidden"</summary>
+            <div class="ts-body"><p class="ts-cause">Sending the test digest is admin-only.</p><p>Ask an Admin or Super Admin to press it, or have your own tier raised.</p></div>
+          </details>
+          <details class="ts-item" id="ts-prospecting-popups">
+            <summary>"Allow pop-ups to print the call sheet"</summary>
+            <div class="ts-body"><p class="ts-cause">The printable call sheet opens in a new window and your browser blocked it.</p><p>Allow pop-ups for this site in your browser settings, then choose <span class="ui">Print call sheet</span> again.</p></div>
+          </details>
+          <details class="ts-item" id="ts-prospecting-cap">
+            <summary>"Showing the top 200 of N dormant clients"</summary>
+            <div class="ts-body"><p class="ts-cause">More dormant clients qualify than the page shows.</p><p>Raise the <span class="ui">Ignore below</span> figure in <span class="path">Settings → Prospecting</span> to focus the list on clients worth the call.</p></div>
+          </details>
+        </div>
+      </section>
+      <section id="invoicing" aria-labelledby="invoicing-h">
+        <h2 id="invoicing-h">Invoicing<a class="anchor-link" href="#invoicing" aria-label="Link to this section">#</a></h2>
+        <p>The <strong>Sales Invoicing</strong> page is one register of every issued invoice and credit note: what's been paid, what's owing, what's overdue, and what's gone to Sage. Payments, credit notes, retention posting and the Sage export all start from here.</p>
+        <figure class="guide-shot">
+          <a class="shot-link" href="img/shots/crewqci-invoicing.webp"><img class="feature-shot" src="img/shots/crewqci-invoicing.webp" width="1400" height="500" loading="lazy" alt="CrewQCI's sales invoice register: five documents with net, VAT, total and outstanding columns, one on reverse charge, rows tinted green for paid, pink for part-paid and purple for a credit note"></a>
+          <figcaption>The invoice register — row colours show payment state; the gold band marks the key money columns.</figcaption>
+        </figure>
+
+        <h3 id="invoicing-read">Reading the register<a class="anchor-link" href="#invoicing-read" aria-label="Link to this section">#</a></h3>
+        <div class="guide-table-scroll">
+          <table class="guide-table">
+            <thead><tr><th scope="col">Row / chip</th><th scope="col">Colour</th><th scope="col">Meaning</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Not Paid</th><td><span class="swatch" style="background:#fef9c3"></span>Pale yellow row, red chip</td><td>Nothing received yet</td></tr>
+              <tr><th scope="row">Overdue</th><td><span class="swatch" style="background:#fecaca"></span>Red row</td><td>Unpaid and past its due date</td></tr>
+              <tr><th scope="row">Part Paid</th><td><span class="swatch" style="background:#fbcfe8"></span>Pink row, orange chip</td><td>Something received, balance still owing</td></tr>
+              <tr><th scope="row">Paid</th><td><span class="swatch" style="background:#bbf7d0"></span>Green row</td><td>Payments, discount and retention together cover the total</td></tr>
+              <tr><th scope="row">Credit</th><td><span class="swatch" style="background:#e9d5ff"></span>Purple row</td><td>A credit note (shown with a CR prefix)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The status works itself out from the figures — you never set it by hand. <strong>Owing</strong> is the total minus payments, discount and retention. The <strong>Due Date</strong> comes from the invoice date and the Terms: "On Rec" means 3 days after the invoice date; "30 Days" (or any "N Days") means N days after the <em>end of the invoice month</em>. Reverse-charge documents show <span class="ui">Rev Chg</span> in gold under the VAT figure, and the <span class="ui">In Sage</span> column gains a tick once a document has been through a Sage export.</p>
+        <p>Filter with the buttons above the table — <span class="ui">All</span>, <span class="ui">Unpaid / Part Paid</span>, <span class="ui">Overdue</span> — or tick <span class="ui">Not yet exported to Sage</span>. The row icons, left to right: view/print the document, record a payment, raise a credit note, post the retention (shield), edit, delete.</p>
+
+        <h3 id="invoicing-raise">Raising an invoice<a class="anchor-link" href="#invoicing-raise" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Click <span class="ui">New Invoice</span> (top right). The invoice number fills in automatically — or type your own. <span class="step-detail">A typed number is refused at save if it's already in use; the suggested one is re-checked at save so two people can never get the same number.</span></li>
+          <li>Pick the <span class="ui">Client</span> and check the address block and contact details it fills in. <span class="step-detail">The address here is the printed "Bill To" — anything you edit is saved back to the client record too. Picking a CIS-registered client ticks <span class="ui">Reverse charge (CIS)</span> for you.</span></li>
+          <li>Fill in <span class="ui">Site</span>, <span class="ui">Contract no.</span>, <span class="ui">Terms</span> (they set the due date) and any <span class="ui">Order no. (client PO)</span>.</li>
+          <li>Either type the <span class="ui">Net (£)</span>, or click <span class="ui">Add line</span> and enter Qty, Details and Unit price per line — Net then becomes the sum of the lines and locks.</li>
+          <li>Check the VAT: leave <span class="ui">VAT rate (%)</span> at 20, change it, or tick <span class="ui">Reverse charge (CIS)</span> for CIS work — VAT becomes £0 and the document prints the proper reverse-charge wording.</li>
+          <li>Enter a <span class="ui">Retention (%)</span> if the contract holds retention. <span class="step-detail">The retention due date defaults to one year after the invoice date.</span></li>
+          <li>Optionally add <span class="ui">Work carried out</span> dates and a printed <span class="ui">Notes</span> line (e.g. "Nil Retention"), and click <span class="ui">Preview PDF</span> to see exactly what will print.</li>
+          <li>Click <span class="ui">Save invoice</span>. If you entered a retention, a prompt offers to post it to the Retentions register — see <a href="#retentions">Retentions</a>.</li>
+        </ol>
+        <div class="callout"><strong>Tip</strong><span class="ui">Preview PDF</span> works before saving and includes your unsaved edits — check the document looks right before it exists. And if you make a mistake anywhere on this page, the app-wide Undo button can take it back: creating, editing, deleting and credit notes are all recorded.</div>
+
+        <h3 id="invoicing-payments">Recording payments<a class="anchor-link" href="#invoicing-payments" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Click the banknote icon (<span class="ui">Record payment</span>) on the invoice row.</li>
+          <li>Enter the <span class="ui">Amount paid (£)</span> — the <em>running total received to date</em>, not just the latest cheque. For a second part-payment, enter the new combined total.</li>
+          <li>Add any <span class="ui">Discount (£)</span> or <span class="ui">Retention amount (£)</span> — both count towards settling the invoice.</li>
+          <li>Check the live "owing after these entries" figure, then click <span class="ui">Save</span>. The row's chip and colour update at once.</li>
+        </ol>
+
+        <h3 id="invoicing-credits">Credit notes<a class="anchor-link" href="#invoicing-credits" aria-label="Link to this section">#</a></h3>
+        <p>Two routes, one result. The quick route: click the minus-circle icon on an invoice row, enter the <span class="ui">Net to credit (£)</span> and who it's <span class="ui">Credited by</span>, and click <span class="ui">Raise credit note</span> — the credit applies to that invoice immediately (its paid figure rises, so the owing figure drops). The standalone route: <span class="ui">New Credit Note</span> at the top of the page, where <span class="ui">Against invoice</span> is optional — pick the client first and their invoices appear.</p>
+        <p>Credit notes share the invoice number sequence and show with a CR prefix, a grey <span class="ui">Credit</span> chip and a purple row. Every application leaves an audit line in the invoice's notes, and editing an issued credit note re-applies it properly — backed out of the old invoice, applied to the new one.</p>
+
+        <h3 id="invoicing-drafts">Draft documents from CrewBook<a class="anchor-link" href="#invoicing-drafts" aria-label="Link to this section">#</a></h3>
+        <p>If your firm also runs CrewBook, coordinators can raise <em>draft</em> invoices, credit notes, proformas and applications from a job — without a document number. Drafts wait in a <span class="ui">Draft documents</span> panel at the top of the Invoicing and Proformas pages, excluded from every figure until issued, and their previews print with a diagonal DRAFT watermark so they can't be mistaken for the real thing.</p>
+        <ol class="step-list">
+          <li>Click <span class="ui">Open</span> on the draft and read the coordinator's note at the top.</li>
+          <li>Add the line items, check the VAT and the <span class="ui">Reverse charge (CIS)</span> tick, and fill anything missing.</li>
+          <li>Click the green <span class="ui">Issue</span> button — the next number is allocated, today's date is stamped, and the finished PDF opens ready to print, email or file. <span class="step-detail">The number field reads "Allocated on issue" until then — numbers are never wasted on drafts.</span></li>
+        </ol>
+
+        <h3 id="invoicing-fix">If something's not right<a class="anchor-link" href="#invoicing-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-inv-number-in-use">
+            <summary>"Invoice number … is already in use."</summary>
+            <div class="ts-body"><p class="ts-cause">You typed a number that already exists in the register.</p><p>Change it — or clear it back to the suggested number, which is checked and allocated fresh at save.</p></div>
+          </details>
+          <details class="ts-item" id="ts-inv-different-number">
+            <summary>The saved invoice got a different number from the one first shown</summary>
+            <div class="ts-body"><p class="ts-cause">Someone else raised a document while your dialog was open, so the number moved up at save — both documents got unique numbers.</p><p>Nothing to fix: the toast ("Invoice … saved.") always states the final number.</p></div>
+          </details>
+          <details class="ts-item" id="ts-inv-net-locked">
+            <summary>The Net (£) box is greyed out</summary>
+            <div class="ts-body"><p class="ts-cause">Line items are present — Net is the sum of the lines.</p><p>Edit the line amounts, or remove all lines (the × on each) to type Net directly.</p></div>
+          </details>
+          <details class="ts-item" id="ts-inv-no-doc-icon">
+            <summary>A row has no document icon, so there's no PDF to print</summary>
+            <div class="ts-body"><p class="ts-cause">The row was imported from the old workbook — the app didn't produce its document, so it can't reproduce it.</p><p>Find the original PDF in your SharePoint filing. Documents raised in the app always have the icon.</p></div>
+          </details>
+          <details class="ts-item" id="ts-inv-allocating">
+            <summary>The number field says "Allocating…" and Save is disabled</summary>
+            <div class="ts-body"><p class="ts-cause">The register scan hasn't come back yet — slow connection, or a very large register.</p><p>Wait a few seconds, or type a number manually.</p></div>
+          </details>
+          <details class="ts-item" id="ts-inv-issue-failed">
+            <summary>"Failed to issue — nothing was written. Try again."</summary>
+            <div class="ts-body"><p class="ts-cause">Issuing a draft didn't complete — the draft is untouched.</p><p>Click <span class="ui">Issue</span> again: no number was used and no document was created, so there's nothing to clean up.</p></div>
+          </details>
+          <details class="ts-item" id="ts-inv-draft-no-email">
+            <summary>A coordinator raised a draft but no email reached the office</summary>
+            <div class="ts-body"><p class="ts-cause">No "Draft notifications email" is set in Settings, so the notification was skipped.</p><p>Set the address in <span class="path">Settings → Bank &amp; document text → Draft notifications email</span>. The draft itself always appears in the Draft documents panel regardless.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="documents" aria-labelledby="documents-h">
+        <h2 id="documents-h">Printing, emailing and filing documents<a class="anchor-link" href="#documents" aria-label="Link to this section">#</a></h2>
+        <p>Every document raised in the app opens in a PDF preview — click the document icon on any register row, or <span class="ui">Preview PDF</span> inside a dialog. From the preview you can <span class="ui">Print</span>, <span class="ui">Download PDF</span>, <span class="ui">Email…</span> the client, or <span class="ui">File to SharePoint</span>.</p>
+
+        <h3 id="documents-email">Emailing a document to the client<a class="anchor-link" href="#documents-email" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Open the document preview and click <span class="ui">Email…</span>.</li>
+          <li>Check the <span class="ui">To</span> address — pre-filled from the client record where known.</li>
+          <li>Optionally add a <span class="ui">Message</span>, which is included in the email.</li>
+          <li>Click <span class="ui">Send</span>. The client gets a branded email under your company name with a download button (the link lasts 7 days), and the send is stamped on the record — hover <span class="ui">Email…</span> later to see "Last emailed to … on …".</li>
+        </ol>
+
+        <h3 id="documents-sharepoint">Filing to SharePoint<a class="anchor-link" href="#documents-sharepoint" aria-label="Link to this section">#</a></h3>
+        <p>With a SharePoint site name set in Settings, <span class="ui">File to SharePoint</span> drops the finished PDF into the right folder automatically — invoices into "Invoices <em>year</em>", credit notes into "Credit Notes <em>year</em>", and so on under "Quotes, Contracts &amp; Invoices". Once filed, the button reads <span class="ui">Re-file</span>; re-filing after an edit deliberately overwrites the earlier PDF of the same name.</p>
+
+        <h3 id="documents-branding">Your branding on the documents<a class="anchor-link" href="#documents-branding" aria-label="Link to this section">#</a></h3>
+        <p>Company details, bank details, logo and footer text on every PDF come from Settings. Before issuing your first real document, open <span class="path">Account → Document samples</span> and click through the <span class="ui">Invoice</span>, <span class="ui">Credit Note</span>, <span class="ui">Proforma</span> and <span class="ui">Application</span> tabs — the samples print with exactly the details real documents will use, without creating anything. Anything wrong or missing is fixed under <span class="path">Settings → Company details (documents)</span> and <span class="path">Settings → Bank &amp; document text</span>.</p>
+
+        <h3 id="documents-fix">If something's not right<a class="anchor-link" href="#documents-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-doc-email-failed">
+            <summary>"Failed to send the email. The document was NOT sent."</summary>
+            <div class="ts-body"><p class="ts-cause">The email service call failed — nothing reached the client.</p><p>Try again; if it keeps failing, use <span class="ui">Download PDF</span> and send it from your own email.</p></div>
+          </details>
+          <details class="ts-item" id="ts-doc-sp-not-configured">
+            <summary>"SharePoint filing is not configured — set the SharePoint site name in Settings."</summary>
+            <div class="ts-body"><p class="ts-cause">No SharePoint site name has been saved in your company settings.</p><p>An administrator sets it in Settings. Until then, use <span class="ui">Download PDF</span> and file manually.</p></div>
+          </details>
+          <details class="ts-item" id="ts-doc-sp-failed">
+            <summary>"SharePoint filing failed… Check the folder exists."</summary>
+            <div class="ts-body"><p class="ts-cause">The year folder (e.g. "Invoices 2026") doesn't exist in SharePoint yet, or the upload was rejected.</p><p>Create the folder in SharePoint under "Quotes, Contracts &amp; Invoices", then click <span class="ui">Re-file</span>.</p></div>
+          </details>
+          <details class="ts-item" id="ts-doc-no-logo">
+            <summary>The PDF generates without your logo</summary>
+            <div class="ts-body"><p class="ts-cause">The "Logo image URL" in Settings is blank, broken, or its host blocks image use.</p><p>Documents generate fine without a logo. To fix it, update <span class="ui">Logo image URL</span> in Settings to a working, publicly reachable image address.</p></div>
+          </details>
+          <details class="ts-item" id="ts-doc-generate-failed">
+            <summary>"Could not generate the document."</summary>
+            <div class="ts-body"><p>Close and reopen the preview. If it persists, check the record for unusual data and email Peter with the document number.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="proformas-applications" aria-labelledby="proformas-applications-h">
+        <h2 id="proformas-applications-h">Proformas and applications for payment<a class="anchor-link" href="#proformas-applications" aria-label="Link to this section">#</a></h2>
+        <p>Both live on the <strong>Proformas/Applications</strong> page, and both ask for money before a VAT invoice exists — but they're different animals. A <strong>proforma</strong> is a letterhead-style request, typically for a deposit before works start, that later converts into an invoice. An <strong>application for payment</strong> is the QS-style staged claim used on contract work — numbered per contract (App 1, 2, 3…) with Tender / Previous / Current columns — which is <em>certified</em> into a Payment Certificate / VAT Invoice when the money is agreed.</p>
+        <figure class="guide-shot">
+          <a class="shot-link" href="img/shots/crewqci-proformas.webp"><img class="feature-shot" src="img/shots/crewqci-proformas.webp" width="1400" height="470" loading="lazy" alt="CrewQCI's proformas and applications register: four documents, two of them numbered applications against the same contract, with totals, amounts owing and one converted through to its invoice"></a>
+          <figcaption>The shared register — statuses run Draft, Open, Converted (green) and Dead (grey).</figcaption>
+        </figure>
+
+        <h3 id="proforma-raise">Raising a proforma<a class="anchor-link" href="#proforma-raise" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Click <span class="ui">New Proforma</span> — the number fills in automatically (proformas and applications share their own sequence, separate from invoices).</li>
+          <li>Fill the required fields: <span class="ui">Client</span>, <span class="ui">Contract no.</span>, <span class="ui">Prepared by</span>, and a Net (or add line items — Description of works, Area/Qty, Rate, Total).</li>
+          <li>Optionally set <span class="ui">Work due for completion</span> and the printed <span class="ui">Terms paragraph</span> (e.g. "Terms net — 50% to be received prior to works commencing…").</li>
+          <li><span class="ui">Preview PDF</span> to check the letterhead, then <span class="ui">Save proforma</span> — it joins the register as <span class="ui">Open</span>.</li>
+        </ol>
+
+        <h3 id="application-raise">Raising an application for payment<a class="anchor-link" href="#application-raise" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Click <span class="ui">New Application</span> and fill in <span class="ui">Client</span>, <span class="ui">Contract no.</span> and <span class="ui">Prepared by</span>.</li>
+          <li>Click <span class="ui">Add line</span> under <span class="ui">Application items</span> and fill each row's Tender, Qty, Unit, Previous and Current figures. <span class="step-detail">Net is the sum of the <em>Current</em> column — the amount claimed this application. A live Cumulative figure shows per row.</span></li>
+          <li>Enter any <span class="ui">Less discount (£)</span>, <span class="ui">CIS tax (£)</span>, <span class="ui">Retention (%)</span>, and check the VAT (including <span class="ui">Reverse charge (CIS)</span>).</li>
+          <li>Save. The <span class="ui">App number</span> is allocated automatically — one running sequence per contract.</li>
+        </ol>
+        <p>Payments received before conversion are recorded with the banknote icon, exactly as on invoices — the figures carry onto the invoice when you convert or certify, so an invoice raised after a 50% deposit arrives already Part Paid.</p>
+
+        <h3 id="convert-certify">Converting and certifying<a class="anchor-link" href="#convert-certify" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li><strong>Check the value first.</strong> The invoice is raised at the document's current figures — edit the proforma or application before converting if the final value differs. The confirmation dialog reminds you.</li>
+          <li>Click the green arrow icon on the Open row — <span class="ui">Convert to invoice</span> on a proforma, <span class="ui">Certify — raise Payment Certificate / VAT Invoice</span> on an application.</li>
+          <li>Confirm. The new invoice is dated today and carries over everything: client, site, contacts, terms, figures, the reverse-charge flag, any payments already recorded, and the work dates. The source flips to <span class="ui">Converted</span> with a link to its invoice.</li>
+          <li>If the application held retention, a prompt offers to post it to the Retentions register — or do it later from the Invoicing page.</li>
+        </ol>
+        <p>A proforma that will never be paid is marked dead with the ban icon on its row (<span class="ui">Mark dead</span>) — the row greys out and it can't be converted. The same button, now a circular arrow, reopens it.</p>
+
+        <h3 id="proformas-fix">If something's not right<a class="anchor-link" href="#proformas-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-prof-missing">
+            <summary>"Missing required fields: …"</summary>
+            <div class="ts-body"><p class="ts-cause">One or more required fields is empty — the toast lists which.</p><p>Fill in each listed field (Proforma number, Client, Contract no., Prepared by, and a Net greater than zero) and save again.</p></div>
+          </details>
+          <details class="ts-item" id="ts-prof-dead">
+            <summary>"This proforma is marked dead."</summary>
+            <div class="ts-body"><p class="ts-cause">Dead proformas can't be converted.</p><p>Click the circular-arrow <span class="ui">Reopen</span> button on the row first, then convert.</p></div>
+          </details>
+          <details class="ts-item" id="ts-prof-retention-failed">
+            <summary>"Couldn't post the retention — post it from the Invoicing page."</summary>
+            <div class="ts-body"><p class="ts-cause">The certificate was raised fine, but the retention record didn't save.</p><p>On the Invoicing page, find the new certificate row and use the shield icon or the <span class="ui">Post</span> button in the Click to Post column.</p></div>
+          </details>
+          <details class="ts-item" id="ts-prof-convert-failed">
+            <summary>"Convert failed."</summary>
+            <div class="ts-body"><p>Before retrying, check whether the invoice already appeared on the Invoicing page — so you don't raise it twice.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="retentions" aria-labelledby="retentions-h">
+        <h2 id="retentions-h">Retentions<a class="anchor-link" href="#retentions" aria-label="Link to this section">#</a></h2>
+        <p>The Retentions page tracks money your clients hold back from invoices until the end of a defects period. Every retention that hasn't been fully returned is listed with the amount held, anything already returned, what's still outstanding, and the date it falls due — counting down in front of you.</p>
+        <figure class="guide-shot">
+          <a class="shot-link" href="img/shots/crewqci-retentions.webp"><img class="feature-shot" src="img/shots/crewqci-retentions.webp" width="1400" height="450" loading="lazy" alt="CrewQCI's retentions register: four retentions with the invoice they came from, amount held, due date and a days countdown, one overdue in red and one due soon in amber"></a>
+          <figcaption>Red = overdue, amber = due within 30 days, green = not yet due. A purple "Part returned" chip marks partial returns.</figcaption>
+        </figure>
+
+        <h3 id="retentions-post">Getting a retention onto the register<a class="anchor-link" href="#retentions-post" aria-label="Link to this section">#</a></h3>
+        <p>This is the one thing that catches people out: <strong>entering a retention on an invoice does not list it here.</strong> The Retentions page shows <em>posted</em> retentions. Post one in any of three ways:</p>
+        <ol class="step-list">
+          <li>Accept the prompt when saving the invoice — "Post retention of £X to the Retentions register?" — by clicking <span class="ui">Post retention</span>.</li>
+          <li>Or later, click the shield icon (<span class="ui">Post retention</span>) on the invoice's row on the Invoicing page.</li>
+          <li>Or use the <span class="ui">Click to Post</span> column there — it reads <span class="ui">Post</span> when unposted, <span class="ui">Posted</span> when up to date, and <span class="ui">Click to update</span> if the invoice's retention figures have changed since posting.</li>
+        </ol>
+
+        <h3 id="retentions-return">Recording a retention coming back<a class="anchor-link" href="#retentions-return" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Find the row and click <span class="ui">Return</span>. The dialog shows "Held £X · outstanding £Y".</li>
+          <li><span class="ui">Amount to return (£)</span> is pre-filled with the full outstanding balance. Leave it for a full return, or type less for a part return — the dialog warns "Part return — £X stays outstanding on the register."</li>
+          <li>Set the <span class="ui">Date</span> (defaults to today) and click <span class="ui">Return in full</span> or <span class="ui">Record part return</span>.</li>
+        </ol>
+        <p>A full return stamps the returned date on the source invoice too, and the row leaves the page. A part return keeps the row listed with a purple <span class="ui">Part returned</span> chip and updates the figures. Either way an audit line is added to the notes, and the app-wide Undo can reverse a slip.</p>
+        <div class="callout"><strong>Where did a returned retention go?</strong>Fully returned retentions leave this page by design. Their history lives in <span class="path">Reports → Retention Register</span> with the Status filter set to <span class="ui">Returned</span> or <span class="ui">All</span>.</div>
+
+        <h3 id="retentions-fix">If something's not right<a class="anchor-link" href="#retentions-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-ret-not-listed">
+            <summary>A retention entered on an invoice isn't on the Retentions page</summary>
+            <div class="ts-body"><p class="ts-cause">It hasn't been posted — the page only shows posted retentions.</p><p>On the Invoicing page, click <span class="ui">Post</span> in the invoice's Click to Post column, or the shield icon on its row.</p></div>
+          </details>
+          <details class="ts-item" id="ts-ret-too-much">
+            <summary>The return dialog won't accept the amount ("More than the outstanding amount.")</summary>
+            <div class="ts-body"><p class="ts-cause">The amount is zero, blank, or larger than what's still outstanding.</p><p>Enter an amount greater than £0 and no more than the outstanding figure shown at the top of the dialog.</p></div>
+          </details>
+          <details class="ts-item" id="ts-ret-no-ageing">
+            <summary>A retention shows no countdown or ageing</summary>
+            <div class="ts-body"><p class="ts-cause">It has no due date recorded, so it can't be aged — it's counted as not yet due.</p><p>Add the retention due date on the source invoice, then click <span class="ui">Click to update</span> in the invoice's Click to Post column to refresh the posted record.</p></div>
+          </details>
+          <details class="ts-item" id="ts-ret-predates">
+            <summary>"Invoice N predates the QCI system — its document lives in the SharePoint filing."</summary>
+            <div class="ts-body"><p class="ts-cause">The retention's invoice was imported from the old workbook, so there's no in-app PDF.</p><p>Find the original document in your SharePoint filing — nothing is wrong with the retention record itself.</p></div>
+          </details>
+        </div>
+      </section>
+      <section id="credit-control" aria-labelledby="credit-control-h">
+        <h2 id="credit-control-h">Credit control: how chasing works<a class="anchor-link" href="#credit-control" aria-label="Link to this section">#</a></h2>
+        <p>Credit Control is where the money gets collected. Every open invoice ages from its due date and climbs a <strong>chase ladder</strong> you control — out of the box: a friendly reminder 7 days <em>before</em> it falls due, a note on the day, a first chaser at 7 days over, a second at 21, and a final notice at 45. A client gets <strong>one email per run</strong>, at the most severe stage they've reached, under your company name. Everything is driven straight from the invoice register, so the figure on screen is always the figure in the email.</p>
+        <p>The page has six tabs — <span class="ui">Chasing</span>, <span class="ui">Statements</span>, <span class="ui">Retentions</span>, <span class="ui">Thank yous</span>, <span class="ui">Credit Limits</span> and <span class="ui">Settings</span> — with the total overdue figure and today's queue count always in the header. It's an admin area: Admin and Super Admin tiers only.</p>
+        <figure class="guide-shot">
+          <a class="shot-link" href="img/shots/crewqci-chasing.webp"><img class="feature-shot" src="img/shots/crewqci-chasing.webp" width="1400" height="860" loading="lazy" alt="CrewQCI's chasing queue: an aged debt summary, then four clients due a chaser with their stage, days overdue and amount, one held back because they promised to pay"></a>
+          <figcaption>The Chasing tab — the queue, each client's stage, and hold reasons written on the row.</figcaption>
+        </figure>
+
+        <h3 id="chasing-queue">Reading the queue<a class="anchor-link" href="#chasing-queue" aria-label="Link to this section">#</a></h3>
+        <p>Aged debt tiles run across the top — Not yet due, 1–30, 31–60, 61–90 and 90+ days — and clicking one filters the queue to clients with money in that band. Each row shows the client, their <strong>stage</strong> (green = Friendly, amber = Firm, red = Final — the same colour appears on the email itself), how overdue, the amount this email chases, and their whole balance. Under the name: their Sage code, the address the chaser will go to, and the invoice numbers being chased.</p>
+        <p>An amber <span class="ui">paused</span> badge means the client is due a chaser but is deliberately held back, with the reason written on the row: "Promised payment by …", "Chasing paused — in dispute", "Balance below the £50.00 chase threshold", "Chased 3 days ago — minimum gap is 7 days", or "No accounts email on the client record". Sending by hand overrides every hold <em>except</em> a missing email address and test mode.</p>
+
+        <h3 id="chasing-send">Sending chasers<a class="anchor-link" href="#chasing-send" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Click the eye icon on a row (<span class="ui">Read the email before it goes</span>) — the preview shows the To address, subject and the exact email.</li>
+          <li>Click <span class="ui">Send now</span> — or, for a batch, tick clients and click <span class="ui">Send N chasers</span>. <span class="step-detail">The toast reports the outcome per client: "5 sent, 1 skipped, 1 failed".</span></li>
+          <li>Or let the automatic morning run do it — see <a href="#chase-settings">switching it on safely</a>.</li>
+        </ol>
+        <p>The <span class="ui">Dry run</span> button asks what today's automatic run would do — "would send N chasers covering £X, hold back N, and send N statements" — without sending a thing. The <span class="ui">History</span> button shows the audit trail: every email Sent (green), Test (blue), Failed (red) or Skipped (grey), so "why didn't this client get chased?" is always answerable.</p>
+
+        <h3 id="chasing-client">One client's credit record<a class="anchor-link" href="#chasing-client" aria-label="Link to this section">#</a></h3>
+        <p>Click a client's name in the queue to open their full picture — outstanding, overdue, credit on account, and every open invoice with the ones that can't be chased greyed out with the reason. Four controls live here:</p>
+        <ul>
+          <li><span class="ui">Accounts email</span> — where chasers and statements go (several addresses separated by semicolons; blank falls back to the client's main email).</li>
+          <li><span class="ui">Promised payment date</span> — chasing pauses until the day after. If they miss it, chasing resumes automatically.</li>
+          <li><span class="ui">Hold all chasing</span> — for disputes or instalment plans, with a recorded reason. They stay on statements and on the page; nothing sends automatically.</li>
+          <li><span class="ui">Credit control notes</span> — the last conversation, who to speak to, portal references.</li>
+        </ul>
+
+        <h3 id="chasing-fix">If something's not right<a class="anchor-link" href="#chasing-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-chase-not-in-queue">
+            <summary>An invoice never appears in the chasing queue</summary>
+            <div class="ts-body"><p class="ts-cause">It may have no due date and no usable payment terms, be marked Disputed, fall before the chase start date, or have already had its chaser at the current stage.</p><p>Click the client's name to open their ledger — excluded invoices are greyed with the exact reason ("Disputed", "No due date", "Due before the … chase start date").</p></div>
+          </details>
+          <details class="ts-item" id="ts-chase-unsigned">
+            <summary>"Set a sender name … before sending — a chaser must not go out unsigned."</summary>
+            <div class="ts-body"><p class="ts-cause"><span class="ui">From name</span> and <span class="ui">Reply-to address</span> are required before any email can leave.</p><p>Fill both in under <span class="path">Settings → Who it comes from</span>, save, and send again.</p></div>
+          </details>
+          <details class="ts-item" id="ts-chase-log-unreadable">
+            <summary>"The chase history could not be read, so nothing was sent…"</summary>
+            <div class="ts-body"><p class="ts-cause">The chase log is the safety interlock that stops the same chaser going twice — if it can't be read, all sending is refused rather than risk repeating one.</p><p>This is a setup-level issue: contact whoever administers your installation, then retry. The page still displays; only sending is blocked.</p></div>
+          </details>
+          <details class="ts-item" id="ts-chase-nothing-sent">
+            <summary>"Nothing was sent." after a batch send</summary>
+            <div class="ts-body"><p class="ts-cause">Every selected client was skipped — usually because the queue moved on since the page loaded (the server re-checks at send time).</p><p>Click <span class="ui">Refresh</span> and read the per-client messages in the toasts.</p></div>
+          </details>
+          <details class="ts-item" id="ts-chase-no-email-warning">
+            <summary>"N overdue clients with no email address"</summary>
+            <div class="ts-body"><p class="ts-cause">That money can't be chased until an address is on file.</p><p>Click each client's name and fill in their <span class="ui">Accounts email</span>.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="chase-settings" aria-labelledby="chase-settings-h">
+        <h2 id="chase-settings-h">Switching credit control on safely<a class="anchor-link" href="#chase-settings" aria-label="Link to this section">#</a></h2>
+        <p>Letting software email your customers about money is a big step, so the safeguards came first — nothing is sent automatically until the master switch is on, and you can prove the whole setup to yourself before a single client hears from it. The recommended order:</p>
+        <ol class="step-list">
+          <li>Under <span class="path">Settings → Who it comes from</span>, fill in <span class="ui">From name</span> and <span class="ui">Reply-to address</span> — nothing sends until both are set.</li>
+          <li>Put your own address in <span class="ui">Test address</span>. From now on <em>every</em> chaser and statement is redirected to you and logged as a Test — nothing can reach a client while it's set.</li>
+          <li>On the Chasing tab, press <span class="ui">Dry run</span> to see exactly what today's run would do.</li>
+          <li>Set the <span class="ui">Chase start date</span> to your switchover day. Invoices due before it are never chased automatically — so turning it on doesn't fire final notices at your entire back book. <span class="step-detail">That older debt stays visible on the page and on statements, to be dealt with by hand.</span></li>
+          <li>Read a few emails with the eye icon and send one or two to yourself.</li>
+          <li>Fill in accounts emails for any clients flagged in the "no email address" warning.</li>
+          <li>Tick <span class="ui">Send chasers automatically</span> and save, leaving the test address in place for a few days — the daily summary email shows what would have gone.</li>
+          <li>Clear the <span class="ui">Test address</span> and save. That's go-live.</li>
+        </ol>
+        <div class="callout"><strong>Sent once, guaranteed</strong>Every email is written to a log, and that log is what stops a stage firing twice. Emails sent in test mode don't count as "chased" — once live, those invoices still get their real chaser. And an invoice arriving already 90 days overdue gets <em>one</em> final notice, not the whole ladder in reverse.</div>
+
+        <h3 id="chase-rules">The rules and the ladder<a class="anchor-link" href="#chase-rules" aria-label="Link to this section">#</a></h3>
+        <p>The <span class="ui">Rules</span> card sets the guard-rails: minimum balance to chase, minimum days between chasers (7 by default), <span class="ui">Weekdays only</span>, how many invoice copies to attach per chaser, <span class="ui">Leave disputed invoices alone</span>, <span class="ui">Exclude retention from the chased amount</span> ("retention is not due until its release date — chasing it is what annoys a quantity surveyor"), and a <span class="ui">Never chase these clients</span> list.</p>
+        <p>The <span class="ui">Chase ladder</span> itself is fully editable: each stage has a name, its timing in days relative to the due date (negative = before it falls due), a tone (Friendly / Firm / Final), subject, opening and closing paragraphs, an on/off switch, and an optional attached statement. Placeholders like <span class="ui">{client}</span>, <span class="ui">{total}</span>, <span class="ui">{count}</span> and <span class="ui">{oldestDays}</span> fill in automatically — with grammar helpers so the wording reads right for one invoice or several.</p>
+        <p>The <span class="ui">Who it comes from</span> card carries the sign-off (name, title, phone), an internal copy address, the <span class="ui">Daily run summary to</span> address, and small print for the foot of every email.</p>
+
+        <h3 id="daily-run">The automatic morning run<a class="anchor-link" href="#daily-run" aria-label="Link to this section">#</a></h3>
+        <p>Once live, a scheduled early-morning job does the whole round: one chaser per client at their most severe pending stage (worst debt first), the monthly statements on or after the configured day, retention release requests, and thank-yous — then emails the office a one-line summary like "5 chasers (£12,340), 3 held back, 0 failed, 12 statements". <span class="ui">Weekdays only</span> holds back chasers at the weekend but never the statements (month-end on a Saturday still runs) or thank-yous. Per-run caps keep it civilised; anything over the cap is picked up next morning, and nothing is ever lost or sent twice.</p>
+
+        <h3 id="chase-settings-fix">If something's not right<a class="anchor-link" href="#chase-settings-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-cc-off-banner">
+            <summary>"Automatic chasing is switched off — nothing goes out on its own."</summary>
+            <div class="ts-body"><p class="ts-cause">The master switch <span class="ui">Send chasers automatically</span> is off. That's the safe default, not a fault.</p><p>Everything on the page still works by hand. Turn the switch on under the Settings tab when you're ready — ideally following the go-live order above.</p></div>
+          </details>
+          <details class="ts-item" id="ts-cc-no-summary">
+            <summary>No daily summary email arrives</summary>
+            <div class="ts-body"><p class="ts-cause">Either <span class="ui">Daily run summary to</span> is blank, or nothing at all happened that day — quiet days genuinely send no summary.</p><p>Set an address under <span class="path">Settings → Who it comes from</span>.</p></div>
+          </details>
+          <details class="ts-item" id="ts-cc-never-chase-missed">
+            <summary>A client on the "Never chase" list still got chased</summary>
+            <div class="ts-body"><p class="ts-cause">The name typed didn't match any name the account answers to.</p><p>Names match the forgiving way credit limits match them — aliases, "&amp;" vs "and", company suffixes all count — but check the spelling against the client record and its aliases.</p></div>
+          </details>
+          <details class="ts-item" id="ts-cc-first-run">
+            <summary>Red warning: "N clients would go straight to a final notice."</summary>
+            <div class="ts-body"><p class="ts-cause">Nothing has been chased from here yet, and some debt is already deep into the ladder.</p><p>Either send those by hand first, or set the <span class="ui">Chase start date</span> so the old debt is left out of automatic chasing.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="statements" aria-labelledby="statements-h">
+        <h2 id="statements-h">Statements of account<a class="anchor-link" href="#statements" aria-label="Link to this section">#</a></h2>
+        <p>A statement lists a client's every open item with a running balance, the aged summary and any unallocated credit notes, on a PDF matching your invoice layout. The monthly run can send them automatically on a day you choose (1–28); the same list is on the <span class="ui">Statements</span> tab for sending by hand.</p>
+        <figure class="guide-shot">
+          <a class="shot-link" href="img/shots/crewqci-statements.webp"><img class="feature-shot" src="img/shots/crewqci-statements.webp" width="1400" height="700" loading="lazy" alt="CrewQCI's statements tab: a note that statements go out on day one of each month, and four client accounts with their open items, overdue amount, balance due and when they were last sent"></a>
+          <figcaption>The Statements tab — who gets one, what they owe, and when they were last sent.</figcaption>
+        </figure>
+        <ol class="step-list">
+          <li>Click the eye icon (<span class="ui">Preview the statement</span>) — the dialog has two tabs, <span class="ui">Statement PDF</span> and <span class="ui">Covering email</span> — then <span class="ui">Print</span>, <span class="ui">Download PDF</span> or <span class="ui">Email statement</span>.</li>
+          <li>For month-end in bulk: tick the clients and click <span class="ui">Send N statements</span> — the button shows the combined balance in brackets as a sanity check before 200 emails leave the building.</li>
+          <li>To schedule it, turn on <span class="ui">Send statements automatically</span> under the Settings tab and pick the <span class="ui">Day of the month</span>.</li>
+        </ol>
+        <div class="callout"><strong>Good to know</strong>The monthly run sends on <em>or after</em> the chosen day — a weekend or a missed morning still catches up — but never sends the same client two statements in one calendar month. A client whose unallocated credit covers their balance is skipped with "Account in credit — nothing owing": sending would ask them to pay a negative number.</div>
+      </section>
+
+      <section id="retention-chasing" aria-labelledby="retention-chasing-h">
+        <h2 id="retention-chasing-h">Retention release requests<a class="anchor-link" href="#retention-chasing" aria-label="Link to this section">#</a></h2>
+        <p>Retention that has passed its release date gets its own tab — deliberately <em>not</em> part of the chase ladder. The client has done nothing wrong, so the email is a level, polite request that repeats gently (at most once per client every 30 days, configurable) until the register records the money returned. Amounts exclude VAT, and part returns are already netted off.</p>
+        <p>Each row lists what a quantity surveyor needs to release the money: the invoice number, the client's purchase order and your contract number. Preview with the eye icon and <span class="ui">Send request</span>, or tick clients and <span class="ui">Send N requests</span> — a manual send deliberately overrides the spacing rule when you need to ask again sooner. Automatic sending has its own switch under the Settings tab.</p>
+      </section>
+
+      <section id="thank-yous" aria-labelledby="thank-yous-h">
+        <h2 id="thank-yous-h">Thank-yous and review requests<a class="anchor-link" href="#thank-yous" aria-label="Link to this section">#</a></h2>
+        <p>The one credit-control email that's good news: a short thank-you to a client who has just cleared their account, sent to the main contact (the person who had the work done) rather than the purchase ledger. Where the throttle allows, it also asks for a Google, Yell or Facebook review while the job is still fresh — a client is thanked every time they pay, but asked for a review at most once every 180 days (configurable), so repeat customers are never pestered.</p>
+        <p>On the <span class="ui">Thank yous</span> tab, a green star in the Review column means this email will ask for a review; a grey crossed star means "asked recently — the thank-you goes without". Several invoices settled in one payment produce one thank-you listing them all, and nothing is ever thanked for twice.</p>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-ty-no-review">
+            <summary>The thank-you goes but never asks for a review</summary>
+            <div class="ts-body"><p class="ts-cause">Either the client was asked within the review interval, <span class="ui">Ask for a review</span> is off, or no review links are filled in — blank links mean no ask, and there are no defaults.</p><p>Under <span class="path">Settings → Thank you &amp; reviews</span>, turn on <span class="ui">Ask for a review</span> and fill in at least one of the Google, Yell or Facebook links.</p></div>
+          </details>
+          <details class="ts-item" id="ts-ty-old-payments">
+            <summary>Old payments from months ago queue up to be thanked</summary>
+            <div class="ts-body"><p class="ts-cause">Invoices settled before payment dates were recorded fall back to an estimated date.</p><p>Set the <span class="ui">Thank-you start date</span> to the day you switch the feature on — invoices settled before it are never thanked for. The <span class="ui">Look back (days)</span> window also limits the reach.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="credit-limits" aria-labelledby="credit-limits-h">
+        <h2 id="credit-limits-h">Credit limits<a class="anchor-link" href="#credit-limits" aria-label="Link to this section">#</a></h2>
+        <p>The <span class="ui">Credit Limits</span> tab sets each client's limit against their live outstanding balance. Limits live on the client records; balances are computed from the invoice register — <strong>net of VAT</strong>, the exposure a credit insurer covers. <span class="ui">Remaining</span> shows red when a client is over their limit and amber when less than 10% is left. A purple CIS badge marks CIS-registered clients.</p>
+        <figure class="guide-shot">
+          <a class="shot-link" href="img/shots/crewqci-credit.webp"><img class="feature-shot" src="img/shots/crewqci-credit.webp" width="1400" height="520" loading="lazy" alt="CrewQCI's credit limits page: a pending credit limit request awaiting a decision, and four client accounts showing outstanding, limit and remaining balance with one over its limit in red"></a>
+          <figcaption>Credit limits — live exposure against the limit, with a pending request awaiting its decision.</figcaption>
+        </figure>
+        <p>Click a row to update or remove a limit, keep <span class="ui">Credit limit notes</span> (insurer decisions, conditions) and attach documents — each shows who added it and when.</p>
+
+        <h3 id="credit-requests">Requests and approvals<a class="anchor-link" href="#credit-requests" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Anyone can raise a request: <span class="ui">Request Limit</span>, pick or type the client, enter the <span class="ui">Limit requested (£)</span>, add notes and attachments, and <span class="ui">Send Request</span>. It's emailed to the credit contacts set in Settings, with a copy to you.</li>
+          <li>Pending requests sit in a rose panel at the top of the tab. An admin (or configured stand-in) clicks <span class="ui">Respond</span> and chooses <span class="ui">Approve</span> (setting the <span class="ui">Limit granted</span>, which may differ from the ask), <span class="ui">With underwriter</span> (keeps it open), or <span class="ui">Decline</span>.</li>
+          <li><span class="ui">Send Decision</span> emails the requester — and an approved limit is written straight onto the client record, so credit checks use it immediately.</li>
+        </ol>
+        <p>Going the other way, the flag icon on a client's row raises a <strong>review request</strong> — "this limit can be reduced or removed". It emails the credit contacts and sits in an amber panel until actioned; <span class="ui">Done in Sage</span> also updates the limit in the app.</p>
+
+        <h3 id="credit-limits-fix">If something's not right<a class="anchor-link" href="#credit-limits-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-cl-mismatch">
+            <summary>The Outstanding here differs from the balance on the Chasing tab</summary>
+            <div class="ts-body"><p class="ts-cause">By design: this tab is net of VAT (insurer exposure); Chasing is gross (what the client actually pays).</p><p>Both are correct — use the figure that matches the conversation you're having.</p></div>
+          </details>
+          <details class="ts-item" id="ts-cl-no-recipients">
+            <summary>"No credit request recipients are configured — set them in Settings."</summary>
+            <div class="ts-body"><p class="ts-cause">Nobody is set up to receive credit limit request emails.</p><p>An admin should add the credit request recipients in Settings. The request itself is saved and still appears in the pending panel.</p></div>
+          </details>
+          <details class="ts-item" id="ts-cl-no-client">
+            <summary>"No client record matches … — the limit will not be recorded against a client."</summary>
+            <div class="ts-body"><p class="ts-cause">The request names a client with no matching record, so the approved limit has nowhere to live.</p><p>Add the client on the Clients page (or add the name as an alias to the right client), then set the limit from the Credit Limits list.</p></div>
+          </details>
+          <details class="ts-item" id="ts-cl-already-decided">
+            <summary>"This request has already been approved/declined by …"</summary>
+            <div class="ts-body"><p class="ts-cause">Two people had the same request open and someone decided it first.</p><p>Nothing to do — the earlier decision stands, and the panel refreshes to show it.</p></div>
+          </details>
+        </div>
+      </section>
+      <section id="clients" aria-labelledby="clients-h">
+        <h2 id="clients-h">The client register<a class="anchor-link" href="#clients" aria-label="Link to this section">#</a></h2>
+        <p>One client register sits behind everything: names, addresses, contacts, credit limits, Sage codes, sectors and the CIS flag. The address on the client record is what prints on invoices, proformas and applications — change it once and every new document uses it. Open the register from the <span class="ui">Clients</span> tile on the Overview, or via <span class="path">Settings → Clients</span>.</p>
+        <figure class="guide-shot">
+          <a class="shot-link" href="img/shots/crewqci-clients.webp"><img class="feature-shot" src="img/shots/crewqci-clients.webp" width="1400" height="500" loading="lazy" alt="CrewQCI's client register: five accounts with Sage codes, sectors, contacts, credit limits and nominal codes, one on hold and one flagged as new"></a>
+          <figcaption>The client register — accounts, codes, limits and flags in one place.</figcaption>
+        </figure>
+
+        <h3 id="clients-add">Adding and editing clients<a class="anchor-link" href="#clients-add" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>Click <span class="ui">New Client</span> (or click any row to edit).</li>
+          <li>Type the <span class="ui">Name</span> — a Sage code is suggested automatically from it (letters and digits, up to 8 characters, unique). Edit it or click <span class="ui">Generate</span> for a fresh one. <span class="step-detail">A red "Already used by another client" warning blocks saving — a clashing code would post invoices to the wrong Sage account.</span></li>
+          <li>Fill in the <span class="ui">Address — one line per printed line</span> (exactly how it prints on documents; the last line is treated as the postcode on Sage exports), contact details and <span class="ui">Credit limit (£)</span>.</li>
+          <li>Tick <span class="ui">CIS registered (reverse charge)</span> for CIS clients — their invoices default to reverse-charge VAT and export with tax code T21.</li>
+          <li>Pick a <span class="ui">Default sector</span> — it also sets the sales nominal code from your sector mapping.</li>
+          <li>Click <span class="ui">Save</span>.</li>
+        </ol>
+        <p>Two flags worth knowing: <span class="ui">Dissolved / no longer trading</span> keeps a dead company on file for history but out of prospecting calls, and <span class="ui">Credit Status</span> records the account's standing (new accounts start at "Needs Checking"). Under <span class="ui">Also invoiced as</span> you can list <strong>aliases</strong> — other names the client is invoiced under — and their activity and balances roll into this one account.</p>
+        <div class="callout"><strong>Renaming is safe</strong>Change a client's name and save — the new name is carried across every linked job, contract, quote, invoice, proforma and lead ("Renamed on 12 linked records."), so nothing drops off as unlinked and the balances stay whole.</div>
+        <p>Click a client's <em>name</em> (rather than the row) for their <strong>activity register</strong> — every issued invoice and credit note since 2025 with live Invoiced, Credited and Outstanding totals, each document number a link to the register.</p>
+
+        <h3 id="clients-unlinked">Unlinked names and new-client requests<a class="anchor-link" href="#clients-unlinked" aria-label="Link to this section">#</a></h3>
+        <p>Type a client name on a contract or invoice that matches no account, and CrewQCI notices. An amber warning triangle appears next to the name wherever it's used; a red panel at the top of the Clients page counts every such name. For each one, either <span class="ui">Link</span> it to an existing account (it becomes an alias, and everything under that name rolls in) or <span class="ui">Set up</span> a new client with the form pre-filled.</p>
+        <p>Raising a <em>contract</em> for an unknown name goes one better: a <strong>new-client request</strong> is raised automatically — a placeholder account is created with the code PENDING and the configured approvers are emailed. On the Clients page, an amber panel lists requests awaiting your <span class="ui">Approve</span> or <span class="ui">Reject</span>; approving emails the setup recipients step-by-step instructions, and the client sits in a grey "awaiting account setup" panel until the real Sage code replaces PENDING.</p>
+        <div class="callout callout-warn"><strong>PENDING blocks exports</strong>A client whose code still says PENDING can't be exported to Sage — and blocks their invoices from the sales export too. Entering the real account code clears both at once.</div>
+
+        <h3 id="clients-fix">If something's not right<a class="anchor-link" href="#clients-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-cli-save-greyed">
+            <summary>Save is greyed out in the client dialog</summary>
+            <div class="ts-body"><p class="ts-cause">Either the <span class="ui">Name</span> is empty, or the Sage code shows "Already used by another client".</p><p>Fill in the name, or change / <span class="ui">Generate</span> the code.</p></div>
+          </details>
+          <details class="ts-item" id="ts-cli-no-approval-email">
+            <summary>New-client approval emails never arrive</summary>
+            <div class="ts-body"><p class="ts-cause">No approval or setup recipients are configured.</p><p>Have an administrator set the new-client approval and setup recipient addresses in the company settings — then use <span class="ui">Resend setup email</span> for anything already approved.</p></div>
+          </details>
+          <details class="ts-item" id="ts-cli-duplicate">
+            <summary>A "new client" already exists under another name</summary>
+            <div class="ts-body"><p class="ts-cause">The same business was typed with a different spelling or trading name.</p><p>In the "awaiting account setup" panel click <span class="ui">Link</span> and pick the real account — the name becomes an alias and the duplicate placeholder is removed, so balances aren't split across two accounts.</p></div>
+          </details>
+          <details class="ts-item" id="ts-cli-no-clients">
+            <summary>"No clients found"</summary>
+            <div class="ts-body"><p>Clear any search text, and untick <span class="ui">Show only clients not yet exported to Sage</span> above the table.</p></div>
+          </details>
+        </div>
+      </section>
+      <section id="reports" aria-labelledby="reports-h">
+        <h2 id="reports-h">Reports<a class="anchor-link" href="#reports" aria-label="Link to this section">#</a></h2>
+        <p>The Reports page is the catalogue: each card opens a full report with filters, key figures, a chart, a sortable table and <span class="ui">PDF</span> / <span class="ui">Excel</span> / <span class="ui">CSV</span> downloads. Every report is calculated from the same engines the credit-control emails use, so a report can never disagree with a chaser that's been sent. Reports are admin-level — Sales and Viewer tiers see "No reports available for your access level."</p>
+        <ul>
+          <li><strong>PDF</strong> — a branded A4 document with your logo and the filters printed on it, for handing over.</li>
+          <li><strong>Excel</strong> — a branded spreadsheet with frozen headers, live totals and a second <em>Basis</em> sheet listing the filters, assumptions and warnings.</li>
+          <li><strong>CSV</strong> — raw machine values (no £ signs, ISO dates) for importing elsewhere, not for reading.</li>
+        </ul>
+        <p>Downloads always match what's on screen, including the sort order. Filters and sorting live in the web address, so a report can be bookmarked or its link shared and it opens exactly the same way. And every report carries a collapsible <span class="ui">How these figures are calculated</span> panel — the same plain-English assumptions print on the PDF and in the Excel Basis sheet, so a figure can go to your accountant with its rules attached.</p>
+
+        <h3 id="report-aged-debtors">Aged Debtors<a class="anchor-link" href="#report-aged-debtors" aria-label="Link to this section">#</a></h3>
+        <p>Who owes you money, how old it is, and who's already being chased — always "as at today". Three <span class="ui">Detail</span> levels: <span class="ui">One line per client</span> (ageing buckets: Not yet due, 1–30, 31–60, 61–90, 90+ days), <span class="ui">Client with invoices</span> (a headline per client with its open invoices beneath), and <span class="ui">Invoice by invoice</span>. Filter the <span class="ui">Ageing</span> (e.g. "90 days and over") and <span class="ui">Chasing</span> ("Being chased" / "Chasing paused").</p>
+        <div class="callout callout-warn"><strong>Mind the basis</strong>Aged Debtors is <strong>gross, including VAT</strong> — the same figure as on client statements. The Retention Register is <strong>ex VAT</strong>, and retention held is already deducted from the amounts owing in Aged Debtors. Never add the two totals together without converting one; every export prints its basis.</div>
+        <p>Unallocated credit notes are listed for reference but never deducted from the totals — a warning calls them out instead. Other warnings flag clients excluded from chasing, missing Sage codes (so you know when it won't reconcile line-for-line with Sage), and invoices whose due date had to be derived from the client's terms.</p>
+
+        <h3 id="report-retention-register">Retention Register<a class="anchor-link" href="#report-retention-register" aria-label="Link to this section">#</a></h3>
+        <p>Retention held against your invoices, when it falls due, and what's already overdue — including, unlike the Retentions page, retentions already returned. The default <span class="ui">Status</span> filter, <span class="ui">Still held</span>, matches the Retentions page exactly; switch to <span class="ui">Returned</span> or <span class="ui">All</span> for the history. Set <span class="ui">Due</span> to <span class="ui">Overdue only</span> to list retention you can now invoice back — the warning line totals it for you.</p>
+
+        <h3 id="reports-fix">If something's not right<a class="anchor-link" href="#reports-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-rep-no-records">
+            <summary>"No records for this period."</summary>
+            <div class="ts-body"><p class="ts-cause">The current filters exclude everything.</p><p>Set the filters back to their "All" options, as the hint suggests.</p></div>
+          </details>
+          <details class="ts-item" id="ts-rep-incomplete">
+            <summary>"A record limit was reached, so this report does not cover every row."</summary>
+            <div class="ts-body"><p class="ts-cause">The data behind the report hit a size cap; exports are stamped "INCOMPLETE".</p><p>Narrow the date range or filters and run it again — don't rely on the totals of an incomplete run.</p></div>
+          </details>
+          <details class="ts-item" id="ts-rep-sage-mismatch">
+            <summary>The Aged Debtors total doesn't match Sage line for line</summary>
+            <div class="ts-body"><p class="ts-cause">Some clients have no Sage account code (a warning counts them), and unallocated credit notes aren't netted off here.</p><p>Add the missing Sage codes on the Clients page, and read the "How these figures are calculated" panel for the netting rules.</p></div>
+          </details>
+          <details class="ts-item" id="ts-rep-no-access">
+            <summary>"You don't have access to this report."</summary>
+            <div class="ts-body"><p class="ts-cause">Your access tier doesn't include it — both current reports are admin-level.</p><p>Ask an administrator to raise your tier, or to run it for you.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="insights" aria-labelledby="insights-h">
+        <h2 id="insights-h">Insights<a class="anchor-link" href="#insights" aria-label="Link to this section">#</a></h2>
+        <p>Insights is the charts page — pipeline, win-rate, invoiced revenue and outstanding balances over the rolling last two years — with the <strong>Overdue invoices</strong> list at the top: colour-banded by age (orange over 15 days, pink over 30, red over 45), most overdue first, each invoice number a link straight to the register. Hover any bar or point for the exact £ figure; each card states the period it covers, and draft documents are excluded from every figure.</p>
+        <figure class="guide-shot">
+          <a class="shot-link" href="img/shots/crewqci-insights.webp"><img class="feature-shot" src="img/shots/crewqci-insights.webp" width="1400" height="900" loading="lazy" alt="CrewQCI's insights screen: quoted, conversion rate, invoiced and outstanding totals, a quoted-versus-won bar chart by month, top sectors by value and an aged debt breakdown"></a>
+          <figcaption>Insights — the charts and the overdue list, straight off the same registers the documents came from.</figcaption>
+        </figure>
+        <p>The charts include lead value and invoiced revenue by lead source, the quotes pipeline by sector, Won vs Lost vs Open, monthly invoiced totals (and this year against last year), and top clients by invoiced value and by outstanding balance — credit notes netted off throughout. A chart showing "No data yet" isn't broken; it fills in as records are added.</p>
+      </section>
+      <section id="sage-export" aria-labelledby="sage-export-h">
+        <h2 id="sage-export-h">Exporting to Sage<a class="anchor-link" href="#sage-export" aria-label="Link to this section">#</a></h2>
+        <p>Two exports keep Sage in step, and both stamp what they've sent so nothing goes twice.</p>
+
+        <h3 id="sage-customers">Customer records (Clients page)<a class="anchor-link" href="#sage-customers" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>On the Clients page, click <span class="ui">Export to Sage</span>. Everything not yet exported with a real code is pre-ticked; tick <span class="ui">Show already exported</span> to re-send a record.</li>
+          <li>Click <span class="ui">Export N</span> — the CSV downloads in Sage's Customer Record FULL layout (account code, name, address split into Sage's columns, contact, credit limit, nominal, tax code T21 for CIS clients, T1 otherwise).</li>
+          <li>Import it with Sage's customer record import. Back in CrewQCI, exported clients show a green tick and the date in the <span class="ui">Exported</span> column.</li>
+        </ol>
+        <p>Clients marked "Skipped — awaiting account code" have a blank or PENDING code and can't be ticked — Sage needs the account reference as its key field. Fix the code and export again.</p>
+
+        <h3 id="sage-sales">Sales invoices (Invoicing page)<a class="anchor-link" href="#sage-sales" aria-label="Link to this section">#</a></h3>
+        <ol class="step-list">
+          <li>On the Invoicing page, click <span class="ui">Sage Export</span>, set the <span class="ui">From</span> / <span class="ui">To</span> dates and leave <span class="ui">Only documents not yet exported</span> ticked for a normal run.</li>
+          <li>Review the list and untick anything to hold back. Check the amber panel for blocked documents — "no matching client record" or "account code missing or still PENDING" — which are left out and resurface automatically once fixed.</li>
+          <li>Click <span class="ui">Export N</span>. The CSV downloads (invoices as SI rows, credit notes as SC; tax codes T1 for VAT, T21 for CIS reverse charge, T0 for zero-rated) and each document is stamped with the export date.</li>
+          <li>Import the CSV into Sage as audit trail transactions — once only.</li>
+        </ol>
+        <p>The nominal code per row comes from the sector's configured code first, then the client's default nominal, then 4000. Drafts never export.</p>
+
+        <h3 id="sage-fix">If something's not right<a class="anchor-link" href="#sage-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-sage-blocked">
+            <summary>"N documents are blocked from this export…"</summary>
+            <div class="ts-body"><p class="ts-cause">The document's client has no matching record, or its account code is blank or still PENDING.</p><p>Add the real account code on the Clients page (or Link the name to the right account), then re-run — blocked documents are never lost, they just wait.</p></div>
+          </details>
+          <details class="ts-item" id="ts-sage-stamp-failed">
+            <summary>"The CSV downloaded but stamping failed…"</summary>
+            <div class="ts-body"><p class="ts-cause">The file was produced, but the exported-date stamps didn't save.</p><p>Import the downloaded CSV into Sage <strong>once only</strong>. The same documents will reappear next run — untick them (or exclude them by date) so Sage doesn't get duplicates. A "Stamping stopped part-way" message works the same and lists exactly which invoice numbers weren't stamped.</p></div>
+          </details>
+          <details class="ts-item" id="ts-sage-empty">
+            <summary>The export dialog lists nothing</summary>
+            <div class="ts-body"><p class="ts-cause">Everything in the window has already been exported, or the dates/search exclude it.</p><p>As the hint says: widen the dates, clear the search, or untick <span class="ui">Only documents not yet exported</span> to re-export.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="settings" aria-labelledby="settings-h">
+        <h2 id="settings-h">Settings, backups and the little helpers<a class="anchor-link" href="#settings" aria-label="Link to this section">#</a></h2>
+        <p>Settings is one page of company-wide configuration, saved all together with the single <span class="ui">Save changes</span> button at the top. It's an admin page (Admin and Super Admin tiers), and saved changes apply across the app immediately.</p>
+        <ul>
+          <li><strong>The dropdown lists</strong> — Sectors, Lead Sources, Payment Terms, Quote Statuses and Sales People. Type a value and press Enter to add; click the × on a tag to remove. These drive the dropdowns across the whole pipeline.</li>
+          <li><strong>Sector nominal codes</strong> — one Sage sales nominal per sector, used when invoices export. A blank sector falls back to the client's default nominal, then 4000.</li>
+          <li><strong>Document settings</strong> — the two cards that print on everything: <span class="ui">Company details (documents)</span> (name, address, VAT/UTR/company registration numbers, registered office, phone, email) and <span class="ui">Bank &amp; document text</span> (bank details, disputes footer, draft notifications email, logo URL, proforma footer lines). Fill these in before issuing documents — blank fields are simply left off.</li>
+          <li><strong>Prospecting</strong> — the reconnection-call options and Monday digest, covered in <a href="#prospecting">Prospecting</a>.</li>
+          <li><strong>Clients</strong> — the card at the top links straight to the client register.</li>
+        </ul>
+
+        <h3 id="backups">Backups<a class="anchor-link" href="#backups" aria-label="Link to this section">#</a></h3>
+        <p>The Backup card on the Settings page takes a complete copy of your company's data — clients, quotes, contracts, invoices, proformas, retentions and credit control — and writes it to <em>your own</em> Google Drive, in a "CrewQCI Backups" folder with one file per table plus a manifest. Nobody else's data is in there, and yours is in nobody else's.</p>
+        <ol class="step-list">
+          <li>Next to <span class="ui">Save backups to:</span>, click <span class="ui">My Google Drive</span>.</li>
+          <li>Click <span class="ui">Connect my Google account</span> and approve in the tab that opens.</li>
+          <li>Click <span class="ui">Back up now</span> and wait for "Backup complete — N records across M tables." The card then shows the last backup date.</li>
+        </ol>
+        <div class="callout"><strong>Make it a habit</strong>Because the backup uses your own Google connection, it can't run on a schedule — put a recurring reminder in your calendar and press <span class="ui">Back up now</span> regularly. The card always shows the last backup date, so a stale backup is visible. If any table can't be read, the backup deliberately writes nothing rather than leave a folder that looks complete but isn't.</div>
+
+        <h3 id="undo">Undo, live updates and what's new<a class="anchor-link" href="#undo" aria-label="Link to this section">#</a></h3>
+        <ul>
+          <li><strong>Undo</strong> — the round dark button fixed at the bottom-left of every screen. Hover it to see what the next undo reverses; click to undo, or open the arrow for "Recent actions — click to undo to here" and roll back several at once. It keeps up to 15 recent actions, newest first — and the history is per browser session, so don't rely on it after a reload.</li>
+          <li><strong>Live updates</strong> — when a colleague records a payment or edits a client, your screen refreshes itself within a moment (politely waiting until you've finished typing). Reports are the one exception: they have their own Refresh button.</li>
+          <li><strong>What's new</strong> — after an update, a "What's new in CrewQCI" popup lists what changed. <span class="ui">Got it</span> dismisses it for good on every device.</li>
+        </ul>
+
+        <h3 id="settings-fix">If something's not right<a class="anchor-link" href="#settings-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-set-backup-forbidden">
+            <summary>"Forbidden" when running a backup</summary>
+            <div class="ts-body"><p class="ts-cause">Backups are restricted to Admin and Super Admin users.</p><p>Ask an administrator to run it.</p></div>
+          </details>
+          <details class="ts-item" id="ts-set-backup-popup">
+            <summary>"Could not open the connection window."</summary>
+            <div class="ts-body"><p class="ts-cause">The browser blocked the Google sign-in tab.</p><p>Allow pop-ups for CrewQCI, then click <span class="ui">Connect my Google account</span> again.</p></div>
+          </details>
+          <details class="ts-item" id="ts-set-backup-refused">
+            <summary>"Backup stopped before writing anything: some of your data could not be read."</summary>
+            <div class="ts-body"><p class="ts-cause">One or more tables failed to download, so no partial backup was written — deliberately.</p><p>Try again; if it persists, email Peter. Nothing misleading was saved to Drive.</p></div>
+          </details>
+          <details class="ts-item" id="ts-set-undo-failed">
+            <summary>"Undo failed — please check the record."</summary>
+            <div class="ts-body"><p class="ts-cause">One of the reversals couldn't be applied — usually the record changed in the meantime.</p><p>Open the record named in the action label and correct it by hand; the remaining history is kept so you can retry the rest.</p></div>
+          </details>
+        </div>
+      </section>
+      <section id="troubleshooting" aria-labelledby="troubleshooting-h">
+        <h2 id="troubleshooting-h">Troubleshooting index<a class="anchor-link" href="#troubleshooting" aria-label="Link to this section">#</a></h2>
+        <p>Every fix in this guide, gathered in one place. Each entry links to the full answer in its chapter — or type what you're seeing into the search box in the contents panel.</p>
+        <h3>Creating your account and signing in</h3>
+        <ul>
+          <li><a href="#ts-login-invalid">"Invalid email or password" when logging in</a></li>
+          <li><a href="#ts-verify-invalid">"Invalid verification code" when registering</a></li>
+          <li><a href="#ts-no-reset-email">No password-reset email arrives</a></li>
+          <li><a href="#ts-reset-link-invalid">"Invalid reset link" or "Failed to reset password"</a></li>
+          <li><a href="#ts-access-restricted">"Access Restricted — you are not registered to use this application"</a></li>
+        </ul>
+        <h3>Your company, the trial and subscribing</h3>
+        <ul>
+          <li><a href="#ts-invited-create">You were invited, but you see "Create your company"</a></li>
+          <li><a href="#ts-already-company">"You already belong to a company"</a></li>
+          <li><a href="#ts-confirming-payment">The page stays on "Confirming your payment…"</a></li>
+          <li><a href="#ts-sub-page-paid">The team keeps seeing the subscription page after paying</a></li>
+        </ul>
+        <h3>Leads</h3>
+        <ul>
+          <li><a href="#ts-leads-save-greyed">The Save button is greyed out in the lead dialog</a></li>
+          <li><a href="#ts-leads-failed-save">"Failed to add lead." / "Failed to save." / "Failed to delete."</a></li>
+          <li><a href="#ts-leads-no-leads">The table says "No leads yet" but leads exist</a></li>
+          <li><a href="#ts-leads-entity">Amber banner: "Couldn't load leads…"</a></li>
+        </ul>
+        <h3>Quotes</h3>
+        <ul>
+          <li><a href="#ts-quotes-complete">"Please complete: …" when saving a quote</a></li>
+          <li><a href="#ts-quotes-allocating">The quote number shows "Allocating…" and stays empty</a></li>
+          <li><a href="#ts-quotes-filtered">Only one quote is showing</a></li>
+          <li><a href="#ts-quotes-failed">"Failed to save quote." / "Failed to delete."</a></li>
+        </ul>
+        <h3>Contracts</h3>
+        <ul>
+          <li><a href="#ts-contracts-amber">A contract row is highlighted amber</a></li>
+          <li><a href="#ts-contracts-value">The contract value keeps showing the quote's figure</a></li>
+          <li><a href="#ts-contracts-save">Save is greyed out in the contract dialog</a></li>
+        </ul>
+        <h3>Prospecting</h3>
+        <ul>
+          <li><a href="#ts-prospecting-no-email">No Monday email arrives</a></li>
+          <li><a href="#ts-prospecting-forbidden">The Test button reports "Forbidden"</a></li>
+          <li><a href="#ts-prospecting-popups">"Allow pop-ups to print the call sheet"</a></li>
+          <li><a href="#ts-prospecting-cap">"Showing the top 200 of N dormant clients"</a></li>
+        </ul>
+        <h3>Invoicing</h3>
+        <ul>
+          <li><a href="#ts-inv-number-in-use">"Invoice number … is already in use."</a></li>
+          <li><a href="#ts-inv-different-number">The saved invoice got a different number from the one first shown</a></li>
+          <li><a href="#ts-inv-net-locked">The Net (£) box is greyed out</a></li>
+          <li><a href="#ts-inv-no-doc-icon">A row has no document icon, so there's no PDF to print</a></li>
+          <li><a href="#ts-inv-allocating">The number field says "Allocating…" and Save is disabled</a></li>
+          <li><a href="#ts-inv-issue-failed">"Failed to issue — nothing was written. Try again."</a></li>
+          <li><a href="#ts-inv-draft-no-email">A coordinator raised a draft but no email reached the office</a></li>
+        </ul>
+        <h3>Printing, emailing and filing documents</h3>
+        <ul>
+          <li><a href="#ts-doc-email-failed">"Failed to send the email. The document was NOT sent."</a></li>
+          <li><a href="#ts-doc-sp-not-configured">"SharePoint filing is not configured — set the SharePoint site name in Settings."</a></li>
+          <li><a href="#ts-doc-sp-failed">"SharePoint filing failed… Check the folder exists."</a></li>
+          <li><a href="#ts-doc-no-logo">The PDF generates without your logo</a></li>
+          <li><a href="#ts-doc-generate-failed">"Could not generate the document."</a></li>
+        </ul>
+        <h3>Proformas and applications for payment</h3>
+        <ul>
+          <li><a href="#ts-prof-missing">"Missing required fields: …"</a></li>
+          <li><a href="#ts-prof-dead">"This proforma is marked dead."</a></li>
+          <li><a href="#ts-prof-retention-failed">"Couldn't post the retention — post it from the Invoicing page."</a></li>
+          <li><a href="#ts-prof-convert-failed">"Convert failed."</a></li>
+        </ul>
+        <h3>Retentions</h3>
+        <ul>
+          <li><a href="#ts-ret-not-listed">A retention entered on an invoice isn't on the Retentions page</a></li>
+          <li><a href="#ts-ret-too-much">The return dialog won't accept the amount ("More than the outstanding amount.")</a></li>
+          <li><a href="#ts-ret-no-ageing">A retention shows no countdown or ageing</a></li>
+          <li><a href="#ts-ret-predates">"Invoice N predates the QCI system — its document lives in the SharePoint filing."</a></li>
+        </ul>
+        <h3>Credit control: how chasing works</h3>
+        <ul>
+          <li><a href="#ts-chase-not-in-queue">An invoice never appears in the chasing queue</a></li>
+          <li><a href="#ts-chase-unsigned">"Set a sender name … before sending — a chaser must not go out unsigned."</a></li>
+          <li><a href="#ts-chase-log-unreadable">"The chase history could not be read, so nothing was sent…"</a></li>
+          <li><a href="#ts-chase-nothing-sent">"Nothing was sent." after a batch send</a></li>
+          <li><a href="#ts-chase-no-email-warning">"N overdue clients with no email address"</a></li>
+        </ul>
+        <h3>Switching credit control on safely</h3>
+        <ul>
+          <li><a href="#ts-cc-off-banner">"Automatic chasing is switched off — nothing goes out on its own."</a></li>
+          <li><a href="#ts-cc-no-summary">No daily summary email arrives</a></li>
+          <li><a href="#ts-cc-never-chase-missed">A client on the "Never chase" list still got chased</a></li>
+          <li><a href="#ts-cc-first-run">Red warning: "N clients would go straight to a final notice."</a></li>
+        </ul>
+        <h3>Thank-yous and review requests</h3>
+        <ul>
+          <li><a href="#ts-ty-no-review">The thank-you goes but never asks for a review</a></li>
+          <li><a href="#ts-ty-old-payments">Old payments from months ago queue up to be thanked</a></li>
+        </ul>
+        <h3>Credit limits</h3>
+        <ul>
+          <li><a href="#ts-cl-mismatch">The Outstanding here differs from the balance on the Chasing tab</a></li>
+          <li><a href="#ts-cl-no-recipients">"No credit request recipients are configured — set them in Settings."</a></li>
+          <li><a href="#ts-cl-no-client">"No client record matches … — the limit will not be recorded against a client."</a></li>
+          <li><a href="#ts-cl-already-decided">"This request has already been approved/declined by …"</a></li>
+        </ul>
+        <h3>The client register</h3>
+        <ul>
+          <li><a href="#ts-cli-save-greyed">Save is greyed out in the client dialog</a></li>
+          <li><a href="#ts-cli-no-approval-email">New-client approval emails never arrive</a></li>
+          <li><a href="#ts-cli-duplicate">A "new client" already exists under another name</a></li>
+          <li><a href="#ts-cli-no-clients">"No clients found"</a></li>
+        </ul>
+        <h3>Reports</h3>
+        <ul>
+          <li><a href="#ts-rep-no-records">"No records for this period."</a></li>
+          <li><a href="#ts-rep-incomplete">"A record limit was reached, so this report does not cover every row."</a></li>
+          <li><a href="#ts-rep-sage-mismatch">The Aged Debtors total doesn't match Sage line for line</a></li>
+          <li><a href="#ts-rep-no-access">"You don't have access to this report."</a></li>
+        </ul>
+        <h3>Exporting to Sage</h3>
+        <ul>
+          <li><a href="#ts-sage-blocked">"N documents are blocked from this export…"</a></li>
+          <li><a href="#ts-sage-stamp-failed">"The CSV downloaded but stamping failed…"</a></li>
+          <li><a href="#ts-sage-empty">The export dialog lists nothing</a></li>
+        </ul>
+        <h3>Settings, backups and the little helpers</h3>
+        <ul>
+          <li><a href="#ts-set-backup-forbidden">"Forbidden" when running a backup</a></li>
+          <li><a href="#ts-set-backup-popup">"Could not open the connection window."</a></li>
+          <li><a href="#ts-set-backup-refused">"Backup stopped before writing anything: some of your data could not be read."</a></li>
+          <li><a href="#ts-set-undo-failed">"Undo failed — please check the record."</a></li>
+        </ul>
+      </section>
+
+      <section id="faq" aria-labelledby="faq-h">
+        <h2 id="faq-h">Questions people ask<a class="anchor-link" href="#faq" aria-label="Link to this section">#</a></h2>
+        <div class="ts-list" id="faq-list">
+          <details class="ts-item faq-q" id="faq-price">
+            <summary>What does CrewQCI cost, and how does the trial work?</summary>
+            <div class="ts-body"><p>Every new company gets 14 days free, started automatically when the company is created — no card details taken. After that it's one subscription for the whole company: £55/month or £550/year (two months free), unlimited users. Nothing is charged until the free period ends.</p></div>
+          </details>
+          <details class="ts-item faq-q" id="faq-users">
+            <summary>How many people can use it?</summary>
+            <div class="ts-body"><p>As many as you like — the price is per company, not per seat. Invite colleagues by email and give each an access tier (<a href="#team-access">who sees what</a>).</p></div>
+          </details>
+          <details class="ts-item faq-q" id="faq-proforma-vs-application">
+            <summary>What's the difference between a proforma and an application for payment?</summary>
+            <div class="ts-body"><p>A proforma is a letterhead-style request for money before a VAT invoice exists — typically a deposit — that converts into a standard invoice. An application for payment is the QS-style staged claim used on contract work, numbered per contract with Tender / Previous / Current columns, certified into a Payment Certificate / VAT Invoice. Both live on the <a href="#proformas-applications">Proformas/Applications page</a>.</p></div>
+          </details>
+          <details class="ts-item faq-q" id="faq-reverse-charge">
+            <summary>How do I handle CIS reverse charge?</summary>
+            <div class="ts-body"><p>Tick <span class="ui">CIS registered (reverse charge)</span> on the client's record once. From then on their documents default to reverse charge: £0 VAT, "REV CHARGE" in place of a VAT figure, the proper HMRC wording printed on the invoice, and tax code T21 on Sage exports.</p></div>
+          </details>
+          <details class="ts-item faq-q" id="faq-two-balances">
+            <summary>Why do two pages show different balances for the same client?</summary>
+            <div class="ts-body"><p>By design. Chasing, statements and Aged Debtors work in <strong>gross</strong> amounts — what the client actually has to pay, including VAT. Credit limits (and the Retention Register) work <strong>net of VAT</strong> — the exposure a credit insurer covers. Use the figure that matches the conversation you're having.</p></div>
+          </details>
+          <details class="ts-item faq-q" id="faq-undo">
+            <summary>I've made a mistake — can I undo it?</summary>
+            <div class="ts-body"><p>Usually, yes. The round <span class="ui">Undo</span> button at the bottom-left of every screen reverses your recent actions, newest first — saves, deletions, credit notes, conversions. It keeps up to 15 actions per browser session, so use it before reloading the page. See <a href="#undo">Undo</a>.</p></div>
+          </details>
+          <details class="ts-item faq-q" id="faq-own-numbers">
+            <summary>Can I use my own document numbers?</summary>
+            <div class="ts-body"><p>Yes — overtype the suggested number in any dialog. A typed number is respected, but refused if it's already in use. Invoices and credit notes share one sequence; proformas and applications share a separate one, and applications also carry a per-contract App number.</p></div>
+          </details>
+          <details class="ts-item faq-q" id="faq-will-it-email-clients">
+            <summary>Will CrewQCI email my clients without me knowing?</summary>
+            <div class="ts-body"><p>Not unless you switch it on. Automatic chasing is off by default; while a test address is set, every email is redirected to you; and the <a href="#chase-settings">go-live checklist</a> lets you prove the whole setup before a single client hears from it. Documents are only ever emailed when you press Send.</p></div>
+          </details>
+          <details class="ts-item faq-q" id="faq-data-out">
+            <summary>Can I get my data out?</summary>
+            <div class="ts-body"><p>Yes. Reports export to PDF, Excel and CSV; the registers export to Sage-ready CSVs; and the <a href="#backups">Backup card</a> writes a complete copy of your company's data — every table plus a manifest — to your own Google Drive.</p></div>
+          </details>
+          <details class="ts-item faq-q" id="faq-crewbook">
+            <summary>We run the whole firm on CrewBook — is this the same QCI?</summary>
+            <div class="ts-body"><p>Yes — CrewBook has the same sales area built in, entered via the QCI logo button, plus extras like draft documents raised from jobs. This guide covers the sales side in full; the <a href="crewbook-guide.html">CrewBook guide</a> covers the rest of the firm.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="get-help" aria-labelledby="get-help-h">
+        <h2 id="get-help-h">Getting help<a class="anchor-link" href="#get-help" aria-label="Link to this section">#</a></h2>
+        <p>Stuck on something this guide doesn't cover, or found a snag? Email <a href="mailto:peter@edwardsapps.co.uk?subject=CrewQCI%20help">peter@edwardsapps.co.uk</a> — you'll be talking to the person who builds CrewQCI, and the answer usually ends up in this guide for the next person. The exact wording of any error message, and the page you were on, make a fix much quicker.</p>
+        <p>The app's own legal pages — Privacy Policy, Terms of Service, Cookie Policy — and the document samples live on the <strong>Account</strong> page, behind the round person icon in the header.</p>
+      </section>
+      </article>
+    </div>
+
+  </main>
+
+  <button class="back-to-top" type="button">↑ Top</button>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="EdwardsApps" width="437" height="68">
+        <p>Practical software for businesses, organisations and everyday life.</p>
+      </div>
+      <nav aria-label="Products">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="crewbook.html">CrewBook</a></li>
+          <li><a href="crewqci.html">CrewQCI</a></li>
+          <li><a href="ourspace.html">OurSpace</a></li>
+          <li><a href="almoner.html">Almoner</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="guides.html">User guides</a></li>
+          <li><a href="services.html">Custom builds</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing</a></li>
+          <li><a href="mailto:peter@edwardsapps.co.uk">peter@edwardsapps.co.uk</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrap">
+      <p class="fineprint">© 2026 EdwardsApps. CrewBook, CrewQCI, OurSpace and Almoner are EdwardsApps products. <a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a>.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/guide.js"></script>
+</body>
+</html>
