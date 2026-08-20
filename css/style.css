@@ -826,6 +826,14 @@ h3 { font-weight: 600; font-size: var(--step-2); }
 }
 .footer-brand img { display: block; height: 26px; width: auto; margin-bottom: 0.9rem; }
 .footer-brand p { color: rgba(255, 255, 255, 0.75); max-width: 34ch; }
+.footer-address {
+  font-style: normal;
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-address a { color: inherit; }
 
 .site-footer h3 {
   font-family: var(--font-body);
