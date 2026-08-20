@@ -775,7 +775,7 @@
           </details>
           <details class="ts-item" id="ts-chase-unsigned">
             <summary>"Set a sender name … before sending — a chaser must not go out unsigned."</summary>
-            <div class="ts-body"><p class="ts-cause"><span class="ui">From name</span> and <span class="ui">Reply-to address</span> are required before any email can leave.</p><p>Fill both in under <span class="path">Settings → Who it comes from</span>, save, and send again.</p></div>
+            <div class="ts-body"><p class="ts-cause">Every email needs a sender identity: the <span class="ui">Reply-to address</span> is always required, and this message appears when the <span class="ui">From name</span> <em>and</em> your company name are both blank, leaving nothing to sign with.</p><p>Fill in the Reply-to address and a From name under <span class="path">Settings → Who it comes from</span> (or set your company name in the document settings), save, and send again.</p></div>
           </details>
           <details class="ts-item" id="ts-chase-log-unreadable">
             <summary>"The chase history could not be read, so nothing was sent…"</summary>
@@ -796,7 +796,7 @@
         <h2 id="chase-settings-h">Switching credit control on safely<a class="anchor-link" href="#chase-settings" aria-label="Link to this section">#</a></h2>
         <p>Letting software email your customers about money is a big step, so the safeguards came first — nothing is sent automatically until the master switch is on, and you can prove the whole setup to yourself before a single client hears from it. The recommended order:</p>
         <ol class="step-list">
-          <li>Under <span class="path">Settings → Who it comes from</span>, fill in <span class="ui">From name</span> and <span class="ui">Reply-to address</span> — nothing sends until both are set.</li>
+          <li>Under <span class="path">Settings → Who it comes from</span>, fill in the <span class="ui">Reply-to address</span> — nothing sends without one — and the <span class="ui">From name</span>. <span class="step-detail">Left blank, the From name falls back to your company name from the document settings; if both are blank, nothing sends.</span></li>
           <li>Put your own address in <span class="ui">Test address</span>. From now on <em>every</em> chaser and statement is redirected to you and logged as a Test — nothing can reach a client while it's set.</li>
           <li>On the Chasing tab, press <span class="ui">Dry run</span> to see exactly what today's run would do.</li>
           <li>Set the <span class="ui">Chase start date</span> to your switchover day. Invoices due before it are never chased automatically — so turning it on doesn't fire final notices at your entire back book. <span class="step-detail">That older debt stays visible on the page and on statements, to be dealt with by hand.</span></li>
@@ -813,7 +813,7 @@
         <p>The <span class="ui">Who it comes from</span> card carries the sign-off (name, title, phone), an internal copy address, the <span class="ui">Daily run summary to</span> address, and small print for the foot of every email.</p>
 
         <h3 id="daily-run">The automatic morning run<a class="anchor-link" href="#daily-run" aria-label="Link to this section">#</a></h3>
-        <p>Once live, a scheduled early-morning job does the whole round: one chaser per client at their most severe pending stage (worst debt first), the monthly statements on or after the configured day, retention release requests, and thank-yous — then emails the office a one-line summary like "5 chasers (£12,340), 3 held back, 0 failed, 12 statements". <span class="ui">Weekdays only</span> holds back chasers at the weekend but never the statements (month-end on a Saturday still runs) or thank-yous. Per-run caps keep it civilised; anything over the cap is picked up next morning, and nothing is ever lost or sent twice.</p>
+        <p>Once live, a scheduled early-morning job does the whole round: one chaser per client at their most severe pending stage (worst debt first), the monthly statements on or after the configured day, retention release requests, and thank-yous — then emails the office a one-line summary like "5 chasers (£12,340), 3 held back, 0 failed, 12 statements". <span class="ui">Weekdays only</span> holds back chasers at the weekend but never the statements (month-end on a Saturday still runs) or thank-yous. Per-run caps keep it civilised — chasers, thank-yous and retention requests over the cap are picked up the next morning, and nothing is ever sent twice. Statements are the one exception: with more than 120 due in a run, the remainder wait for the next month (or send them by hand from the Statements tab).</p>
 
         <h3 id="chase-settings-fix">If something's not right<a class="anchor-link" href="#chase-settings-fix" aria-label="Link to this section">#</a></h3>
         <div class="ts-list">
@@ -859,7 +859,7 @@
 
       <section id="thank-yous" aria-labelledby="thank-yous-h">
         <h2 id="thank-yous-h">Thank-yous and review requests<a class="anchor-link" href="#thank-yous" aria-label="Link to this section">#</a></h2>
-        <p>The one credit-control email that's good news: a short thank-you to a client who has just cleared their account, sent to the main contact (the person who had the work done) rather than the purchase ledger. Where the throttle allows, it also asks for a Google, Yell or Facebook review while the job is still fresh — a client is thanked every time they pay, but asked for a review at most once every 180 days (configurable), so repeat customers are never pestered.</p>
+        <p>The one credit-control email that's good news: a short thank-you when a client settles up — triggered by invoices marked Paid within the look-back window, and sent to the main contact (the person who had the work done) rather than the purchase ledger. Where the throttle allows, it also asks for a Google, Yell or Facebook review while the job is still fresh — a client is thanked every time they pay, but asked for a review at most once every 180 days (configurable), so repeat customers are never pestered.</p>
         <p>On the <span class="ui">Thank yous</span> tab, a green star in the Review column means this email will ask for a review; a grey crossed star means "asked recently — the thank-you goes without". Several invoices settled in one payment produce one thank-you listing them all, and nothing is ever thanked for twice.</p>
         <div class="ts-list">
           <details class="ts-item" id="ts-ty-no-review">

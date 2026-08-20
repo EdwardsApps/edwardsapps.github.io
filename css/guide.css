@@ -360,7 +360,7 @@ h2:hover .anchor-link, h3:hover .anchor-link,
   .guide-shell { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 1.75rem; }
   .guide-toc {
     position: static;
-    max-height: none;
+    max-height: 45vh;
     background: #fff;
     border: 1px solid var(--line);
     border-radius: 12px;
