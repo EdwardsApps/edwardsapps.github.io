@@ -21,13 +21,46 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://edwardsapps.co.uk/#organization",
-    "name": "EdwardsApps",
-    "url": "https://edwardsapps.co.uk/",
-    "logo": "https://edwardsapps.co.uk/img/logo.png",
-    "email": "peter@edwardsapps.co.uk",
-    "founder": { "@type": "Person", "name": "Peter Edwards" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://edwardsapps.co.uk/#organization",
+        "name": "EdwardsApps",
+        "legalName": "EdwardsApps",
+        "url": "https://edwardsapps.co.uk/",
+        "description": "Software built for real working days — CrewBook, CrewQCI, OurSpace and Almoner — or an app shaped around the way your own organisation runs.",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://edwardsapps.co.uk/#logo",
+          "url": "https://edwardsapps.co.uk/img/logo-square.png",
+          "contentUrl": "https://edwardsapps.co.uk/img/logo-square.png",
+          "width": 512,
+          "height": 512,
+          "caption": "EdwardsApps"
+        },
+        "image": { "@id": "https://edwardsapps.co.uk/#logo" },
+        "email": "peter@edwardsapps.co.uk",
+        "telephone": "+44 1296 711248",
+        "areaServed": "GB",
+        "founder": { "@type": "Person", "name": "Peter Edwards" },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "peter@edwardsapps.co.uk",
+          "telephone": "+44 1296 711248",
+          "areaServed": "GB",
+          "availableLanguage": "English"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://edwardsapps.co.uk/#website",
+        "url": "https://edwardsapps.co.uk/",
+        "name": "EdwardsApps",
+        "publisher": { "@id": "https://edwardsapps.co.uk/#organization" },
+        "inLanguage": "en-GB"
+      }
+    ]
   }
   </script>
   <link rel="icon" href="favicon.ico" sizes="32x32">
