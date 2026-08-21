@@ -318,10 +318,12 @@
           <li>Drag a name onto a job — or click several names to select them, then click <span class="ui">+ Add N</span> on the target job. Drag chips <em>between</em> jobs to move people.</li>
           <li>Click a worker's name on their chip to set their <strong>shift</strong> (0, ⅓, ½, 1, 1½, 2), their job order for the day, and the <span class="ui">Driver</span> tick. <span class="step-detail">Shifts drive wages — and a worker on two jobs in one day is split ½ and ½ automatically.</span></li>
         </ol>
+        <div class="callout"><strong>Setting a shift to 0 gives the day back to the other jobs.</strong> If someone was down for two jobs at ½ each and didn't end up going to one, set that one to 0 — the other returns to a full shift on its own, so wages don't pay half a day for a full day's work. Set a third job to 0 and the remaining two go to ½ each. Shifts you've set by hand to 1½ or 2 are never touched.</div>
         <p>Chip colours carry live information: blue = WhatsApp brief sent, green = brief read, amber = the worker has a day status (sick, holiday…) and probably shouldn't be on the job.</p>
 
         <h3 id="day-view-booking">Booking materials, plant and subs<a class="anchor-link" href="#day-view-booking" aria-label="Link to this section">#</a></h3>
         <p>Every material, hired plant item, subcontractor and other cost has a circle icon — click it once the order is actually placed and the chip turns yellow with a tick. The Dashboard's Unbooked Items card is driven by exactly these ticks. Booked material chips grow inline boxes for the order reference and delivered quantities, so tonnages can be trued up after the day. An amber ⚠ triangle on a chip means it carries a note — tap to read it.</p>
+        <p>When you type a supplier name that isn't on file, CrewBook checks for near-misses first — typos, part-names and spacing differences, so "FM Conway" finds "F M Conway Ltd". Any it finds are listed under <span class="ui">Similar suppliers already exist — is it one of these?</span>, and the add button reads <span class="ui">None of these — add "…" as new</span> so you have to mean it. While that list is showing, pressing Enter won't create the supplier. The client name on a job does the same, offering a <span class="ui">Did you mean:</span> row of existing accounts before it raises a new-client request.</p>
         <p>Each job card also carries its <strong>credit status</strong> badge (click to change — Needs Checking, OK, No Credit, Percentage Upfront, Special Authority) and its <strong>invoice status</strong> badge (Not Invoiced red, Draft Raised blue, Invoiced green, Proforma amber) — click it to set the status and which job days it applies to. Both feed the Dashboard's checklists.</p>
 
         <h3 id="day-view-fix">If something's not right<a class="anchor-link" href="#day-view-fix" aria-label="Link to this section">#</a></h3>
@@ -337,6 +339,10 @@
           <details class="ts-item" id="ts-dv-save-failed">
             <summary>"Failed to save — please try again."</summary>
             <div class="ts-body"><p class="ts-cause">A change didn't reach the server; the screen reverts to the previous value so nothing is half-saved.</p><p>Retry once you're connected.</p></div>
+          </details>
+          <details class="ts-item" id="ts-dv-already-on-job">
+            <summary>"[Worker] is already on this job"</summary>
+            <div class="ts-body"><p class="ts-cause">The name was dragged or tapped onto the same job twice — CrewBook refuses the second one rather than showing the worker on the job twice.</p><p>Nothing to fix; the worker is already there. To move them elsewhere, drag their existing chip to the other job.</p></div>
           </details>
         </div>
       </section>
@@ -879,6 +885,7 @@
           <li><a href="#ts-dv-worker-missing">A worker isn't in the Unassigned Workers pool</a></li>
           <li><a href="#ts-dv-plant-red">A plant chip has gone red with "⚠ 3/2"</a></li>
           <li><a href="#ts-dv-save-failed">"Failed to save — please try again."</a></li>
+          <li><a href="#ts-dv-already-on-job">"[Worker] is already on this job"</a></li>
         </ul>
         <h3>The job editor</h3>
         <ul>

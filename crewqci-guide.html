@@ -867,6 +867,8 @@
         <h2 id="thank-yous-h">Thank-yous and review requests<a class="anchor-link" href="#thank-yous" aria-label="Link to this section">#</a></h2>
         <p>The one credit-control email that's good news: a short thank-you when a client settles up — triggered by invoices marked Paid within the look-back window, and sent to the main contact (the person who had the work done) rather than the purchase ledger. Where the throttle allows, it also asks for a Google, Yell or Facebook review while the job is still fresh — a client is thanked every time they pay, but asked for a review at most once every 180 days (configurable), so repeat customers are never pestered.</p>
         <p>On the <span class="ui">Thank yous</span> tab, a green star in the Review column means this email will ask for a review; a grey crossed star means "asked recently — the thank-you goes without". Several invoices settled in one payment produce one thank-you listing them all, and nothing is ever thanked for twice.</p>
+        <div class="callout"><strong>The amount shown is what you received, not what you invoiced.</strong> Retention withheld and any discount taken are deducted, so the figure in the email matches what actually reached the bank. An invoice where nothing was received is left out of the thank-you altogether.</div>
+        <p>Only real payment evidence puts an invoice in the queue: the date it was marked Paid, or failing that the date of the last payment recorded against it. An invoice marked Paid with neither is never thanked for — so editing an old settled invoice, syncing its contract details or adding a note won't drag it back into the list.</p>
         <div class="ts-list">
           <details class="ts-item" id="ts-ty-no-review">
             <summary>The thank-you goes but never asks for a review</summary>
@@ -874,7 +876,7 @@
           </details>
           <details class="ts-item" id="ts-ty-old-payments">
             <summary>Old payments from months ago queue up to be thanked</summary>
-            <div class="ts-body"><p class="ts-cause">Invoices settled before payment dates were recorded fall back to an estimated date.</p><p>Set the <span class="ui">Thank-you start date</span> to the day you switch the feature on — invoices settled before it are never thanked for. The <span class="ui">Look back (days)</span> window also limits the reach.</p></div>
+            <div class="ts-body"><p class="ts-cause">The invoices carry a recent paid date — usually because they were marked Paid in bulk when you started using the feature.</p><p>Set the <span class="ui">Thank-you start date</span> to the day you switch the feature on — invoices settled before it are never thanked for. The <span class="ui">Look back (days)</span> window also limits the reach.</p></div>
           </details>
         </div>
       </section>
@@ -939,6 +941,8 @@
 
         <h3 id="clients-unlinked">Unlinked names and new-client requests<a class="anchor-link" href="#clients-unlinked" aria-label="Link to this section">#</a></h3>
         <p>Type a client name on a contract or invoice that matches no account, and CrewQCI notices. An amber warning triangle appears next to the name wherever it's used; a red panel at the top of the Clients page counts every such name. For each one, either <span class="ui">Link</span> it to an existing account (it becomes an alias, and everything under that name rolls in) or <span class="ui">Set up</span> a new client with the form pre-filled.</p>
+        <p>Before it lets a duplicate through, CrewQCI checks the register for near-misses — typos, part-names and trading-name differences, so "K Dean" finds "Kevin Dean" and "FM Conway" finds "F M Conway Ltd". Where it finds any, a <span class="ui">Did you mean:</span> row of account names appears under the client field; click one to link straight to it. The red panel does the same, offering <span class="ui">Possible match:</span> buttons that open the link flow.</p>
+        <div class="callout"><strong>Why it matters</strong>A duplicate account splits a client's balance and credit exposure across two records, so neither shows the true position and chasing goes to the wrong place. It's far quicker to link the name than to merge the accounts later.</div>
         <p>Raising a <em>contract</em> for an unknown name goes one better: a <strong>new-client request</strong> is raised automatically — a placeholder account is created with the code PENDING and the configured approvers are emailed. On the Clients page, an amber panel lists requests awaiting your <span class="ui">Approve</span> or <span class="ui">Reject</span>; approving emails the setup recipients step-by-step instructions, and the client sits in a grey "awaiting account setup" panel until the real Sage code replaces PENDING.</p>
         <div class="callout callout-warn"><strong>PENDING blocks exports</strong>A client whose code still says PENDING can't be exported to Sage — and blocks their invoices from the sales export too. Entering the real account code clears both at once.</div>
 
@@ -1004,6 +1008,7 @@
       <section id="insights" aria-labelledby="insights-h">
         <h2 id="insights-h">Insights<a class="anchor-link" href="#insights" aria-label="Link to this section">#</a></h2>
         <p>Insights is the charts page — pipeline, win-rate, invoiced revenue and outstanding balances over the rolling last two years — with the <strong>Overdue invoices</strong> list at the top: colour-banded by age (orange over 15 days, pink over 30, red over 45), most overdue first, each invoice number a link straight to the register. Hover any bar or point for the exact £ figure; each card states the period it covers, and draft documents are excluded from every figure.</p>
+        <p>The Client column shows the <strong>account name</strong> from the register, not whatever spelling was typed on the invoice, so the list lines up with the Aged Debtors report and one client never appears as several rows. Where an invoice was raised under an alias, that name follows in smaller text as <em>(inv: …)</em>.</p>
         <figure class="guide-shot">
           <a class="shot-link" href="img/shots/crewqci-insights.webp"><img class="feature-shot" src="img/shots/crewqci-insights.webp" width="1400" height="900" loading="lazy" alt="CrewQCI's insights screen: quoted, conversion rate, invoiced and outstanding totals, a quoted-versus-won bar chart by month, top sectors by value and an aged debt breakdown"></a>
           <figcaption>Insights — the charts and the overdue list, straight off the same registers the documents came from.</figcaption>
