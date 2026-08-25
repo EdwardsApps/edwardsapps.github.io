@@ -363,7 +363,8 @@
         <h3 id="quotes-add">Adding a quote<a class="anchor-link" href="#quotes-add" aria-label="Link to this section">#</a></h3>
         <ol class="step-list">
           <li>Click <span class="ui">Add Quote</span> (top right). The dialog opens with today's date, and <span class="ui">Quote number</span> briefly shows "Allocating…" while the next number in sequence is fetched. <span class="step-detail">It fills in by itself — or you can overtype your own number at any time.</span></li>
-          <li>Complete the required fields (marked *): <span class="ui">Quote number</span>, <span class="ui">Client</span>, <span class="ui">Sector</span>, <span class="ui">Lead source</span>, <span class="ui">Quoted by</span>, <span class="ui">Status</span> and <span class="ui">Value (£)</span> — the value must be greater than zero.</li>
+          <li>Complete the required fields (marked *): <span class="ui">Quote number</span>, <span class="ui">Client</span>, <span class="ui">Sector</span>, <span class="ui">Lead source</span>, <span class="ui">Quoted by</span>, <span class="ui">Status</span> and <span class="ui">Value (£)</span> — the value must be greater than zero. <span class="step-detail">Picking the client from the list links the quote to that account rather than just copying the name, which is what lets the lifetime figures on <a href="#insights">Insights</a> follow the client.</span></li>
+          <li>If the client is already on file and you have worked for them before, <span class="ui">Lead source</span> fills in as <span class="ui">Existing Customer</span> by itself, with a small line beneath saying where they originally came from — "Originally acquired via Google, 2021". <span class="step-detail">Overtype it whenever this particular enquiry came from somewhere else; typing your own choice stops it being changed again.</span></li>
           <li>Optionally add <span class="ui">Site</span>, contact details and <span class="ui">Feedback</span>.</li>
           <li>Click <span class="ui">Save</span>. <span class="step-detail">If anything required is missing, the dialog footer lists it ("Required: …") and the save is refused with "Please complete: …" naming exactly what's needed.</span></li>
         </ol>
@@ -764,7 +765,18 @@
         </ol>
         <p>The <span class="ui">Dry run</span> button asks what today's automatic run would do — "would send N chasers covering £X, hold back N, and send N statements" — without sending a thing. The <span class="ui">History</span> button shows the audit trail: every email Sent (green), Test (blue), Failed (red) or Skipped (grey), so "why didn't this client get chased?" is always answerable.</p>
 
+        <h3 id="chasing-resend">Resending one that bounced<a class="anchor-link" href="#chasing-resend" aria-label="Link to this section">#</a></h3>
+        <p>When a chaser bounces or lands with the wrong person, you don't have to wait for the next stage. Open <span class="ui">History</span> and click the paper-plane icon at the end of any chaser or statement row (<span class="ui">Resend this email — pick or type the address</span>). It appears on reminders and statements that actually went out; skipped rows have nothing to resend.</p>
+        <ol class="step-list">
+          <li>The dialog names the email — the stage and the date it first went — and offers the addresses already known for that client: the <span class="ui">Accounts email on the client record</span> (or <span class="ui">Main email on the client record</span> where no accounts address is set), and <span class="ui">Where it originally went</span>.</li>
+          <li>Or choose <span class="ui">A different address</span> and type one in. <span class="step-detail">Handy when a client tells you over the phone which mailbox their invoices should go to.</span></li>
+          <li>Click <span class="ui">Resend</span>. The toast confirms "Resent to …".</li>
+        </ol>
+        <div class="callout"><strong>It is rebuilt, not replayed</strong>The email goes out with <em>today's</em> figures for the same invoices, not the figures it carried the first time — anything paid since is gone from it. A resend quoting stale numbers is the fastest way to start an argument you didn't need. Test mode still wins: while a test address is set, a resend goes there too, and the toast says "(test mode — redirected)".</div>
+
+
         <h3 id="chasing-client">One client's credit record<a class="anchor-link" href="#chasing-client" aria-label="Link to this section">#</a></h3>
+        <p>The small pencil beside a client's name — in the queue and in the History list alike — opens their client record for editing without leaving the page (<span class="ui">Edit this client — accounts email, notes</span>). It's the quickest way to fix the two things usually wrong when a chaser bounces. Renaming the account from here still carries the new name across their quotes, contracts and invoices, exactly as it does on the Clients page.</p>
         <p>Click a client's name in the queue to open their full picture — outstanding, overdue, credit on account, and every open invoice with the ones that can't be chased greyed out with the reason. Four controls live here:</p>
         <ul>
           <li><span class="ui">Accounts email</span> — where chasers and statements go (several addresses separated by semicolons; blank falls back to the client's main email).</li>
@@ -790,6 +802,14 @@
           <details class="ts-item" id="ts-chase-nothing-sent">
             <summary>"Nothing was sent." after a batch send</summary>
             <div class="ts-body"><p class="ts-cause">Every selected client was skipped — usually because the queue moved on since the page loaded (the server re-checks at send time).</p><p>Click <span class="ui">Refresh</span> and read the per-client messages in the toasts.</p></div>
+          </details>
+          <details class="ts-item" id="ts-resend-nothing-outstanding">
+            <summary>"None of the invoices on that email are still outstanding — there is nothing to resend"</summary>
+            <div class="ts-body"><p class="ts-cause">Every invoice the original chaser listed has since been paid, so rebuilding it with today's figures would produce an empty email.</p><p>Nothing needs chasing on that email. If the client owes money on <em>other</em> invoices, chase them from the queue instead — or use <span class="ui">Send now</span> on their row.</p></div>
+          </details>
+          <details class="ts-item" id="ts-resend-stage-gone">
+            <summary>"The chase stage on that email no longer exists in the settings"</summary>
+            <div class="ts-body"><p class="ts-cause">The chase ladder has been edited since that chaser went out, and the stage it was sent at has been removed.</p><p>Chase the client from the queue at their current stage. Old history rows keep their labels; only resending them needs the stage to still exist.</p></div>
           </details>
           <details class="ts-item" id="ts-chase-no-email-warning">
             <summary>"N overdue clients with no email address"</summary>
@@ -921,6 +941,7 @@
       <section id="clients" aria-labelledby="clients-h">
         <h2 id="clients-h">The client register<a class="anchor-link" href="#clients" aria-label="Link to this section">#</a></h2>
         <p>One client register sits behind everything: names, addresses, contacts, credit limits, Sage codes, sectors and the CIS flag. The address on the client record is what prints on invoices, proformas and applications — change it once and every new document uses it. Open the register from the <span class="ui">Clients</span> tile on the Overview, or via <span class="path">Settings → Clients</span>.</p>
+        <p>Each account also records <strong>how it was originally won</strong>. The <span class="ui">Originally acquired via</span> panel at the bottom of the client dialog shows the source, the date and the quote or lead reference it came from. It is filled in once — from that client’s first quote or lead carrying a real source — and then left alone, because it is the anchor every lifetime figure on <a href="#insights">Insights</a> is measured from. Admins who need to correct it (a mis-keyed first quote, or a backfill that guessed wrong) click <span class="ui">Override</span> to unlock the three fields. Three columns — <span class="ui">Acquired via</span>, <span class="ui">Acquired on</span> and <span class="ui">Acquired ref</span> — are available under <span class="ui">Columns</span>, switched off by default.</p>
         <figure class="guide-shot">
           <a class="shot-link" href="img/shots/crewqci-clients.webp"><img class="feature-shot" src="img/shots/crewqci-clients.webp" width="1400" height="500" loading="lazy" alt="CrewQCI's client register: five accounts with Sage codes, sectors, contacts, credit limits and nominal codes, one on hold and one flagged as new"></a>
           <figcaption>The client register — accounts, codes, limits and flags in one place.</figcaption>
@@ -1007,13 +1028,40 @@
 
       <section id="insights" aria-labelledby="insights-h">
         <h2 id="insights-h">Insights<a class="anchor-link" href="#insights" aria-label="Link to this section">#</a></h2>
-        <p>Insights is the charts page — pipeline, win-rate, invoiced revenue and outstanding balances over the rolling last two years — with the <strong>Overdue invoices</strong> list at the top: colour-banded by age (orange over 15 days, pink over 30, red over 45), most overdue first, each invoice number a link straight to the register. Hover any bar or point for the exact £ figure; each card states the period it covers, and draft documents are excluded from every figure.</p>
+        <p>Insights is the charts page — pipeline, win-rate, invoiced revenue and outstanding balances — with the <strong>Overdue invoices</strong> list at the top: colour-banded by age (orange over 15 days, pink over 30, red over 45), most overdue first, each invoice number a link straight to the register. Hover any bar or point for the exact £ figure, and draft documents are excluded from every figure.</p>
+        <p><strong>One period selector drives the whole page.</strong> Pick <span class="ui">This financial year</span>, <span class="ui">Last financial year</span>, or the last <span class="ui">3</span>, <span class="ui">6</span>, <span class="ui">12</span> or <span class="ui">24</span> months, and every headline figure and chart moves together — no two cards can quietly cover different windows. The line under the heading always says which period you are looking at and what it is compared against. The comparison is like-for-like: the same-length period immediately before, or the same dates a year earlier for a financial year.</p>
+        <p>Four headline figures sit across the top — <span class="ui">Invoiced revenue</span>, <span class="ui">Quotes won</span>, <span class="ui">Average days to pay</span> and <span class="ui">Outstanding today</span> — each with a green or red percentage against the comparison period. Green always means "better", so a <em>fall</em> in days-to-pay shows green.</p>
+        <div class="callout"><strong>"As of today" cards</strong>Two cards deliberately ignore the period selector, because a balance is a snapshot and not a period figure: <span class="ui">Outstanding today</span> and <span class="ui">Top clients by outstanding balance</span>. Both say so on the card.</div>
         <p>The Client column shows the <strong>account name</strong> from the register, not whatever spelling was typed on the invoice, so the list lines up with the Aged Debtors report and one client never appears as several rows. Where an invoice was raised under an alias, that name follows in smaller text as <em>(inv: …)</em>.</p>
         <figure class="guide-shot">
           <a class="shot-link" href="img/shots/crewqci-insights.webp"><img class="feature-shot" src="img/shots/crewqci-insights.webp" width="1400" height="900" loading="lazy" alt="CrewQCI's insights screen: quoted, conversion rate, invoiced and outstanding totals, a quoted-versus-won bar chart by month, top sectors by value and an aged debt breakdown"></a>
           <figcaption>Insights — the charts and the overdue list, straight off the same registers the documents came from.</figcaption>
         </figure>
-        <p>The charts include lead value and invoiced revenue by lead source, the quotes pipeline by sector, Won vs Lost vs Open, monthly invoiced totals (and this year against last year), and top clients by invoiced value and by outstanding balance — credit notes netted off throughout. A chart showing "No data yet" isn't broken; it fills in as records are added.</p>
+        <p>The charts cover invoiced revenue by month (this period against the last), quote outcomes by value, quoted value by sector and by lead source split won/open/lost, top clients by invoiced revenue, and top clients by outstanding balance — credit notes netted off throughout. A chart showing "No data for this period" isn't broken; it fills in as records are added, or when you widen the period.</p>
+
+        <h3 id="insights-attribution">Where the work really came from<a class="anchor-link" href="#insights-attribution" aria-label="Link to this section">#</a></h3>
+        <p>A client’s first job carries its real lead source. Every job after that gets recorded as <span class="ui">Existing Customer</span> — so over time Google, your website and word of mouth all look as though they stopped working, when in fact they are the reason the repeat work exists at all. Insights answers both questions separately, from the same invoices:</p>
+        <ul>
+          <li><strong>Invoiced revenue by enquiry source</strong> — each invoice’s own lead source. This is the familiar view: repeat jobs sit under "Existing Customer".</li>
+          <li><strong>Invoiced revenue by acquisition source — lifetime view</strong> — the same invoices, grouped by how that <em>client</em> was originally won. The two cards total the same figure, and the note on the card says so.</li>
+          <li><strong>New vs repeat business</strong> — a donut splitting the period’s revenue into new, repeat and not-yet-attributed. "Repeat" means the client was won more than 90 days before the invoice.</li>
+          <li><strong>Client cohorts by acquisition year and source</strong> — a full-width table: for everyone won in a given year through a given channel, how many clients, their <em>lifetime</em> invoiced revenue (every invoice on file, not just this period), the average per client, and what share came back for more than one job.</li>
+        </ul>
+        <div class="callout callout-warn"><strong>Attribution has to be filled in first</strong>Until a client has an acquisition source their revenue lands under <span class="ui">Not yet attributed</span>, and the cohort table says how many clients are still waiting. New quotes and leads set it automatically from now on; for the clients already on file, a Super Admin runs the one-off backfill described under <a href="#settings">Settings</a>.</div>
+
+        <h3 id="insights-export">Exporting the page<a class="anchor-link" href="#insights-export" aria-label="Link to this section">#</a></h3>
+        <p><span class="ui">Export</span> (top right, beside <span class="ui">Reports &amp; exports</span>) downloads everything on screen as one Excel workbook — twelve sheets, one per card, built from the very figures already on the page, so the spreadsheet can never disagree with what you were looking at. Each sheet carries the period and comparison period in its subtitle, a filtered header row and a totals row. The file is named for the period, for example <em>Insights — Last 12 months — 2026-08-25.xlsx</em>.</p>
+
+        <div class="ts-list">
+          <details class="ts-item" id="ts-insights-not-attributed">
+            <summary>A large slice of revenue shows as "Not yet attributed"</summary>
+            <div class="ts-body"><p class="ts-cause">Those invoices belong to clients with no acquisition source yet — normal before the one-off backfill has been run, and for any client whose name on the invoice doesn’t match an account in the register.</p><p>Ask a Super Admin to run the acquisition backfill under <a href="#settings">Settings</a>. If a slice remains afterwards it is usually invoices raised under a spelling that isn’t on the client account — add it under <span class="ui">Also invoiced as</span> on that client.</p></div>
+          </details>
+          <details class="ts-item" id="ts-insights-two-source-charts">
+            <summary>The two lead-source charts show different totals</summary>
+            <div class="ts-body"><p class="ts-cause">They are meant to reconcile. When they don’t, some invoices could not be matched to a client account, so their revenue falls into "Not yet attributed" on the lifetime chart while still appearing under its own enquiry source on the other.</p><p>The card’s note prints both totals whenever they differ. Fix the underlying client matching (aliases on the client record) and the two agree again.</p></div>
+          </details>
+        </div>
       </section>
       <section id="sage-export" aria-labelledby="sage-export-h">
         <h2 id="sage-export-h">Exporting to Sage<a class="anchor-link" href="#sage-export" aria-label="Link to this section">#</a></h2>
@@ -1062,7 +1110,18 @@
           <li><strong>Document settings</strong> — the two cards that print on everything: <span class="ui">Company details (documents)</span> (name, address, VAT/UTR/company registration numbers, registered office, phone, email) and <span class="ui">Bank &amp; document text</span> (bank details, disputes footer, draft notifications email, logo URL, proforma footer lines). Fill these in before issuing documents — blank fields are simply left off.</li>
           <li><strong>Prospecting</strong> — the reconnection-call options and Monday digest, covered in <a href="#prospecting">Prospecting</a>.</li>
           <li><strong>Clients</strong> — the card at the top links straight to the client register.</li>
+          <li><strong>Lifetime lead-source attribution — backfill</strong> — a one-off migration, shown to Super Admins only. See below.</li>
         </ul>
+
+        <h3 id="acquisition-backfill">Filling in how existing clients were won<a class="anchor-link" href="#acquisition-backfill" aria-label="Link to this section">#</a></h3>
+        <p>New quotes and leads record how a client was won as they are saved. For the clients already on file, the <span class="ui">Lifetime lead-source attribution — backfill</span> panel works it out from their history: it takes each client’s earliest quote (or earliest lead, if they have no quotes), and if that carries a real source it uses it; if not, it looks for a real source on anything in their first 90 days; and if there still isn’t one, it records <span class="ui">Unknown (pre-app)</span>. Until this has been run, the lifetime views on <a href="#insights">Insights</a> show most revenue as "Not yet attributed".</p>
+        <ol class="step-list">
+          <li>Take a backup first (above) — this writes to every client record that doesn’t already have a source.</li>
+          <li>Click <span class="ui">Dry run</span>. Nothing is written. You get the whole plan: how many clients, quotes and leads were read, how many already have a source, how many would be written and under which source, how each was decided, and a sample of the first forty rows with the reason for each.</li>
+          <li>Read the report. <span class="step-detail">"Quotes / leads not matching any client" counts documents whose name doesn’t match any account — usually a spelling that should be added under <span class="ui">Also invoiced as</span> on the client.</span></li>
+          <li>Click <span class="ui">Write to clients</span> and confirm. It writes in paced batches until nothing remains, then reports "Acquisition backfill complete — N clients written."</li>
+        </ol>
+        <div class="callout"><strong>Safe to run again</strong>A client that already has an acquisition source is never touched, and quotes, leads and invoices are never modified at all. If it stops part-way, just run it again — it picks up where it left off. To correct an individual client afterwards, use <span class="ui">Override</span> on their record in <a href="#clients">the client register</a>.</div>
 
         <h3 id="backups">Backups<a class="anchor-link" href="#backups" aria-label="Link to this section">#</a></h3>
         <p>The Backup card on the Settings page takes a complete copy of your company's data — clients, quotes, contracts, invoices, proformas, retentions and credit control — and writes it to <em>your own</em> Google Drive, in a "CrewQCI Backups" folder with one file per table plus a manifest. Nobody else's data is in there, and yours is in nobody else's.</p>
@@ -1093,6 +1152,10 @@
           <details class="ts-item" id="ts-set-backup-refused">
             <summary>"Backup stopped before writing anything: some of your data could not be read."</summary>
             <div class="ts-body"><p class="ts-cause">One or more tables failed to download, so no partial backup was written — deliberately.</p><p>Try again; if it persists, email Peter. Nothing misleading was saved to Drive.</p></div>
+          </details>
+          <details class="ts-item" id="ts-backfill-no-panel">
+            <summary>There’s no backfill panel on my Settings page</summary>
+            <div class="ts-body"><p class="ts-cause">It is shown to Super Admins only — it rewrites every client record in one go.</p><p>Ask whoever holds the Super Admin tier in your team to run it. Everyone sees the result on <a href="#insights">Insights</a> once it has been.</p></div>
           </details>
           <details class="ts-item" id="ts-set-undo-failed">
             <summary>"Undo failed — please check the record."</summary>
@@ -1183,7 +1246,14 @@
           <li><a href="#ts-chase-unsigned">"Set a sender name … before sending — a chaser must not go out unsigned."</a></li>
           <li><a href="#ts-chase-log-unreadable">"The chase history could not be read, so nothing was sent…"</a></li>
           <li><a href="#ts-chase-nothing-sent">"Nothing was sent." after a batch send</a></li>
+          <li><a href="#ts-resend-nothing-outstanding">"None of the invoices on that email are still outstanding — there is nothing to resend"</a></li>
+          <li><a href="#ts-resend-stage-gone">"The chase stage on that email no longer exists in the settings"</a></li>
           <li><a href="#ts-chase-no-email-warning">"N overdue clients with no email address"</a></li>
+        </ul>
+        <h3>Insights</h3>
+        <ul>
+          <li><a href="#ts-insights-not-attributed">A large slice of revenue shows as "Not yet attributed"</a></li>
+          <li><a href="#ts-insights-two-source-charts">The two lead-source charts show different totals</a></li>
         </ul>
         <h3>Switching credit control on safely</h3>
         <ul>
@@ -1229,6 +1299,7 @@
           <li><a href="#ts-set-backup-forbidden">"Forbidden" when running a backup</a></li>
           <li><a href="#ts-set-backup-popup">"Could not open the connection window."</a></li>
           <li><a href="#ts-set-backup-refused">"Backup stopped before writing anything: some of your data could not be read."</a></li>
+          <li><a href="#ts-backfill-no-panel">There’s no backfill panel on my Settings page</a></li>
           <li><a href="#ts-set-undo-failed">"Undo failed — please check the record."</a></li>
         </ul>
       </section>
