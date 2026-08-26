@@ -362,9 +362,18 @@
           <li><strong>Materials</strong> — orders with supplier, quantity, unit and price; <span class="ui">From Yard</span> for own stock; <span class="ui">Split Load</span> for two materials on one wagon (its charge line is added automatically); delivery times with an auto-fill for multi-load tonnage runs; daywork charges; and a per-item <strong>invoice check</strong> — enter the invoiced figures and the icons tell you green = matches, amber = under, red = over. <span class="ui">Contra Charge</span> records a credit note due from the supplier.</li>
           <li><strong>Hired Plant / Subcontractors</strong> — rates, ordered prices and invoice checks. Setting a hire's from/to dates puts it on every job day it spans; <span class="ui">Invoice logged elsewhere</span> and <span class="ui">Apply invoice to another day?</span> stop a multi-day invoice being counted twice. Ticking <span class="ui">CIS Deductible</span> on a sub shows the 20%-of-labour deduction live.</li>
           <li><strong>Other Costs</strong> — grab lorries, testing, traffic management, drawings, with the same booking and invoice checks.</li>
-          <li><strong>Media</strong> — photos, videos, sign-off sheets and documents uploaded from site; one batch note, category badges, automatic compression, and one summary email per batch to the office. Uploads surface on the Dashboard for a month.</li>
+          <li><strong>Media</strong> — photos, videos, sign-off sheets and documents uploaded from site; notes, category badges, automatic compression, and one summary email per batch to the office. Uploads surface on the Dashboard for a month. See <a href="#job-editor-notes">notes on site photos</a> below.</li>
         </ul>
         <div class="callout"><strong>Cancel, don't delete</strong>A rained-off job should be <em>cancelled</em> (it keeps its record and history, and can be reinstated) or <em>moved</em> — deleting removes the day and everything on it. When you do need to move work, always use <span class="ui">Move day</span> or the calendar drag rather than recreating the job: moving carries every linked record with it.</div>
+
+        <h3 id="job-editor-notes">Notes on site photos<a class="anchor-link" href="#job-editor-notes" aria-label="Link to this section">#</a></h3>
+        <p>The <span class="ui">Notes (optional)</span> box at the top of the <span class="ui">Media</span> tab records what was done on site. There are two ways to use it, and they behave differently:</p>
+        <ol class="step-list">
+          <li>Type the note <em>before</em> uploading, then upload as normal. The text is saved onto every file in that batch, shows under each thumbnail, and is included in the upload email. <span class="step-detail">The box keeps what you typed, so the same note carries to the next batch until you change it.</span></li>
+          <li>Type the note and press <span class="ui">Save notes</span>. The note is saved on its own and appears in the <span class="ui">Saved notes</span> list underneath, stamped with the date and who wrote it. The box clears, and the office gets a short follow-up email. <span class="step-detail">Use this for anything you think of after the photos have gone up.</span></li>
+        </ol>
+        <p>Every note in <span class="ui">Saved notes</span> can be removed — hover the note and click the bin icon. Removing a note leaves the photos untouched.</p>
+        <div class="callout"><strong>Which one do I want?</strong>If you're describing the photos you're about to upload, type the note first and upload. If the photos are already on the job, use <span class="ui">Save notes</span> — it's the only way to add or correct a note after the fact.</div>
 
         <h3 id="job-editor-fix">If something's not right<a class="anchor-link" href="#job-editor-fix" aria-label="Link to this section">#</a></h3>
         <div class="ts-list">
@@ -387,6 +396,14 @@
           <details class="ts-item" id="ts-je-no-photo-email">
             <summary>Files uploaded from site but no email reached the office</summary>
             <div class="ts-body"><p class="ts-cause">No photo-upload recipients are configured.</p><p>An admin adds recipient addresses in Settings. The files themselves are already safely on the job — the email is only a notification.</p></div>
+          </details>
+          <details class="ts-item" id="ts-je-note-not-listed">
+            <summary>A note I typed isn't in the Saved notes list</summary>
+            <div class="ts-body"><p class="ts-cause">A note typed and then uploaded is saved onto the files themselves, not as a note in its own right — the two are recorded separately.</p><p>Look under the thumbnails: the text is there on each file from that batch. To have it in <span class="ui">Saved notes</span> as well, type it again and press <span class="ui">Save notes</span>.</p></div>
+          </details>
+          <details class="ts-item" id="ts-je-no-notes-email">
+            <summary>Saved a note but the office didn't get an email</summary>
+            <div class="ts-body"><p class="ts-cause">The follow-up email goes to the same recipients as the photo-upload email, and none are configured.</p><p>An admin adds recipient addresses in Settings. The note itself is saved either way — it's showing in <span class="ui">Saved notes</span>.</p></div>
           </details>
         </div>
       </section>
@@ -894,6 +911,8 @@
           <li><a href="#ts-je-readonly">Rows in Job details won't open for editing</a></li>
           <li><a href="#ts-je-window-closed">The editor closed by itself</a></li>
           <li><a href="#ts-je-no-photo-email">Files uploaded from site but no email reached the office</a></li>
+          <li><a href="#ts-je-note-not-listed">A note I typed isn't in the Saved notes list</a></li>
+          <li><a href="#ts-je-no-notes-email">Saved a note but the office didn't get an email</a></li>
         </ul>
         <h3>WhatsApp job briefs</h3>
         <ul>
