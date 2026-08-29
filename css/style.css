@@ -964,6 +964,28 @@ h3 { font-weight: 600; font-size: var(--step-2); }
   }
 }
 
+/* ---- Desktop screenshots (OurSpace) ----
+   OurSpace runs in a browser as well, so the same screens are shown again at
+   1400px wide. Two to a row rather than .feature-shot's full column, which
+   would make each capture taller than the viewport. */
+
+.desktop-shots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+.desktop-shots figure { margin: 0; }
+.desktop-shots figcaption {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+@media (max-width: 48em) {
+  .desktop-shots { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* ---- Enquiry page (enquiry.html): the form that feeds EdwardsApps Connect ----
    Same quiet system as the rest of the site: a white card on paper, green as
    the only accent. The form comes first in the source so it is also first on
