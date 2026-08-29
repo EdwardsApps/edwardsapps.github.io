@@ -97,6 +97,7 @@
             <li><a href="#workers">Workers</a></li>
             <li><a href="#holidays">Holidays</a></li>
             <li><a href="#wages">Wages</a></li>
+            <li><a href="#absence-cost">Absence &amp; Cost report</a></li>
           </ul>
         </div>
         <div class="toc-group">
@@ -246,6 +247,15 @@
           <li>Like CrewQCI, the app installs from the browser: <span class="path">Account → Install App</span> (on iPhone: Safari's Share → Add to Home Screen).</li>
           <li>The <span class="ui">?</span> button in the header opens this guide at the chapter for the page you're on — and inside the QCI area it opens the <a href="crewqci-guide.html">CrewQCI guide</a> instead, where the sales side is documented in full. The in-app <span class="ui">Guide</span> page is a condensed version, always to hand from the navigation.</li>
         </ul>
+
+        <h3 id="finding-your-way-phone">How it behaves on a phone<a class="anchor-link" href="#finding-your-way-phone" aria-label="Link to this section">#</a></h3>
+        <ul>
+          <li><strong>Swipe back closes what's open.</strong> Swiping back (or the Android back button) while a dialog is open closes the dialog rather than leaving the page — so a half-filled job or claim is no longer lost by the gesture you'd naturally use to dismiss it.</li>
+          <li><strong>Dropdown lists rise from the bottom.</strong> Any list you pick from opens as a sheet pinned to the bottom of the screen, where the keyboard can't cover it, with the options spaced for a thumb.</li>
+          <li><strong>Pull down to refresh.</strong> From the top of any page, pull down to refetch everything on screen. It waits if something is still saving, so a refresh can never overwrite a save in progress.</li>
+          <li><strong>Registers remember where you were.</strong> A table's search text and column filters survive switching to another page and coming back.</li>
+          <li><strong>Small buttons are easier to hit.</strong> Icon buttons carry an invisible 44-pixel target, so the tap area is bigger than the icon looks.</li>
+        </ul>
       </section>
       <section id="dashboard" aria-labelledby="dashboard-h">
         <h2 id="dashboard-h">Dashboard<a class="anchor-link" href="#dashboard" aria-label="Link to this section">#</a></h2>
@@ -279,6 +289,7 @@
 
         <h3 id="calendar-provisional">Provisional bookings<a class="anchor-link" href="#calendar-provisional" aria-label="Link to this section">#</a></h3>
         <p>Work that isn't signed off yet is pencilled in with <span class="ui">+ Prov.</span> — no contract number needed, just a client and/or site and the dates. Provisionals show as white dashed-border cards with a ⬡ badge. When the job is confirmed, click the green <span class="ui">→ Confirm</span> button, look up (or type) the contract number, and resolve any differences the dialog flags between what was pencilled in and what SharePoint says. Costs booked on a provisional follow it into Costings once it has its number.</p>
+        <p>The <span class="ui">Full Address</span> field has a <span class="ui">Use client's address</span> button beside it, which pulls the postal address straight off the client's account rather than making you re-key it. It fills in as one line, and you can edit it afterwards like any other address. <span class="step-detail">It needs a client name in the dialog, and an address saved on that client's account.</span></p>
 
         <h3 id="calendar-move">Rescheduling, deleting and closed periods<a class="anchor-link" href="#calendar-move" aria-label="Link to this section">#</a></h3>
         <ul>
@@ -322,7 +333,7 @@
         <p>Chip colours carry live information: blue = WhatsApp brief sent, green = brief read, amber = the worker has a day status (sick, holiday…) and probably shouldn't be on the job.</p>
 
         <h3 id="day-view-booking">Booking materials, plant and subs<a class="anchor-link" href="#day-view-booking" aria-label="Link to this section">#</a></h3>
-        <p>Every material, hired plant item, subcontractor and other cost has a circle icon — click it once the order is actually placed and the chip turns yellow with a tick. The Dashboard's Unbooked Items card is driven by exactly these ticks. Booked material chips grow inline boxes for the order reference and delivered quantities, so tonnages can be trued up after the day. An amber ⚠ triangle on a chip means it carries a note — tap to read it.</p>
+        <p>Every material, hired plant item, subcontractor and other cost has a circle icon — click it once the order is actually placed and the chip turns yellow with a tick. The Dashboard's Unbooked Items card is driven by exactly these ticks. Booking a material opens inline boxes for the order reference and delivered quantities on every material, whoever the supplier is, so tonnages can be trued up after the day. An amber ⚠ triangle on a chip means it carries a note — tap to read it.</p>
         <p>When you type a supplier name that isn't on file, CrewBook checks for near-misses first — typos, part-names and spacing differences, so "FM Conway" finds "F M Conway Ltd". Any it finds are listed under <span class="ui">Similar suppliers already exist — is it one of these?</span>, and the add button reads <span class="ui">None of these — add "…" as new</span> so you have to mean it. While that list is showing, pressing Enter won't create the supplier. The client name on a job does the same, offering a <span class="ui">Did you mean:</span> row of existing accounts before it raises a new-client request.</p>
         <p>Each job card also carries its <strong>credit status</strong> badge (click to change — Needs Checking, OK, No Credit, Percentage Upfront, Special Authority) and its <strong>invoice status</strong> badge (Not Invoiced red, Draft Raised blue, Invoiced green, Proforma amber) — click it to set the status and which job days it applies to. Both feed the Dashboard's checklists.</p>
 
@@ -411,6 +422,7 @@
       <section id="whatsapp-briefs" aria-labelledby="whatsapp-briefs-h">
         <h2 id="whatsapp-briefs-h">WhatsApp job briefs<a class="anchor-link" href="#whatsapp-briefs" aria-label="Link to this section">#</a></h2>
         <p>The brief sends each worker their day on WhatsApp: site, client, address with Maps and What3Words links, the crew list, plant, materials and notes. Messages go from your company's own WhatsApp number (see <a href="#integrations">integrations</a>), and delivery feeds back into the app — a worker's chip turns blue when the message arrives and green once it's read.</p>
+        <p>Hired plant and subcontractors booked as a date range are listed on <em>every</em> day of that range, not only the day the booking starts — so the middle of a week-long hire reads correctly. Tools and plant fall back to what is booked on the job itself when no plant record has been saved for that day, so the brief matches the job card rather than saying "N/A".</p>
         <figure class="guide-shot">
           <a class="shot-link" href="img/shots/whatsapp.png"><img class="feature-shot" src="img/shots/whatsapp.png" width="1400" height="508" loading="lazy" alt="CrewBook's WhatsApp preview showing the job brief message and its recipients"></a>
           <figcaption>The WhatsApp preview — check the message and recipients, then send.</figcaption>
@@ -556,6 +568,52 @@
           <details class="ts-item" id="ts-wage-old-email-link">
             <summary>The link in an old wages email doesn't work</summary>
             <div class="ts-body"><p class="ts-cause">Emailed download links expire after 7 days.</p><p>Open <span class="path">Team → Wages</span>, navigate to that week with the arrows, and click <span class="ui">Download</span>.</p></div>
+          </details>
+        </div>
+      </section>
+      <section id="absence-cost" aria-labelledby="absence-cost-h">
+        <h2 id="absence-cost-h">Absence &amp; Cost report<a class="anchor-link" href="#absence-cost" aria-label="Link to this section">#</a></h2>
+        <p>Who has been off sick or on holiday, how many times, the dates, and what it cost. The report reads the same day statuses you set on the <a href="#appointments-statuses">Calendar and Day View</a> and prices them from each worker's basic daily rate, so nothing has to be entered twice.</p>
+        <p>Find it under <span class="path">QCI → Reports → People</span>, alongside the sales reports. It is admin-level: Sales and Viewer tiers do not see it.</p>
+
+        <h3 id="absence-cost-filters">Choosing what you're looking at<a class="anchor-link" href="#absence-cost-filters" aria-label="Link to this section">#</a></h3>
+        <div class="guide-table-scroll">
+          <table class="guide-table">
+            <thead><tr><th>Filter</th><th>What it does</th></tr></thead>
+            <tbody>
+              <tr><td><span class="ui">Reason</span></td><td><span class="ui">Sick</span> (the default), <span class="ui">Holiday</span>, <span class="ui">Compassionate leave</span>, <span class="ui">Training</span>, <span class="ui">Unpaid leave</span>, <span class="ui">Yard</span>, or <span class="ui">All reasons</span>.</td></tr>
+              <tr><td><span class="ui">Basis</span></td><td><span class="ui">Costings (incl. NI)</span> — the default — or <span class="ui">Wages paid (excl. NI)</span>. See below.</td></tr>
+              <tr><td><span class="ui">View</span></td><td><span class="ui">Per person</span> (the default): one row per worker per reason, with times off, days, cost per time and the dates. <span class="ui">Per occasion</span>: one row per spell, with its start and end. <span class="ui">Per day</span>: one row per day off, showing the rate and the multiplier applied.</td></tr>
+              <tr><td><span class="ui">Period</span></td><td>The usual period picker — it defaults to <span class="ui">Financial year to date</span>.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="absence-cost-times-off">"Times off" counts occasions, not days<a class="anchor-link" href="#absence-cost-times-off" aria-label="Link to this section">#</a></h3>
+        <p>Being off Monday to Wednesday is once, not three times. Consecutive days of the same reason roll into one occasion, and a weekend between two absent days does not break the run — off Friday and Monday is one spell of sickness, which is how anyone would describe it. Any other gap starts a new occasion. <span class="step-detail">This is what makes the report usable for return-to-work conversations: three separate one-day absences read very differently from one three-day one.</span></p>
+
+        <h3 id="absence-cost-basis">The two bases, and why the figure changes<a class="anchor-link" href="#absence-cost-basis" aria-label="Link to this section">#</a></h3>
+        <p>A day off costs the worker's basic daily rate times the multiplier your wages run pays for that reason — sick days at your <span class="ui">Sick pay multiplier</span>, unpaid leave at nothing, everything else in full. <span class="ui">Wages paid (excl. NI)</span> shows exactly that.</p>
+        <p><span class="ui">Costings (incl. NI)</span>, the default, additionally applies your employer NI loading, because that is how costings and the monthly management accounts value labour. It is the higher figure, and it is the one that agrees with your accounts. Whichever basis is used is printed on screen and on every export, so a figure never travels without its basis.</p>
+        <div class="callout"><strong>Set your own figures</strong>Both come from <span class="path">Settings → Sick pay multiplier</span> and <span class="path">Settings → Employer NI loading</span>. Until you set them the report uses 0.8 and 1.15, which suit most UK employers — but they are your numbers to choose, and the report is only as right as they are.</div>
+
+        <h3 id="absence-cost-worked">The rule that is easy to miss<a class="anchor-link" href="#absence-cost-worked" aria-label="Link to this section">#</a></h3>
+        <p>A day marked absent that <em>also</em> has labour recorded against a job costs <strong>£0</strong> here — the wages run pays the job, not the absence. Someone marked sick who then turned up and was booked on site is paid for the work. Those days are still listed, because they remain a record of the absence, and the warnings total them separately. Without that rule the report would overstate what absence costs you.</p>
+        <p>Two other things worth knowing: a spell spanning a month end is split between the two months, exactly as wages are; and holiday days still awaiting approval are included.</p>
+
+        <h3 id="absence-cost-fix">If something's not right<a class="anchor-link" href="#absence-cost-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-absence-zero-cost">
+            <summary>Days are listed but cost £0</summary>
+            <div class="ts-body"><p class="ts-cause">Either the worker was booked on a job that day — so the wages run pays the job, not the absence — or the reason is Unpaid leave, or there is no basic rate on the worker's record.</p><p>The <span class="ui">Note</span> column says which it is. If it reads "No basic rate on worker record", set the rate under <span class="path">Team → Workers</span> and the figures fill in.</p></div>
+          </details>
+          <details class="ts-item" id="ts-absence-vs-accounts">
+            <summary>The total doesn't match the management accounts</summary>
+            <div class="ts-body"><p class="ts-cause">The report is probably on the wages basis, which excludes employer NI.</p><p>Set <span class="ui">Basis</span> to <span class="ui">Costings (incl. NI)</span> — the default — and check your employer NI loading in Settings matches the one your accounts use.</p></div>
+          </details>
+          <details class="ts-item" id="ts-absence-empty">
+            <summary>"No records for this period."</summary>
+            <div class="ts-body"><p class="ts-cause">The <span class="ui">Reason</span> filter defaults to <span class="ui">Sick</span>, so a period with no sickness looks empty even when there was holiday.</p><p>Switch <span class="ui">Reason</span> to <span class="ui">All reasons</span>, or widen the period.</p></div>
           </details>
         </div>
       </section>
@@ -722,14 +780,25 @@
         </figure>
 
         <h3 id="qci-entry">Getting in and out<a class="anchor-link" href="#qci-entry" aria-label="Link to this section">#</a></h3>
-        <p>Click the <strong>QCI logo button</strong> (the dark pill with a gold border) in the top navigation — or the bottom bar on a phone. You land on the QCI Overview with its own pill bar: Overview, Leads, Quotes, Contracts, Invoicing, Proformas/Applications, Retentions, Credit Control, Prospecting and Insights. Three areas sit off that bar, and all three are tiles on the QCI Overview: <strong>Settings</strong> is also the <span class="ui">⚙</span> cog in the QCI header, next to the <span class="ui">?</span> button; <strong>Reports</strong> also opens from <span class="ui">Insights</span> via <span class="ui">Reports &amp; exports</span> at the top right; and the client register is the <span class="ui">Clients</span> tile. <span class="ui">← CrewBook</span> at the top left brings you back. The button only appears for users with the <span class="ui">QCI Sales</span> page permission (Admin and Super Admin tiers have it by default). The QCI search box reads "Search QCI and planned works…" — results include a "The Book job days" section, so one search spans sales <em>and</em> the schedule.</p>
+        <p>Click the <strong>QCI logo button</strong> (the dark pill with a gold border) in the top navigation — or the bottom bar on a phone. You land on the QCI Overview with its own pill bar: Overview, Leads, Quotes, Contracts, Invoicing, Proformas/Applications, Retentions, Credit Control, Prospecting and Insights. Three areas sit off that bar, and all three are tiles on the QCI Overview: <strong>Settings</strong> is also the <span class="ui">⚙</span> cog in the QCI header, next to the <span class="ui">?</span> button; <strong>Reports</strong> also opens from <span class="ui">Insights</span> via <span class="ui">Reports &amp; exports</span> at the top right; and the client register is the <span class="ui">Clients</span> tile. <span class="ui">← CrewBook</span> at the top left brings you back. The button only appears for users with the <span class="ui">QCI Sales</span> page permission (Admin and Super Admin tiers have it by default). The QCI search box reads "Search QCI and planned works… use # to be exact" — results include a "Job days (The Book)" area, so one search spans sales <em>and</em> the schedule.</p>
+
+        <h3 id="qci-search">Searching sales and the schedule together<a class="anchor-link" href="#qci-search" aria-label="Link to this section">#</a></h3>
+        <p>Press Enter in the QCI search box for the results page. Results are grouped into one card per area — clients, credit control, leads, quotes, contracts, invoices and credit notes, proformas and applications, retentions, prospects, suppliers and job days — with a count strip across the top showing which areas the term appears in. Click a count to jump to that card, or any result to open the record on its own page. Areas with hits sort to the front, and a long list shows the first six with <span class="ui">Show {n} more</span> underneath.</p>
+        <ul>
+          <li><strong>Punctuation and spacing are ignored</strong>, so "A &amp; C Hobbs", "A and C Hobbs" and "A+C Hobbs" all find the account stored as "A&amp;C Hobbs Ltd". Company endings like Ltd and plc are ignored too — the same client is rarely typed the same way twice.</li>
+          <li>Client accounts match on their <strong>alias names</strong> as well, so a merged account is found under every name it has ever been invoiced under.</li>
+          <li>Prefix with <strong>#</strong> (e.g. <span class="ui">#6532</span>) for an exact reference search — it matches the whole number only, so #6532 will not return 16532.</li>
+          <li>Job days show upcoming first, then past; cancelled days are left out. Each one opens straight into Day View.</li>
+        </ul>
+        <div class="callout"><strong>Tip</strong>Search a contract number with # to pull together the whole story at once — the contract, the quote it came from, its invoices and retentions, and every day it was on the schedule.</div>
 
         <h3 id="qci-drafts">Drafts: from the job to the front desk<a class="anchor-link" href="#qci-drafts" aria-label="Link to this section">#</a></h3>
         <p>The flagship join. A coordinator on a job can send the billing to the office without ever entering QCI:</p>
         <ol class="step-list">
           <li>On the job's Summary tab, click <span class="ui">Raise draft document</span> (under the invoice status bar) — no QCI access needed.</li>
-          <li>Pick the type — Invoice, Credit Note, Proforma or Application for Payment — and check the <span class="ui">Job days covered</span>: un-invoiced days start ticked, remedial days unticked, already-billed days show an <span class="ui">Invoiced</span> badge.</li>
-          <li>Optionally add a net amount (the front desk can fill it in), check the printed customer address, write <span class="ui">Notes for the front desk</span>, and <span class="ui">Send to front desk</span>.</li>
+          <li>Work down the numbered cards: <span class="ui">Document type</span> (Invoice, Credit Note, Proforma or Application for Payment), <span class="ui">Job days covered</span>, <span class="ui">What's being charged</span>, <span class="ui">Money &amp; terms</span>, <span class="ui">Customer address</span> and <span class="ui">Notes for the front desk</span>. Under Job days covered, un-invoiced days start ticked, remedial days unticked, and already-billed days show an <span class="ui">Invoiced</span> badge.</li>
+          <li>Add the priced lines under <span class="ui">What's being charged</span> — these print on the document, so the front desk is not guessing what the job was. In any details box, <strong>Shift+Enter</strong> starts a new line within the same priced item; plain Enter does nothing, so a stray keystroke can't add a blank line.</li>
+          <li>Set the net amount, VAT and payment terms under <span class="ui">Money &amp; terms</span>, check the printed <span class="ui">Customer address</span>, then <span class="ui">Send to front desk</span>.</li>
           <li>The ticked days flip to <span class="ui">Draft Invoice Raised</span> (blue), the job gains a <span class="ui">Draft with front desk</span> chip, and the office is emailed — to the <span class="ui">Draft notifications email</span> set in QCI Settings.</li>
           <li>At the front desk, the draft waits in the <span class="ui">Draft documents</span> panel at the top of the QCI register. Opening it shows the coordinator's note; the office adds line items, checks the VAT, and clicks the green <span class="ui">Issue</span> — which is the moment the next document number is allocated. A prompt then offers to mark the job days <span class="ui">Invoice Issued</span> in the schedule, closing the loop.</li>
         </ol>
@@ -745,6 +814,11 @@
 
         <h3 id="qci-clients-join">One client register for both sides<a class="anchor-link" href="#qci-clients-join" aria-label="Link to this section">#</a></h3>
         <p>The names booked on jobs and the accounts invoices are raised against are the same register. A green building icon next to a client name on a job means it's linked to an account; an amber warning triangle means no account matches — tap it and the Clients page opens with the setup form pre-filled. The Clients page also collects <strong>new-client requests</strong> raised from the field for approval, and its red panel lists any booked names with no account. Renaming an account carries the new name across jobs, contracts, quotes and invoices automatically.</p>
+
+        <h3 id="qci-sent-emails">What was emailed to the client, and resending it<a class="anchor-link" href="#qci-sent-emails" aria-label="Link to this section">#</a></h3>
+        <p>Every document email the app sends is kept. Open one document's history with <span class="ui">Sent emails</span> in its PDF preview, or a whole register's with <span class="ui">Sent emails</span> in the header of Invoicing or Proformas/Applications — that view has its own search across document number, client, address and subject.</p>
+        <p>Pick a send to read the email exactly as the client received it, change the address under <span class="ui">Resend to (change the address if needed)</span> if it needs to go somewhere new, and click <span class="ui">Resend</span>. A resend reuses the PDF that actually went out and gives it a fresh 30-day download link, so the client gets the same paperwork with a working link rather than a rebuilt document.</p>
+        <div class="callout"><strong>Emails sent before this existed</strong>Only sends made since the sent-email log was added are listed. Older ones show only as the "Last emailed to … on …" stamp on the record.</div>
 
         <h3 id="qci-differences">If you've used standalone CrewQCI<a class="anchor-link" href="#qci-differences" aria-label="Link to this section">#</a></h3>
         <p>Everything central works the same — registers, document numbering, credit control, retentions, prospecting, reports, Sage exports, settings. The differences: you enter with the QCI button rather than a separate login; access is CrewBook's <span class="ui">QCI Sales</span> permission; search also covers the schedule; invoices tick real job days instead of a typed date list; the draft-from-job flow exists; and there is no workbook Import page.</p>
@@ -937,6 +1011,12 @@
           <li><a href="#ts-wage-bankhol">A bank holiday shows as "Holiday" — or isn't paid at all</a></li>
           <li><a href="#ts-wage-rates-blank">Rate columns are missing, or blank in the download</a></li>
           <li><a href="#ts-wage-old-email-link">The link in an old wages email doesn't work</a></li>
+        </ul>
+        <h3>Absence &amp; Cost report</h3>
+        <ul>
+          <li><a href="#ts-absence-zero-cost">Days are listed but cost £0</a></li>
+          <li><a href="#ts-absence-vs-accounts">The total doesn't match the management accounts</a></li>
+          <li><a href="#ts-absence-empty">"No records for this period."</a></li>
         </ul>
         <h3>Petty cash and expenses</h3>
         <ul>

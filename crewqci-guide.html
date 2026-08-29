@@ -261,6 +261,14 @@
           <li>No prompt? In Chrome or Edge it's under <span class="path">Menu → Install CrewQCI</span>; in Safari, <span class="path">File → Add to Home Screen</span>.</li>
         </ol>
         <p>Installing changes nothing about your account or data — it's the same app, just quicker to reach.</p>
+
+        <h3 id="install-app-phone">How it behaves on a phone<a class="anchor-link" href="#install-app-phone" aria-label="Link to this section">#</a></h3>
+        <ul>
+          <li><strong>Swipe back closes what's open.</strong> Swiping back (or the Android back button) while a dialog is open closes the dialog rather than leaving the page — so a half-filled form is no longer lost by the gesture you'd naturally use to dismiss it.</li>
+          <li><strong>Dropdown lists rise from the bottom.</strong> Any list you pick from opens as a sheet pinned to the bottom of the screen, where the keyboard can't cover it, with the options spaced for a thumb.</li>
+          <li><strong>Pull down to refresh.</strong> From the top of any page, pull down to refetch everything on screen. It waits if something is still saving, so a refresh can never overwrite a save in progress.</li>
+          <li><strong>Registers remember where you were.</strong> A table's search text and column filters survive switching to another page and coming back.</li>
+        </ul>
       </section>
       <section id="finding-your-way" aria-labelledby="finding-your-way-h">
         <h2 id="finding-your-way-h">Finding your way around<a class="anchor-link" href="#finding-your-way" aria-label="Link to this section">#</a></h2>
@@ -273,10 +281,12 @@
         </ul>
 
         <h3 id="search">Search: one box for everything<a class="anchor-link" href="#search" aria-label="Link to this section">#</a></h3>
-        <p>The header search box — "Search the pipeline… use # to be exact" — finds leads, quotes, contracts, invoices, proformas, retentions and client accounts from one place. Press Enter for the results page, split into <span class="ui">Pipeline references</span> and <span class="ui">Client accounts</span>; click any result to jump straight to the record on its own page.</p>
+        <p>The header search box — "Search the pipeline… use # to be exact" — finds clients, credit control, leads, quotes, contracts, invoices, proformas, retentions and prospects from one place. Press Enter for the results page. Results are grouped into one card per area, with a count strip across the top showing which areas the term appears in; click a count to jump to that card, or any result to open the record on its own page. Areas with hits sort to the front, and a long list shows the first six with <span class="ui">Show {n} more</span> underneath.</p>
         <ul>
           <li>An ordinary search matches anywhere: reference numbers, client names, sites, sectors, contacts, emails, notes and feedback.</li>
-          <li>Prefix with <strong>#</strong> (e.g. <span class="ui">#6532</span>) for an exact reference search — it matches the whole number only, so #653 will not return 6532.</li>
+          <li><strong>Punctuation and spacing are ignored</strong>, so "A &amp; C Hobbs", "A and C Hobbs" and "A+C Hobbs" all find the account stored as "A&amp;C Hobbs Ltd". Company endings like Ltd and plc are ignored too. This matters because the same client is rarely typed the same way twice.</li>
+          <li>Client accounts match on their <strong>alias names</strong> as well, so a merged account is found under every name it has ever been invoiced under.</li>
+          <li>Prefix with <strong>#</strong> (e.g. <span class="ui">#6532</span>) for an exact reference search — it matches the whole number only, so #653 will not return 6532, and #6532 will not return 16532.</li>
           <li>Searching a contract number also surfaces the quote it came from. Draft documents are excluded until issued.</li>
         </ul>
         <div class="callout"><strong>Tip</strong>To pull together everything on one job — contract, source quote, invoices, retentions, the original lead — search its number with #. One search, the whole story.</div>
@@ -603,7 +613,7 @@
 
       <section id="documents" aria-labelledby="documents-h">
         <h2 id="documents-h">Printing, emailing and filing documents<a class="anchor-link" href="#documents" aria-label="Link to this section">#</a></h2>
-        <p>Every document raised in the app opens in a PDF preview — click the document icon on any register row, or <span class="ui">Preview PDF</span> inside a dialog. From the preview you can <span class="ui">Print</span>, <span class="ui">Download PDF</span>, <span class="ui">Email…</span> the client, or <span class="ui">File to SharePoint</span>.</p>
+        <p>Every document raised in the app opens in a PDF preview — click the document icon on any register row, or <span class="ui">Preview PDF</span> inside a dialog. From the preview you can <span class="ui">Print</span>, <span class="ui">Download PDF</span>, <span class="ui">Email…</span> the client, <span class="ui">Sent emails</span> to see what has already gone out, or <span class="ui">File to SharePoint</span>.</p>
 
         <h3 id="documents-email">Emailing a document to the client<a class="anchor-link" href="#documents-email" aria-label="Link to this section">#</a></h3>
         <ol class="step-list">
@@ -612,6 +622,21 @@
           <li>Optionally add a <span class="ui">Message</span>, which is included in the email.</li>
           <li>Click <span class="ui">Send</span>. The client gets a branded email under your company name with a download button (the link lasts 7 days), and the send is stamped on the record — hover <span class="ui">Email…</span> later to see "Last emailed to … on …".</li>
         </ol>
+
+        <h3 id="documents-sent-log">Seeing what was sent, and resending it<a class="anchor-link" href="#documents-sent-log" aria-label="Link to this section">#</a></h3>
+        <p>Every document email the app sends is kept, so "did that invoice actually go, and to whom?" has an answer. There are two ways in:</p>
+        <ul>
+          <li><strong>For one document</strong> — open its preview and click <span class="ui">Sent emails</span>.</li>
+          <li><strong>For a whole register</strong> — click <span class="ui">Sent emails</span> in the header of Invoicing or Proformas/Applications. That view lists every send for that register and has its own search box across document number, client, address and subject.</li>
+        </ul>
+        <p>Pick a send from the list to read the email exactly as the client received it. Each row shows when it went, the document, the client, the address, who sent it, and a <span class="ui">Resend</span> tag if it was itself a resend.</p>
+        <ol class="step-list">
+          <li>Select the email you want to send again.</li>
+          <li>Change the address under <span class="ui">Resend to (change the address if needed)</span> if it is going somewhere new — it starts as the address the email originally went to.</li>
+          <li>Click <span class="ui">Resend</span>.</li>
+        </ol>
+        <p>A resend does not rebuild the document: it reuses the PDF that was actually sent and mints it a fresh 30-day download link, so the client gets the same paperwork with a working link. <span class="step-detail">The record's "Last emailed to" stamp updates to the new address.</span></p>
+        <div class="callout"><strong>Emails sent before this existed</strong>Only sends made since the sent-email log was added are listed. Older ones show only as the "Last emailed to … on …" stamp on the record itself.</div>
 
         <h3 id="documents-sharepoint">Filing to SharePoint<a class="anchor-link" href="#documents-sharepoint" aria-label="Link to this section">#</a></h3>
         <p>With a SharePoint site name set in Settings, <span class="ui">File to SharePoint</span> drops the finished PDF into the right folder automatically — invoices into "Invoices <em>year</em>", credit notes into "Credit Notes <em>year</em>", and so on under "Quotes, Contracts &amp; Invoices". Once filed, the button reads <span class="ui">Re-file</span>; re-filing after an edit deliberately overwrites the earlier PDF of the same name.</p>
@@ -997,6 +1022,25 @@
         </ul>
         <p>Downloads always match what's on screen, including the sort order. Filters and sorting live in the web address, so a report can be bookmarked or its link shared and it opens exactly the same way. And every report carries a collapsible <span class="ui">How these figures are calculated</span> panel — the same plain-English assumptions print on the PDF and in the Excel Basis sheet, so a figure can go to your accountant with its rules attached.</p>
 
+        <h3 id="reports-period">Choosing the period<a class="anchor-link" href="#reports-period" aria-label="Link to this section">#</a></h3>
+        <p>Reports that cover a span of time open with a <span class="ui">Period</span> picker. Most of what the office asks for is one click:</p>
+        <div class="guide-table-scroll">
+          <table class="guide-table">
+            <thead><tr><th>Period</th><th>What it covers</th></tr></thead>
+            <tbody>
+              <tr><td><span class="ui">Month</span></td><td>One calendar month, chosen with the <span class="ui">Month</span> and <span class="ui">Year</span> boxes that appear beside it.</td></tr>
+              <tr><td><span class="ui">Last month</span></td><td>The whole of the month just gone.</td></tr>
+              <tr><td><span class="ui">Last 3 months</span>, <span class="ui">Last 6 months</span>, <span class="ui">Last 12 months</span></td><td>A rolling window: the completed months back from the start of this one, plus this month so far — the way the office reads "the last three months".</td></tr>
+              <tr><td><span class="ui">Financial year to date</span></td><td>1 April to today.</td></tr>
+              <tr><td><span class="ui">Full financial year</span></td><td>This financial year in full, 1 April to 31 March.</td></tr>
+              <tr><td><span class="ui">Last financial year</span></td><td>The previous 1 April to 31 March.</td></tr>
+              <tr><td><span class="ui">Calendar year to date</span></td><td>1 January to today.</td></tr>
+              <tr><td><span class="ui">Custom range</span></td><td>Your own <span class="ui">From</span> and <span class="ui">To</span> dates.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Whichever you pick is printed on the report and on every export, so a figure never travels without its period. <span class="step-detail">Financial years run April to March.</span></p>
+
         <h3 id="report-aged-debtors">Aged Debtors<a class="anchor-link" href="#report-aged-debtors" aria-label="Link to this section">#</a></h3>
         <p>Who owes you money, how old it is, and who's already being chased — always "as at today". Three <span class="ui">Detail</span> levels: <span class="ui">One line per client</span> (ageing buckets: Not yet due, 1–30, 31–60, 61–90, 90+ days), <span class="ui">Client with invoices</span> (a headline per client with its open invoices beneath), and <span class="ui">Invoice by invoice</span>. Filter the <span class="ui">Ageing</span> (e.g. "90 days and over") and <span class="ui">Chasing</span> ("Being chased" / "Chasing paused").</p>
         <div class="callout callout-warn"><strong>Mind the basis</strong>Aged Debtors is <strong>gross, including VAT</strong> — the same figure as on client statements. The Retention Register is <strong>ex VAT</strong>, and retention held is already deducted from the amounts owing in Aged Debtors. Never add the two totals together without converting one; every export prints its basis.</div>
@@ -1044,22 +1088,22 @@
         <ul>
           <li><strong>Invoiced revenue by enquiry source</strong> — each invoice’s own lead source. This is the familiar view: repeat jobs sit under "Existing Customer".</li>
           <li><strong>Invoiced revenue by acquisition source — lifetime view</strong> — the same invoices, grouped by how that <em>client</em> was originally won. The two cards total the same figure, and the note on the card says so.</li>
-          <li><strong>New vs repeat business</strong> — a donut splitting the period’s revenue into new, repeat and not-yet-attributed. "Repeat" means the client was won more than 90 days before the invoice.</li>
-          <li><strong>Client cohorts by acquisition year and source</strong> — a full-width table: for everyone won in a given year through a given channel, how many clients, their <em>lifetime</em> invoiced revenue (every invoice on file, not just this period), the average per client, and what share came back for more than one job.</li>
+          <li><strong>New vs repeat business</strong> — a donut splitting the period’s revenue into new, repeat and <span class="ui">Unknown / pre-app</span>. "Repeat" means the client was won more than 90 days before the invoice.</li>
+          <li><strong>Client cohorts by acquisition year and source</strong> — for everyone won in a given year through a given channel: how many clients, their <em>lifetime</em> invoiced revenue (every invoice on file, not just this period), the average per client, and what share came back for more than one job. This one is not on the page — it was too much detail to take in at a glance. Find it in the <span class="ui">Export</span> workbook and in <a href="#reports">Reports</a>.</li>
         </ul>
-        <div class="callout callout-warn"><strong>Attribution has to be filled in first</strong>Until a client has an acquisition source their revenue lands under <span class="ui">Not yet attributed</span>, and the cohort table says how many clients are still waiting. New quotes and leads set it automatically from now on; for the clients already on file, a Super Admin runs the one-off backfill described under <a href="#settings">Settings</a>.</div>
+        <div class="callout callout-warn"><strong>Attribution has to be filled in first</strong>Until a client has an acquisition source their revenue lands under <span class="ui">Unknown / pre-app</span> — the same bucket as clients recorded as "Unknown (pre-app)", because to anyone reading the chart they are the same thing. The cohort sheet in the export says how many clients are still waiting. New quotes and leads set it automatically from now on; for the clients already on file, a Super Admin runs the one-off backfill described under <a href="#settings">Settings</a>.</div>
 
         <h3 id="insights-export">Exporting the page<a class="anchor-link" href="#insights-export" aria-label="Link to this section">#</a></h3>
         <p><span class="ui">Export</span> (top right, beside <span class="ui">Reports &amp; exports</span>) downloads everything on screen as one Excel workbook — twelve sheets, one per card, built from the very figures already on the page, so the spreadsheet can never disagree with what you were looking at. Each sheet carries the period and comparison period in its subtitle, a filtered header row and a totals row. The file is named for the period, for example <em>Insights — Last 12 months — 2026-08-25.xlsx</em>.</p>
 
         <div class="ts-list">
           <details class="ts-item" id="ts-insights-not-attributed">
-            <summary>A large slice of revenue shows as "Not yet attributed"</summary>
-            <div class="ts-body"><p class="ts-cause">Those invoices belong to clients with no acquisition source yet — normal before the one-off backfill has been run, and for any client whose name on the invoice doesn’t match an account in the register.</p><p>Ask a Super Admin to run the acquisition backfill under <a href="#settings">Settings</a>. If a slice remains afterwards it is usually invoices raised under a spelling that isn’t on the client account — add it under <span class="ui">Also invoiced as</span> on that client.</p></div>
+            <summary>A large slice of revenue shows as "Unknown / pre-app"</summary>
+            <div class="ts-body"><p class="ts-cause">Those invoices belong to clients with no acquisition source yet, or to clients recorded as "Unknown (pre-app)" — the two share one bucket. Normal before the one-off backfill has been run, and for any client whose name on the invoice doesn’t match an account in the register.</p><p>Ask a Super Admin to run the acquisition backfill under <a href="#settings">Settings</a>. If a slice remains afterwards it is usually invoices raised under a spelling that isn’t on the client account — add it under <span class="ui">Also invoiced as</span> on that client.</p></div>
           </details>
           <details class="ts-item" id="ts-insights-two-source-charts">
             <summary>The two lead-source charts show different totals</summary>
-            <div class="ts-body"><p class="ts-cause">They are meant to reconcile. When they don’t, some invoices could not be matched to a client account, so their revenue falls into "Not yet attributed" on the lifetime chart while still appearing under its own enquiry source on the other.</p><p>The card’s note prints both totals whenever they differ. Fix the underlying client matching (aliases on the client record) and the two agree again.</p></div>
+            <div class="ts-body"><p class="ts-cause">They are meant to reconcile. When they don’t, some invoices could not be matched to a client account, so their revenue falls into "Unknown / pre-app" on the lifetime chart while still appearing under its own enquiry source on the other.</p><p>The card’s note prints both totals whenever they differ. Fix the underlying client matching (aliases on the client record) and the two agree again.</p></div>
           </details>
         </div>
       </section>
@@ -1114,7 +1158,7 @@
         </ul>
 
         <h3 id="acquisition-backfill">Filling in how existing clients were won<a class="anchor-link" href="#acquisition-backfill" aria-label="Link to this section">#</a></h3>
-        <p>New quotes and leads record how a client was won as they are saved. For the clients already on file, the <span class="ui">Lifetime lead-source attribution — backfill</span> panel works it out from their history: it takes each client’s earliest quote (or earliest lead, if they have no quotes), and if that carries a real source it uses it; if not, it looks for a real source on anything in their first 90 days; and if there still isn’t one, it records <span class="ui">Unknown (pre-app)</span>. Until this has been run, the lifetime views on <a href="#insights">Insights</a> show most revenue as "Not yet attributed".</p>
+        <p>New quotes and leads record how a client was won as they are saved. For the clients already on file, the <span class="ui">Lifetime lead-source attribution — backfill</span> panel works it out from their history: it takes each client’s earliest quote (or earliest lead, if they have no quotes), and if that carries a real source it uses it; if not, it looks for a real source on anything in their first 90 days; and if there still isn’t one, it records <span class="ui">Unknown (pre-app)</span>. Until this has been run, the lifetime views on <a href="#insights">Insights</a> show most revenue as "Unknown / pre-app".</p>
         <ol class="step-list">
           <li>Take a backup first (above) — this writes to every client record that doesn’t already have a source.</li>
           <li>Click <span class="ui">Dry run</span>. Nothing is written. You get the whole plan: how many clients, quotes and leads were read, how many already have a source, how many would be written and under which source, how each was decided, and a sample of the first forty rows with the reason for each.</li>
@@ -1252,7 +1296,7 @@
         </ul>
         <h3>Insights</h3>
         <ul>
-          <li><a href="#ts-insights-not-attributed">A large slice of revenue shows as "Not yet attributed"</a></li>
+          <li><a href="#ts-insights-not-attributed">A large slice of revenue shows as "Unknown / pre-app"</a></li>
           <li><a href="#ts-insights-two-source-charts">The two lead-source charts show different totals</a></li>
         </ul>
         <h3>Switching credit control on safely</h3>
