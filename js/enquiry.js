@@ -10,7 +10,7 @@
   // Where enquiries land: the websiteEnquiry function in the EdwardsApps
   // Connect app (Base44). If Connect ever moves, update this one line —
   // the mailto fallback below keeps the form working in the meantime.
-  const ENDPOINT = 'https://edwardsapps-connect.base44.app/functions/websiteEnquiry';
+  const ENDPOINT = 'https://connect.edwardsapps.co.uk/functions/websiteEnquiry';
 
   var form = document.getElementById('enquiry-form');
   if (!form || typeof window.fetch !== 'function') return;
