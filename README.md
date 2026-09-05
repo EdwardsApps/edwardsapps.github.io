@@ -5,7 +5,7 @@ The EdwardsApps marketing site — static HTML/CSS/JS served by GitHub Pages fro
 - No framework, no build step. Edit the HTML/CSS directly and push.
 - Shared styles live in `css/style.css` (design tokens at the top); the only JS is the mobile nav toggle in `js/main.js`.
 - Analytics and the consent controls live in `js/consent.js`; Google Analytics loads only after a visitor accepts analytics.
-- Pages: `index.html`, `crewbook.html`, `ourspace.html`, `almoner.html`, `services.html`, `about.html`, `privacy.html`, `cookies.html`, plus `404.html`.
+- Pages: `index.html`, `crewbook.html`, `crewqci.html`, `studiobooks.html`, `ourspace.html`, `almoner.html`, `services.html`, `about.html`, `enquiry.html`, `privacy.html`, `cookies.html`, plus `404.html`.
 - Custom domain: edwardsapps.co.uk (CNAME added once DNS is live at IONOS).
 - User guides: `guides.html`, `crewbook-guide.html` and `crewqci-guide.html`, with their own `css/guide.css` and `js/guide.js`. The downloadable PDFs in `downloads/` are printed from those pages — after editing a guide, regenerate them with `npm i --no-save playwright && node scripts/build_guide_pdfs.mjs` and commit the result.
 

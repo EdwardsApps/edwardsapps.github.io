@@ -140,6 +140,7 @@ a:hover { color: var(--green-ink); text-decoration-thickness: 2px; }
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 .nav-links a:hover,
 .nav-links a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--lime); text-decoration-thickness: 2px; text-underline-offset: 0.3em; }
@@ -200,7 +201,7 @@ a:hover { color: var(--green-ink); text-decoration-thickness: 2px; }
 }
 .home-showcase {
   position: relative;
-  /* Proportional, so the four overlapping cards keep their composition at any
+  /* Proportional, so the five overlapping cards keep their composition at any
      column width. Percentage offsets below scale with it for the same reason. */
   aspect-ratio: 20 / 19;
 }
@@ -230,11 +231,17 @@ a:hover { color: var(--green-ink); text-decoration-thickness: 2px; }
 }
 .showcase-card > span strong { display: block; color: var(--lime); font-size: 0.8rem; }
 .showcase-card:hover { border-color: var(--lime); }
-.showcase-crewbook { z-index: 1; top: 0; left: 0; width: 78%; }
-.showcase-crewqci { z-index: 2; top: 30%; right: 0; width: 78%; }
-.showcase-almoner { z-index: 3; bottom: 0; left: 0; width: 58%; }
-.showcase-ourspace { z-index: 4; bottom: 0; right: 0; width: 26%; }
+.showcase-crewbook { z-index: 1; top: 0; left: 0; width: 72%; }
+.showcase-studiobooks { z-index: 2; top: 21%; right: 0; width: 72%; }
+.showcase-crewqci { z-index: 3; top: 45%; left: 0; width: 66%; }
+.showcase-almoner { z-index: 4; bottom: 0; left: 0; width: 50%; }
+.showcase-ourspace { z-index: 5; bottom: 0; right: 0; width: 26%; }
 .showcase-ourspace > span { left: 0.4rem; right: 0.4rem; bottom: 0.4rem; }
+/* The StudioBooks capture is taller than the other desktop shots, so the card
+   crops it to the same letterbox as its neighbours; the label moves to the top
+   because the CrewQCI card overlaps its foot. */
+.showcase-studiobooks img { aspect-ratio: 2.6; object-fit: cover; object-position: left 35%; }
+.showcase-studiobooks > span { top: 0.65rem; bottom: auto; }
 
 /* The flagship page earns the spare hero space with the product itself. */
 .hero-product {
@@ -448,6 +455,18 @@ h3 { font-weight: 600; font-size: var(--step-2); }
   line-height: 1.25;
   text-transform: uppercase;
 }
+.new-tag {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fff;
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  vertical-align: 0.12em;
+}
 .product-promise {
   max-width: 28ch;
   margin-bottom: 0.65rem;
@@ -555,6 +574,16 @@ h3 { font-weight: 600; font-size: var(--step-2); }
 .operator-proof li { display: grid; grid-template-columns: minmax(9rem, 0.4fr) 1fr; gap: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--line); }
 .operator-proof strong { font-family: var(--font-display); font-size: 0.93rem; }
 .operator-proof span { color: var(--muted); font-size: 0.93rem; }
+
+/* StudioBooks page: the product's own lockup, on its own blush ground. */
+.brand-lockup {
+  margin: 0 0 2rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #FFF4EF;
+}
+.brand-lockup img { display: block; width: min(100%, 24rem); height: auto; margin-inline: auto; }
 
 /* App icon atop each product page hero. */
 .app-icon {
@@ -849,9 +878,17 @@ h3 { font-weight: 600; font-size: var(--step-2); }
 }
 .fineprint a { text-decoration: underline; text-underline-offset: 0.18em; }
 
-/* ---- Mobile ---- */
+/* ---- Header at tablet widths ----
+   Eight menu items no longer sit beside the wordmark below about 1000px, so
+   the row tightens first and then collapses into the menu button well before
+   the rest of the layout goes single-column. */
 
-@media (max-width: 46em) {
+@media (min-width: 60em) and (max-width: 66em) {
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 0.9rem; }
+}
+
+@media (max-width: 60em) {
   /* The collapse is a JS enhancement (html.js set inline in each <head>):
      without JS the menu renders expanded and no dead toggle appears. */
   .js .nav-toggle { display: block; }
@@ -867,7 +904,11 @@ h3 { font-weight: 600; font-size: var(--step-2); }
   .js .nav-links.is-open { display: flex; }
   .nav-links a { display: inline-block; padding: 0.4em 0; }
   .nav-links .nav-cta { margin-top: 0.4rem; }
+}
 
+/* ---- Mobile ---- */
+
+@media (max-width: 46em) {
   .daybook-features > li { grid-template-columns: 1fr; }
   .chapter-grid { grid-template-columns: 1fr; }
   .hero-product { grid-template-columns: 1fr; gap: 2rem; }

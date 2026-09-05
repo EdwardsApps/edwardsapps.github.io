@@ -72,6 +72,8 @@
     'crewbook.me': 'CrewBook',
     'crew-qci.com': 'CrewQCI',
     'www.crew-qci.com': 'CrewQCI',
+    'studiobooks.app': 'StudioBooks',
+    'www.studiobooks.app': 'StudioBooks',
     'our-space.me': 'OurSpace',
     'apps.apple.com': 'OurSpace',
     'play.google.com': 'OurSpace'
