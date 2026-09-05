@@ -237,7 +237,7 @@ a:hover { color: var(--green-ink); text-decoration-thickness: 2px; }
 .showcase-almoner { z-index: 4; bottom: 0; left: 0; width: 50%; }
 .showcase-ourspace { z-index: 5; bottom: 0; right: 0; width: 26%; }
 .showcase-ourspace > span { left: 0.4rem; right: 0.4rem; bottom: 0.4rem; }
-/* The StudioBooks capture is taller than the other desktop shots, so the card
+/* The Studiobooks capture is taller than the other desktop shots, so the card
    crops it to the same letterbox as its neighbours; the label moves to the top
    because the CrewQCI card overlaps its foot. */
 .showcase-studiobooks img { aspect-ratio: 2.6; object-fit: cover; object-position: left 35%; }
@@ -575,7 +575,7 @@ h3 { font-weight: 600; font-size: var(--step-2); }
 .operator-proof strong { font-family: var(--font-display); font-size: 0.93rem; }
 .operator-proof span { color: var(--muted); font-size: 0.93rem; }
 
-/* StudioBooks page: the product's own lockup, on its own blush ground. */
+/* Studiobooks page: the product's own lockup, on its own blush ground. */
 .brand-lockup {
   margin: 0 0 2rem;
   padding: clamp(1.5rem, 4vw, 2.5rem);

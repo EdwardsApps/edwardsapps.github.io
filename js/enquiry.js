@@ -1,5 +1,5 @@
 /* EdwardsApps — enquiry form (enquiry.html).
-   Sends the enquiry as JSON to StudioBooks (EdwardsApps' own back office,
+   Sends the enquiry as JSON to Studiobooks (EdwardsApps' own back office,
    formerly EdwardsApps Connect) so it lands in Peter's pipeline. Built to
    fail soft: on ANY problem — network down, endpoint moved, non-2xx response,
    slow reply — the visitor's email app opens instead with the same details
@@ -8,14 +8,14 @@
 (function () {
   'use strict';
 
-  // Where enquiries land: the websiteEnquiry function in StudioBooks (Base44).
+  // Where enquiries land: the websiteEnquiry function in Studiobooks (Base44).
   // If the app ever moves, update this one line — the mailto fallback below
   // keeps the form working in the meantime.
   const ENDPOINT = 'https://studiobooks.app/functions/websiteEnquiry';
 
-  // Which company the enquiry belongs to. StudioBooks routes each submission by
+  // Which company the enquiry belongs to. Studiobooks routes each submission by
   // this key and rejects one without it. It is a routing key meant for a public
-  // website, not a secret; it is shown in StudioBooks under Settings > Website.
+  // website, not a secret; it is shown in Studiobooks under Settings > Website.
   const ENQUIRY_KEY = 'd4398b6eb9bb6726767ffde30fca2efa56643fd2727ff0e5';
 
   var form = document.getElementById('enquiry-form');
@@ -31,7 +31,7 @@
     return field && field.value ? field.value.trim() : '';
   }
 
-  // The exact payload the StudioBooks backend expects.
+  // The exact payload the Studiobooks backend expects.
   function payload() {
     return {
       enquiry_key: ENQUIRY_KEY,
