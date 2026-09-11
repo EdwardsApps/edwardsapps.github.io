@@ -443,12 +443,15 @@
           <li><span class="ui">Contract number</span> shows "Allocating…" then fills with the next number in sequence. You can overtype it.</li>
           <li>Pick the <span class="ui">Quote number</span> if the work was quoted — <span class="ui">Contract value (£)</span> auto-fills from the quote's value. <span class="step-detail">A figure you type yourself is never overwritten by the auto-fill.</span></li>
           <li>Complete client, site, sector, source and contact fields, and tick <span class="ui">VAT zero-rated</span> and <span class="ui">VAT form returned</span> if they apply.</li>
+          <li>Set <span class="ui">Retention</span> to what was agreed — <span class="ui">Nil retention</span>, <span class="ui">5%</span> or <span class="ui">2.5%</span> — or leave it at <span class="ui">— not stated —</span>. <span class="step-detail">New invoices and proformas raised against the contract fill in their <span class="ui">Retention (%)</span> from it.</span></li>
           <li>Click <span class="ui">Save</span>.</li>
         </ol>
         <div class="callout"><strong>Good to know</strong>If you type a client name that isn't set up yet, the contract still saves — and a new-client request is raised for you automatically, with the approvers emailed. You'll see the confirmation in a toast.</div>
 
         <h3 id="contracts-docs">Raising documents and seeing what's billed<a class="anchor-link" href="#contracts-docs" aria-label="Link to this section">#</a></h3>
         <p>Open any contract and use the buttons at the bottom left — <span class="ui">Invoice</span>, <span class="ui">Proforma</span> or <span class="ui">Credit note</span> — to start a new document pre-filled from the contract. The <span class="ui">Documents raised</span> panel in the same dialog lists everything already billed, newest first, each with a status badge (grey <em>Draft</em>, red <em>Not Paid</em>, orange <em>Part Paid</em>, green <em>Paid</em>, purple <em>Credit</em>); click a line to jump straight to that document.</p>
+        <p>For the money position on the whole job, click the <strong>contract number</strong> in the register, or the bar-chart icon on the row. The contract summary shows eight figures: <span class="ui">Contract value</span>, <span class="ui">Invoiced to date</span> (net, after credit notes), <span class="ui">Applied for</span> (open proformas and applications not yet invoiced), <span class="ui">Still to invoice</span>, <span class="ui">Retention held</span>, <span class="ui">Invoiced total</span>, <span class="ui">Received</span> and <span class="ui">Owing now</span> — which reads <span class="ui">Client in credit</span> when a credit note was raised after the invoice had already been paid. Underneath, every invoice, credit note and open application on the contract is listed oldest first; drafts show in grey and aren't counted until they're issued. Links at the foot take you to <span class="ui">Open the contract record</span>, <span class="ui">Show these in Invoicing</span> and, where retention is held, <span class="ui">Show on the Retentions register</span>.</p>
+        <p>The same summary opens from the <span class="ui">Contract No.</span> column on the Invoicing page and the <span class="ui">Contract</span> column on Proformas/Applications. Both columns start switched off — turn them on under <span class="ui">Columns</span>.</p>
 
         <h3 id="contracts-propagation">One correction, everywhere<a class="anchor-link" href="#contracts-propagation" aria-label="Link to this section">#</a></h3>
         <p>Fix a client name, site or phone number on the contract and save — the correction is pushed to the contract's quote, its invoices and proformas, the originating lead and the job diary. A toast confirms it: "Details updated on N other records for this contract." Enter details once, correct them once.</p>
@@ -554,7 +557,7 @@
           <li>Fill in <span class="ui">Site</span>, <span class="ui">Contract no.</span>, <span class="ui">Terms</span> (they set the due date) and any <span class="ui">Order no. (client PO)</span>.</li>
           <li>Either type the <span class="ui">Net (£)</span>, or click <span class="ui">Add line</span> and enter Qty, Details and Unit price per line — Net then becomes the sum of the lines and locks.</li>
           <li>Check the VAT: leave <span class="ui">VAT rate (%)</span> at 20, change it, or tick <span class="ui">Reverse charge (CIS)</span> for CIS work — VAT becomes £0 and the document prints the proper reverse-charge wording.</li>
-          <li>Enter a <span class="ui">Retention (%)</span> if the contract holds retention. <span class="step-detail">The retention due date defaults to one year after the invoice date.</span></li>
+          <li>Enter a <span class="ui">Retention (%)</span> if the contract holds retention. <span class="step-detail">If the contract has its <span class="ui">Retention</span> set, a new invoice fills this in for you. The retention due date defaults to one year after the invoice date — set the real date for the whole contract later on the <a href="#retentions-due">Retentions page</a>.</span></li>
           <li>Optionally add <span class="ui">Work carried out</span> dates and a printed <span class="ui">Notes</span> line (e.g. "Nil Retention"), and click <span class="ui">Preview PDF</span> to see exactly what will print.</li>
           <li>Click <span class="ui">Save invoice</span>. If you entered a retention, a prompt offers to post it to the Retentions register — see <a href="#retentions">Retentions</a>.</li>
         </ol>
@@ -691,7 +694,7 @@
         <ol class="step-list">
           <li>Click <span class="ui">New Application</span> and fill in <span class="ui">Client</span>, <span class="ui">Contract no.</span> and <span class="ui">Prepared by</span>.</li>
           <li>Click <span class="ui">Add line</span> under <span class="ui">Application items</span> and fill each row's Tender, Qty, Unit, Previous and Current figures. <span class="step-detail">Net is the sum of the <em>Current</em> column — the amount claimed this application. A live Cumulative figure shows per row.</span></li>
-          <li>Enter any <span class="ui">Less discount (£)</span>, <span class="ui">CIS tax (£)</span>, <span class="ui">Retention (%)</span>, and check the VAT (including <span class="ui">Reverse charge (CIS)</span>).</li>
+          <li>Enter any <span class="ui">Less discount (£)</span>, <span class="ui">CIS tax (£)</span>, <span class="ui">Retention (%)</span>, and check the VAT (including <span class="ui">Reverse charge (CIS)</span>). <span class="step-detail"><span class="ui">Retention (%)</span> fills in from the contract when its <span class="ui">Retention</span> is set.</span></li>
           <li>Save. The <span class="ui">App number</span> is allocated automatically — one running sequence per contract.</li>
         </ol>
         <p>Payments received before conversion are recorded with the banknote icon, exactly as on invoices — the figures carry onto the invoice when you convert or certify, so an invoice raised after a 50% deposit arrives already Part Paid.</p>
@@ -729,7 +732,7 @@
 
       <section id="retentions" aria-labelledby="retentions-h">
         <h2 id="retentions-h">Retentions<a class="anchor-link" href="#retentions" aria-label="Link to this section">#</a></h2>
-        <p>The Retentions page tracks money your clients hold back from invoices until the end of a defects period. Every retention that hasn't been fully returned is listed with the amount held, anything already returned, what's still outstanding, and the date it falls due — counting down in front of you.</p>
+        <p>The Retentions page tracks money your clients hold back until the end of a defects period. Retention comes off every invoice, but it is released for the <strong>whole contract</strong> when the main contractor completes — so the page shows <strong>one line per contract</strong>, with the invoices it was deducted from, the amount held, anything already returned, what's still outstanding and the date it falls due. Click a line to open its invoices underneath. The header counts the contracts and invoices and totals what's held.</p>
         <figure class="guide-shot">
           <a class="shot-link" href="img/shots/crewqci-retentions.webp"><img class="feature-shot" src="img/shots/crewqci-retentions.webp" width="1400" height="450" loading="lazy" alt="CrewQCI's retentions register: four retentions with the invoice they came from, amount held, due date and a days countdown, one overdue in red and one due soon in amber"></a>
           <figcaption>Red = overdue, amber = due within 30 days, green = not yet due. A purple "Part returned" chip marks partial returns.</figcaption>
@@ -743,13 +746,21 @@
           <li>Or use the <span class="ui">Click to Post</span> column there — it reads <span class="ui">Post</span> when unposted, <span class="ui">Posted</span> when up to date, and <span class="ui">Click to update</span> if the invoice's retention figures have changed since posting.</li>
         </ol>
 
+        <h3 id="retentions-due">Setting the contract's due date<a class="anchor-link" href="#retentions-due" aria-label="Link to this section">#</a></h3>
+        <p>Each invoice's retention due date defaults to a year after that invoice, so a contract with several invoices usually carries several dates. The contract is aged and chased on the <strong>latest</strong> of them — the job can't have finished before its last application — and an amber <span class="ui">mixed</span> chip beside the date tells you they disagree.</p>
+        <ol class="step-list">
+          <li>Click <span class="ui">Due date</span> on the contract's line.</li>
+          <li>Enter the main contractor's completion date plus the defects period.</li>
+          <li>Click <span class="ui">Save due date</span>. The date is written to every invoice on the contract and to the source invoices on the Invoicing page, so the two always agree.</li>
+        </ol>
+
         <h3 id="retentions-return">Recording a retention coming back<a class="anchor-link" href="#retentions-return" aria-label="Link to this section">#</a></h3>
         <ol class="step-list">
-          <li>Find the row and click <span class="ui">Return</span>. The dialog shows "Held £X · outstanding £Y".</li>
-          <li><span class="ui">Amount to return (£)</span> is pre-filled with the full outstanding balance. Leave it for a full return, or type less for a part return — the dialog warns "Part return — £X stays outstanding on the register."</li>
+          <li>Click <span class="ui">Return</span> on the contract's line. The dialog shows "Held £X · outstanding £Y" for the whole contract.</li>
+          <li><span class="ui">Amount to return (£)</span> is pre-filled with the full outstanding balance. Leave it for a full return, or type less for a part return — the dialog warns "Part return — £X stays outstanding on the register." <span class="step-detail">On a contract with several invoices, a part return is applied to the oldest invoice first.</span></li>
           <li>Set the <span class="ui">Date</span> (defaults to today) and click <span class="ui">Return in full</span> or <span class="ui">Record part return</span>.</li>
         </ol>
-        <p>A full return stamps the returned date on the source invoice too, and the row leaves the page. A part return keeps the row listed with a purple <span class="ui">Part returned</span> chip and updates the figures. Either way an audit line is added to the notes, and the app-wide Undo can reverse a slip.</p>
+        <p>To return one invoice's retention on its own, open the contract's line and click <span class="ui">Return</span> against that invoice instead. A full return stamps the returned date on the source invoice too, and once every invoice on a contract has been returned the line leaves the page. A part return keeps the line listed with a purple <span class="ui">Part returned</span> chip and updates the figures. Either way an audit line is added to the notes, and the app-wide Undo can reverse a slip.</p>
         <div class="callout"><strong>Where did a returned retention go?</strong>Fully returned retentions leave this page by design. Their history lives in <span class="path">Reports → Retention Register</span> with the Status filter set to <span class="ui">Returned</span> or <span class="ui">All</span>.</div>
 
         <h3 id="retentions-fix">If something's not right<a class="anchor-link" href="#retentions-fix" aria-label="Link to this section">#</a></h3>
@@ -764,7 +775,11 @@
           </details>
           <details class="ts-item" id="ts-ret-no-ageing">
             <summary>A retention shows no countdown or ageing</summary>
-            <div class="ts-body"><p class="ts-cause">It has no due date recorded, so it can't be aged — it's counted as not yet due.</p><p>Add the retention due date on the source invoice, then click <span class="ui">Click to update</span> in the invoice's Click to Post column to refresh the posted record.</p></div>
+            <div class="ts-body"><p class="ts-cause">It has no due date recorded, so it can't be aged — it's counted as not yet due.</p><p>Click <span class="ui">Due date</span> on the contract's line and set the date — it is written to every invoice on the contract.</p></div>
+          </details>
+          <details class="ts-item" id="ts-ret-mixed">
+            <summary>An amber "mixed" chip shows beside a contract's due date</summary>
+            <div class="ts-body"><p class="ts-cause">The invoices on the contract carry different retention due dates — usually because each one defaulted to a year after its own invoice. The latest date is used for ageing and for release requests.</p><p>Click <span class="ui">Due date</span> on the contract's line, enter the main contractor's completion date plus the defects period, and click <span class="ui">Save due date</span> to bring them into line.</p></div>
           </details>
           <details class="ts-item" id="ts-ret-predates">
             <summary>"Invoice N predates the QCI system — its document lives in the SharePoint filing."</summary>
@@ -908,7 +923,7 @@
       <section id="retention-chasing" aria-labelledby="retention-chasing-h">
         <h2 id="retention-chasing-h">Retention release requests<a class="anchor-link" href="#retention-chasing" aria-label="Link to this section">#</a></h2>
         <p>Retention that has passed its release date gets its own tab — deliberately <em>not</em> part of the chase ladder. The client has done nothing wrong, so the email is a level, polite request that repeats gently (at most once per client every 30 days, configurable) until the register records the money returned. Amounts exclude VAT, and part returns are already netted off.</p>
-        <p>Each row lists what a quantity surveyor needs to release the money: the invoice number, the client's purchase order and your contract number. Preview with the eye icon and <span class="ui">Send request</span>, or tick clients and <span class="ui">Send N requests</span> — a manual send deliberately overrides the spacing rule when you need to ask again sooner. Automatic sending has its own switch under the Settings tab.</p>
+        <p>Each client gets one request listing <strong>one line per contract</strong>. Retention is released per contract, so a contract only appears once the release date of its <em>last</em> invoice has passed. Each line carries what a quantity surveyor needs to release the money — your contract number, the site and the client's purchase order — with the invoices the retention was deducted from underneath. Search by client, account code, contract, site or invoice number. Preview with the eye icon and <span class="ui">Send request</span>, or tick clients and <span class="ui">Send N requests</span> — a manual send deliberately overrides the spacing rule when you need to ask again sooner. Automatic sending has its own switch under the Settings tab.</p>
       </section>
 
       <section id="thank-yous" aria-labelledby="thank-yous-h">
@@ -979,7 +994,7 @@
         <ol class="step-list">
           <li>Click <span class="ui">New Client</span> (or click any row to edit).</li>
           <li>Type the <span class="ui">Name</span> — a Sage code is suggested automatically from it (letters and digits, up to 8 characters, unique). Edit it or click <span class="ui">Generate</span> for a fresh one. <span class="step-detail">A red "Already used by another client" warning blocks saving — a clashing code would post invoices to the wrong Sage account.</span></li>
-          <li>Fill in the <span class="ui">Address — one line per printed line</span> (exactly how it prints on documents; the last line is treated as the postcode on Sage exports), contact details and <span class="ui">Credit limit (£)</span>.</li>
+          <li>Fill in the <span class="ui">Address — one line per printed line</span> (exactly how it prints on documents — if an address has more lines than the page has room for, the middle lines are joined onto one so the postcode always prints; the last line is treated as the postcode on Sage exports), contact details and <span class="ui">Credit limit (£)</span>.</li>
           <li>Tick <span class="ui">CIS registered (reverse charge)</span> for CIS clients — their invoices default to reverse-charge VAT and export with tax code T21.</li>
           <li>Pick a <span class="ui">Default sector</span> — it also sets the sales nominal code from your sector mapping.</li>
           <li>Click <span class="ui">Save</span>.</li>
@@ -1050,7 +1065,7 @@
         <p>Unallocated credit notes are listed for reference but never deducted from the totals — a warning calls them out instead. Other warnings flag clients excluded from chasing, missing Sage codes (so you know when it won't reconcile line-for-line with Sage), and invoices whose due date had to be derived from the client's terms.</p>
 
         <h3 id="report-retention-register">Retention Register<a class="anchor-link" href="#report-retention-register" aria-label="Link to this section">#</a></h3>
-        <p>Retention held against your invoices, when it falls due, and what's already overdue — including, unlike the Retentions page, retentions already returned. The default <span class="ui">Status</span> filter, <span class="ui">Still held</span>, matches the Retentions page exactly; switch to <span class="ui">Returned</span> or <span class="ui">All</span> for the history. Set <span class="ui">Due</span> to <span class="ui">Overdue only</span> to list retention you can now invoice back — the warning line totals it for you.</p>
+        <p>Retention held against your invoices, when it falls due, and what's already overdue — including, unlike the Retentions page, retentions already returned. Like the page, it shows <strong>one line per contract</strong>: the <span class="ui">Invoices</span> column lists what was issued, the money columns are the contract's totals, and the due date is the latest across its invoices, with "mixed due dates" in the Status column where they disagree. The default <span class="ui">Status</span> filter, <span class="ui">Still held</span>, matches the Retentions page exactly; switch to <span class="ui">Returned</span> or <span class="ui">All</span> for the history. Set <span class="ui">Due</span> to <span class="ui">Overdue only</span> to list retention you can now invoice back — the warning line totals it for you.</p>
 
         <h3 id="reports-fix">If something's not right<a class="anchor-link" href="#reports-fix" aria-label="Link to this section">#</a></h3>
         <div class="ts-list">
@@ -1285,6 +1300,7 @@
           <li><a href="#ts-ret-not-listed">A retention entered on an invoice isn't on the Retentions page</a></li>
           <li><a href="#ts-ret-too-much">The return dialog won't accept the amount ("More than the outstanding amount.")</a></li>
           <li><a href="#ts-ret-no-ageing">A retention shows no countdown or ageing</a></li>
+          <li><a href="#ts-ret-mixed">An amber "mixed" chip shows beside a contract's due date</a></li>
           <li><a href="#ts-ret-predates">"Invoice N predates the QCI system — its document lives in the SharePoint filing."</a></li>
         </ul>
         <h3>Credit control: how chasing works</h3>
