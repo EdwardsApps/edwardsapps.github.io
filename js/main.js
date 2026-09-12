@@ -74,15 +74,31 @@
     'www.crew-qci.com': 'CrewQCI',
     'studiobooks.app': 'Studiobooks',
     'www.studiobooks.app': 'Studiobooks',
-    'our-space.me': 'OurSpace',
-    'apps.apple.com': 'OurSpace',
-    'play.google.com': 'OurSpace'
+    'our-space.me': 'OurSpace'
   };
+
+  /* The app stores carry more than one of our apps, so the hostname alone
+     won't say which. Match on the listing instead. */
+  var STORE_LISTINGS = [
+    { match: 'id6807538781', app: 'Studiobooks' },
+    { match: 'id6775036547', app: 'OurSpace' },
+    { match: 'com.base6a0d9576def7780fc56eeb7e.app', app: 'OurSpace' }
+  ];
+
+  function appForLink(href) {
+    var url = new URL(href);
+    if (APP_HOSTS[url.hostname]) return APP_HOSTS[url.hostname];
+    if (url.hostname !== 'apps.apple.com' && url.hostname !== 'play.google.com') return null;
+    for (var i = 0; i < STORE_LISTINGS.length; i++) {
+      if (href.indexOf(STORE_LISTINGS[i].match) !== -1) return STORE_LISTINGS[i].app;
+    }
+    return null;
+  }
 
   document.addEventListener('click', function (e) {
     var link = e.target.closest && e.target.closest('a[href^="https://"]');
     if (!link || typeof window.gtag !== 'function') return;
-    var app = APP_HOSTS[new URL(link.href).hostname];
+    var app = appForLink(link.href);
     if (!app) return;
     window.gtag('event', 'app_click', {
       app_name: app,
