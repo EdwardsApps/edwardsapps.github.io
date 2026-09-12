@@ -1110,3 +1110,36 @@ h3 { font-weight: 600; font-size: var(--step-2); }
   .enquiry-grid { grid-template-columns: 1fr; gap: 2.25rem; }
   .field-row { grid-template-columns: 1fr; }
 }
+
+/* ---- "Works with" assistant marks (OurSpace MCP) ---- */
+
+/* Official brand marks as single-path SVGs painting in currentColor, so one
+   copy works on both the tinted band and the white product card. They are the
+   trademarks of Anthropic, OpenAI and Mistral AI, shown only to say which
+   assistants OurSpace connects to. */
+.assistant-row {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.6rem;
+  margin: 1.4rem 0 0;
+  padding: 0;
+}
+.assistant-row li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--coal);
+}
+.assistant-row svg {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  fill: currentColor;
+}
+.assistant-row-sm { margin-top: 0.9rem; gap: 0.5rem 1.1rem; }
+.assistant-row-sm li { font-size: 0.85rem; }
+.assistant-row-sm svg { width: 17px; height: 17px; }
