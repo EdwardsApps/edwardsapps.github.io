@@ -1,3 +1,5 @@
+> Update: the public Keystone demo and its navigation links were removed at the owner's request on 13 September 2026. Demo references below record historical redesign checks.
+
 # EdwardsApps refresh — 13 September 2026
 
 ## Coverage
