@@ -26,7 +26,7 @@
   <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13">
   <link rel="stylesheet" href="css/company-revamp.css?v=1">
-  <script src="js/consent.js" defer></script>
+  <script src="js/consent.js?v=2" defer></script>
   <link rel="stylesheet" href="/css/revamp.css?v=2">
 
   <link rel="stylesheet" href="/css/elevate.css?v=2">
@@ -59,25 +59,28 @@
       <div class="wrap">
         <p class="kicker">Cookies</p>
         <h1>Your choice, remembered.</h1>
-        <p class="lede">Your analytics choice is remembered in this browser. If you use the brief builder, your draft can also travel with you to the enquiry form. Google Analytics loads only if you accept it.</p>
+        <p class="lede">Your analytics choice is remembered in this browser. If you use the brief builder, your draft can also travel with you to the enquiry form. Google Analytics and Meta Pixel load only after you accept their respective categories.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap legal-layout">
-        <aside class="legal-sidebar"><p class="kicker">In this notice</p><nav aria-label="On this page"><ol><li><a href="#essential-preference-storage">Essential preference storage</a></li><li><a href="#optional-analytics">Optional analytics</a></li><li><a href="#more-information">More information</a></li></ol></nav><a class="legal-settings" href="#" data-consent-settings>Cookie settings <span aria-hidden="true">↗</span></a></aside>
+        <aside class="legal-sidebar"><p class="kicker">In this notice</p><nav aria-label="On this page"><ol><li><a href="#essential-preference-storage">Essential preference storage</a></li><li><a href="#optional-analytics">Optional analytics</a></li><li><a href="#optional-marketing">Optional marketing</a></li><li><a href="#more-information">More information</a></li></ol></nav><a class="legal-settings" href="#" data-consent-settings>Cookie settings <span aria-hidden="true">↗</span></a></aside>
         <div class="legal-copy">
         <p><strong>Last updated:</strong> 13 September 2026</p>
 
         <h2 id="essential-preference-storage">Essential preference storage</h2>
-        <p>The site stores a value named <code>ea-consent</code> in your browser's local storage. It records whether you accepted or declined analytics so the banner does not ask on every page. It contains only the word <code>granted</code> or <code>denied</code> and is not used to identify you.</p>
+        <p>The site stores a value named <code>ea-consent</code> in your browser's local storage. It records whether you accepted or declined analytics so the banner does not ask on every page. A separate value, <code>ea-marketing-consent</code>, remembers your marketing choice. Each contains only the word <code>granted</code> or <code>denied</code> and is not used to identify you.</p>
         <p>This preference remains until you change it, clear the site's stored data or use a browser setting that removes it.</p>
         <p>If you choose “Take this to Peter” in the custom-build brief builder, the site temporarily stores your draft and its creation time as <code>ea-project-brief</code> in this tab's session storage. The enquiry page reads and removes it, and only imports drafts created within the previous 30 minutes. Starting a fresh brief or closing the tab also removes it. Your draft is not included in the page address and is not sent to Peter until you submit the enquiry form.</p>
 
         <h2 id="optional-analytics">Optional analytics</h2>
-        <p>If you select “Accept analytics”, the site loads Google Analytics. Google Analytics may then use cookies or similar identifiers to measure visits, pages viewed, broad device information, referral sources and approximate location. EdwardsApps uses this information to understand which pages are useful and improve the site.</p>
-        <p>If you decline, the Google Analytics script is not loaded. Advertising storage, personalisation and user-data consent remain denied on this website.</p>
+        <p>If you enable Analytics in Cookie settings, the site loads Google Analytics. Google Analytics may then use cookies or similar identifiers to measure visits, pages viewed, broad device information, referral sources and approximate location. EdwardsApps uses this information to understand which pages are useful and improve the site.</p>
+        <p>If you decline, the Google Analytics script is not loaded. Google advertising storage, personalisation and user-data consent remain denied.</p>
 
+        <h2 id="optional-marketing">Optional marketing</h2>
+        <p>If you enable Marketing, Meta Pixel (ID 3441716076000928) sends page-view events to Meta to help measure Facebook and Instagram advertising. Meta receives the page address, browser and device information and may use cookies such as <code>_fbp</code> and <code>_fbc</code> to associate visits with advertising interactions. See <a href="https://www.facebook.com/privacy/policy/" rel="noopener">Meta's privacy policy</a>.</p>
+        <p>The pixel does not load before marketing consent or after rejection. A previous analytics choice does not grant marketing consent. This installation records page views, not completed enquiries or purchases. There is no unconditional tracking image for visitors without JavaScript. Withdrawing marketing consent stops future pixel activity; it does not delete events already received by Meta.</p>
         <div class="legal-note">
           <p><strong>Change your choice</strong></p>
           <p>Open <a href="#" data-consent-settings>Cookie settings</a> at any time. Your new choice takes effect immediately for future activity.</p>

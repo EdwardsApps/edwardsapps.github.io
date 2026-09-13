@@ -30,3 +30,6 @@ jobs:
           node --check js/product-explorer.js
           node --check js/build-planner.js
           node --check scripts/build_guide_pdfs.mjs
+
+      - name: Verify analytics and marketing consent gates
+        run: node --test scripts/consent.test.cjs
