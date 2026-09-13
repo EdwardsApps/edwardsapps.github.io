@@ -140,10 +140,19 @@
   .resource-journal-index .resource-hero h1 { max-width: 13ch; font-size: clamp(3.2rem,5.5vw,5.4rem); line-height: 1.06; }
   .resource-journal-index .resource-hero .kicker { color: #60754e; }
   .resource-journal-index .resource-hero .kicker::before { background: #617d44; box-shadow: 11px 0 0 #c4d5b1,22px 0 0 #a0c674; }
-  .journal-issue-card { position: relative; border-radius: 10px; padding: .8rem; border: 1px solid #c9d6bf; background: #fcfdf8; box-shadow: 0 22px 55px #3c542015; transform: rotate(2deg); }
+  .resource-journal-index .resource-hero-grid { grid-template-columns: minmax(0,1fr) minmax(0,1.25fr); gap: 2rem; }
+  .journal-issue-card { position: relative; border-radius: 10px; padding: .8rem; border: 1px solid #c9d6bf; background: #fcfdf8; box-shadow: 0 22px 55px #3c542015; }
   .journal-card-edition { display: block; font: .6rem/1.5 ui-monospace,Consolas,monospace; letter-spacing: .13em; color: #718663; padding: .25rem .25rem 1rem; }
-  .journal-issue-card > img { display: block; width: 100%; border: 1px solid #dae4d0; border-radius: 5px; height: auto; object-fit: contain; background: #f4f7f0; }
-  .resource-journal-index .journal-issue-card > a { color: #1e3417; font-family: var(--font-display); font-size: 1.15rem; text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.3rem .25rem .4rem; }
+  /* Show the complete admin panel, not the surrounding 1440px browser canvas.
+     Source viewport x332..1108, y0..680 contains all controls with a margin. */
+  .journal-screen { position: relative; display: block; overflow: hidden; aspect-ratio: 776 / 680; border: 1px solid #dae4d0; border-radius: 7px; background: #f4f7f0; }
+  .journal-screen img { display: block; width: 185.567%; max-width: none; height: auto; margin-left: -42.784%; }
+  .journal-screen-zoom { position: absolute; right: .5rem; bottom: .5rem; padding: .4rem .65rem; background: #fff; border: 1px solid #c4d1b9; border-radius: 6px; color: #345128; font: 500 .72rem var(--font-body); box-shadow: 0 2px 8px #19301512; }
+  .journal-screen:hover .journal-screen-zoom { background: #e5f2d6; }
+  .resource-journal-index .shot-lightbox .shot-frame { width: min(92vw, calc(88vh * 776 / 680), 1000px); aspect-ratio: 776 / 680; overflow: hidden; border-radius: 12px; }
+  .resource-journal-index .shot-lightbox img { width: 185.567%; max-width: none; height: auto; max-height: none; margin-left: -42.784%; border-radius: 0; }
+  .resource-journal-index .shot-close { z-index: 1; }
+  .resource-journal-index .journal-issue-card > a:not(.journal-screen) { color: #1e3417; font-family: var(--font-display); font-size: 1.15rem; text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.3rem .25rem .4rem; }
   .journal-issue-card > a b { width: 36px; height: 36px; display: grid; place-items: center; flex: none; background: #e7f0dc; border-radius: 50%; font-size: 1.15rem; font-weight: 400; }
   .journal-issue-card > p { color: #7a8b6d; font-size: .66rem; margin: .2rem .25rem .25rem; }
   .resource-journal-index .article-feature { border-radius: 12px; padding: 1.9rem; }
@@ -159,6 +168,7 @@
   .resource-elevated:not(.resource-guides-index) .guide-hero .resource-cover .resource-cover-link { color: #3f612b; border-top: 1px solid #cfddc0; padding-top: 1rem; }
   .resource-elevated:not(.resource-guides-index) .guide-hero .resource-cover-shot { box-shadow: 0 8px 20px #23391515; border-radius: 5px; border-color: #c3d4b3; }
   @media (max-width: 1000px) {
+    .resource-journal-index .resource-hero-grid { grid-template-columns: minmax(0,1fr); }
     .resource-editorial .resource-hero-grid { gap: 2rem; }
     .resource-editorial .resource-hero h1 { font-size: clamp(2.7rem,5.1vw,4rem); }
     .editorial-visual { padding-bottom: 0; }
@@ -171,6 +181,7 @@
     .resource-editorial .article-toc ol { border: 0; }
   }
   @media (max-width: 760px) {
+    .resource-journal-index .resource-hero-grid { grid-template-columns: minmax(0,1fr); }
     .resource-editorial .article-hero { padding-block: 1.7rem 1.4rem; }
     .resource-editorial .resource-hero-grid { grid-template-columns: minmax(0,1fr); gap: 2rem; }
     .resource-editorial .resource-hero h1 { font-size: clamp(2.6rem,8.5vw,4.2rem); max-width: 18ch; }
