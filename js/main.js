@@ -89,9 +89,22 @@
     image.classList.toggle('is-phone', data.app === 'ourspace');
     panel.querySelector('strong').textContent = data.title;
     panel.querySelector('.app-preview-caption span').textContent = data.caption;
-    var link = panel.querySelector('a');
+    var link = panel.querySelector('.app-explore');
     link.href = data.app + '.html';
     link.setAttribute('aria-label', 'Explore ' + data.title);
+    panel.querySelector('.app-preview-image').href = data.image;
+    panel.querySelector('.app-preview-image').setAttribute('aria-label', 'Enlarge ' + data.title + ' screenshot');
+    panel.closest('.app-stage').dataset.activeApp = data.app;
+    var features = {
+      crewbook: ['Schedule the week', 'Allocate the crew', 'See the job costs'],
+      crewqci: ['Send the quote', 'Agree the work', 'Chase the payment'],
+      studiobooks: ['Win the proposal', 'Run the billing', 'Keep clients informed'],
+      almoner: ['Track donations', 'Manage Gift Aid', 'Support the trustees'],
+      ourspace: ['Share the calendar', 'Plan the meals', 'Remember the little things']
+    };
+    panel.querySelectorAll('.preview-workflow span').forEach(function (item, index) {
+      item.textContent = features[data.app][index];
+    });
     panel.setAttribute('aria-labelledby', button.id);
     counter.textContent = '0' + (buttons.indexOf(button) + 1) + ' / 05';
     if (focus) button.focus();
@@ -100,8 +113,8 @@
     button.addEventListener('click', function () { select(button, false); });
     button.addEventListener('keydown', function (event) {
       var next;
-      if (event.key === 'ArrowRight') next = (index + 1) % buttons.length;
-      if (event.key === 'ArrowLeft') next = (index + buttons.length - 1) % buttons.length;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % buttons.length;
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index + buttons.length - 1) % buttons.length;
       if (event.key === 'Home') next = 0;
       if (event.key === 'End') next = buttons.length - 1;
       if (next === undefined) return;
@@ -110,6 +123,10 @@
     });
   });
   tabs.setAttribute('role', 'tablist');
+  var tabLayout = window.matchMedia('(min-width: 701px)');
+  function setOrientation() { tabs.setAttribute('aria-orientation', tabLayout.matches ? 'vertical' : 'horizontal'); }
+  setOrientation();
+  tabLayout.addEventListener('change', setOrientation);
   panel.setAttribute('role', 'tabpanel');
   panel.setAttribute('aria-labelledby', buttons[0].id);
   tabs.classList.add('is-ready');

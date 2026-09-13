@@ -24,9 +24,12 @@
   <link rel="stylesheet" href="css/articles.css?v=1">
   <link rel="stylesheet" href="css/resources-revamp.css?v=1">
   <script src="js/consent.js" defer></script>
-  <link rel="stylesheet" href="/css/revamp.css?v=1">
+  <link rel="stylesheet" href="/css/revamp.css?v=2">
+
+  <link rel="stylesheet" href="/css/resources-elevate.css?v=1">
+  <link rel="stylesheet" href="/css/elevate.css?v=1">
 </head>
-<body class="resource-page">
+<body class="resource-page resource-elevated resource-editorial">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <nav class="nav" aria-label="Main">
@@ -47,15 +50,21 @@
     </nav>
   </header>
   <aside class="articles-discovery" aria-label="Latest from the studio"><a href="/base44-mfa-guide.html"><span>From the workbench</span><span class="articles-discovery-detail">A practical guide to admin MFA on Base44</span><span aria-hidden="true">↗</span></a></aside>
-  <main id="main"><section class="hero resource-hero article-hero"><div class="wrap resource-hero-grid"><div class="resource-hero-copy"><a class="article-back" href="base44-mfa.html">← Read the story behind this guide</a><p class="kicker">Practical guide · Base44</p><h1>Add admin MFA to a Base44 app, step by step.</h1><p class="lede">A Builder-led implementation guide with copyable prompts, one small worked feature and checks that tell you whether the protection actually holds.</p><p class="article-byline">By Peter Edwards · Checked 13 September 2026 · Guide version 1.0</p></div>
-<aside class="resource-cover" aria-label="Guide overview">
-  <div class="resource-cover-label">The implementation</div>
-  <h2>One small feature.<br>Nine clear steps.</h2>
-  <div class="resource-cells resource-cells-nine" aria-hidden="true"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span><span>09</span></div>
-  <p>Copyable Builder prompts, private setup instructions and a repeatable acceptance checklist.</p>
-  <a class="resource-cover-link" href="#downloads">Get the Builder pack <span aria-hidden="true">↓</span></a>
+  <main id="main"><section class="hero resource-hero article-hero"><div class="wrap resource-hero-grid"><div class="resource-hero-copy"><a class="article-back" href="base44-mfa.html">← Read the story behind this guide</a><p class="kicker">The practical guide <span class="editorial-issue">№ 001 / Base44</span></p><h1>Add admin MFA to a Base44 app, <span>step by step.</span></h1><p class="lede">A Builder-led implementation guide with copyable prompts, one small worked feature and checks that tell you whether the protection actually holds.</p><p class="article-byline">By Peter Edwards · Checked 13 September 2026 · Guide version 1.0</p></div>
+<aside class="editorial-visual" aria-label="Implementation preview">
+  <div class="editorial-preview-window">
+    <div class="editorial-window-chrome"><span class="editorial-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>keystone / admin security</span><span>UI preview</span></div>
+    <div class="editorial-preview-crop"><img src="img/articles/mfa-owner.png" alt="Owner approval screen in an isolated implementation preview with synthetic accounts" width="1440" height="1000"></div>
+  </div>
+  <div class="editorial-code-float"><div class="editorial-code-label"><span>THE DATA BOUNDARY</span><span aria-hidden="true">{ }</span></div><pre aria-label="Backend-only security record access rules"><code><span class="code-token-key">"rls"</span>: {
+  <span class="code-token-key">"read"</span>: <span class="code-token-value">false</span>,
+  <span class="code-token-key">"create"</span>: <span class="code-token-value">false</span>,
+  <span class="code-token-key">"update"</span>: <span class="code-token-value">false</span>,
+  <span class="code-token-key">"delete"</span>: <span class="code-token-value">false</span>
+}</code></pre><p>Backend-owned security entity</p></div>
+  <div class="editorial-preview-caption"><span class="editorial-caption-line"></span><span>The real interface.<br>The checks behind it.</span></div>
 </aside>
-</div></section>
+</div></section><div class="editorial-reading-strip wrap"><span><i aria-hidden="true"></i> Built from a real implementation</span><span>Read the details. Explore the code.</span><a href="#step-1">Start reading <span aria-hidden="true">↓</span></a></div>
 <div class="wrap article-layout"><aside class="article-toc" aria-label="Guide contents"><p class="kicker">Build in this order</p><ol><li><a href="#step-1">Check the app before changing it</a></li><li><a href="#step-2">Prove the database operation first</a></li><li><a href="#step-3">Build the security records and shared verifier</a></li><li><a href="#step-4">Prepare owner setup without a public shortcut</a></li><li><a href="#step-5">Build enrolment, verification and recovery</a></li><li><a href="#step-6">Protect the complete AdminNote pilot</a></li><li><a href="#step-7">Connect the rest of the admin work</a></li><li><a href="#step-8">Run and record the acceptance checks</a></li><li><a href="#step-9">Prepare the release and operating notes</a></li></ol><a href="#troubleshooting">Troubleshooting</a><br><a href="#downloads">Downloads</a></aside><article class="article-body">
 <p class="article-opening">If you want to do this in your own app, start small. Protect one harmless admin feature properly, prove that it cannot be bypassed, then apply the pattern to the rest of the app.</p>
 <p>This guide explains what to ask the Base44 Builder to build, what you need to configure yourself and what a passing result looks like. It is for an app owner working with the Builder or a developer. You do not need to understand every line before starting, but the finished security implementation needs technical review.</p>
@@ -134,8 +143,9 @@ Keep normal users&#x27; sign-in methods unchanged. Do not call this enforced Mic
     </div>
     <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
-  <script src="/js/main.js?v=2"></script>
+  <script src="/js/main.js?v=3"></script>
   <script src="js/mfa-guide.js"></script>
-  <script src="js/resources-revamp.js"></script>
+  <script src="js/resources-revamp.js?v=2"></script>
+  <script src="/js/command-menu.js?v=1" defer></script>
 </body>
 </html>

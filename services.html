@@ -36,9 +36,12 @@
   <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13">
-  <link rel="stylesheet" href="css/company-revamp.css?v=1">
+  <link rel="stylesheet" href="css/company-revamp.css?v=2">
+  <script src="js/build-planner.js?v=1" defer></script>
   <script src="js/consent.js" defer></script>
-  <link rel="stylesheet" href="/css/revamp.css?v=1">
+  <link rel="stylesheet" href="/css/revamp.css?v=2">
+
+  <link rel="stylesheet" href="/css/elevate.css?v=1">
 </head>
 <body class="company-page services-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -73,7 +76,7 @@
         <p class="lede">Internal tools, job trackers and integrations for trades, contractors and charities — designed and built by Peter Edwards, who has run a surfacing firm, chaired a charity and kept a pub for nine years.</p>
         <div class="cta-row">
           <a class="button button-primary" href="mailto:peter@edwardsapps.co.uk?subject=Custom%20build">Start with an email</a>
-          <a class="company-text-link" href="#how-heading">See how it works <span aria-hidden="true">↓</span></a>
+          <a class="company-text-link" href="#build-planner">Shape your brief <span aria-hidden="true">↓</span></a>
         </div>
         </div>
         <div class="build-canvas" aria-label="A tool shaped around your working day">
@@ -84,6 +87,41 @@
           <div class="canvas-output"><span aria-hidden="true">✓</span><div><strong>Less re-keying. More doing.</strong><p>One connected place for the work.</p></div></div>
           <div class="canvas-bottomline"><span>Real workflows</span><span>Working software</span><span>One person</span></div>
         </div>
+      </div>
+    </section>
+
+
+    <section class="section brief-studio" id="build-planner" aria-labelledby="planner-heading">
+      <div class="wrap">
+        <div class="brief-studio-intro"><div><p class="kicker">A small tool for your next big idea</p><h2 id="planner-heading">Less blank page.<br><span>More starting point.</span></h2></div><p>You know the work. This helps put it into words. Pick what gets in the way, and shape a brief you can take to Peter.</p></div>
+        <div class="brief-planner" data-brief-planner hidden>
+          <aside class="planner-sidebar"><span class="planner-studio-label"><i aria-hidden="true"></i> THE BRIEF BUILDER</span><h3>Let's make<br>work feel<br><em>lighter.</em></h3><p>Three small steps.<br>A useful conversation starter.</p><div class="planner-live-notes" aria-hidden="true"><span>YOUR WORKING NOTES</span><p data-planner-note="friction">Find the friction.</p><p data-planner-note="people">Bring the right people.</p><p data-planner-note="outcome">Picture a better day.</p></div><p class="planner-local-note">Your draft stays in this browser until you send the enquiry.</p></aside>
+          <div class="planner-workspace">
+            <ol class="planner-progress" aria-label="Brief builder steps"><li><button type="button" data-planner-step="0" aria-current="step"><span>01</span> The friction</button></li><li><button type="button" data-planner-step="1" disabled><span>02</span> The people</button></li><li><button type="button" data-planner-step="2" disabled><span>03</span> The outcome</button></li></ol>
+            <form id="brief-planner-form" novalidate>
+              <fieldset data-planner-panel="0"><legend tabindex="-1">What keeps slowing you down?</legend><p class="planner-help">Choose the things that sound familiar. One is enough.</p><div class="planner-choice-grid">
+                <label class="planner-choice"><input type="checkbox" name="friction" value="The same information gets typed into more than one place."><span class="planner-choice-mark" aria-hidden="true">↔</span><span><strong>Typing it twice</strong><small>The same details, in too many places.</small></span><i aria-hidden="true"></i></label>
+                <label class="planner-choice"><input type="checkbox" name="friction" value="Important information is scattered across messages, paperwork and spreadsheets."><span class="planner-choice-mark" aria-hidden="true">▦</span><span><strong>Details everywhere</strong><small>Messages, paperwork, spreadsheets.</small></span><i aria-hidden="true"></i></label>
+                <label class="planner-choice"><input type="checkbox" name="friction" value="Scheduling people and jobs takes too much back-and-forth."><span class="planner-choice-mark" aria-hidden="true">◷</span><span><strong>A moving schedule</strong><small>Keeping people and jobs lined up.</small></span><i aria-hidden="true"></i></label>
+                <label class="planner-choice"><input type="checkbox" name="friction" value="We spend too much time chasing updates and finding out where work stands."><span class="planner-choice-mark" aria-hidden="true">↗</span><span><strong>Chasing updates</strong><small>Finding out where the work stands.</small></span><i aria-hidden="true"></i></label>
+                <label class="planner-choice"><input type="checkbox" name="friction" value="Quotes, invoices or records take too much time to prepare and keep in order."><span class="planner-choice-mark" aria-hidden="true">≡</span><span><strong>Admin piling up</strong><small>Quotes, invoices and records.</small></span><i aria-hidden="true"></i></label>
+                <label class="planner-choice"><input type="checkbox" name="friction" value="There is a different problem in our workflow that I would like to talk through."><span class="planner-choice-mark" aria-hidden="true">+</span><span><strong>Something else</strong><small>We'll put it in your own words.</small></span><i aria-hidden="true"></i></label>
+              </div></fieldset>
+              <fieldset data-planner-panel="1" hidden><legend tabindex="-1">Who needs a better way?</legend><p class="planner-help">Choose the closest fit. Then add the tools you use today.</p><div class="planner-team-options">
+                <label><input type="radio" name="people" value="an office and a team working on site"><span>An office + a team on site</span></label>
+                <label><input type="radio" name="people" value="a small office or studio"><span>A small office or studio</span></label>
+                <label><input type="radio" name="people" value="a charity or volunteer organisation"><span>A charity or volunteer team</span></label>
+                <label><input type="radio" name="people" value="a business and its customers"><span>A business and its customers</span></label>
+                <label><input type="radio" name="people" value="my own day-to-day work"><span>Just me, for now</span></label>
+              </div><label class="planner-field-label" for="planner-tools">Where does the work live now? <span>optional</span></label><input id="planner-tools" name="current_tools" type="text" maxlength="180" placeholder="For example, Excel, WhatsApp and paper job sheets" autocomplete="off"></fieldset>
+              <fieldset data-planner-panel="2" hidden><legend tabindex="-1">What would a good day look like?</legend><p class="planner-help">A sentence or two is enough. You can leave this blank and talk it through with Peter.</p><label class="planner-field-label" for="planner-outcome">I'd like us to be able to… <span>optional</span></label><textarea id="planner-outcome" name="outcome" rows="5" maxlength="1200" placeholder="For example, give everyone one clear view of tomorrow's jobs, without checking three different places."></textarea><div class="planner-ground-rule"><span aria-hidden="true">↗</span><p>This creates a starting brief. Peter will help work out what fits, with a clear scope and price agreed before building.</p></div></fieldset>
+              <p id="planner-feedback" class="planner-feedback" role="status" aria-live="polite"></p>
+              <div class="planner-actions"><button type="button" class="planner-back" data-planner-back hidden>← Back</button><span class="planner-step-count" data-planner-count>Step 1 of 3</span><button type="submit" class="button button-primary" data-planner-next>Next: the people</button></div>
+            </form>
+            <div class="planner-result" data-planner-result hidden><span class="planner-result-check" aria-hidden="true">✓</span><p class="kicker">Your starting point</p><h3 tabindex="-1">That's a brief worth<br>having a conversation about.</h3><p>Read it through, make it yours, and bring it across to the enquiry form.</p><label class="planner-field-label" for="planner-brief">Your brief <span>you can edit this</span></label><textarea id="planner-brief" rows="11" maxlength="3500"></textarea><div class="planner-result-actions"><a class="button button-primary" data-planner-enquiry href="enquiry.html?from=planner">Take this to Peter</a><button type="button" class="planner-copy" data-planner-copy>Copy the brief</button></div><p class="planner-copy-status" data-planner-copy-status role="status" aria-live="polite"></p><button type="button" class="planner-reset" data-planner-reset>← Start a fresh brief</button></div>
+          </div>
+        </div>
+        <noscript><p class="planner-noscript">The brief builder needs JavaScript. A few words about what's slow, who does the work and what would help is all Peter needs. <a href="enquiry.html">Write your enquiry here.</a></p></noscript>
       </div>
     </section>
 
@@ -142,6 +180,7 @@
     <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
 
-  <script src="/js/main.js?v=2"></script>
+  <script src="/js/main.js?v=3"></script>
+  <script src="/js/command-menu.js?v=1" defer></script>
 </body>
 </html>

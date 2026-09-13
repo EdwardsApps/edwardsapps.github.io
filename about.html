@@ -41,9 +41,12 @@
   <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13">
-  <link rel="stylesheet" href="css/company-revamp.css?v=1">
+  <link rel="stylesheet" href="css/company-revamp.css?v=2">
+  <script src="js/build-planner.js?v=1" defer></script>
   <script src="js/consent.js" defer></script>
-  <link rel="stylesheet" href="/css/revamp.css?v=1">
+  <link rel="stylesheet" href="/css/revamp.css?v=2">
+
+  <link rel="stylesheet" href="/css/elevate.css?v=1">
 </head>
 <body class="company-page about-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -120,53 +123,64 @@
       </div>
     </section>
 
-    <section class="section section-alt company-history" aria-labelledby="story-heading">
+    <section class="section section-alt company-history editorial-journey" aria-labelledby="story-heading">
       <div class="wrap history-grid">
         <div class="history-heading">
         <p class="kicker">The story</p>
         <h2 id="story-heading" class="sheet-head">Twenty years in the making.</h2>
         <p class="history-caption">From a portacabin in Buckinghamshire to the tools that make work feel lighter.</p>
-        <span class="history-years" aria-hidden="true">2005<br><span>↓</span><br>2026</span>
+        <div class="journey-stage" aria-hidden="true"><span class="journey-stage-label">FROM THE BEGINNING</span><strong class="journey-current-year" data-journey-year>2005</strong><span class="journey-current-title" data-journey-title>A family ambition.</span><div class="journey-stage-mark"><img data-journey-image src="img/logo-edwards-surfacing.png" alt="" width="100" height="80"></div><div class="journey-stage-foot"><span data-journey-count>01 / 10</span><span>THE WORK CAME FIRST</span></div></div>
+        <nav class="journey-jumps" aria-label="Jump to a chapter" data-journey-jumps hidden></nav>
         </div>
-        <ol class="timeline" role="list">
-          <li>
+        <ol class="timeline journey-timeline" role="list">
+          <li id="journey-1" data-journey-item data-title="A family ambition." data-image="img/logo-edwards-surfacing.png">
             <span class="tl-year">2005</span>
+            <h3 class="journey-chapter-title">A family ambition.</h3>
             <p>After more than thirty years in the paving industry, Ken Edwards decides to realise a lifelong ambition and start his own surfacing firm — with the support of his wife Diane, and encouragement from long-time friend and accountant James Birch.</p>
           </li>
-          <li>
+          <li id="journey-2" data-journey-item data-title="The doors open." data-image="img/logo-edwards-surfacing.png">
             <span class="tl-year">2006</span>
+            <h3 class="journey-chapter-title">The doors open.</h3>
             <p>Edwards Surfacing opens from a small portacabin, the family name proudly on the door. Sons Simon and Peter join in the earliest days — Simon out on the tools learning the craft first-hand, Peter in the office building the admin and business processes from scratch.</p>
           </li>
-          <li>
+          <li id="journey-3" data-journey-item data-title="Wembley calls." data-image="img/logo-edwards-surfacing.png">
             <span class="tl-year">Months later</span>
+            <h3 class="journey-chapter-title">Wembley calls.</h3>
             <p>The young firm is awarded the asphalt surfacing works at the new Wembley Stadium — tight deadlines, huge tonnages, immense pressure on a world-famous project. Delivering it proves what the business is capable of and sets the course for everything after.</p>
           </li>
-          <li>
+          <li id="journey-4" data-journey-item data-title="The music begins." data-image="img/logo-the-red-bullets.png">
             <span class="tl-year">2007</span>
+            <h3 class="journey-chapter-title">The music begins.</h3>
             <p>While the firm grows, the music does too: Peter and his brother Mark form The Red Bullets — going on to tour Dubai and the French Alps, and later to play the British Grand Prix.</p>
           </li>
-          <li>
+          <li id="journey-5" data-journey-item data-title="Room to grow." data-image="img/logo-edwards-surfacing.png">
             <span class="tl-year">2008</span>
+            <h3 class="journey-chapter-title">Room to grow.</h3>
             <p>Out of the portacabin and into a permanent home at Great Horwood, Buckinghamshire — where the firm, its crews and its burgundy-and-grey livery remain today.</p>
           </li>
-          <li>
+          <li id="journey-6" data-journey-item data-title="Songs find their audience." data-image="img/logo-the-red-bullets.png">
             <span class="tl-year">2012</span>
+            <h3 class="journey-chapter-title">Songs find their audience.</h3>
             <p>The Red Bullets release their album <em>Drama in the Drawing Room</em> — earning plays on BBC Radio 2.</p>
           </li>
-          <li>
+          <li id="journey-7" data-journey-item data-title="Behind the bar." data-image="img/logo-the-mitre.png">
             <span class="tl-year">May 2017</span>
+            <h3 class="journey-chapter-title">Behind the bar.</h3>
             <p>Peter takes on The Mitre in Buckingham — thrown in at the deep end behind the bar on day one. Over nine years it becomes a premier live-music venue and a three-time CAMRA Pub of the Year.</p>
           </li>
-          <li>
+          <li id="journey-8" data-journey-item data-title="The first working tool." data-image="img/product-crewbook.png">
             <span class="tl-year">Along the way</span>
+            <h3 class="journey-chapter-title">The first working tool.</h3>
             <p>In the office at Great Horwood, Peter builds the job book nobody sold — scheduling, costing, invoicing, CIS — because the firm needed it. It becomes <a href="crewbook.html">CrewBook</a>, and it still runs Edwards Surfacing every working day.</p>
           </li>
-          <li>
+          <li id="journey-9" data-journey-item data-title="The regulars rally." data-image="img/logo-impact-buckingham.png">
             <span class="tl-year">December 2025</span>
+            <h3 class="journey-chapter-title">The regulars rally.</h3>
             <p>An idea that began with a radio report a couple of winters earlier — neighbours dreading the cost of Christmas — comes good at The Mitre. A plan to send out a few hampers snowballs: local businesses pledge, the regulars give up their evenings, and Impact Buckingham registers with the Charity Commission — delivering 75 festive hampers through partner schools within four weeks, £4,800 raised in cash and kind, every penny to local families.</p>
           </li>
-          <li>
+          <li id="journey-10" data-journey-item data-title="The tools become EdwardsApps." data-image="img/logo.png">
             <span class="tl-year">2026</span>
+            <h3 class="journey-chapter-title">The tools become EdwardsApps.</h3>
             <p>Edwards Surfacing marks twenty years in business — still family-run, with Simon as Managing Director. Impact Buckingham steps out on its own, planning support for families through the summer holidays. And the tools built along the way become EdwardsApps: <a href="crewbook.html">CrewBook</a> for contractors, <a href="ourspace.html">OurSpace</a> for households, <a href="almoner.html">Almoner</a> for charities, and <a href="studiobooks.html">Studiobooks</a>, the back office EdwardsApps runs on itself, opened up for other studios.</p>
           </li>
         </ol>
@@ -202,6 +216,7 @@
     <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
 
-  <script src="/js/main.js?v=2"></script>
+  <script src="/js/main.js?v=3"></script>
+  <script src="/js/command-menu.js?v=1" defer></script>
 </body>
 </html>

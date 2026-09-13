@@ -40,9 +40,12 @@
   <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13">
-  <link rel="stylesheet" href="css/company-revamp.css?v=1">
+  <link rel="stylesheet" href="css/company-revamp.css?v=2">
+  <script src="js/build-planner.js?v=1" defer></script>
   <script src="js/consent.js" defer></script>
-  <link rel="stylesheet" href="/css/revamp.css?v=1">
+  <link rel="stylesheet" href="/css/revamp.css?v=2">
+
+  <link rel="stylesheet" href="/css/elevate.css?v=1">
 </head>
 <body class="company-page enquiry-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -86,6 +89,8 @@
                upgrades it to send JSON to Studiobooks (our own back office) instead. -->
           <form id="enquiry-form" class="enquiry-form" action="mailto:peter@edwardsapps.co.uk?subject=I%20need%20an%20app" method="post" enctype="text/plain" aria-labelledby="form-heading">
             <div class="form-card-heading"><span class="form-card-icon" aria-hidden="true">↗</span><div><p class="kicker">Start a conversation</p><h2 id="form-heading">A little about you.</h2><p>Fields marked optional can be left blank.</p></div></div>
+            <div class="enquiry-draft-note" data-enquiry-draft-note hidden><span aria-hidden="true">✓</span><p><strong>Your brief is here.</strong> Check the details, add your name and email, and send it when you're ready.</p></div>
+            <div class="enquiry-readiness" data-enquiry-readiness hidden><span>Your essentials</span><progress value="0" max="3" aria-label="Required enquiry details supplied"></progress><span data-enquiry-count>0 of 3</span></div>
             <div class="field-row">
               <div class="field">
                 <label for="enq-name">Your name</label>
@@ -121,6 +126,7 @@
             </div>
             <div class="field">
               <label for="enq-message">What would make work feel lighter?</label>
+              <div class="enquiry-writing-cues" data-enquiry-writing-cues hidden aria-label="Add a starting sentence"><span>A hand getting started?</span><button type="button" data-writing-cue="The work today: ">The work today</button><button type="button" data-writing-cue="Where it gets stuck: ">Where it gets stuck</button><button type="button" data-writing-cue="A good day would look like: ">A better day</button></div>
               <textarea id="enq-message" name="message" rows="7" aria-describedby="enq-message-hint" required></textarea>
               <span id="enq-message-hint" class="field-hint">Plain English is fine — no technical brief needed. The spreadsheet, the WhatsApp thread, the thing typed in twice: whatever it is, describe it the way you'd tell a colleague.</span>
             </div>
@@ -179,7 +185,8 @@
     <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
 
-  <script src="/js/main.js?v=2"></script>
+  <script src="/js/main.js?v=3"></script>
   <script src="js/enquiry.js"></script>
+  <script src="/js/command-menu.js?v=1" defer></script>
 </body>
 </html>

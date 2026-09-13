@@ -24,9 +24,12 @@
   <link rel="stylesheet" href="css/articles.css?v=1">
   <link rel="stylesheet" href="css/resources-revamp.css?v=1">
   <script src="js/consent.js" defer></script>
-  <link rel="stylesheet" href="/css/revamp.css?v=1">
+  <link rel="stylesheet" href="/css/revamp.css?v=2">
+
+  <link rel="stylesheet" href="/css/resources-elevate.css?v=1">
+  <link rel="stylesheet" href="/css/elevate.css?v=1">
 </head>
-<body class="resource-page">
+<body class="resource-page resource-elevated resource-editorial">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <nav class="nav" aria-label="Main">
@@ -50,19 +53,25 @@
   <main id="main">
 <section class="hero resource-hero article-hero"><div class="wrap resource-hero-grid"><div class="resource-hero-copy">
   <a class="article-back" href="articles.html">← All articles</a>
-  <p class="kicker">Build notes · Authentication</p>
-  <h1>A password shouldn’t be enough to run the whole app.</h1>
+  <p class="kicker">The build journal <span class="editorial-issue">№ 001 / Authentication</span></p>
+  <h1>A password shouldn’t be enough <span>to run the whole app.</span></h1>
   <p class="lede">How I added an extra admin check to a Base44 app — and why most of the work was behind the six-digit code.</p>
   <p class="article-byline">By Peter Edwards <span>·</span> <time datetime="2026-09-13">13 September 2026</time> <span>·</span> 9 minute read</p>
 </div>
-<aside class="resource-cover" aria-label="Article overview">
-  <div class="resource-cover-label">Behind the build</div>
-  <h2>Six digits.<br>A deeper story.</h2>
-  <div class="resource-cells" aria-hidden="true"><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span></div>
-  <p>Owner approval, authenticator setup and the checks behind every admin request.</p>
-  <div class="resource-cover-bottom"><span>Base44</span><span>Authentication</span><span>Build notes</span></div>
+<aside class="editorial-visual" aria-label="Implementation preview">
+  <div class="editorial-preview-window">
+    <div class="editorial-window-chrome"><span class="editorial-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>keystone / admin security</span><span>UI preview</span></div>
+    <div class="editorial-preview-crop"><img src="img/articles/mfa-owner.png" alt="Owner approval screen in an isolated implementation preview with synthetic accounts" width="1440" height="1000"></div>
+  </div>
+  <div class="editorial-code-float"><div class="editorial-code-label"><span>THE DATA BOUNDARY</span><span aria-hidden="true">{ }</span></div><pre aria-label="Backend-only security record access rules"><code><span class="code-token-key">"rls"</span>: {
+  <span class="code-token-key">"read"</span>: <span class="code-token-value">false</span>,
+  <span class="code-token-key">"create"</span>: <span class="code-token-value">false</span>,
+  <span class="code-token-key">"update"</span>: <span class="code-token-value">false</span>,
+  <span class="code-token-key">"delete"</span>: <span class="code-token-value">false</span>
+}</code></pre><p>Backend-owned security entity</p></div>
+  <div class="editorial-preview-caption"><span class="editorial-caption-line"></span><span>The real interface.<br>The checks behind it.</span></div>
 </aside>
-</div></section>
+</div></section><div class="editorial-reading-strip wrap"><span><i aria-hidden="true"></i> Built from a real implementation</span><span>Read the details. Explore the code.</span><a href="#requirement">Start reading <span aria-hidden="true">↓</span></a></div>
 <div class="wrap article-layout">
 <aside class="article-toc" aria-label="In this article"><p class="kicker">In this article</p><ol>
   <li><a href="#requirement">Start with the requirement</a></li>
@@ -186,7 +195,8 @@ if (result?.success !== true ||
     </div>
     <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
-  <script src="/js/main.js?v=2"></script>
-  <script src="js/resources-revamp.js"></script>
+  <script src="/js/main.js?v=3"></script>
+  <script src="js/resources-revamp.js?v=2"></script>
+  <script src="/js/command-menu.js?v=1" defer></script>
 </body>
 </html>

@@ -39,8 +39,14 @@ for path in sorted(root.glob('*.html')):
   </footer>'''
     source = re.sub(r'  <footer class="site-footer">.*?</footer>', lambda _: footer, source, flags=re.S)
     source = re.sub(r'\s*<link rel="stylesheet" href="/?css/revamp.css(?:\?[^\"]*)?">', '', source)
-    source = source.replace('</head>', '  <link rel="stylesheet" href="/css/revamp.css?v=1">\n</head>')
-    source = re.sub(r'src="(/?js/main.js)(?:\?[^\"]*)?"', 'src="/js/main.js?v=2"', source)
+    # Keep per-page second-pass styles between the shared foundation and finish.
+    source = re.sub(r'\s*<link rel="stylesheet" href="/?css/elevate.css(?:\?[^\"]*)?">', '', source)
+    extra = re.findall(r'\s*<link rel="stylesheet" href="/?css/resources-elevate.css(?:\?[^\"]*)?">', source)
+    source = re.sub(r'\s*<link rel="stylesheet" href="/?css/resources-elevate.css(?:\?[^\"]*)?">', '', source)
+    source = source.replace('</head>', '  <link rel="stylesheet" href="/css/revamp.css?v=2">\n' + ''.join(extra) + '\n  <link rel="stylesheet" href="/css/elevate.css?v=1">\n</head>')
+    source = re.sub(r'src="(/?js/main.js)(?:\?[^\"]*)?"', 'src="/js/main.js?v=3"', source)
+    source = re.sub(r'\s*<script src="/?js/command-menu.js(?:\?[^\"]*)?"(?: defer)?></script>', '', source)
+    source = source.replace('</body>', '  <script src="/js/command-menu.js?v=1" defer></script>\n</body>')
     source = source.replace('content="#12161D"', 'content="#111813"')
     path.write_text(source, encoding='utf-8')
 print('Shared shell refreshed across all root pages.')
