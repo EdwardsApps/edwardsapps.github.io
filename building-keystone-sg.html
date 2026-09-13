@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add('js')</script>
+  <title>Building Keystone SG — and the app it inspired — EdwardsApps</title>
+  <meta name="description" content="Peter Edwards on building Keystone SG: practical scheduling, Site Memory, admin MFA, sensitive-data encryption and the client work that became Studiobooks.">
+  <link rel="canonical" href="https://edwardsapps.co.uk/building-keystone-sg.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="EdwardsApps">
+  <meta property="og:title" content="Building Keystone SG — and the app it inspired">
+  <meta property="og:description" content="Peter Edwards on building Keystone SG: practical scheduling, Site Memory, admin MFA, sensitive-data encryption and the client work that became Studiobooks.">
+  <meta property="og:url" content="https://edwardsapps.co.uk/building-keystone-sg.html">
+  <meta property="og:image" content="https://edwardsapps.co.uk/img/articles/articles-social-v1.png">
+  <meta property="og:image:alt" content="EdwardsApps — practical software for real work">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#111813">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Building Keystone SG — and the app it inspired", "description": "Peter Edwards on building Keystone SG: practical scheduling, Site Memory, admin MFA, sensitive-data encryption and the client work that became Studiobooks.", "url": "https://edwardsapps.co.uk/building-keystone-sg.html", "author": {"@type": "Person", "name": "Peter Edwards", "url": "https://edwardsapps.co.uk/about.html"}, "datePublished": "2026-09-13", "dateModified": "2026-09-13", "publisher": {"@type": "Organization", "name": "EdwardsApps", "url": "https://edwardsapps.co.uk/"}}</script>
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/articles.css?v=1">
+  <link rel="stylesheet" href="css/resources-revamp.css?v=1">
+  <script src="js/consent.js" defer></script>
+  <link rel="stylesheet" href="/css/revamp.css?v=2">
+
+  <link rel="stylesheet" href="/css/resources-elevate.css?v=2">
+  <link rel="stylesheet" href="/css/elevate.css?v=2">
+  <link rel="stylesheet" href="css/build-story.css?v=1">
+  <link rel="stylesheet" href="css/story-editorial.css?v=1">
+</head>
+<body class="story-designed resource-page resource-elevated resource-editorial build-story">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul id="nav-links" class="nav-links">
+        <li><details class="nav-apps"><summary>Our apps</summary><div class="nav-apps-panel"><div class="nav-app-grid"><a href="/crewbook.html"><img src="/img/product-crewbook.png" alt="" width="40" height="40"><strong>CrewBook</strong><span>Contractor operations</span></a>
+<a href="/crewqci.html"><img src="/img/product-crewqci.png" alt="" width="40" height="40"><strong>CrewQCI</strong><span>Quotes, contracts & invoices</span></a>
+<a href="/studiobooks.html"><img src="/img/product-studiobooks.png" alt="" width="40" height="40"><strong>Studiobooks</strong><span>The studio back office</span></a>
+<a href="/ourspace.html"><img src="/img/product-ourspace.png" alt="" width="40" height="40"><strong>OurSpace</strong><span>Life, shared</span></a>
+<a href="/almoner.html"><img src="/img/product-almoner.png" alt="" width="40" height="40"><strong>Almoner</strong><span>Charity governance</span></a></div><a class="nav-app-help" href="/index.html#products-heading"><span>Not sure which fits? Explore the collection.</span><span aria-hidden="true">↗</span></a></div></details></li>
+        <li><a href="/services.html">Custom builds</a></li>
+        <li><a href="/articles.html">Articles</a></li>
+        <li><a href="/guides.html">Guides</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/enquiry.html" class="nav-cta">Let’s talk <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+  </header>
+  <aside class="articles-discovery" aria-label="Latest from the studio"><a href="/building-keystone-sg.html"><span>From the workbench</span><span class="articles-discovery-detail">Building Keystone SG — and the app it inspired</span><span aria-hidden="true">↗</span></a></aside>
+  <main id="main">
+<section class="hero resource-hero article-hero"><div class="wrap resource-hero-grid"><div class="resource-hero-copy">
+<a class="article-back" href="articles.html">← All articles</a>
+<p class="kicker">The build journal <span class="editorial-issue">№ 002 / Behind the build</span></p>
+<h1>I set out to build Keystone&nbsp;SG. <span>I ended up building Studiobooks too.</span></h1>
+<p class="lede">A security app, the challenges that made it better, and the studio app that grew out of the work around it.</p>
+<p class="article-byline">By Peter Edwards <span>·</span> <time datetime="2026-09-13">13 September 2026</time> <span>·</span> 10 minute read</p>
+</div><aside aria-label="Two connected builds"><div class="build-cover"><p class="build-cover-label">ONE BUILD LED TO ANOTHER</p><div class="build-cover-product"><img src="img/articles/keystone-icon.png" alt="" width="512" height="512"><div><strong>Keystone SG</strong><p>People. Properties. Patrols.</p></div></div><p class="build-cover-connection">The work around the build</p><div class="build-cover-product"><img src="img/product-studiobooks.png" alt="" width="512" height="512"><div><strong>Studiobooks</strong><p>The studio and its customers,<br>connected.</p></div></div></div><a class="story-client-link" href="https://www.keystonesg.co.uk" rel="noopener"><span><small>The business behind the build</small><strong>Visit Keystone SG</strong></span><span aria-hidden="true">↗</span></a></aside></div></section>
+<div class="editorial-reading-strip wrap"><span><i aria-hidden="true"></i> From the studio workbench</span><span>Real decisions. Useful lessons.</span><a href="#working-day">Start reading <span aria-hidden="true">↓</span></a></div>
+<div class="wrap article-layout"><aside class="article-toc" aria-label="In this article"><p class="kicker">In this article</p><ol><li><a href="#working-day">Three roles, one operation</a></li><li><a href="#operations-board">A better way to plan</a></li><li><a href="#beyond-the-basics">Beyond the basics</a></li><li><a href="#data-protection">Protecting the data</a></li><li><a href="#testing">The awkward cases</a></li><li><a href="#studiobooks">How Studiobooks began</a></li><li><a href="#what-stays-with-me">What stays with me</a></li></ol></aside>
+<article class="article-body"><p class="article-opening">I set out to build an app for <a href="https://www.keystonesg.co.uk" rel="noopener">Keystone SG</a>, a security business. Along the way, I found myself building a second app to manage the work around it. That became Studiobooks.</p>
+<p>The two solve different problems, but they came from the same place: looking closely at what people need to get through a working day, then building the tools to support them.</p>
+<p>I'm particularly proud of Keystone. There is a lot to it now, from planning patrols to keeping customers informed. But some of the work I care most about barely appears in a screenshot. It is the care behind who can see information, how sensitive details are stored, and what happens when something goes wrong.</p>
+
+<nav class="story-overview" aria-label="Highlights in this story"><a href="#beyond-the-basics"><span>01 / The operation</span><strong>Beyond a job sheet ↗</strong><small>Site Memory and a more useful Plan B.</small></a><a href="#data-protection"><span>02 / The responsibility</span><strong>Protecting the details ↗</strong><small>MFA, encryption and private documents.</small></a><a href="#studiobooks"><span>03 / The next app</span><strong>Studiobooks begins ↗</strong><small>A better connection with the customer.</small></a></nav>
+<h2 id="working-day">Start with the working day</h2>
+<p>Keystone SG brings together the office, guards carrying out patrols and customers whose properties are being looked after. Those are three very different views of the same operation.</p>
+<p>The office needs to plan the night, allocate people and equipment, review reports and deal with the commercial side. A guard needs a clear next job, the information they are authorised to use, and a straightforward way to record a visit. A customer needs to know what happened at their property and find the relevant report without navigating the office's entire system.</p>
+<div class="build-role-map" aria-label="Three views of one operation">
+  <div><span>01 / Office</span><strong>Plan and review</strong><p>People, shifts, equipment, reports and billing.</p></div>
+  <div><span>02 / Guard</span><strong>Carry out the visit</strong><p>Assigned work, check-in, observations and evidence.</p></div>
+  <div><span>03 / Customer</span><strong>See what happened</strong><p>Their properties, shared reports and documents.</p></div>
+</div>
+<p>That shaped the build. A report is part of a chain: a visit is scheduled, a guard records it, the office reviews what needs attention, and the customer sees the information intended for them. Making each screen look good matters. Making those handovers work matters more.</p>
+
+<h2 id="operations-board">Borrow the working idea, then make it fit</h2>
+<p>One of the first things I wanted to push further was scheduling. I already had something useful in <a href="crewbook.html">CrewBook</a>, the app we use at Edwards Surfacing: a day view with a pool of workers and a practical way to allocate them to work.</p>
+<p>That was a good starting point for Keystone, but a security operation has its own requirements. A guard being free on a calendar does not, on its own, make them the right person for a shift. Availability, licence status, required skills, equipment and coverage all need consideration.</p>
+<p>We developed the schedule into an Operations Board, bringing guard allocation, shift rates, equipment and coverage into the planning workflow. The useful idea came from a working business; the detail had to belong to Keystone.</p>
+<p>Later, we made the Equipment centre easier to reach and added regular checks, maintenance flags and an issue-and-return workflow. A damaged item should lead to an action, rather than quietly remaining available for the next shift.</p>
+
+<h2 id="beyond-the-basics">Going beyond a digital job sheet</h2>
+<p>As the build developed, I kept looking for places where it could help the office make a decision, or stop useful knowledge disappearing between visits. These were some of the additions that took it beyond a basic patrol-and-report app.</p>
+<section class="story-feature"><h3>Site Memory: keep the history of a problem</h3>
+<p>A report can tell you that a gate was damaged last night. The next questions are just as useful: did someone check it again, was the repair verified, and has the same problem returned?</p>
+<p>Site Memory gives a finding a continuing history. It can be recorded, assigned a next action, checked again with fresh evidence, reviewed for closure and reopened if it recurs. Customer updates are reviewed before being shared. That turns a collection of individual reports into something the next guard and the office can use.</p>
+<ol class="story-cycle" aria-label="The life of a site finding"><li><b>01</b>Record the finding</li><li><b>02</b>Check it again</li><li><b>03</b>Review the repair</li><li><b>04</b>Remember its history</li></ol></section>
+<section class="story-feature story-feature-warm"><h3>Plan B: give me a way forward</h3>
+<p>Plan B produced one of the clearest lessons of the build. The early version could show uncovered shifts, but its options were too similar and it left too much of the thinking to the person using it. Worse, a guard marked absent could still appear among the available people.</p>
+<p>I pushed back. If someone is absent, they cannot also be the answer. And if a tool offers alternatives, those alternatives need to explain what to do.</p>
+<p>We revised it to exclude the absent guard, remove duplicate options and make the recommendations more concrete, with named replacements and specific next steps. The office still makes the operational decision. The app's job is to give them something useful to assess.</p>
+</section>
+<h3>Better context for the next decision</h3>
+<p>Growth Radar explores how a prospective site might fit the operation. We added address lookup and a movable map pin, because an address match is not always the entrance a guard actually uses. Its planning estimates still depend on the quality of the inputs.</p>
+<p>Change Watch supports comparisons between reference photographs and later inspections, with human confirmation of findings. The point is to help someone notice and investigate a change, then carry a confirmed finding into the site's history.</p>
+
+<h2 id="data-protection">The work I am proudest of is behind the screen</h2>
+<p>An app for a security business carries a particular responsibility. Property access information, personal details, photographs and operational records deserve careful handling. A tidy dashboard does not answer the question of who can actually retrieve them.</p>
+<p>We worked on several layers together: account verification, permissions, sensitive-field encryption and private attachment access. Each addresses a different part of the problem.</p>
+<h3>MFA has to protect the work behind the dashboard</h3>
+<p>For administrators, we built an approval and authenticator flow, with verification checked by the backend before protected operations run. Signing in through a provider and proving an additional factor to the application are distinct things.</p>
+<p>I have written separately about the decisions, setup and session checks in <a href="base44-mfa.html">“A password shouldn’t be enough to run the whole app.”</a> There is also a <a href="base44-mfa-guide.html">step-by-step Base44 Builder guide</a> for readers who want to understand how to approach their own implementation.</p>
+<h3>Encrypt the sensitive values, and bind them to their home</h3>
+<p>Keystone's protected fields use AES-256-GCM authenticated encryption. That includes guard personal details and selected sensitive operational fields, such as access notes, staff phone numbers, SIA licence numbers and shift notes.</p>
+<p>In plain English, authenticated encryption is designed both to conceal the saved value and to reject it if the encrypted data has been altered. We went further in the newer format: a protected value is also tied to the particular record and field it belongs to.</p>
+<p>That last detail matters. An encrypted value copied into another record, or into a different field, should not suddenly become readable there. The implementation checks that binding when it decrypts, and our tests exercise the wrong record, wrong field, wrong key and modified data.</p>
+<div class="build-security-note"><span>Protection follows the data</span><strong>Approved access → permission check → authorised decryption</strong><p>The ordinary app does not send the encryption key to the browser. Backend functions check who is asking before returning the permitted information.</p></div>
+<p>This is selective field encryption, rather than a claim that every database field has received that extra layer. It is also server-side encryption, not end-to-end encryption: an authorised backend operation must be able to read the information to do its job.</p>
+<h3>Keep documents private too</h3>
+<p>Sensitive attachments use private storage. Access goes through backend checks before a short-lived signed link is issued. The link expires; it is not intended to be a permanent public address for someone's document.</p>
+<p>We also kept sensitive fields out of ordinary CSV exports and masked them in general data views. Protecting a value in its form is only part of the work if a different screen can casually export it.</p>
+
+<h2 id="testing">The awkward cases made the app better</h2>
+<p>Some of the most valuable fixes came from asking what happens outside the happy path. Can a customer retrieve internal invoice information? Does an issued invoice change when somebody later edits a client's address? Does “Open report” open that patrol's report, or just a general queue?</p>
+<p>Those questions led to concrete changes. Customer invoices are returned through a checked backend operation with an explicit set of document fields. Issued invoices retain a snapshot of the company and customer details. Visit-specific links take people to the report they selected.</p>
+<p>Even the encryption tests needed scrutiny. One test sometimes changed the encoded text without changing the underlying encrypted bytes. We corrected it to alter the actual bytes, so it reliably tests whether tampering is rejected. A green test is useful only if it tests the thing you think it does.</p>
+<p>Recovery received attention too. We built encrypted SharePoint backup packages, including private attachments, and a separate Offline Reader that can open a downloaded recovery set with the key supplied separately. Reading a real recovery set back outside the app was an important check. A complete restore drill remains a separate exercise.</p>
+<p>We also worked through the phone experience across all three roles. Clear next actions, visible approvals and readable reports are particularly valuable when someone is trying to do a job rather than explore an app.</p>
+
+<h2 id="studiobooks">Then the build needed its own app</h2>
+<p>While Keystone was taking shape, another need became clear on my side of the relationship. I needed a proper way to stay connected to the customer, present the proposal, issue the order form and invoices, show the app as it developed, and hand over the finished work.</p>
+<p>The app being built was becoming more joined up. I wanted the experience of working with EdwardsApps to feel joined up as well.</p>
+<p>That was the beginning of <a href="studiobooks.html">Studiobooks</a>. It became the back office and client portal I needed for my own studio, and I opened it up for other app and software studios to use.</p>
+<ol class="build-studio-flow">
+  <li><strong>Set out the work.</strong> Create proposals customers can review and accept, followed by the agreement and order form.</li>
+  <li><strong>Keep the commercial details together.</strong> Manage invoices and recurring billing alongside the client relationship.</li>
+  <li><strong>Show the work as it develops.</strong> Keep app and demo links accessible, so a conversation can move from describing a feature to trying it.</li>
+  <li><strong>Make handover easy to find.</strong> Share final designs and supporting documents, and give customers the finished app links and store links through their portal.</li>
+</ol>
+<p>The portal carries the studio's own branding and gives customers a place to return to for their apps, proposals, invoices and paperwork. The practical aim is simple: keep the customer connected to both the build and the business delivering it.</p>
+<p>Studiobooks is now available for other studios on the <a href="https://apps.apple.com/gb/app/studiobooks/id6807538781" rel="noopener">App Store for iPhone and iPad</a>, as well as <a href="https://studiobooks.app" rel="noopener">on the web</a>. It is the same product I built to support my own work.</p>
+
+<h2 id="what-stays-with-me">What stays with me</h2>
+<p>Keystone started as a custom app for a particular business. Working through it led to better planning, a continuing memory of site issues, more deliberate data protection and a second product for the studio behind the build.</p>
+<p>I'm proud of how far it has come. I'm especially proud that we kept asking the less visible questions: who should be able to read this, what happens if the data changes, and how will someone recover the information when they need it?</p>
+<p class="article-takeaway">The best additions came from paying attention to the work — both the customer's work and my own.</p>
+<section class="article-sources" aria-labelledby="build-notes"><h2 id="build-notes">About this build note</h2><p>Written from the Keystone SG and Studiobooks implementations and build discussions, reviewed on 13 September 2026. This is an account of the engineering decisions, not an independent security certification or a sign-off of every deployment, recovery and operational acceptance check.</p><ul><li><a href="base44-mfa.html">The admin MFA article</a> and <a href="base44-mfa-guide.html">its practical Builder guide</a></li><li><a href="studiobooks.html">See what Studiobooks does</a></li><li><a href="https://www.keystonesg.co.uk" rel="noopener">Visit Keystone SG</a></li></ul></section>
+<a class="story-next" href="base44-mfa.html"><small>Go deeper / Authentication</small><strong>The work behind the six-digit code <span aria-hidden="true">↗</span></strong></a>
+<div class="article-author"><p class="kicker">Peter Edwards · EdwardsApps</p><p>I build practical software around the work people actually do. If your business needs an app shaped around its operation, <a href="enquiry.html">tell me what you need it to do</a>.</p></div>
+</article></div></main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand"><a href="/" aria-label="EdwardsApps home"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a><p>Practical software.<br>Built from the inside.</p><p class="footer-note">An independent studio by Peter Edwards.</p></div>
+      <nav aria-label="Products"><h3>The apps</h3><ul><li><a href="/crewbook.html">CrewBook</a></li><li><a href="/crewqci.html">CrewQCI</a></li><li><a href="/studiobooks.html">Studiobooks</a></li><li><a href="/ourspace.html">OurSpace</a></li><li><a href="/almoner.html">Almoner</a></li></ul></nav>
+      <nav aria-label="Studio"><h3>The studio</h3><ul><li><a href="/services.html">Custom builds</a></li><li><a href="/about.html">About Peter</a></li><li><a href="/enquiry.html">Start a conversation</a></li><li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing ↗</a></li></ul></nav>
+      <nav aria-label="Resources"><h3>Useful things</h3><ul><li><a href="/articles.html">Articles & build notes</a></li><li><a href="/guides.html">User guides</a></li><li><a href="/base44-mfa-guide.html">Base44 MFA guide</a></li><li><a href="mailto:peter@edwardsapps.co.uk">Email Peter ↗</a></li></ul></nav>
+    </div>
+    <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
+  </footer>
+  <script src="/js/main.js?v=3"></script>
+  <script src="js/resources-revamp.js?v=2"></script>
+  <script src="/js/command-menu.js?v=3" defer></script>
+</body>
+</html>

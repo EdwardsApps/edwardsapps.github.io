@@ -27,7 +27,7 @@ for path in sorted(root.glob('*.html')):
     </nav>
   </header>'''
     source = re.sub(r'  <header class="site-header">.*?</header>', lambda _: nav, source, flags=re.S)
-    source = re.sub(r'<aside class="articles-discovery".*?</aside>', '<aside class="articles-discovery" aria-label="Latest from the studio"><a href="/base44-mfa-guide.html"><span>From the workbench</span><span class="articles-discovery-detail">A practical guide to admin MFA on Base44</span><span aria-hidden="true">↗</span></a></aside>', source, flags=re.S)
+    source = re.sub(r'<aside class="articles-discovery".*?</aside>', '<aside class="articles-discovery" aria-label="Latest from the studio"><a href="/building-keystone-sg.html"><span>From the workbench</span><span class="articles-discovery-detail">Building Keystone SG — and the app it inspired</span><span aria-hidden="true">↗</span></a></aside>', source, flags=re.S)
     footer = f'''  <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-brand"><a href="/" aria-label="EdwardsApps home"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a><p>Practical software.<br>Built from the inside.</p><p class="footer-note">An independent studio by Peter Edwards.</p></div>
@@ -46,7 +46,7 @@ for path in sorted(root.glob('*.html')):
     source = source.replace('</head>', '  <link rel="stylesheet" href="/css/revamp.css?v=2">\n' + ''.join(extra) + '\n  <link rel="stylesheet" href="/css/elevate.css?v=2">\n</head>')
     source = re.sub(r'src="(/?js/main.js)(?:\?[^\"]*)?"', 'src="/js/main.js?v=3"', source)
     source = re.sub(r'\s*<script src="/?js/command-menu.js(?:\?[^\"]*)?"(?: defer)?></script>', '', source)
-    source = source.replace('</body>', '  <script src="/js/command-menu.js?v=2" defer></script>\n</body>')
+    source = source.replace('</body>', '  <script src="/js/command-menu.js?v=3" defer></script>\n</body>')
     source = source.replace('content="#12161D"', 'content="#111813"')
     path.write_text(source, encoding='utf-8')
 print('Shared shell refreshed across all root pages.')

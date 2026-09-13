@@ -1,0 +1,38 @@
+/* A build journal cover made from real product marks and readable text. */
+.build-story .resource-hero-grid { grid-template-columns: 1.25fr 1fr; gap: 2.5rem; }
+.build-story .article-hero h1 { font-size: clamp(2.3rem, 4.1vw, 4rem); max-width: 19ch; }
+.build-cover { color: #f4f7ef; background: #172d29; border: 1px solid #64988860; border-radius: 18px; padding: 1.5rem; }
+.build-cover-label { margin: 0 0 1.4rem; color: #a7cbbf; font: .75rem/1.5 ui-monospace,Consolas,monospace; letter-spacing: .08em; }
+.build-cover-product { display: flex; align-items: center; gap: 1.1rem; }
+.build-cover-product img { width: 72px; height: 72px; border-radius: 16px; object-fit: contain; flex: 0 0 auto; }
+.build-cover-product strong { display: block; font: 600 1.7rem/1.2 var(--font-display); letter-spacing: -.04em; }
+.build-cover-product p { color: #c3d7cf; font-size: .95rem; line-height: 1.6; margin: .5rem 0 0; }
+.build-cover-connection { display: flex; align-items: center; gap: 1rem; margin: 1.3rem 0; color: #b7ee63; font-size: .85rem; }
+.build-cover-connection::before { content: '↓'; display: grid; place-items: center; width: 72px; font-size: 1.8rem; flex-shrink: 0; }
+.build-cover-product:last-child { background: #34243b; border: 1px solid #ba8eaa55; padding: 1.2rem; margin: 0 -.3rem -.3rem; border-radius: 12px; }
+.build-cover-product:last-child p { color: #e0cbdc; }
+.build-story .build-role-map { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .65rem; margin: 1.8rem 0; }
+.build-role-map > div { padding: 1rem; background: #eaf0e4; border-top: 3px solid #547a43; border-radius: 0 0 8px 8px; }
+.build-role-map span { display: block; font-size: .75rem; color: #526348; margin-bottom: .7rem; }
+.build-role-map strong { font-size: 1rem; }
+.build-story .build-role-map p { font-size: .95rem; line-height: 1.6; margin: .65rem 0 0; }
+.build-security-note { margin: 1.8rem 0; padding: 1.4rem; border: 1px solid #b9ccb2; background: #eaf1e4; border-radius: 12px; }
+.build-security-note > span { display: block; font: .75rem/1.5 ui-monospace,Consolas,monospace; color: #526348; margin-bottom: .8rem; }
+.build-security-note > strong { display: block; font-size: 1.1rem; line-height: 1.6; color: #204332; }
+.build-story .build-security-note p { margin: .9rem 0 0; }
+.build-studio-flow { padding-left: 1.4rem; }
+.build-studio-flow li { padding: .6rem 0 .9rem .25rem; border-bottom: 1px solid #d6dfcf; }
+.build-studio-flow li::marker { color: #516e41; font-weight: 700; }
+.resource-journal-index .build-feature-art { background: #1b302b; display: grid; align-content: center; gap: 1.2rem; }
+.resource-journal-index .article-feature > div, .build-cover-product > div { min-width: 0; }
+.build-feature-art .build-cover-product:last-child { padding: 1rem; margin: 0; }
+.resource-journal-index .build-feature-art .build-cover-product strong { color: white; font-size: 1.5rem; }
+.resource-journal-index .build-feature-art .build-cover-product p { color: #d3ded8; font-size: .85rem; margin: .4rem 0 0; }
+.journal-build-link { text-decoration: none; display: block; }
+.journal-build-link .build-cover { margin-bottom: 1rem; }
+.resource-journal-index .journal-issue-card .journal-build-link > span { display: block; font: 600 1.4rem/1.3 var(--font-display); color: #263d20; }
+.resource-journal-index .journal-issue-card > a.journal-build-link:last-of-type { display: block; padding: 0; }
+.journal-build-link .build-cover-product p { font-weight: 400; }
+@media(max-width:1000px) { .build-story .resource-hero-grid { grid-template-columns: 1fr; } .build-story .article-hero h1 { max-width: 24ch; } .build-story .build-cover { max-width: 620px; } }
+@media(max-width:600px) { .build-story .build-role-map { grid-template-columns: 1fr; } .build-cover { padding: 1.1rem; } .build-cover-product { gap: .8rem; } .build-cover-product img { width: 56px; height: 56px; border-radius: 12px; } .build-cover-product strong { font-size: 1.35rem; } .build-cover-product p { font-size: .85rem; } .build-cover-product:last-child { padding: .85rem; } .build-cover-connection { font-size: .8rem; } .build-cover-connection::before { width: 56px; } .build-story .article-hero h1 { font-size: 2.3rem; } }
+@media(max-width:480px) { .resource-journal-index .build-feature-art { padding: 1rem; } .build-feature-art .build-cover-product { flex-direction: column; align-items: flex-start; } .resource-journal-index .build-feature-art .build-cover-product strong { font-size: 1.3rem; } }

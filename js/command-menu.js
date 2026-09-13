@@ -31,6 +31,7 @@
     ['The studio', 'About Peter', 'The people and work behind the software', '/about.html', '↗', 'story timeline founder operator contractor charity pub'],
     ['The studio', 'Start a conversation', 'Tell Peter what is getting in the way', '/enquiry.html', '↗', 'contact email help demo enquiry request support'],
     ['Read & learn', 'Articles & build notes', 'Practical ideas from the studio workbench', '/articles.html', '≡', 'blog news resources writing'],
+    ['Read & learn', 'Building Keystone SG', 'The security app and the work that became Studiobooks', '/building-keystone-sg.html', '{}', 'keystone security encryption build case study studiobooks patrol site memory plan b'],
     ['Read & learn', 'Admin MFA on Base44', 'The architecture, code and lessons from building it', '/base44-mfa.html', '{}', 'security authentication two factor otp totp password mfa code admin'],
     ['Read & learn', 'Base44 MFA Builder guide', 'A step-by-step implementation with copyable prompts', '/base44-mfa-guide.html', '{}', 'security tutorial builder entity schema prompt how install implement'],
     ['Read & learn', 'User guides', 'The manuals for day-to-day work', '/guides.html', '≡', 'help handbook manual documentation pdf download'],
