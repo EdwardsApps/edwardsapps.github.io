@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="CrewBook's weekly job schedule and WhatsApp crew brief beside the headline: the job book a whole firm can run on.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#12161D">
+  <meta name="theme-color" content="#111813">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,52 +36,103 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=12">
+  <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/products-revamp.css?v=2">
   <script src="js/consent.js" defer></script>
+  <link rel="stylesheet" href="/css/revamp.css?v=2">
+
+  <link rel="stylesheet" href="/css/elevate.css?v=2">
 </head>
-<body>
+<body class="product-page product-crewbook">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <nav class="nav" aria-label="Main">
-      <a class="brand" href="index.html"><img src="img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <a class="brand" href="/"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul id="nav-links" class="nav-links">
-        <li><a href="crewbook.html" aria-current="page">CrewBook</a></li>
-        <li><a href="crewqci.html">CrewQCI</a></li>
-        <li><a href="studiobooks.html">Studiobooks</a></li>
-        <li><a href="ourspace.html">OurSpace</a></li>
-        <li><a href="almoner.html">Almoner</a></li>
-        <li><a href="services.html">Custom builds</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="nav-cta" href="mailto:peter@edwardsapps.co.uk">Contact</a></li>
+        <li><details class="nav-apps"><summary>Our apps</summary><div class="nav-apps-panel"><div class="nav-app-grid"><a href="/crewbook.html" aria-current="page"><img src="/img/product-crewbook.png" alt="" width="40" height="40"><strong>CrewBook</strong><span>Contractor operations</span></a>
+<a href="/crewqci.html"><img src="/img/product-crewqci.png" alt="" width="40" height="40"><strong>CrewQCI</strong><span>Quotes, contracts & invoices</span></a>
+<a href="/studiobooks.html"><img src="/img/product-studiobooks.png" alt="" width="40" height="40"><strong>Studiobooks</strong><span>The studio back office</span></a>
+<a href="/ourspace.html"><img src="/img/product-ourspace.png" alt="" width="40" height="40"><strong>OurSpace</strong><span>Life, shared</span></a>
+<a href="/almoner.html"><img src="/img/product-almoner.png" alt="" width="40" height="40"><strong>Almoner</strong><span>Charity governance</span></a></div><a class="nav-app-help" href="/index.html#products-heading"><span>Not sure which fits? Explore the collection.</span><span aria-hidden="true">↗</span></a></div></details></li>
+        <li><a href="/services.html">Custom builds</a></li>
+        <li><a href="/articles.html">Articles</a></li>
+        <li><a href="/guides.html">Guides</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/enquiry.html" class="nav-cta">Let’s talk <span aria-hidden="true">↗</span></a></li>
       </ul>
     </nav>
   </header>
+  <aside class="articles-discovery" aria-label="Latest from the studio"><a href="/base44-mfa-guide.html"><span>From the workbench</span><span class="articles-discovery-detail">A practical guide to admin MFA on Base44</span><span aria-hidden="true">↗</span></a></aside>
 
   <main id="main">
 
-    <section class="hero">
-      <div class="wrap hero-product">
-        <div>
-          <img class="app-icon" src="img/product-crewbook.png" alt="" width="72" height="72">
-          <p class="kicker">CrewBook</p>
-          <h1>The job book a whole firm can run on.</h1>
-          <p class="lede">Job management for surfacing and groundworks contractors — scheduling, costing, invoicing and CIS in one place. CrewBook was built inside a working contractor, and it runs that firm today.</p>
+    <section class="hero product-hero">
+      <div class="wrap">
+        <div class="product-identity-row">
+          <div class="product-identity"><img class="app-icon" src="img/product-crewbook.png" alt="" width="72" height="72"><p class="kicker">CrewBook</p></div>
+          <p class="product-status"><span aria-hidden="true"></span>For surfacing &amp; groundworks</p>
+        </div>
+        <div class="hero-product product-hero-layout">
+          <div class="product-hero-copy">
+            <h1>The job book a whole firm can <span>run on.</span></h1>
+            <p class="lede">Job management for surfacing and groundworks contractors — scheduling, costing, invoicing and CIS in one place. CrewBook was built inside a working contractor, and it runs that firm today.</p>
           <p class="hero-price-line"><strong>14 days free · no card needed</strong><span>Then £99/month per company.</span></p>
           <div class="cta-row">
             <a class="button button-primary" href="https://crewbook.me" rel="noopener">Start your free trial</a>
             <a class="button button-ghost" href="mailto:peter@edwardsapps.co.uk?subject=CrewBook%20demo">Request a demo</a>
           </div>
           <p class="hero-note">Already on CrewBook? <a href="crewbook-guide.html">Read the user guide</a> — online, or as a PDF to keep.</p>
-        </div>
-        <a class="hero-product-shot shot-link" href="img/shots/schedule.png">
+          </div>
+          <div class="product-preview">
+            <div class="product-preview-heading"><span class="product-preview-dot" aria-hidden="true"></span><span>Your working week, in one view</span><span aria-hidden="true">↗</span></div>
+            <div class="product-screen-stage"><a class="hero-product-shot shot-link" href="img/shots/schedule.png">
           <img src="img/shots/schedule.png" alt="CrewBook's weekly schedule showing jobs, crews and contract details from Monday to Friday" width="1400" height="508" fetchpriority="high">
-        </a>
+        </a></div>
+            <p class="product-preview-caption">The real CrewBook schedule. Select the screen to take a closer look.</p>
+            <div class="product-workflow" aria-label="The CrewBook workflow"><span>Plan the work</span><span>Track the costs</span><span>Get paid</span></div>
+          </div>
+        </div>
+        <dl class="product-facts" aria-label="CrewBook at a glance">
+            <div><dt>14 days</dt><dd>Free trial · no card needed</dd></div>
+            <div><dt>£99 / month</dt><dd>One subscription per company</dd></div>
+            <div><dt>Built on the job</dt><dd>Used inside a working contractor</dd></div>
+        </dl>
+      </div>
+    </section>
+    <nav class="product-contents" aria-label="Explore CrewBook">
+      <div class="wrap"><span>Explore CrewBook</span><div><a href="#features-heading">Features<span aria-hidden="true">↗</span></a><a href="#qci-heading">Built-in sales tools<span aria-hidden="true">↗</span></a><a href="#crewbook-pricing-heading">Pricing<span aria-hidden="true">↗</span></a><a href="#origin-heading">The story<span aria-hidden="true">↗</span></a></div></div>
+    </nav>
+
+    <section class="product-tour" id="crewbook-product-tour" data-product-explorer aria-labelledby="crewbook-tour-heading">
+      <div class="wrap">
+        <div class="product-tour-intro"><div><p class="kicker">Inside CrewBook</p><h2 id="crewbook-tour-heading">A working week.<br><span>All joined up.</span></h2></div><p>Follow the job from the schedule to the invoice. Choose the part of the working day you want to see.</p></div>
+        <div class="product-tour-workspace">
+          <div class="product-tour-sidebar">
+            <p class="product-tour-rail-label">A closer look <span>05 views</span></p>
+            <div class="product-tour-tabs" aria-label="Explore CrewBook features">
+              <a href="#crewbook-explore-1" id="crewbook-explore-1-tab" class="product-tour-tab is-active" data-tour-target="crewbook-explore-1"><span class="product-tour-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2"/></svg></span><span><strong>The schedule</strong><small>Plan the working week</small></span><span class="product-tour-tab-arrow" aria-hidden="true">↗</span></a>
+              <a href="#crewbook-explore-2" id="crewbook-explore-2-tab" class="product-tour-tab" data-tour-target="crewbook-explore-2"><span class="product-tour-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></svg></span><span><strong>Job costs</strong><small>Labour, materials &amp; plant</small></span><span class="product-tour-tab-arrow" aria-hidden="true">↗</span></a>
+              <a href="#crewbook-explore-3" id="crewbook-explore-3-tab" class="product-tour-tab" data-tour-target="crewbook-explore-3"><span class="product-tour-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14v18l-3-2-4 2-4-2-3 2V3ZM8 7h8M8 11h8M8 15h5"/></svg></span><span><strong>Invoicing</strong><small>Turn the work into an invoice</small></span><span class="product-tour-tab-arrow" aria-hidden="true">↗</span></a>
+              <a href="#crewbook-explore-4" id="crewbook-explore-4-tab" class="product-tour-tab" data-tour-target="crewbook-explore-4"><span class="product-tour-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6M17 15a5 5 0 0 1 4 5v1"/></svg></span><span><strong>Crew briefings</strong><small>Keep everyone in the picture</small></span><span class="product-tour-tab-arrow" aria-hidden="true">↗</span></a>
+              <a href="#crewbook-explore-5" id="crewbook-explore-5-tab" class="product-tour-tab" data-tour-target="crewbook-explore-5"><span class="product-tour-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="9" cy="6" rx="6" ry="3"/><path d="M3 6v5c0 2 3 3 6 3M3 11v5c0 2 3 3 6 3M15 6v3"/><ellipse cx="16" cy="13" rx="5" ry="3"/><path d="M11 13v5c0 2 2 3 5 3s5-1 5-3v-5"/></svg></span><span><strong>Wage sheets</strong><small>Bring the week together</small></span><span class="product-tour-tab-arrow" aria-hidden="true">↗</span></a>
+            </div>
+            <div class="product-tour-rail-note"><img src="img/product-crewbook.png" alt="" width="40" height="40"><p><strong>CrewBook, up close.</strong><span>Real screens. The details that make a difference.</span></p></div>
+          </div>
+          <div class="product-tour-panel" id="crewbook-tour-panel">
+            <div class="product-tour-window"><div class="product-tour-window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span class="product-tour-window-label">Product view</span><span class="product-tour-counter" aria-hidden="true">01 / 05</span></div>
+            <div class="product-tour-stage"><a class="product-tour-image shot-link" href="img/shots/schedule.png"><img src="img/shots/schedule.png" alt="CrewBook&#x27;s week calendar: five jobs laid out Monday to Friday with crew counts, contract numbers and a provisional job awaiting confirmation" width="1400" height="508" loading="lazy"></a><span class="product-tour-enlarge" aria-hidden="true">↗ Select the screen to enlarge</span></div>
+            <div class="product-tour-copy"><div><p class="product-tour-feature-label">CrewBook / The schedule</p><h3>Scheduling and job tracking</h3><p class="product-tour-description">Every job, every crew, every day in one view.</p></div><a class="product-tour-detail" href="#crewbook-explore-1">The full detail <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </div>
+        <p class="product-tour-key-hint" hidden>Explore with a click, or use the arrow keys when a topic is selected. <span aria-hidden="true">← →</span></p>
       </div>
     </section>
 
-    <section class="section section-alt" aria-labelledby="problem-heading">
+
+
+    <section class="section section-alt product-problem" aria-labelledby="problem-heading">
       <div class="wrap">
         <p class="kicker">The problem</p>
         <h2 id="problem-heading" class="sheet-head">This may look familiar.</h2>
@@ -116,78 +167,78 @@
         <p class="kicker">What it does</p>
         <h2 id="features-heading" class="sheet-head">One place for the working week.</h2>
 
-        <ul class="daybook daybook-features" role="list">
-          <li>
+        <ul class="daybook daybook-features product-feature-list" role="list">
+          <li data-spotlight id="crewbook-explore-1" data-tour-title="Scheduling and job tracking" data-tour-summary="Every job, every crew, every day in one view.">
             <div class="feature-text">
               <h3>Scheduling and job tracking</h3>
               <p>Every job, every crew, every day in one view. Move a job and the rest of the picture moves with it, so nobody is working from last week's whiteboard.</p>
             </div>
             <a class="shot-link" href="img/shots/schedule.png"><img class="feature-shot" src="img/shots/schedule.png" width="1400" height="508" loading="lazy" alt="CrewBook's week calendar: five jobs laid out Monday to Friday with crew counts, contract numbers and a provisional job awaiting confirmation"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>The whole job on one card</h3>
               <p>Open any job and it is all there — client and contact, coordinator, crew, owned plant, booked materials with delivery times, hired plant with day rates, and the site notes the crew need. Nothing to chase round the office.</p>
             </div>
             <a class="shot-link" href="img/shots/jobedit.png"><img class="feature-shot" src="img/shots/jobedit.png" width="1400" height="962" loading="lazy" alt="A CrewBook job card: client, site and contact details, four crew, six items of plant, booked materials with delivery times and prices, hired plant with day rates, and site notes"></a>
           </li>
-          <li>
+          <li data-spotlight id="crewbook-explore-2" data-tour-title="Labour, materials and plant" data-tour-summary="Day rates, materials and plant go against the job as it happens, rather than from memory a fortnight later — so a job&#x27;s real cost is visible while there is still time to act on it.">
             <div class="feature-text">
               <h3>Labour, materials and plant</h3>
               <p>Day rates, materials and plant go against the job as it happens, rather than from memory a fortnight later — so a job's real cost is visible while there is still time to act on it.</p>
             </div>
             <a class="shot-link" href="img/shots/costs.png"><img class="feature-shot" src="img/shots/costs.png" width="1400" height="875" loading="lazy" alt="A job's cost breakdown in CrewBook: materials, hired plant and labour lines with every crew day listed and a running total"></a>
           </li>
-          <li>
+          <li data-spotlight id="crewbook-explore-3" data-tour-title="Invoicing, including proforma" data-tour-summary="Invoices and proformas are built straight from the job, using the numbers captured on site rather than re-typed later — so the invoice matches the work.">
             <div class="feature-text">
               <h3>Invoicing, including proforma</h3>
               <p>Invoices and proformas are built straight from the job, using the numbers captured on site rather than re-typed later — so the invoice matches the work. Every document email is kept, so you can read exactly what a client received and send it again to a different address if the first one was wrong.</p>
             </div>
             <a class="shot-link" href="img/shots/invoicing.png"><img class="feature-shot" src="img/shots/invoicing.png" width="1400" height="875" loading="lazy" alt="An invoice preview in CrewBook with labour and materials split out, the CIS deduction noted, and totals ready to send"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>CIS-aware Sage 50 export</h3>
               <p>CrewBook routes every invoice line the way CIS expects — labour netted for deduction and materials paid gross, gross-status lump sums left untouched, and non-CIS work left alone — then exports it clean to Sage 50, which takes the re-keying out of month end.</p>
             </div>
             <a class="shot-link" href="img/shots/sage.png"><img class="feature-shot" src="img/shots/sage.png" width="1400" height="779" loading="lazy" alt="CrewBook's Sage 50 export screen: a fortnight of purchase invoices typed as materials, hired plant and subcontractor lines, ready to download as CSV"></a>
           </li>
-          <li>
+          <li data-spotlight id="crewbook-explore-4" data-tour-title="WhatsApp job notifications" data-tour-summary="Crews get the job where they already look: WhatsApp.">
             <div class="feature-text">
               <h3>WhatsApp job notifications</h3>
               <p>Crews get the job where they already look: WhatsApp. Where, when and what is needed, sent from the schedule rather than typed out each evening.</p>
             </div>
             <a class="shot-link" href="img/shots/whatsapp.png"><img class="feature-shot" src="img/shots/whatsapp.png" width="1400" height="875" loading="lazy" alt="CrewBook's WhatsApp preview: the job brief message with client, address, map link and date, and the crew selected as recipients"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>The emails that send themselves</h3>
               <p>Each coordinator gets tomorrow's operations brief by email every day — crew, materials, plant and credit status for their jobs. The weekly wage summary lands with the office on Mondays, and holiday approvals notify the right people. Set them up once and they carry on.</p>
             </div>
             <a class="shot-link" href="img/shots/coordinator.png"><img class="feature-shot" src="img/shots/coordinator.png" width="1400" height="875" loading="lazy" alt="CrewBook's notifications setup: holiday approver, daily coordinator brief recipient and weekly wages recipients, each with their own email address"></a>
           </li>
-          <li>
+          <li data-spotlight id="crewbook-explore-5" data-tour-title="Wage sheets, straight from the schedule" data-tour-summary="The week&#x27;s shifts become the week&#x27;s wage sheet — split days, sick, yard and holiday all accounted for, basic and charge rates side by side, exported to Excel in one click.">
             <div class="feature-text">
               <h3>Wage sheets, straight from the schedule</h3>
               <p>The week's shifts become the week's wage sheet — split days, sick, yard and holiday all accounted for, basic and charge rates side by side, exported to Excel in one click. The same day statuses drive an Absence &amp; Cost report: how many times each person has been off, on what dates, and what it cost you, counted as occasions rather than days (Friday and Monday off is one spell of sickness, not two).</p>
             </div>
             <a class="shot-link" href="img/shots/wages.png"><img class="feature-shot" src="img/shots/wages.png" width="1400" height="429" loading="lazy" alt="CrewBook's wage summary for a week: each worker's day-by-day shifts with contract numbers, split days, sick and holiday badges, shift totals and rates, with an Excel download button"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Expense claims with the receipt attached</h3>
               <p>Crews claim diesel, permits and PPE with the receipt attached and the job number against the line; the office approves, rejects or pays with the VAT already split out.</p>
             </div>
             <a class="shot-link" href="img/shots/expenses.png"><img class="feature-shot" src="img/shots/expenses.png" width="1400" height="455" loading="lazy" alt="CrewBook's expenses list: four claims with claimant, description, job number, VAT split, and pending or approved status"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Mileage, logged and claimed</h3>
               <p>Journeys are logged against the job, then turned into expense claims in one click — batch the week's trips or claim them one at a time.</p>
             </div>
             <a class="shot-link" href="img/shots/mileage.png"><img class="feature-shot" src="img/shots/mileage.png" width="1400" height="604" loading="lazy" alt="CrewBook's mileage log: journeys from the depot to sites with miles, rate and value, a claim button per journey and a claim-all option"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Holidays in one tracker</h3>
               <p>Requests, approvals and allowances together — approved leave shows on the calendar, pending requests are flagged, and remaining days count themselves.</p>
@@ -235,37 +286,16 @@
 
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <img src="img/logo.png" alt="EdwardsApps" width="437" height="68">
-        <p>Practical software for businesses, organisations and everyday life.</p>
-      </div>
-      <nav aria-label="Products">
-        <h3>Products</h3>
-        <ul>
-          <li><a href="crewbook.html" aria-current="page">CrewBook</a></li>
-          <li><a href="crewqci.html">CrewQCI</a></li>
-          <li><a href="studiobooks.html">Studiobooks</a></li>
-          <li><a href="ourspace.html">OurSpace</a></li>
-          <li><a href="almoner.html">Almoner</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Company">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="guides.html">User guides</a></li>
-          <li><a href="services.html">Custom builds</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing</a></li>
-          <li><a href="mailto:peter@edwardsapps.co.uk">peter@edwardsapps.co.uk</a></li>
-        </ul>
-      </nav>
+      <div class="footer-brand"><a href="/" aria-label="EdwardsApps home"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a><p>Practical software.<br>Built from the inside.</p><p class="footer-note">An independent studio by Peter Edwards.</p></div>
+      <nav aria-label="Products"><h3>The apps</h3><ul><li><a href="/crewbook.html" aria-current="page">CrewBook</a></li><li><a href="/crewqci.html">CrewQCI</a></li><li><a href="/studiobooks.html">Studiobooks</a></li><li><a href="/ourspace.html">OurSpace</a></li><li><a href="/almoner.html">Almoner</a></li></ul></nav>
+      <nav aria-label="Studio"><h3>The studio</h3><ul><li><a href="/services.html">Custom builds</a></li><li><a href="/about.html">About Peter</a></li><li><a href="/enquiry.html">Start a conversation</a></li><li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing ↗</a></li></ul></nav>
+      <nav aria-label="Resources"><h3>Useful things</h3><ul><li><a href="/articles.html">Articles & build notes</a></li><li><a href="/guides.html">User guides</a></li><li><a href="/base44-mfa-guide.html">Base44 MFA guide</a></li><li><a href="/keystone-demo/">Keystone demo</a></li><li><a href="mailto:peter@edwardsapps.co.uk">Email Peter ↗</a></li></ul></nav>
     </div>
-    <div class="wrap">
-      <p class="fineprint">© 2026 EdwardsApps. CrewBook, CrewQCI, Studiobooks, OurSpace and Almoner are EdwardsApps products. <a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a>.</p>
-    </div>
+    <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js?v=3"></script>
+  <script src="/js/product-explorer.js?v=1"></script>
+  <script src="/js/command-menu.js?v=1" defer></script>
 </body>
 </html>

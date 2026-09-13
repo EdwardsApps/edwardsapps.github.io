@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Almoner's charity dashboard and collection-pot register beside the headline: every pot accounted for.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#12161D">
+  <meta name="theme-color" content="#111813">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,51 +36,102 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=12">
+  <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/products-revamp.css?v=2">
   <script src="js/consent.js" defer></script>
+  <link rel="stylesheet" href="/css/revamp.css?v=2">
+
+  <link rel="stylesheet" href="/css/elevate.css?v=2">
 </head>
-<body>
+<body class="product-page product-almoner">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <nav class="nav" aria-label="Main">
-      <a class="brand" href="index.html"><img src="img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <a class="brand" href="/"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul id="nav-links" class="nav-links">
-        <li><a href="crewbook.html">CrewBook</a></li>
-        <li><a href="crewqci.html">CrewQCI</a></li>
-        <li><a href="studiobooks.html">Studiobooks</a></li>
-        <li><a href="ourspace.html">OurSpace</a></li>
-        <li><a href="almoner.html" aria-current="page">Almoner</a></li>
-        <li><a href="services.html">Custom builds</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="nav-cta" href="mailto:peter@edwardsapps.co.uk">Contact</a></li>
+        <li><details class="nav-apps"><summary>Our apps</summary><div class="nav-apps-panel"><div class="nav-app-grid"><a href="/crewbook.html"><img src="/img/product-crewbook.png" alt="" width="40" height="40"><strong>CrewBook</strong><span>Contractor operations</span></a>
+<a href="/crewqci.html"><img src="/img/product-crewqci.png" alt="" width="40" height="40"><strong>CrewQCI</strong><span>Quotes, contracts & invoices</span></a>
+<a href="/studiobooks.html"><img src="/img/product-studiobooks.png" alt="" width="40" height="40"><strong>Studiobooks</strong><span>The studio back office</span></a>
+<a href="/ourspace.html"><img src="/img/product-ourspace.png" alt="" width="40" height="40"><strong>OurSpace</strong><span>Life, shared</span></a>
+<a href="/almoner.html" aria-current="page"><img src="/img/product-almoner.png" alt="" width="40" height="40"><strong>Almoner</strong><span>Charity governance</span></a></div><a class="nav-app-help" href="/index.html#products-heading"><span>Not sure which fits? Explore the collection.</span><span aria-hidden="true">↗</span></a></div></details></li>
+        <li><a href="/services.html">Custom builds</a></li>
+        <li><a href="/articles.html">Articles</a></li>
+        <li><a href="/guides.html">Guides</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/enquiry.html" class="nav-cta">Let’s talk <span aria-hidden="true">↗</span></a></li>
       </ul>
     </nav>
   </header>
+  <aside class="articles-discovery" aria-label="Latest from the studio"><a href="/base44-mfa-guide.html"><span>From the workbench</span><span class="articles-discovery-detail">A practical guide to admin MFA on Base44</span><span aria-hidden="true">↗</span></a></aside>
 
   <main id="main">
 
-    <section class="hero">
-      <div class="wrap hero-product">
-        <div>
-          <img class="app-icon" src="img/product-almoner.png" alt="" width="72" height="72">
-          <p class="kicker">Almoner</p>
-          <h1>Every pot accounted for.</h1>
-          <p class="lede">Almoner is collection-pot, fundraising and governance software for small charities. It grew out of running a real registered charity's first fundraising campaign — and out of the paperwork that comes with doing it properly. It's live at almoner.app.</p>
+    <section class="hero product-hero">
+      <div class="wrap">
+        <div class="product-identity-row">
+          <div class="product-identity"><img class="app-icon" src="img/product-almoner.png" alt="" width="72" height="72"><p class="kicker">Almoner</p></div>
+          <p class="product-status"><span aria-hidden="true"></span>For small charities</p>
+        </div>
+        <div class="hero-product product-hero-layout">
+          <div class="product-hero-copy">
+            <h1>Every pot<br><span>accounted for.</span></h1>
+            <p class="lede">Almoner is collection-pot, fundraising and governance software for small charities. It grew out of running a real registered charity's first fundraising campaign — and out of the paperwork that comes with doing it properly. It's live at almoner.app.</p>
           <p class="hero-price-line"><strong>14 days free</strong><span>Then £12/month or £120/year.</span></p>
           <div class="cta-row">
             <a class="button button-primary" href="https://almoner.app" rel="noopener">Start your free trial</a>
             <a class="button button-ghost" href="mailto:peter@edwardsapps.co.uk?subject=Almoner">Talk to Peter first</a>
           </div>
-        </div>
-        <a class="hero-product-shot shot-link" href="img/shots/almoner-dashboard.webp">
+
+          </div>
+          <div class="product-preview">
+            <div class="product-preview-heading"><span class="product-preview-dot" aria-hidden="true"></span><span>The records behind your fundraising</span><span aria-hidden="true">↗</span></div>
+            <div class="product-screen-stage"><a class="hero-product-shot shot-link" href="img/shots/almoner-dashboard.webp">
           <img src="img/shots/almoner-dashboard.webp" alt="The Almoner dashboard for a charity, showing total raised, pots deployed, available pots, open tasks, donations by source, recent notices and upcoming compliance deadlines" width="1600" height="956" fetchpriority="high">
-        </a>
+        </a></div>
+            <p class="product-preview-caption">The real Almoner dashboard. Select the screen to take a closer look.</p>
+            <div class="product-workflow" aria-label="The Almoner workflow"><span>Place the pot</span><span>Witness the count</span><span>Record the banking</span></div>
+          </div>
+        </div>
+        <dl class="product-facts" aria-label="Almoner at a glance">
+            <div><dt>14 days</dt><dd>Free access to try it properly</dd></div>
+            <div><dt>£12 / month</dt><dd>Or £120 per year</dd></div>
+            <div><dt>One clear trail</dt><dd>Collection, count and banking</dd></div>
+        </dl>
+      </div>
+    </section>
+    <nav class="product-contents" aria-label="Explore Almoner">
+      <div class="wrap"><span>Explore Almoner</span><div><a href="#almoner-does-heading">Features<span aria-hidden="true">↗</span></a><a href="#almoner-screenshots-heading">Inside the app<span aria-hidden="true">↗</span></a><a href="#almoner-pricing-heading">Pricing<span aria-hidden="true">↗</span></a><a href="#almoner-cta-heading">Talk to Peter<span aria-hidden="true">↗</span></a></div></div>
+    </nav>
+
+    <section class="product-tour" id="almoner-product-tour" data-product-explorer aria-labelledby="almoner-tour-heading">
+      <div class="wrap">
+        <div class="product-tour-intro"><div><p class="kicker">Inside Almoner</p><h2 id="almoner-tour-heading">See the trail.<br><span>From pot to purpose.</span></h2></div><p>Explore the records that connect a collection pot, a witnessed count and the people accountable for them.</p></div>
+        <div class="product-tour-workspace">
+          <div class="product-tour-sidebar">
+            <p class="product-tour-rail-label">A closer look <span>04 views</span></p>
+            <div class="product-tour-tabs" aria-label="Explore Almoner features">
+              <a href="#almoner-explore-1" id="almoner-explore-1-tab" class="product-tour-tab is-active" data-tour-target="almoner-explore-1"><span class="product-tour-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></svg></span><span><strong>Collection pots</strong><small>Know where every pot is</small></span><span class="product-tour-tab-arrow" aria-hidden="true">↗</span></a>
+              <a href="#almoner-explore-2" id="almoner-explore-2-tab" class="product-tour-tab" data-tour-target="almoner-explore-2"><span class="product-tour-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="9" cy="6" rx="6" ry="3"/><path d="M3 6v5c0 2 3 3 6 3M3 11v5c0 2 3 3 6 3M15 6v3"/><ellipse cx="16" cy="13" rx="5" ry="3"/><path d="M11 13v5c0 2 2 3 5 3s5-1 5-3v-5"/></svg></span><span><strong>Witnessed counts</strong><small>Follow the cash to the bank</small></span><span class="product-tour-tab-arrow" aria-hidden="true">↗</span></a>
+              <a href="#almoner-explore-3" id="almoner-explore-3-tab" class="product-tour-tab" data-tour-target="almoner-explore-3"><span class="product-tour-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14v18l-3-2-4 2-4-2-3 2V3ZM8 7h8M8 11h8M8 15h5"/></svg></span><span><strong>Gift Aid</strong><small>Keep every claim on record</small></span><span class="product-tour-tab-arrow" aria-hidden="true">↗</span></a>
+              <a href="#almoner-explore-4" id="almoner-explore-4-tab" class="product-tour-tab" data-tour-target="almoner-explore-4"><span class="product-tour-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></svg></span><span><strong>Compliance</strong><small>Keep the next deadline in view</small></span><span class="product-tour-tab-arrow" aria-hidden="true">↗</span></a>
+            </div>
+            <div class="product-tour-rail-note"><img src="img/product-almoner.png" alt="" width="40" height="40"><p><strong>Almoner, up close.</strong><span>Real screens. The details that make a difference.</span></p></div>
+          </div>
+          <div class="product-tour-panel" id="almoner-tour-panel">
+            <div class="product-tour-window"><div class="product-tour-window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span class="product-tour-window-label">Product view</span><span class="product-tour-counter" aria-hidden="true">01 / 04</span></div>
+            <div class="product-tour-stage"><a class="product-tour-image shot-link" href="img/shots/almoner-pots.webp"><img src="img/shots/almoner-pots.webp" alt="Almoner&#x27;s pot register listing pots by number with status badges reading deployed, awaiting collection, available and counting, alongside the venue each is placed in and the date it went out" width="1600" height="956" loading="lazy"></a><span class="product-tour-enlarge" aria-hidden="true">↗ Select the screen to enlarge</span></div>
+            <div class="product-tour-copy"><div><p class="product-tour-feature-label">Almoner / Collection pots</p><h3>Where every pot is</h3><p class="product-tour-description">Pots tracked by number and status across the venues hosting them — deployed, awaiting collection, counting, or back on the shelf ready to go out.</p></div><a class="product-tour-detail" href="#almoner-explore-1">The full detail <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </div>
+        <p class="product-tour-key-hint" hidden>Explore with a click, or use the arrow keys when a topic is selected. <span aria-hidden="true">← →</span></p>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="almoner-problem-heading">
+
+
+    <section class="section product-problem" aria-labelledby="almoner-problem-heading">
       <div class="wrap">
         <p class="kicker">The problem</p>
         <h2 id="almoner-problem-heading" class="sheet-head">Cash in tins, records on paper.</h2>
@@ -93,15 +144,15 @@
       <div class="wrap">
         <p class="kicker">What it does</p>
         <h2 id="almoner-does-heading" class="sheet-head">Stewardship you can show.</h2>
-        <ul class="checklist" role="list">
-          <li>Pot tracking — where every pot is, the venue hosting it, who placed it, and when it's due for collection.</li>
-          <li>Witnessed counts — the amount counted, who counted it, who witnessed it, and the paying-in reference once it's banked.</li>
-          <li>Donors and Gift Aid — declarations held against each donor, eligible donations totalled by claim period, and the 25% worked out for you.</li>
-          <li>Grants and restricted funds — what a funder awarded, what it may be spent on, what's left, and when the report is due.</li>
-          <li>Income and expenditure — categorised the way charity accounts need it, against a financial year end you set once.</li>
-          <li>Volunteers and events — shifts volunteers can claim, and hours logged against the work they did.</li>
-          <li>Compliance calendar — filings, insurance renewals, DBS checks, policy reviews and trustee meetings, each with an owner and a due date.</li>
-          <li>Documents — policies, minutes and accounts with review dates, and a record of which trustees have signed what.</li>
+        <ul class="checklist product-capabilities" role="list">
+          <li data-spotlight><strong>Pot tracking — </strong>where every pot is, the venue hosting it, who placed it, and when it's due for collection.</li>
+          <li data-spotlight><strong>Witnessed counts — </strong>the amount counted, who counted it, who witnessed it, and the paying-in reference once it's banked.</li>
+          <li data-spotlight><strong>Donors and Gift Aid — </strong>declarations held against each donor, eligible donations totalled by claim period, and the 25% worked out for you.</li>
+          <li data-spotlight><strong>Grants and restricted funds — </strong>what a funder awarded, what it may be spent on, what's left, and when the report is due.</li>
+          <li data-spotlight><strong>Income and expenditure — </strong>categorised the way charity accounts need it, against a financial year end you set once.</li>
+          <li data-spotlight><strong>Volunteers and events — </strong>shifts volunteers can claim, and hours logged against the work they did.</li>
+          <li data-spotlight><strong>Compliance calendar — </strong>filings, insurance renewals, DBS checks, policy reviews and trustee meetings, each with an owner and a due date.</li>
+          <li data-spotlight><strong>Documents — </strong>policies, minutes and accounts with review dates, and a record of which trustees have signed what.</li>
         </ul>
         <p class="measure">Two named people on every cash count is the detail auditors tend to ask about, and the one most easily lost in a spreadsheet. Almoner records both, on every collection.</p>
         <p class="measure">Volunteers, trustees and admins each see a different slice of it: volunteers get the pots, shifts and tasks they need to do the work, while donor records, finances and Gift Aid stay with the people accountable for them.</p>
@@ -143,29 +194,29 @@
         <h2 id="almoner-screenshots-heading" class="sheet-head">The records behind the fundraising.</h2>
         <p class="measure">How the everyday work of collecting, claiming and keeping compliant ends up as a trail trustees can follow. Select any screenshot to view it full size.</p>
 
-        <ul class="daybook daybook-features" role="list">
-          <li>
+        <ul class="daybook daybook-features product-feature-list" role="list">
+          <li data-spotlight id="almoner-explore-2" data-tour-title="Every count, witnessed and banked" data-tour-summary="Every collection record holds the amount counted, the volunteer who counted it, the one who witnessed it, and the paying-in reference once it clears the bank.">
             <div class="feature-text">
               <h3>Every count, witnessed and banked</h3>
               <p>Every collection record holds the amount counted, the volunteer who counted it, the one who witnessed it, and the paying-in reference once it clears the bank.</p>
             </div>
             <a class="shot-link" href="img/shots/almoner-collections.webp"><img class="feature-shot" src="img/shots/almoner-collections.webp" width="1600" height="956" loading="lazy" alt="Almoner's pot collections table: each row shows the date, pot number, venue, amount counted, the volunteer who counted it, and whether it has been banked, with a button to bank the outstanding count"></a>
           </li>
-          <li>
+          <li data-spotlight id="almoner-explore-3" data-tour-title="Gift Aid claims, period by period" data-tour-summary="Eligible donations are totted up per claim period with the 25% worked out, tracked from draft through submitted to received against your HMRC reference.">
             <div class="feature-text">
               <h3>Gift Aid claims, period by period</h3>
               <p>Eligible donations are totted up per claim period with the 25% worked out, tracked from draft through submitted to received against your HMRC reference.</p>
             </div>
             <a class="shot-link" href="img/shots/almoner-gift-aid.webp"><img class="feature-shot" src="img/shots/almoner-gift-aid.webp" width="1600" height="956" loading="lazy" alt="Almoner's Gift Aid page listing claim periods, each showing eligible donation totals, the amount claimable, an HMRC reference and a status of received, submitted or draft"></a>
           </li>
-          <li>
+          <li data-spotlight id="almoner-explore-4" data-tour-title="Deadlines, with an owner and a date" data-tour-summary="Filings, insurance, DBS checks, policy reviews and trustee meetings, each with someone responsible and a date to meet.">
             <div class="feature-text">
               <h3>Deadlines, with an owner and a date</h3>
               <p>Filings, insurance, DBS checks, policy reviews and trustee meetings, each with someone responsible and a date to meet. Anything overdue is flagged at the top.</p>
             </div>
             <a class="shot-link" href="img/shots/almoner-compliance.webp"><img class="feature-shot" src="img/shots/almoner-compliance.webp" width="1600" height="956" loading="lazy" alt="Almoner's compliance calendar listing insurance renewal, annual return, safeguarding policy review and trustee meeting, each with days remaining and a responsible person; an overdue DBS check is highlighted in red"></a>
           </li>
-          <li>
+          <li data-spotlight id="almoner-explore-1" data-tour-title="Where every pot is" data-tour-summary="Pots tracked by number and status across the venues hosting them — deployed, awaiting collection, counting, or back on the shelf ready to go out.">
             <div class="feature-text">
               <h3>Where every pot is</h3>
               <p>Pots tracked by number and status across the venues hosting them — deployed, awaiting collection, counting, or back on the shelf ready to go out.</p>
@@ -188,37 +239,16 @@
 
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <img src="img/logo.png" alt="EdwardsApps" width="437" height="68">
-        <p>Practical software for businesses, organisations and everyday life.</p>
-      </div>
-      <nav aria-label="Products">
-        <h3>Products</h3>
-        <ul>
-          <li><a href="crewbook.html">CrewBook</a></li>
-          <li><a href="crewqci.html">CrewQCI</a></li>
-          <li><a href="studiobooks.html">Studiobooks</a></li>
-          <li><a href="ourspace.html">OurSpace</a></li>
-          <li><a href="almoner.html" aria-current="page">Almoner</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Company">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="guides.html">User guides</a></li>
-          <li><a href="services.html">Custom builds</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing</a></li>
-          <li><a href="mailto:peter@edwardsapps.co.uk">peter@edwardsapps.co.uk</a></li>
-        </ul>
-      </nav>
+      <div class="footer-brand"><a href="/" aria-label="EdwardsApps home"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a><p>Practical software.<br>Built from the inside.</p><p class="footer-note">An independent studio by Peter Edwards.</p></div>
+      <nav aria-label="Products"><h3>The apps</h3><ul><li><a href="/crewbook.html">CrewBook</a></li><li><a href="/crewqci.html">CrewQCI</a></li><li><a href="/studiobooks.html">Studiobooks</a></li><li><a href="/ourspace.html">OurSpace</a></li><li><a href="/almoner.html" aria-current="page">Almoner</a></li></ul></nav>
+      <nav aria-label="Studio"><h3>The studio</h3><ul><li><a href="/services.html">Custom builds</a></li><li><a href="/about.html">About Peter</a></li><li><a href="/enquiry.html">Start a conversation</a></li><li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing ↗</a></li></ul></nav>
+      <nav aria-label="Resources"><h3>Useful things</h3><ul><li><a href="/articles.html">Articles & build notes</a></li><li><a href="/guides.html">User guides</a></li><li><a href="/base44-mfa-guide.html">Base44 MFA guide</a></li><li><a href="/keystone-demo/">Keystone demo</a></li><li><a href="mailto:peter@edwardsapps.co.uk">Email Peter ↗</a></li></ul></nav>
     </div>
-    <div class="wrap">
-      <p class="fineprint">© 2026 EdwardsApps. CrewBook, CrewQCI, Studiobooks, OurSpace and Almoner are EdwardsApps products. <a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a>. Almoner's <a href="https://almoner.app/privacy-policy" rel="noopener">privacy policy</a> and <a href="https://almoner.app/terms-of-service" rel="noopener">terms of service</a>.</p>
-    </div>
+    <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js?v=3"></script>
+  <script src="/js/product-explorer.js?v=1"></script>
+  <script src="/js/command-menu.js?v=1" defer></script>
 </body>
 </html>

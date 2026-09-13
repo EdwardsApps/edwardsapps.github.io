@@ -9,11 +9,13 @@
      node scripts/build_guide_pdfs.mjs
 
    Set PLAYWRIGHT_BROWSERS_PATH or PLAYWRIGHT_CHROMIUM if Chromium lives
-   somewhere Playwright wouldn't find on its own. */
+   somewhere Playwright wouldn't find on its own. PLAYWRIGHT_MODULE can point
+   to an existing Playwright entry module to reuse a local installation. */
 
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
-import { mkdir } from 'node:fs/promises';
+import { mkdir, readFile } from 'node:fs/promises';
+import { createServer } from 'node:http';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -22,25 +24,59 @@ const GUIDES = [
   { page: 'crewqci-guide.html', pdf: 'downloads/crewqci-user-guide.pdf', title: 'CrewQCI user guide' },
 ];
 
-const { chromium } = await import('playwright');
+const { chromium } = await import(process.env.PLAYWRIGHT_MODULE
+  ? pathToFileURL(path.resolve(process.env.PLAYWRIGHT_MODULE)).href
+  : 'playwright');
 
-const browser = await chromium.launch({
-  executablePath: process.env.PLAYWRIGHT_CHROMIUM || undefined,
+// A private temporary origin resolves root-relative styles, scripts and images
+// exactly as GitHub Pages does. file:// would resolve /css/ at the drive root.
+const MIME = {
+  '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8',
+  '.js': 'text/javascript; charset=utf-8', '.png': 'image/png',
+  '.webp': 'image/webp', '.svg': 'image/svg+xml', '.ico': 'image/x-icon',
+  '.woff2': 'font/woff2', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
+};
+const server = createServer(async (req, res) => {
+  try {
+    const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+    const file = path.resolve(ROOT, '.' + (pathname === '/' ? '/index.html' : pathname));
+    if (!file.startsWith(ROOT + path.sep)) {
+      res.writeHead(403).end();
+      return;
+    }
+    const data = await readFile(file);
+    res.writeHead(200, { 'Content-Type': MIME[path.extname(file)] || 'application/octet-stream' });
+    res.end(data);
+  } catch {
+    res.writeHead(404).end();
+  }
 });
+await new Promise((resolve, reject) => {
+  server.once('error', reject);
+  server.listen(0, '127.0.0.1', resolve);
+});
+const origin = `http://127.0.0.1:${server.address().port}`;
+let browser;
 
 try {
+  browser = await chromium.launch({
+    executablePath: process.env.PLAYWRIGHT_CHROMIUM || undefined,
+  });
   await mkdir(path.join(ROOT, 'downloads'), { recursive: true });
   const page = await browser.newPage();
 
   for (const guide of GUIDES) {
-    const url = pathToFileURL(path.join(ROOT, guide.page)).href;
+    const url = `${origin}/${guide.page}`;
     await page.goto(url, { waitUntil: 'networkidle' });
 
     // page.pdf() doesn't fire beforeprint, so open the accordions here and
     // drop the consent banner — neither belongs in the document.
-    await page.evaluate(() => {
+    await page.evaluate(async () => {
       document.querySelectorAll('details').forEach((d) => { d.open = true; });
       document.querySelectorAll('.consent-banner').forEach((el) => el.remove());
+      document.querySelectorAll('img').forEach((img) => { img.loading = 'eager'; });
+      await document.fonts.ready;
+      await Promise.all(Array.from(document.images, (img) => img.decode().catch(() => {})));
     });
 
     const out = path.join(ROOT, guide.pdf);
@@ -62,5 +98,6 @@ try {
     console.log(`Wrote ${guide.pdf}`);
   }
 } finally {
-  await browser.close();
+  if (browser) await browser.close();
+  await new Promise((resolve) => server.close(resolve));
 }

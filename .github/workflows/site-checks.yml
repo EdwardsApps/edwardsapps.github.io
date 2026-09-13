@@ -23,3 +23,12 @@ jobs:
           node --check js/main.js
           node --check js/consent.js
           node --check js/guide.js
+          node --check js/enquiry.js
+          node --check js/mfa-guide.js
+          node --check js/resources-revamp.js
+          node --check js/command-menu.js
+          node --check js/product-explorer.js
+          node --check js/build-planner.js
+          node --check keystone-demo/demo.js
+          node --check keystone-demo/location.js
+          node --check scripts/build_guide_pdfs.mjs
