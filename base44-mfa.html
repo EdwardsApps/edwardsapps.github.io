@@ -28,8 +28,9 @@
 
   <link rel="stylesheet" href="/css/resources-elevate.css?v=2">
   <link rel="stylesheet" href="/css/elevate.css?v=2">
+  <link rel="stylesheet" href="css/story-editorial.css?v=1">
 </head>
-<body class="resource-page resource-elevated resource-editorial">
+<body class="story-designed resource-page resource-elevated resource-editorial">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <nav class="nav" aria-label="Main">
@@ -84,9 +85,10 @@
 </ol></aside>
 <article class="article-body"><div class="guide-note"><strong>Want to implement this?</strong><p>Follow the <a href="base44-mfa-guide.html">step-by-step Builder guide</a>: nine copyable prompts, a small AdminNote feature, private setup instructions, troubleshooting and a downloadable test record.</p></div>
 <p class="article-opening">I didn’t start this job wanting to build an authentication system. I wanted a straightforward answer to a straightforward question: if somebody gets hold of an administrator’s password, can they get into the admin side of the app?</p>
-<p>For Keystone, that mattered. It’s an app for a security business, bringing together people, properties, patrols and office work. The people using it have different jobs and need different access. The office needs more authority than a guard checking their next shift or a client reading a report.</p>
+<p>For <a href="https://www.keystonesg.co.uk" rel="noopener">Keystone SG</a>, that mattered. It’s an app for a security business, bringing together people, properties, patrols and office work. The people using it have different jobs and need different access. The office needs more authority than a guard checking their next shift or a client reading a report.</p>
 <p>Base44 had already done the sign-in plumbing. The extra requirement was to make administrative access depend on my approval and an authenticator check. Guards and clients should still be able to use the sign-in options configured for them.</p>
 
+<nav class="story-overview" aria-label="Highlights in this story"><a href="#approval"><span>01 / The person</span><strong>Approval comes first ↗</strong><small>Protect the first authenticator setup.</small></a><a href="#proof"><span>02 / The session</span><strong>A code has a limit ↗</strong><small>Time-bound proof, checked by the server.</small></a><a href="#testing"><span>03 / The evidence</span><strong>Test what must fail ↗</strong><small>Check denied requests, not just a login.</small></a></nav>
 <h2 id="requirement">Start with what you need to prevent</h2>
 <p>The first conversation was about Microsoft accounts and MFA. That is a reasonable place to start, but “they sign in with Microsoft” and “our app has verified a second factor for this admin session” are different claims.</p>
 <p>We needed to answer the second one. I kept the platform login and added a separate check before the app would do administrative work. This is an application-level authenticator check. It is not Microsoft Conditional Access or a claim that a particular Microsoft tenant performed MFA.</p>
@@ -144,9 +146,10 @@ await requireAdminMfa(
 <p>This is an illustrative excerpt, not a complete MFA implementation. <code>requireAdminMfa</code> is our own helper, not a Base44 API. It has to validate the stored proof; the business operation still needs its own scope and input checks. Service-role access is powerful, so the backend must never become an unrestricted proxy for whatever the browser asks it to do.</p>
 
 <h2 id="lessons">The details that needed attention</h2>
-<h3>Keep the decision on the server</h3>
+<section class="story-feature"><h3>Keep the decision on the server</h3>
 <p>An early version used a build-time flag to decide whether the browser installed the MFA adapter. That was one more setting that could differ between local development and the published app. The current client always installs the adapter and asks the server what verification is required.</p>
 <p>The backend still has an explicit activation setting. If that is off, it is off. Removing a frontend switch is not a substitute for checking deployed backend configuration and access rules together.</p>
+</section>
 <h3>Read the request body once</h3>
 <p>Some operations parse their JSON before checking MFA. A request body is a stream: you cannot assume it will be there to read a second time. We either extract the proof before consuming the body or pass the already-parsed proof to the helper. File uploads and nested function calls need the same care.</p>
 <h3>Don’t let two requests spend the same code</h3>
@@ -162,10 +165,11 @@ if (result?.success !== true ||
   throw new Error(&quot;Verification changed. Please try again.&quot;);
 }</code></pre></div>
 <p>This is the expected store contract, not proof that a hosted database fulfils it. The concurrency probe has to run against the actual platform. A rate-limit response and two successful conflicting updates are different failures; record what happened rather than treating every failed probe as broken atomicity.</p>
-<h3>Give people a recovery route</h3>
+<section class="story-feature story-feature-warm"><h3>Give people a recovery route</h3>
 <p>There is no password-only “reset my authenticator” shortcut. Ordinary resets go through the owner. Owner recovery uses the separately protected Base44 workspace and a documented procedure. I already use Google MFA for that workspace login.</p>
 <p>The recovery procedure keeps the existing encryption key. Replacing it to fix one person’s authenticator would create a problem for everyone else. This is the sort of detail I want written down before I need it.</p>
 
+</section>
 <h2 id="testing">I want to test the request that should fail</h2>
 <p>It is satisfying to enter a code and watch the dashboard open. The more useful test is to stop before entering it and try to fetch the same information directly.</p>
 <p>The checks I want recorded include a missing proof, a proof from another login, an expired proof, revocation, competing verification attempts and interrupted enrolment. They also include normal work: reports, invoices, uploads and the guard and client journeys. A security change that breaks the working day has not finished the job.</p>
@@ -183,6 +187,7 @@ if (result?.success !== true ||
 <li><a href="https://docs.base44.com/developers/backend/resources/entities/security">Base44 entity permissions</a></li>
 <li><a href="https://www.rfc-editor.org/rfc/rfc6238">RFC 6238: time-based one-time passwords</a></li>
 <li><a href="https://pages.nist.gov/800-63-4/sp800-63b/authenticators/">NIST: authenticator requirements and limitations</a></li></ul></section>
+<a class="story-next" href="building-keystone-sg.html"><small>Behind the build / The full story</small><strong>How Keystone SG led to Studiobooks <span aria-hidden="true">↗</span></strong></a>
 <div class="article-author"><p class="kicker">Peter Edwards · EdwardsApps</p><p>I build practical software around the work people actually do. If you have an app that needs to fit a particular operation, <a href="enquiry.html">tell me what you need it to do</a>.</p></div>
 </article></div>
 </main>
