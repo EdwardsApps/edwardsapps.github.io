@@ -56,6 +56,7 @@
 .about-page .world-story[open] .when-open { display: inline; }
 .about-page .world-story-copy { padding: .5rem 0 1.5rem; }
 .company-page.about-page .chapter .world-story-copy p { color: var(--world-muted); font-size: 1rem; line-height: 1.7; margin: 0; }
+.company-page.about-page .chapter .world-story-copy p + p { margin-top: .9rem; }
 .company-page.about-page .chapter .world-story-copy .daybook-tag { color: var(--world-accent); font-size: .8rem; margin-bottom: .75rem; }
 .about-page .world-story-copy a { color: var(--world-ink); text-decoration-color: var(--world-accent); text-underline-offset: .2em; overflow-wrap: anywhere; }
 
