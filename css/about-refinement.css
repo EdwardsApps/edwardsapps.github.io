@@ -1,0 +1,112 @@
+/* About: readable story cards and a compact, continuously visible chronology. */
+.company-page.about-page .about-hero-grid h1 { max-width: 18ch; }
+.about-page .about-hero-grid h1 > span { color: #b7ee63; }
+.company-page.about-page .story-canvas { transform: none; padding: 1.4rem; }
+.company-page.about-page .story-logo { aspect-ratio: 2.1; }
+.company-page.about-page .story-logo img { max-height: 80px; }
+.company-page.about-page .story-logo-grid > a > span:last-child { font-size: .8rem; padding: .6rem .2rem; }
+.company-page.about-page .story-canvas-foot { padding-top: 1.1rem; font-size: .8rem; }
+.company-page.about-page .worlds-section .sheet-head { max-width: none; margin-bottom: .6rem; }
+.about-page .worlds-intro { color: #5a6855; font-size: 1rem; margin: 0; }
+.company-page.about-page .chapter-grid { gap: 1rem; margin-top: 1.5rem; align-items: start; }
+.company-page.about-page .chapter {
+  --world-ink: #f5f7ee;
+  --world-muted: #c6d0c0;
+  --world-accent: #c0ed8a;
+  --world-rule: #ffffff30;
+  background: #213027;
+  color: var(--world-ink);
+  border: 1px solid var(--world-rule);
+  border-radius: 16px;
+  padding: 1.5rem 1.65rem 0;
+}
+.company-page.about-page .chapter-ib {
+  --world-ink: #173a32; --world-muted: #426057; --world-accent: #216e59; --world-rule: #184b3526;
+  background: #e8f0e4;
+}
+.company-page.about-page .chapter-mitre {
+  --world-ink: #44351f; --world-muted: #685b47; --world-accent: #80561e; --world-rule: #6e4b262b;
+  background: #f1eadd;
+}
+.company-page.about-page .chapter-rb {
+  --world-ink: #fff3ed; --world-muted: #e3c3c6; --world-accent: #ffc0b7; --world-rule: #ffffff30;
+  background: #42272f;
+}
+.company-page.about-page .chapter::before { display: none; }
+.about-page .world-heading { display: flex; align-items: center; gap: 1rem; }
+.about-page .world-heading > div { min-width: 0; }
+.about-page .world-mark { display: flex; align-items: center; justify-content: center; flex: 0 0 72px; height: 68px; background: #fff; padding: .55rem; border-radius: 9px; }
+.about-page .world-mark img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+.about-page .world-kind { display: block; font-size: .75rem; color: var(--world-muted); margin-bottom: .25rem; }
+.about-page .world-heading h3 { color: var(--world-ink); font-size: clamp(1.1rem, 1.7vw, 1.45rem); letter-spacing: -.035em; line-height: 1.25; margin: 0; }
+.company-page.about-page .chapter .world-fact { display: flex; align-items: center; gap: 1rem; margin: 1.35rem 0 1rem; color: var(--world-accent); }
+.about-page .world-fact strong { font: 600 clamp(2.7rem, 4vw, 3.5rem)/1 var(--font-display); letter-spacing: -.065em; white-space: nowrap; }
+.about-page .world-fact span { font-size: .85rem; line-height: 1.45; max-width: 23ch; }
+.company-page.about-page .chapter .world-intro { color: var(--world-muted); font-size: 1rem; line-height: 1.65; margin: 0 0 1.1rem; }
+.about-page .world-story { border-top: 1px solid var(--world-rule); }
+.about-page .world-story summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; cursor: pointer; list-style: none; min-height: 56px; padding: .75rem 0; font-size: .85rem; font-weight: 600; color: var(--world-ink); }
+.about-page .world-story summary::-webkit-details-marker { display: none; }
+.about-page .world-story summary:hover { color: var(--world-accent); }
+.about-page .world-story summary:focus-visible { outline: 2px solid var(--world-accent); outline-offset: 3px; border-radius: 3px; }
+.about-page .world-toggle { position: relative; width: 26px; height: 26px; border: 1px solid var(--world-rule); border-radius: 50%; flex: 0 0 auto; }
+.about-page .world-toggle::before, .about-page .world-toggle::after { content: ''; position: absolute; width: 10px; height: 1px; background: currentColor; top: 11px; left: 7px; }
+.about-page .world-toggle::after { transform: rotate(90deg); }
+.about-page .world-story[open] .world-toggle::after { display: none; }
+.about-page .world-story .when-open, .about-page .world-story[open] .when-closed { display: none; }
+.about-page .world-story[open] .when-open { display: inline; }
+.about-page .world-story-copy { padding: .5rem 0 1.5rem; }
+.company-page.about-page .chapter .world-story-copy p { color: var(--world-muted); font-size: 1rem; line-height: 1.7; margin: 0; }
+.company-page.about-page .chapter .world-story-copy .daybook-tag { color: var(--world-accent); font-size: .8rem; margin-bottom: .75rem; }
+.about-page .world-story-copy a { color: var(--world-ink); text-decoration-color: var(--world-accent); text-underline-offset: .2em; overflow-wrap: anywhere; }
+
+.company-page.about-page .editorial-journey .history-grid { grid-template-columns: 300px minmax(0, 1fr); gap: 3rem; }
+.company-page.about-page .editorial-journey .history-heading h2 { font-size: 2.55rem; }
+.about-page .editorial-journey .history-caption { color: #526348; margin-top: 1rem; }
+.about-page .journey-stage { display: grid; grid-template-columns: minmax(0, 1fr) 60px; gap: 0 .5rem; margin-top: 1.5rem; min-height: 0; }
+.about-page .journey-stage-label, .about-page .journey-current-year, .about-page .journey-stage-foot { grid-column: 1 / -1; }
+.about-page .journey-current-year { font-size: 3.5rem; margin-top: 1.25rem; }
+.about-page .journey-current-year.is-wordy { font-size: 2.3rem; max-width: 100%; min-height: 0; }
+.about-page .journey-current-title { max-width: 19ch; }
+.about-page .journey-stage-mark { position: relative; inset: auto; align-self: center; margin-top: .85rem; width: 58px; height: 50px; }
+.about-page .journey-stage-mark:has(.is-wordmark) { width: 58px; }
+.about-page .journey-stage-foot { font-size: .6rem; letter-spacing: 0; }
+.about-page .journey-jumps { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .35rem; }
+.about-page .journey-jumps a { font-size: .75rem; min-height: 40px; border-color: #c2cfb6; color: #496239; }
+.about-page .journey-jumps a[aria-current=step] { color: #f1f9e9; }
+.company-page.about-page .editorial-journey .journey-timeline { padding-left: 1.5rem; padding-bottom: 0; }
+.company-page.about-page .editorial-journey .journey-timeline li { min-height: 0; padding: 1.3rem 1.4rem; }
+.company-page.about-page .editorial-journey .journey-timeline li:first-child { padding-top: 1.3rem; }
+.company-page.about-page .editorial-journey .journey-timeline li::before { top: 1.6rem; left: -1.82rem; }
+.company-page.about-page .editorial-journey .journey-timeline .tl-year { font-size: .8rem; color: #52733f; margin-bottom: .5rem; }
+.company-page.about-page .editorial-journey .journey-chapter-title { font-size: 1.75rem; max-width: none; margin-bottom: .7rem; color: #294322; }
+.company-page.about-page .editorial-journey .journey-timeline p { color: #526348; font-size: 1rem; line-height: 1.7; margin: 0; }
+.company-page.about-page .editorial-journey .journey-timeline li.is-current { background: #e0e9d5; border-radius: 10px; }
+
+@media (max-width: 1000px) {
+  .company-page.about-page .editorial-journey .history-grid { grid-template-columns: 250px minmax(0, 1fr); gap: 1.8rem; }
+  .company-page.about-page .chapter { padding: 1.25rem 1.25rem 0; }
+  .about-page .world-fact { flex-wrap: wrap; }
+  .about-page .world-fact span { max-width: none; }
+  .about-page .journey-stage-mark { display: none; }
+}
+@media (max-width: 800px) {
+  .about-page .journey-stage { display: none; }
+  .company-page.about-page .editorial-journey .history-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .company-page.about-page .editorial-journey .history-heading h2 { max-width: none; }
+  .about-page .journey-jumps { grid-template-columns: repeat(10, minmax(0, 1fr)); max-width: none; }
+}
+@media (max-width: 650px) {
+  .company-page.about-page .chapter-grid { grid-template-columns: 1fr; }
+  .company-page.about-page .story-canvas { padding: 1rem; }
+  .company-page.about-page .story-logo-grid > a > span:last-child { font-size: .73rem; }
+  .company-page.about-page .story-logo { aspect-ratio: 1.8; }
+  .about-page .world-heading h3 { font-size: 1.3rem; }
+  .about-page .world-fact strong { font-size: 3rem; }
+  .company-page.about-page .chapter .world-fact { flex-wrap: nowrap; gap: .85rem; }
+  .about-page .world-fact span { font-size: .8rem; }
+  .about-page .journey-jumps { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .company-page.about-page .editorial-journey .journey-timeline { padding-left: .75rem; }
+  .company-page.about-page .editorial-journey .journey-timeline li { padding: 1.2rem 0 1.2rem 1rem; }
+  .company-page.about-page .editorial-journey .journey-timeline li::before { left: -1.07rem; }
+  .company-page.about-page .editorial-journey .journey-chapter-title { font-size: 1.6rem; }
+}

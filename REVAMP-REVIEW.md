@@ -60,6 +60,13 @@ These are local checks. Production publication and real enquiry delivery are sep
 
 This second pass updates the same draft PR; it does not publish the production site.
 
+## About page refinement
+
+- Replaced the four oversized white biography cards with compact forest, mint, cream and burgundy cards. Each has a clear organisation heading, a source-backed milestone, a short introduction and a native expandable full story.
+- Preserved all four original story paragraphs and all ten timeline entries verbatim. Expanded stories support keyboard and touch input; body copy remains 16px on narrow phones.
+- Removed the timeline's forced 300px minimum entry height, widened its reading column and enlarged chapter navigation. Tightened the hero logo composition and highlighted the main message.
+- At 1280px, the closed story grid reduced from 956px to 635px and the timeline from 3166px to 1864px. Checked 1280, 900, 390 and 320px layouts for overflow and heading bounds, plus keyboard/touch story expansion and chapter navigation. All 18 page structural checks pass.
+
 ## Readability and spacing refinement
 
 - Removed all fixed custom-build starting-price claims. The homepage and enquiry now describe competitive pricing, with the scope and quote agreed before work begins. Individual app prices remain unchanged.
