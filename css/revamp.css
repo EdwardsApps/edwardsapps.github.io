@@ -177,9 +177,9 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
 .article-home-grid { display: grid; grid-template-columns: 1fr .8fr; gap: 4rem; align-items: center; }
 .article-home h2 { max-width: 20ch; font-size: var(--step-4); }
 .article-home p:not(.kicker) { color: var(--muted); font-size: .97rem; }
-.article-home-visual { display: block; border: 1px solid #b3c79b; border-radius: 16px; background: #dae6c9; padding: 1.7rem; }
+.article-home-visual { display: block; border: 1px solid #b3c79b; border-radius: 16px; background: #dae6c9; padding: 1.7rem; text-decoration: none; }
 .article-home-visual img { display: block; border-radius: 12px; width: 100%; height: auto; }
-.article-home-visual span { display: block; margin-top: 1rem; font: 600 .74rem var(--font-body); color: var(--green-ink); }
+.article-home-visual > span { display: flex; justify-content: space-between; gap: 1rem; margin-top: 1rem; font: 600 .74rem var(--font-body); color: var(--green-ink); }
 @media (min-width: 961px) {
   .nav-toggle { display: none; }
   .nav-links { display: flex; }
