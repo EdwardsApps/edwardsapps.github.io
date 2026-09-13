@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="CrewBook, CrewQCI, Almoner and OurSpace shown as real app screenshots beside the headline: software that fits the way the work already happens.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#12161D">
+  <meta name="theme-color" content="#111813">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,36 +40,41 @@
   <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/company-revamp.css?v=1">
   <script src="js/consent.js" defer></script>
+  <link rel="stylesheet" href="/css/revamp.css?v=1">
 </head>
-<body>
+<body class="company-page enquiry-page">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <nav class="nav" aria-label="Main">
-      <a class="brand" href="index.html"><img src="img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <a class="brand" href="/"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul id="nav-links" class="nav-links">
-        <li><a href="crewbook.html">CrewBook</a></li>
-        <li><a href="crewqci.html">CrewQCI</a></li>
-        <li><a href="studiobooks.html">Studiobooks</a></li>
-        <li><a href="ourspace.html">OurSpace</a></li>
-        <li><a href="almoner.html">Almoner</a></li>
-        <li><a href="services.html">Custom builds</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="nav-cta" href="mailto:peter@edwardsapps.co.uk">Contact</a></li>
+        <li><details class="nav-apps"><summary>Our apps</summary><div class="nav-apps-panel"><div class="nav-app-grid"><a href="/crewbook.html"><img src="/img/product-crewbook.png" alt="" width="40" height="40"><strong>CrewBook</strong><span>Contractor operations</span></a>
+<a href="/crewqci.html"><img src="/img/product-crewqci.png" alt="" width="40" height="40"><strong>CrewQCI</strong><span>Quotes, contracts & invoices</span></a>
+<a href="/studiobooks.html"><img src="/img/product-studiobooks.png" alt="" width="40" height="40"><strong>Studiobooks</strong><span>The studio back office</span></a>
+<a href="/ourspace.html"><img src="/img/product-ourspace.png" alt="" width="40" height="40"><strong>OurSpace</strong><span>Life, shared</span></a>
+<a href="/almoner.html"><img src="/img/product-almoner.png" alt="" width="40" height="40"><strong>Almoner</strong><span>Charity governance</span></a></div><a class="nav-app-help" href="/index.html#products-heading"><span>Not sure which fits? Explore the collection.</span><span aria-hidden="true">↗</span></a></div></details></li>
+        <li><a href="/services.html">Custom builds</a></li>
+        <li><a href="/articles.html">Articles</a></li>
+        <li><a href="/guides.html">Guides</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/enquiry.html" class="nav-cta" aria-current="page">Let’s talk <span aria-hidden="true">↗</span></a></li>
       </ul>
     </nav>
   </header>
-  <aside class="articles-discovery" aria-label="Articles"><a href="articles.html"><span>Articles &amp; practical guides</span><span class="articles-discovery-detail">Build notes, code &amp; Builder prompts</span><span aria-hidden="true">↗</span></a></aside>
+  <aside class="articles-discovery" aria-label="Latest from the studio"><a href="/base44-mfa-guide.html"><span>From the workbench</span><span class="articles-discovery-detail">A practical guide to admin MFA on Base44</span><span aria-hidden="true">↗</span></a></aside>
 
   <main id="main">
 
-    <section class="hero">
+    <section class="hero company-hero">
       <div class="wrap">
         <p class="kicker">Request a proposal</p>
         <h1>Tell us what you need.</h1>
         <p class="lede">Say a little about the work — what happens now, and what a good day would look like. It goes straight to Peter, and it's Peter who replies, usually within a working day.</p>
+        <div class="enquiry-promise"><span><i aria-hidden="true"></i> Straight to Peter</span><span>Personal reply</span><span>No technical brief needed</span></div>
       </div>
     </section>
 
@@ -79,7 +84,8 @@
         <div class="enquiry-main">
           <!-- Without JS the form posts to the mailto address; js/enquiry.js
                upgrades it to send JSON to Studiobooks (our own back office) instead. -->
-          <form id="enquiry-form" class="enquiry-form" action="mailto:peter@edwardsapps.co.uk?subject=I%20need%20an%20app" method="post" enctype="text/plain">
+          <form id="enquiry-form" class="enquiry-form" action="mailto:peter@edwardsapps.co.uk?subject=I%20need%20an%20app" method="post" enctype="text/plain" aria-labelledby="form-heading">
+            <div class="form-card-heading"><span class="form-card-icon" aria-hidden="true">↗</span><div><p class="kicker">Start a conversation</p><h2 id="form-heading">A little about you.</h2><p>Fields marked optional can be left blank.</p></div></div>
             <div class="field-row">
               <div class="field">
                 <label for="enq-name">Your name</label>
@@ -100,6 +106,7 @@
                 <input id="enq-phone" name="phone" type="tel" autocomplete="tel">
               </div>
             </div>
+            <div class="form-section-label"><span aria-hidden="true">02</span> A little about the work</div>
             <div class="field">
               <label for="enq-app">Which app is it about?</label>
               <select id="enq-app" name="app_interest">
@@ -114,8 +121,8 @@
             </div>
             <div class="field">
               <label for="enq-message">What would make work feel lighter?</label>
-              <textarea id="enq-message" name="message" rows="7" required></textarea>
-              <span class="field-hint">Plain English is fine — no technical brief needed. The spreadsheet, the WhatsApp thread, the thing typed in twice: whatever it is, describe it the way you'd tell a colleague.</span>
+              <textarea id="enq-message" name="message" rows="7" aria-describedby="enq-message-hint" required></textarea>
+              <span id="enq-message-hint" class="field-hint">Plain English is fine — no technical brief needed. The spreadsheet, the WhatsApp thread, the thing typed in twice: whatever it is, describe it the way you'd tell a colleague.</span>
             </div>
             <!-- Honeypot: off-screen for people, filled in by bots. -->
             <div class="field hp-field" aria-hidden="true">
@@ -136,6 +143,7 @@
         </div>
 
         <div class="enquiry-aside">
+          <div class="reply-marker"><span aria-hidden="true">PE</span><div><strong>Peter Edwards</strong><small>The person who builds it. The person who replies.</small></div></div>
           <p class="kicker">The other side of the form</p>
           <h2 id="enquiry-heading" class="sheet-head">What happens next.</h2>
           <p>You don't need a feature list or a budget figure — just how the work happens today, and where it sticks.</p>
@@ -163,38 +171,15 @@
 
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <img src="img/logo.png" alt="EdwardsApps" width="437" height="68">
-        <p>Practical software for businesses, organisations and everyday life.</p>
-      </div>
-      <nav aria-label="Products">
-        <h3>Products</h3>
-        <ul>
-          <li><a href="crewbook.html">CrewBook</a></li>
-          <li><a href="crewqci.html">CrewQCI</a></li>
-          <li><a href="studiobooks.html">Studiobooks</a></li>
-          <li><a href="ourspace.html">OurSpace</a></li>
-          <li><a href="almoner.html">Almoner</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Company">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="guides.html">User guides</a></li>
-          <li><a href="services.html">Custom builds</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing</a></li>
-          <li><a href="mailto:peter@edwardsapps.co.uk">peter@edwardsapps.co.uk</a></li>
-        </ul>
-      </nav>
+      <div class="footer-brand"><a href="/" aria-label="EdwardsApps home"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a><p>Practical software.<br>Built from the inside.</p><p class="footer-note">An independent studio by Peter Edwards.</p></div>
+      <nav aria-label="Products"><h3>The apps</h3><ul><li><a href="/crewbook.html">CrewBook</a></li><li><a href="/crewqci.html">CrewQCI</a></li><li><a href="/studiobooks.html">Studiobooks</a></li><li><a href="/ourspace.html">OurSpace</a></li><li><a href="/almoner.html">Almoner</a></li></ul></nav>
+      <nav aria-label="Studio"><h3>The studio</h3><ul><li><a href="/services.html">Custom builds</a></li><li><a href="/about.html">About Peter</a></li><li><a href="/enquiry.html" aria-current="page">Start a conversation</a></li><li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing ↗</a></li></ul></nav>
+      <nav aria-label="Resources"><h3>Useful things</h3><ul><li><a href="/articles.html">Articles & build notes</a></li><li><a href="/guides.html">User guides</a></li><li><a href="/base44-mfa-guide.html">Base44 MFA guide</a></li><li><a href="/keystone-demo/">Keystone demo</a></li><li><a href="mailto:peter@edwardsapps.co.uk">Email Peter ↗</a></li></ul></nav>
     </div>
-    <div class="wrap">
-      <p class="fineprint">© 2026 EdwardsApps. CrewBook, CrewQCI, Studiobooks, OurSpace and Almoner are EdwardsApps products. <a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a>.</p>
-    </div>
+    <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js?v=2"></script>
   <script src="js/enquiry.js"></script>
 </body>
 </html>

@@ -15,41 +15,53 @@
   <meta property="og:image" content="https://edwardsapps.co.uk/img/og.png?v=2">
   <meta property="og:image:alt" content="EdwardsApps — practical software for real work">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#12161D">
+  <meta name="theme-color" content="#111813">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Adding admin MFA to a Base44 app", "description": "Peter Edwards on adding owner-approved admin MFA to Base44: backend permissions, authenticator setup, session proofs and the details that needed fixing.", "url": "https://edwardsapps.co.uk/base44-mfa.html", "author": {"@type": "Person", "name": "Peter Edwards", "url": "https://edwardsapps.co.uk/about.html"}, "datePublished": "2026-09-13", "dateModified": "2026-09-13", "publisher": {"@type": "Organization", "name": "EdwardsApps", "url": "https://edwardsapps.co.uk/"}}</script>
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css?v=13">
   <link rel="stylesheet" href="css/articles.css?v=1">
+  <link rel="stylesheet" href="css/resources-revamp.css?v=1">
   <script src="js/consent.js" defer></script>
+  <link rel="stylesheet" href="/css/revamp.css?v=1">
 </head>
-<body>
+<body class="resource-page">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <nav class="nav" aria-label="Main">
-      <a class="brand" href="index.html"><img src="img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <a class="brand" href="/"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul id="nav-links" class="nav-links">
-        <li><a href="crewbook.html">CrewBook</a></li>
-        <li><a href="crewqci.html">CrewQCI</a></li>
-        <li><a href="studiobooks.html">Studiobooks</a></li>
-        <li><a href="ourspace.html">OurSpace</a></li>
-        <li><a href="almoner.html">Almoner</a></li>
-        <li><a href="services.html">Custom builds</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="nav-cta" href="mailto:peter@edwardsapps.co.uk">Contact</a></li>
+        <li><details class="nav-apps"><summary>Our apps</summary><div class="nav-apps-panel"><div class="nav-app-grid"><a href="/crewbook.html"><img src="/img/product-crewbook.png" alt="" width="40" height="40"><strong>CrewBook</strong><span>Contractor operations</span></a>
+<a href="/crewqci.html"><img src="/img/product-crewqci.png" alt="" width="40" height="40"><strong>CrewQCI</strong><span>Quotes, contracts & invoices</span></a>
+<a href="/studiobooks.html"><img src="/img/product-studiobooks.png" alt="" width="40" height="40"><strong>Studiobooks</strong><span>The studio back office</span></a>
+<a href="/ourspace.html"><img src="/img/product-ourspace.png" alt="" width="40" height="40"><strong>OurSpace</strong><span>Life, shared</span></a>
+<a href="/almoner.html"><img src="/img/product-almoner.png" alt="" width="40" height="40"><strong>Almoner</strong><span>Charity governance</span></a></div><a class="nav-app-help" href="/index.html#products-heading"><span>Not sure which fits? Explore the collection.</span><span aria-hidden="true">↗</span></a></div></details></li>
+        <li><a href="/services.html">Custom builds</a></li>
+        <li><a href="/articles.html">Articles</a></li>
+        <li><a href="/guides.html">Guides</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/enquiry.html" class="nav-cta">Let’s talk <span aria-hidden="true">↗</span></a></li>
       </ul>
     </nav>
   </header>
-  <aside class="articles-discovery" aria-label="Articles"><a href="articles.html"><span>Articles &amp; practical guides</span><span class="articles-discovery-detail">Build notes, code &amp; Builder prompts</span><span aria-hidden="true">↗</span></a></aside>
+  <aside class="articles-discovery" aria-label="Latest from the studio"><a href="/base44-mfa-guide.html"><span>From the workbench</span><span class="articles-discovery-detail">A practical guide to admin MFA on Base44</span><span aria-hidden="true">↗</span></a></aside>
   <main id="main">
-<section class="hero article-hero"><div class="wrap">
+<section class="hero resource-hero article-hero"><div class="wrap resource-hero-grid"><div class="resource-hero-copy">
   <a class="article-back" href="articles.html">← All articles</a>
   <p class="kicker">Build notes · Authentication</p>
   <h1>A password shouldn’t be enough to run the whole app.</h1>
   <p class="lede">How I added an extra admin check to a Base44 app — and why most of the work was behind the six-digit code.</p>
   <p class="article-byline">By Peter Edwards <span>·</span> <time datetime="2026-09-13">13 September 2026</time> <span>·</span> 9 minute read</p>
+</div>
+<aside class="resource-cover" aria-label="Article overview">
+  <div class="resource-cover-label">Behind the build</div>
+  <h2>Six digits.<br>A deeper story.</h2>
+  <div class="resource-cells" aria-hidden="true"><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span></div>
+  <p>Owner approval, authenticator setup and the checks behind every admin request.</p>
+  <div class="resource-cover-bottom"><span>Base44</span><span>Authentication</span><span>Build notes</span></div>
+</aside>
 </div></section>
 <div class="wrap article-layout">
 <aside class="article-toc" aria-label="In this article"><p class="kicker">In this article</p><ol>
@@ -167,36 +179,14 @@ if (result?.success !== true ||
 </main>
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <img src="img/logo.png" alt="EdwardsApps" width="437" height="68">
-        <p>Practical software for businesses, organisations and everyday life.</p>
-      </div>
-      <nav aria-label="Products">
-        <h3>Products</h3>
-        <ul>
-          <li><a href="crewbook.html">CrewBook</a></li>
-          <li><a href="crewqci.html">CrewQCI</a></li>
-          <li><a href="studiobooks.html">Studiobooks</a></li>
-          <li><a href="ourspace.html">OurSpace</a></li>
-          <li><a href="almoner.html">Almoner</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Company">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="guides.html">User guides</a></li>
-          <li><a href="services.html">Custom builds</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing</a></li>
-          <li><a href="mailto:peter@edwardsapps.co.uk">peter@edwardsapps.co.uk</a></li>
-        </ul>
-      </nav>
+      <div class="footer-brand"><a href="/" aria-label="EdwardsApps home"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a><p>Practical software.<br>Built from the inside.</p><p class="footer-note">An independent studio by Peter Edwards.</p></div>
+      <nav aria-label="Products"><h3>The apps</h3><ul><li><a href="/crewbook.html">CrewBook</a></li><li><a href="/crewqci.html">CrewQCI</a></li><li><a href="/studiobooks.html">Studiobooks</a></li><li><a href="/ourspace.html">OurSpace</a></li><li><a href="/almoner.html">Almoner</a></li></ul></nav>
+      <nav aria-label="Studio"><h3>The studio</h3><ul><li><a href="/services.html">Custom builds</a></li><li><a href="/about.html">About Peter</a></li><li><a href="/enquiry.html">Start a conversation</a></li><li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing ↗</a></li></ul></nav>
+      <nav aria-label="Resources"><h3>Useful things</h3><ul><li><a href="/articles.html">Articles & build notes</a></li><li><a href="/guides.html">User guides</a></li><li><a href="/base44-mfa-guide.html">Base44 MFA guide</a></li><li><a href="/keystone-demo/">Keystone demo</a></li><li><a href="mailto:peter@edwardsapps.co.uk">Email Peter ↗</a></li></ul></nav>
     </div>
-    <div class="wrap">
-      <p class="fineprint">© 2026 EdwardsApps. CrewBook, CrewQCI, Studiobooks, OurSpace and Almoner are EdwardsApps products. <a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a>.</p>
-    </div>
+    <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
-  <script src="js/main.js"></script>
+  <script src="/js/main.js?v=2"></script>
+  <script src="js/resources-revamp.js"></script>
 </body>
 </html>

@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="CrewQCI's credit control and quotes screens beside the headline: the work you won is only worth what you actually collect.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#12161D">
+  <meta name="theme-color" content="#111813">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,52 +41,73 @@
   <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/products-revamp.css?v=1">
   <script src="js/consent.js" defer></script>
+  <link rel="stylesheet" href="/css/revamp.css?v=1">
 </head>
-<body>
+<body class="product-page product-crewqci">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <nav class="nav" aria-label="Main">
-      <a class="brand" href="index.html"><img src="img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <a class="brand" href="/"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul id="nav-links" class="nav-links">
-        <li><a href="crewbook.html">CrewBook</a></li>
-        <li><a href="crewqci.html" aria-current="page">CrewQCI</a></li>
-        <li><a href="studiobooks.html">Studiobooks</a></li>
-        <li><a href="ourspace.html">OurSpace</a></li>
-        <li><a href="almoner.html">Almoner</a></li>
-        <li><a href="services.html">Custom builds</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="nav-cta" href="mailto:peter@edwardsapps.co.uk">Contact</a></li>
+        <li><details class="nav-apps"><summary>Our apps</summary><div class="nav-apps-panel"><div class="nav-app-grid"><a href="/crewbook.html"><img src="/img/product-crewbook.png" alt="" width="40" height="40"><strong>CrewBook</strong><span>Contractor operations</span></a>
+<a href="/crewqci.html" aria-current="page"><img src="/img/product-crewqci.png" alt="" width="40" height="40"><strong>CrewQCI</strong><span>Quotes, contracts & invoices</span></a>
+<a href="/studiobooks.html"><img src="/img/product-studiobooks.png" alt="" width="40" height="40"><strong>Studiobooks</strong><span>The studio back office</span></a>
+<a href="/ourspace.html"><img src="/img/product-ourspace.png" alt="" width="40" height="40"><strong>OurSpace</strong><span>Life, shared</span></a>
+<a href="/almoner.html"><img src="/img/product-almoner.png" alt="" width="40" height="40"><strong>Almoner</strong><span>Charity governance</span></a></div><a class="nav-app-help" href="/index.html#products-heading"><span>Not sure which fits? Explore the collection.</span><span aria-hidden="true">↗</span></a></div></details></li>
+        <li><a href="/services.html">Custom builds</a></li>
+        <li><a href="/articles.html">Articles</a></li>
+        <li><a href="/guides.html">Guides</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/enquiry.html" class="nav-cta">Let’s talk <span aria-hidden="true">↗</span></a></li>
       </ul>
     </nav>
   </header>
-  <aside class="articles-discovery" aria-label="Articles"><a href="articles.html"><span>Articles &amp; practical guides</span><span class="articles-discovery-detail">Build notes, code &amp; Builder prompts</span><span aria-hidden="true">↗</span></a></aside>
+  <aside class="articles-discovery" aria-label="Latest from the studio"><a href="/base44-mfa-guide.html"><span>From the workbench</span><span class="articles-discovery-detail">A practical guide to admin MFA on Base44</span><span aria-hidden="true">↗</span></a></aside>
 
   <main id="main">
 
-    <section class="hero">
-      <div class="wrap hero-product">
-        <div>
-          <img class="app-icon" src="img/product-crewqci.png" alt="" width="72" height="72">
-          <p class="kicker">CrewQCI</p>
-          <h1>The commercial side, from first enquiry to cleared payment.</h1>
-          <p class="lede">Sales pipeline and credit control for construction and trade businesses — leads, quotes, contracts, invoicing, applications for payment and retentions in one place, and it chases the money for you. CrewQCI grew out of a working contractor's sales workbook, and it runs that firm's commercial side today.</p>
+    <section class="hero product-hero">
+      <div class="wrap">
+        <div class="product-identity-row">
+          <div class="product-identity"><img class="app-icon" src="img/product-crewqci.png" alt="" width="72" height="72"><p class="kicker">CrewQCI</p></div>
+          <p class="product-status"><span aria-hidden="true"></span>For construction &amp; trade businesses</p>
+        </div>
+        <div class="hero-product product-hero-layout">
+          <div class="product-hero-copy">
+            <h1>The commercial side, from first enquiry to <span>cleared payment.</span></h1>
+            <p class="lede">Sales pipeline and credit control for construction and trade businesses — leads, quotes, contracts, invoicing, applications for payment and retentions in one place, and it chases the money for you. CrewQCI grew out of a working contractor's sales workbook, and it runs that firm's commercial side today.</p>
           <p class="hero-price-line"><strong>14 days free · no card needed</strong><span>Then £55/month or £550/year per company.</span></p>
           <div class="cta-row">
             <a class="button button-primary" href="https://crew-qci.com" rel="noopener">Start your free trial</a>
             <a class="button button-ghost" href="mailto:peter@edwardsapps.co.uk?subject=CrewQCI%20demo">Request a demo</a>
           </div>
           <p class="hero-note">Already on CrewQCI? <a href="crewqci-guide.html">Read the user guide</a> — online, or as a PDF to keep.</p>
-        </div>
-        <a class="hero-product-shot shot-link" href="img/shots/crewqci-overview.webp">
+          </div>
+          <div class="product-preview">
+            <div class="product-preview-heading"><span class="product-preview-dot" aria-hidden="true"></span><span>Every stage of your sales pipeline</span><span aria-hidden="true">↗</span></div>
+            <div class="product-screen-stage"><a class="hero-product-shot shot-link" href="img/shots/crewqci-overview.webp">
           <img src="img/shots/crewqci-overview.webp" alt="CrewQCI's overview screen showing the sales pipeline from leads through to credit control" width="1400" height="470" fetchpriority="high">
-        </a>
+        </a></div>
+            <p class="product-preview-caption">The real CrewQCI overview. Select the screen to take a closer look.</p>
+            <div class="product-workflow" aria-label="The CrewQCI workflow"><span>Win the work</span><span>Send the invoice</span><span>Chase the money</span></div>
+          </div>
+        </div>
+        <dl class="product-facts" aria-label="CrewQCI at a glance">
+            <div><dt>14 days</dt><dd>Free trial · no card needed</dd></div>
+            <div><dt>£55 / month</dt><dd>Or £550 per year, per company</dd></div>
+            <div><dt>One pipeline</dt><dd>From first lead to credit control</dd></div>
+        </dl>
       </div>
     </section>
+    <nav class="product-contents" aria-label="Explore CrewQCI">
+      <div class="wrap"><span>Explore CrewQCI</span><div><a href="#features-heading">Features<span aria-hidden="true">↗</span></a><a href="#safety-heading">Your controls<span aria-hidden="true">↗</span></a><a href="#crewqci-pricing-heading">Pricing<span aria-hidden="true">↗</span></a><a href="#crewbook-heading">Meet CrewBook<span aria-hidden="true">↗</span></a></div></div>
+    </nav>
 
-    <section class="section section-alt" aria-labelledby="problem-heading">
+    <section class="section section-alt product-problem" aria-labelledby="problem-heading">
       <div class="wrap">
         <p class="kicker">The problem</p>
         <h2 id="problem-heading" class="sheet-head">The gap between the quote and the bank.</h2>
@@ -126,43 +147,43 @@
         <p class="kicker">What it does</p>
         <h2 id="features-heading" class="sheet-head">Lead to quote to contract to invoice to cleared payment.</h2>
 
-        <ul class="daybook daybook-features" role="list">
-          <li>
+        <ul class="daybook daybook-features product-feature-list" role="list">
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Every enquiry in one pipeline</h3>
               <p>Leads carry their source, sector and owner, so the follow-up is somebody's job rather than everybody's. Convert a lead to a quote and nothing is re-typed.</p>
             </div>
             <a class="shot-link" href="img/shots/crewqci-overview.webp"><img class="feature-shot" src="img/shots/crewqci-overview.webp" width="1400" height="470" loading="lazy" alt="CrewQCI's overview: tiles for leads, quotes, contracts, invoicing, proformas and applications, retentions, clients and credit control"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Quotes you can read at a glance</h3>
               <p>Quote numbers allocate in sequence. Statuses run from Quoted through Emailed and Called Follow Up to Won or Lost, colour-coded down the register so anything gone cold is visible from across the office — and a won quote becomes a contract in one click.</p>
             </div>
             <a class="shot-link" href="img/shots/crewqci-quotes.webp"><img class="feature-shot" src="img/shots/crewqci-quotes.webp" width="1400" height="470" loading="lazy" alt="CrewQCI's quotes register: four quotes with values, quoted-by, chase-up counts and statuses colour-coded from quoted through to won and lost"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Invoices, credit notes and CIS reverse charge</h3>
               <p>Raise invoices and credit notes against the contract as branded PDFs, emailed under your own company name. Mark a client CIS registered and the domestic reverse charge is applied and worded properly on everything that follows. Every document email is kept, so you can read exactly what a client received and send it again to a different address if the first one was wrong (the resend carries the same PDF with a fresh download link, rather than a rebuilt document).</p>
             </div>
             <a class="shot-link" href="img/shots/crewqci-invoicing.webp"><img class="feature-shot" src="img/shots/crewqci-invoicing.webp" width="1400" height="500" loading="lazy" alt="CrewQCI's sales invoice register: five documents with net, VAT, total and outstanding columns, one on reverse charge, rows tinted green for paid, pink for part-paid and purple for a credit note"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Proformas, applications and payment certificates</h3>
               <p>Applications for payment are numbered per contract with previous and current valuations, and certify into a payment certificate and VAT invoice when the money is agreed — the way main-contractor work actually gets paid.</p>
             </div>
             <a class="shot-link" href="img/shots/crewqci-proformas.webp"><img class="feature-shot" src="img/shots/crewqci-proformas.webp" width="1400" height="470" loading="lazy" alt="CrewQCI's proformas and applications register: four documents, two of them numbered applications against the same contract, with totals, amounts owing and one converted through to its invoice"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Retentions with a due date attached</h3>
               <p>Raise an invoice with a retention percentage and the retention posts itself to its own register with the amount held and the date it falls due, then counts down in front of you — amber as it approaches, red once it is overdue.</p>
             </div>
             <a class="shot-link" href="img/shots/crewqci-retentions.webp"><img class="feature-shot" src="img/shots/crewqci-retentions.webp" width="1400" height="450" loading="lazy" alt="CrewQCI's retentions register: four retentions with the invoice they came from, amount held, due date and a days countdown, one overdue in red and one due soon in amber"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Debt chasing that runs itself</h3>
               <p>Every open invoice ages from its due date and climbs a ladder you set — a reminder before it falls due, a note on the day, then chasers at 7, 21 and 45 days over. One email per client per run, at the most severe stage they have reached, under your company name. Read any of them before it goes, send a batch by hand, or let the 7am run do it.</p>
@@ -170,28 +191,28 @@
             </div>
             <a class="shot-link" href="img/shots/crewqci-chasing.webp"><img class="feature-shot" src="img/shots/crewqci-chasing.webp" width="1400" height="860" loading="lazy" alt="CrewQCI's chasing queue: an aged debt summary, then four clients due a chaser with their stage, days overdue and amount, one held back because they promised to pay"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Statements, retention requests and thank-yous</h3>
               <p>A statement of account PDF per client — every open item, a running balance, the aged summary and any unallocated credit — sent on a day of the month you choose or one at a time. Matured retention gets its own polite, non-escalating release request, and a client who clears their account gets a thank-you with an optional review ask.</p>
             </div>
             <a class="shot-link" href="img/shots/crewqci-statements.webp"><img class="feature-shot" src="img/shots/crewqci-statements.webp" width="1400" height="700" loading="lazy" alt="CrewQCI's statements tab: a note that statements go out on day one of each month, and four client accounts with their open items, overdue amount, balance due and when they were last sent"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Credit limits and live exposure</h3>
               <p>Every client's outstanding balance is computed from the invoice register, net of VAT, and set against the limit you have given them. Staff can request more headroom and an admin approves or declines it, with the decision emailed back.</p>
             </div>
             <a class="shot-link" href="img/shots/crewqci-credit.webp"><img class="feature-shot" src="img/shots/crewqci-credit.webp" width="1400" height="520" loading="lazy" alt="CrewQCI's credit limits page: a pending credit limit request awaiting a decision, and four client accounts showing outstanding, limit and remaining balance with one over its limit in red"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Insights and reports, straight off the register</h3>
               <p>Conversion by sector and source, quoted against won by month, and aged debt taken from the same invoices the documents were printed from — so the report and the register do not disagree. Export to PDF, Excel or CSV, including a Sage-ready sales ledger with nominal codes per sector.</p>
             </div>
             <a class="shot-link" href="img/shots/crewqci-insights.webp"><img class="feature-shot" src="img/shots/crewqci-insights.webp" width="1400" height="900" loading="lazy" alt="CrewQCI's insights screen: quoted, conversion rate, invoiced and outstanding totals, a quoted-versus-won bar chart by month, top sectors by value and an aged debt breakdown"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>One client register behind everything</h3>
               <p>Addresses, contacts, Sage codes, sector and credit limit in one place. Change a detail once and it propagates across the contract and its documents, and any name used on a record with no matching account is flagged for setting up. Search ignores punctuation and spacing, so "A &amp; C Hobbs", "A and C Hobbs" and "A+C Hobbs" all find the same account, whichever way it happened to be typed.</p>
@@ -263,37 +284,14 @@
 
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <img src="img/logo.png" alt="EdwardsApps" width="437" height="68">
-        <p>Practical software for businesses, organisations and everyday life.</p>
-      </div>
-      <nav aria-label="Products">
-        <h3>Products</h3>
-        <ul>
-          <li><a href="crewbook.html">CrewBook</a></li>
-          <li><a href="crewqci.html" aria-current="page">CrewQCI</a></li>
-          <li><a href="studiobooks.html">Studiobooks</a></li>
-          <li><a href="ourspace.html">OurSpace</a></li>
-          <li><a href="almoner.html">Almoner</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Company">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="guides.html">User guides</a></li>
-          <li><a href="services.html">Custom builds</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing</a></li>
-          <li><a href="mailto:peter@edwardsapps.co.uk">peter@edwardsapps.co.uk</a></li>
-        </ul>
-      </nav>
+      <div class="footer-brand"><a href="/" aria-label="EdwardsApps home"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a><p>Practical software.<br>Built from the inside.</p><p class="footer-note">An independent studio by Peter Edwards.</p></div>
+      <nav aria-label="Products"><h3>The apps</h3><ul><li><a href="/crewbook.html">CrewBook</a></li><li><a href="/crewqci.html" aria-current="page">CrewQCI</a></li><li><a href="/studiobooks.html">Studiobooks</a></li><li><a href="/ourspace.html">OurSpace</a></li><li><a href="/almoner.html">Almoner</a></li></ul></nav>
+      <nav aria-label="Studio"><h3>The studio</h3><ul><li><a href="/services.html">Custom builds</a></li><li><a href="/about.html">About Peter</a></li><li><a href="/enquiry.html">Start a conversation</a></li><li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing ↗</a></li></ul></nav>
+      <nav aria-label="Resources"><h3>Useful things</h3><ul><li><a href="/articles.html">Articles & build notes</a></li><li><a href="/guides.html">User guides</a></li><li><a href="/base44-mfa-guide.html">Base44 MFA guide</a></li><li><a href="/keystone-demo/">Keystone demo</a></li><li><a href="mailto:peter@edwardsapps.co.uk">Email Peter ↗</a></li></ul></nav>
     </div>
-    <div class="wrap">
-      <p class="fineprint">© 2026 EdwardsApps. CrewBook, CrewQCI, Studiobooks, OurSpace and Almoner are EdwardsApps products. <a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a>.</p>
-    </div>
+    <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js?v=2"></script>
 </body>
 </html>

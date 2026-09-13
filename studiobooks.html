@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Studiobooks' dashboard and a client-facing proposal beside the headline: the paperwork between winning the work and getting paid.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#12161D">
+  <meta name="theme-color" content="#111813">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,38 +39,45 @@
   <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/products-revamp.css?v=1">
   <script src="js/consent.js" defer></script>
+  <link rel="stylesheet" href="/css/revamp.css?v=1">
 </head>
-<body>
+<body class="product-page product-studiobooks">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <nav class="nav" aria-label="Main">
-      <a class="brand" href="index.html"><img src="img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <a class="brand" href="/"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul id="nav-links" class="nav-links">
-        <li><a href="crewbook.html">CrewBook</a></li>
-        <li><a href="crewqci.html">CrewQCI</a></li>
-        <li><a href="studiobooks.html" aria-current="page">Studiobooks</a></li>
-        <li><a href="ourspace.html">OurSpace</a></li>
-        <li><a href="almoner.html">Almoner</a></li>
-        <li><a href="services.html">Custom builds</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="nav-cta" href="mailto:peter@edwardsapps.co.uk">Contact</a></li>
+        <li><details class="nav-apps"><summary>Our apps</summary><div class="nav-apps-panel"><div class="nav-app-grid"><a href="/crewbook.html"><img src="/img/product-crewbook.png" alt="" width="40" height="40"><strong>CrewBook</strong><span>Contractor operations</span></a>
+<a href="/crewqci.html"><img src="/img/product-crewqci.png" alt="" width="40" height="40"><strong>CrewQCI</strong><span>Quotes, contracts & invoices</span></a>
+<a href="/studiobooks.html" aria-current="page"><img src="/img/product-studiobooks.png" alt="" width="40" height="40"><strong>Studiobooks</strong><span>The studio back office</span></a>
+<a href="/ourspace.html"><img src="/img/product-ourspace.png" alt="" width="40" height="40"><strong>OurSpace</strong><span>Life, shared</span></a>
+<a href="/almoner.html"><img src="/img/product-almoner.png" alt="" width="40" height="40"><strong>Almoner</strong><span>Charity governance</span></a></div><a class="nav-app-help" href="/index.html#products-heading"><span>Not sure which fits? Explore the collection.</span><span aria-hidden="true">↗</span></a></div></details></li>
+        <li><a href="/services.html">Custom builds</a></li>
+        <li><a href="/articles.html">Articles</a></li>
+        <li><a href="/guides.html">Guides</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/enquiry.html" class="nav-cta">Let’s talk <span aria-hidden="true">↗</span></a></li>
       </ul>
     </nav>
   </header>
-  <aside class="articles-discovery" aria-label="Articles"><a href="articles.html"><span>Articles &amp; practical guides</span><span class="articles-discovery-detail">Build notes, code &amp; Builder prompts</span><span aria-hidden="true">↗</span></a></aside>
+  <aside class="articles-discovery" aria-label="Latest from the studio"><a href="/base44-mfa-guide.html"><span>From the workbench</span><span class="articles-discovery-detail">A practical guide to admin MFA on Base44</span><span aria-hidden="true">↗</span></a></aside>
 
   <main id="main">
 
-    <section class="hero">
-      <div class="wrap hero-product">
-        <div>
-          <img class="app-icon" src="img/product-studiobooks.png" alt="" width="72" height="72">
-          <p class="kicker">Studiobooks</p>
-          <h1>The back office for app and software studios.</h1>
-          <p class="lede">Proposals your clients accept online, service agreements, a monthly billing run, invoices and credit control, and a portal where each client sees what you have sent them, under your logo and colours rather than ours. Studiobooks runs EdwardsApps' own paperwork today; it was opened up so any studio can run theirs on it.</p>
+    <section class="hero product-hero">
+      <div class="wrap">
+        <div class="product-identity-row">
+          <div class="product-identity"><img class="app-icon" src="img/product-studiobooks.png" alt="" width="72" height="72"><p class="kicker">Studiobooks</p></div>
+          <p class="product-status"><span aria-hidden="true"></span>For app &amp; software studios</p>
+        </div>
+        <div class="hero-product product-hero-layout">
+          <div class="product-hero-copy">
+            <h1>The back office for app and <span>software studios.</span></h1>
+            <p class="lede">Proposals your clients accept online, service agreements, a monthly billing run, invoices and credit control, and a portal where each client sees what you have sent them, under your logo and colours rather than ours. Studiobooks runs EdwardsApps' own paperwork today; it was opened up so any studio can run theirs on it.</p>
           <p class="hero-price-line"><strong>Free to use today · no card needed</strong><span>On the App Store for iPhone and iPad, and on the web at studiobooks.app.</span></p>
           <div class="cta-row">
             <a class="button button-primary" href="https://apps.apple.com/gb/app/studiobooks/id6807538781" rel="noopener">Get it on the App Store</a>
@@ -78,14 +85,28 @@
             <a class="button button-ghost" href="mailto:peter@edwardsapps.co.uk?subject=Studiobooks%20walkthrough">Request a walkthrough</a>
           </div>
           <p class="hero-note">Already on Studiobooks? <a href="https://studiobooks.app" rel="noopener">Sign in at studiobooks.app</a>. If a studio has sent you a proposal or an invoice, sign in with the address it came to and it will be waiting for you.</p>
-        </div>
-        <a class="hero-product-shot shot-link" href="img/shots/studiobooks-dashboard.webp">
+          </div>
+          <div class="product-preview">
+            <div class="product-preview-heading"><span class="product-preview-dot" aria-hidden="true"></span><span>A clearer view of your studio</span><span aria-hidden="true">↗</span></div>
+            <div class="product-screen-stage"><a class="hero-product-shot shot-link" href="img/shots/studiobooks-dashboard.webp">
           <img src="img/shots/studiobooks-dashboard.webp" alt="The Studiobooks dashboard for a studio: monthly recurring, outstanding and overdue totals, open enquiries, live apps and active contracts, and invoicing by month" width="1400" height="1155" fetchpriority="high">
-        </a>
+        </a></div>
+            <p class="product-preview-caption">The real Studiobooks dashboard. Select the screen to take a closer look.</p>
+            <div class="product-workflow" aria-label="The Studiobooks workflow"><span>Send a proposal</span><span>Agree the work</span><span>Run the billing</span></div>
+          </div>
+        </div>
+        <dl class="product-facts" aria-label="Studiobooks at a glance">
+            <div><dt>Free today</dt><dd>Every feature, every account</dd></div>
+            <div><dt>Your brand</dt><dd>Your logo, colours and documents</dd></div>
+            <div><dt>Web + iOS</dt><dd>One account for your whole studio</dd></div>
+        </dl>
       </div>
     </section>
+    <nav class="product-contents" aria-label="Explore Studiobooks">
+      <div class="wrap"><span>Explore Studiobooks</span><div><a href="#features-heading">Features<span aria-hidden="true">↗</span></a><a href="#phone-heading">On your phone<span aria-hidden="true">↗</span></a><a href="#studiobooks-start-heading">Get started<span aria-hidden="true">↗</span></a><a href="#privacy-heading">Privacy<span aria-hidden="true">↗</span></a></div></div>
+    </nav>
 
-    <section class="section section-alt" aria-labelledby="problem-heading">
+    <section class="section section-alt product-problem" aria-labelledby="problem-heading">
       <div class="wrap">
         <p class="kicker">The problem</p>
         <h2 id="problem-heading" class="sheet-head">The paperwork between winning the work and getting paid for it.</h2>
@@ -121,64 +142,64 @@
         <p class="kicker">What it does</p>
         <h2 id="features-heading" class="sheet-head">Enquiry to proposal to agreement to invoice to cleared payment.</h2>
 
-        <ul class="daybook daybook-features" role="list">
-          <li>
+        <ul class="daybook daybook-features product-feature-list" role="list">
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Enquiries that arrive already filed</h3>
               <p>Point your website's contact form at Studiobooks and each enquiry lands in the register with the name, email address and message intact, and an email to you saying it has arrived. Add the ones that come by phone yourself. Each carries its source, a status from new through to won or lost, and a next action with a date, so following up is somebody's job rather than everybody's. Either way, an enquiry becomes a proposal without anything being retyped.</p>
             </div>
             <a class="shot-link" href="img/shots/studiobooks-enquiries.webp"><img class="feature-shot" src="img/shots/studiobooks-enquiries.webp" width="1400" height="988" loading="lazy" alt="The enquiry register: open enquiries and a pipeline estimate above a list of approaches, each with its source, date received, status and next action"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Proposals your clients answer online</h3>
               <p>Write the proposal in the app, with your logo and colours on it, and send a link rather than an attachment. The register shows what is open, what it is worth and who has yet to reply. The client reads it in their browser and accepts or declines there, adding a note if they want to. You can see when it was first opened, and a revised version supersedes the old one rather than leaving two in circulation.</p>
             </div>
             <a class="shot-link" href="img/shots/studiobooks-proposals.webp"><img class="feature-shot" src="img/shots/studiobooks-proposals.webp" width="1400" height="725" loading="lazy" alt="The proposals register: open proposals, pipeline value and responses awaited, with one proposal sent and awaiting a reply"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>What the client sees</h3>
               <p>The proposal opens as a page under your name, with the short version up top, the scope, the price and the terms laid out below, and two buttons that stay in view: decline, or accept this proposal. No account is needed to read it or to answer it; the link is enough.</p>
             </div>
             <a class="shot-link" href="img/shots/studiobooks-proposal-client.webp"><img class="feature-shot" src="img/shots/studiobooks-proposal-client.webp" width="1400" height="979" loading="lazy" alt="A proposal as the client sees it, headed with the studio's name, with a summary panel and Decline and Accept this proposal buttons along the bottom"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Agreements that raise their own invoices</h3>
               <p>A contract carries the monthly amount, the build fee if there is one, and the payment terms, and produces the order form your client signs. From then on the agreement, rather than somebody's memory, is what raises the invoices. The billing run reads your live contracts and raises the month's invoices as drafts for you to look over, numbered in sequence only when they are issued. It shows what it is about to do before it writes anything, and a period is billed once, so running it twice doesn't produce two invoices. Chargeable extras (a developer account renewal passed through at cost, say) wait on the same page and go on the next invoice. VAT is added if you are registered and left off if you are not.</p>
             </div>
             <a class="shot-link" href="img/shots/studiobooks-billing.webp"><img class="feature-shot" src="img/shots/studiobooks-billing.webp" width="1400" height="1066" loading="lazy" alt="The billing page: a run date with one contract ready to bill, and two pieces of chargeable work waiting to go on the next invoice"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Invoices and credit notes, sent under your name</h3>
               <p>Issue an invoice and it goes to the client by email from your studio, not from us, with your bank details in the footer. Record payments as they come in, in full or in part, and correct an issued invoice with a credit note rather than an edit, so the register always adds up to what was actually sent. The VAT summary at the top is taken from the same documents, so it never disagrees with them.</p>
             </div>
             <a class="shot-link" href="img/shots/studiobooks-invoices.webp"><img class="feature-shot" src="img/shots/studiobooks-invoices.webp" width="1400" height="1155" loading="lazy" alt="The invoice register: outstanding, overdue and draft totals, a VAT summary, and invoices marked draft, issued, paid or not paid"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Who owes what, and for how long</h3>
               <p>Every issued invoice with a balance, grouped by how overdue it is, with the total against each client. Re-send the invoice, record a payment or open the document from the same row. The chasing is still yours to do; the screen just tells you where to start.</p>
             </div>
             <a class="shot-link" href="img/shots/studiobooks-credit.webp"><img class="feature-shot" src="img/shots/studiobooks-credit.webp" width="1400" height="1012" loading="lazy" alt="Credit control: outstanding money in aged bands, aged debt by client, and an overdue invoice with view, email and payment actions"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>One client book behind everything</h3>
               <p>Every client with their contacts, the apps you run for them, what they pay each month and what they owe right now, taken from the same contracts and invoices the documents were printed from. A prospect becomes a client the day their proposal is accepted; nothing is entered twice.</p>
             </div>
             <a class="shot-link" href="img/shots/studiobooks-clients.webp"><img class="feature-shot" src="img/shots/studiobooks-clients.webp" width="1400" height="1012" loading="lazy" alt="The client book: active clients, monthly recurring, outstanding and overdue totals, and four clients with status, contact, apps, monthly value and balance"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>A portal for every client, in your colours</h3>
               <p>Your clients sign in with the address you send documents to and see their proposals, invoices, the apps you have built for them and the documents you have shared, and nothing of anyone else's. It carries your logo, your colours and your contact details; Studiobooks appears only as a line in the footer. Share an agreement, a data-processing document or a getting-started guide and it is there when they need it, so "can you resend that?" stops being an email.</p>
             </div>
             <a class="shot-link" href="img/shots/studiobooks-portal.webp"><img class="feature-shot" src="img/shots/studiobooks-portal.webp" width="1400" height="1155" loading="lazy" alt="A client's portal home under their studio's own name and mark: their app, recent invoices with a credit note, and how to get in touch"></a>
           </li>
-          <li>
+          <li data-spotlight>
             <div class="feature-text">
               <h3>Set up once, revise any time</h3>
               <p>Company details, your logo and colours, VAT position, bank details for the invoice footer, the name your emails go out under, your team and your website's enquiry key all live in Settings, and the setup wizard walks the same fields if you would rather be led through them. Nothing here is shared with, or filled in from, any other company on Studiobooks.</p>
@@ -198,7 +219,7 @@
         <div class="cta-row">
           <a class="button button-primary" href="https://apps.apple.com/gb/app/studiobooks/id6807538781" rel="noopener">Get it on the App Store</a>
         </div>
-        <div class="phone-shots">
+        <div class="phone-shots product-phone-gallery">
           <figure>
             <a class="shot-link" href="img/shots/studiobooks-phone-dashboard.webp"><img class="feature-shot" src="img/shots/studiobooks-phone-dashboard.webp" width="720" height="1564" loading="lazy" alt="The Studiobooks dashboard on a phone: monthly recurring, outstanding, overdue and open enquiries, with invoicing by month below"></a>
             <figcaption>Dashboard: the month at a glance</figcaption>
@@ -285,37 +306,14 @@
 
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <img src="img/logo.png" alt="EdwardsApps" width="437" height="68">
-        <p>Practical software for businesses, organisations and everyday life.</p>
-      </div>
-      <nav aria-label="Products">
-        <h3>Products</h3>
-        <ul>
-          <li><a href="crewbook.html">CrewBook</a></li>
-          <li><a href="crewqci.html">CrewQCI</a></li>
-          <li><a href="studiobooks.html" aria-current="page">Studiobooks</a></li>
-          <li><a href="ourspace.html">OurSpace</a></li>
-          <li><a href="almoner.html">Almoner</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Company">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="guides.html">User guides</a></li>
-          <li><a href="services.html">Custom builds</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing</a></li>
-          <li><a href="mailto:peter@edwardsapps.co.uk">peter@edwardsapps.co.uk</a></li>
-        </ul>
-      </nav>
+      <div class="footer-brand"><a href="/" aria-label="EdwardsApps home"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a><p>Practical software.<br>Built from the inside.</p><p class="footer-note">An independent studio by Peter Edwards.</p></div>
+      <nav aria-label="Products"><h3>The apps</h3><ul><li><a href="/crewbook.html">CrewBook</a></li><li><a href="/crewqci.html">CrewQCI</a></li><li><a href="/studiobooks.html" aria-current="page">Studiobooks</a></li><li><a href="/ourspace.html">OurSpace</a></li><li><a href="/almoner.html">Almoner</a></li></ul></nav>
+      <nav aria-label="Studio"><h3>The studio</h3><ul><li><a href="/services.html">Custom builds</a></li><li><a href="/about.html">About Peter</a></li><li><a href="/enquiry.html">Start a conversation</a></li><li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing ↗</a></li></ul></nav>
+      <nav aria-label="Resources"><h3>Useful things</h3><ul><li><a href="/articles.html">Articles & build notes</a></li><li><a href="/guides.html">User guides</a></li><li><a href="/base44-mfa-guide.html">Base44 MFA guide</a></li><li><a href="/keystone-demo/">Keystone demo</a></li><li><a href="mailto:peter@edwardsapps.co.uk">Email Peter ↗</a></li></ul></nav>
     </div>
-    <div class="wrap">
-      <p class="fineprint">© 2026 EdwardsApps. CrewBook, CrewQCI, Studiobooks, OurSpace and Almoner are EdwardsApps products. <a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a>. Studiobooks' <a href="https://studiobooks.app/privacy" rel="noopener">privacy policy</a> and <a href="https://studiobooks.app/terms" rel="noopener">terms of service</a>.</p>
-    </div>
+    <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js?v=2"></script>
 </body>
 </html>

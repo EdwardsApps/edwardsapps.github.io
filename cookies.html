@@ -18,38 +18,42 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="CrewBook, CrewQCI, Almoner and OurSpace shown as real app screenshots beside the headline: software that fits the way the work already happens.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#12161D">
+  <meta name="theme-color" content="#111813">
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/company-revamp.css?v=1">
   <script src="js/consent.js" defer></script>
+  <link rel="stylesheet" href="/css/revamp.css?v=1">
 </head>
-<body>
+<body class="company-page cookies-page legal-page">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <nav class="nav" aria-label="Main">
-      <a class="brand" href="index.html"><img src="img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <a class="brand" href="/"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul id="nav-links" class="nav-links">
-        <li><a href="crewbook.html">CrewBook</a></li>
-        <li><a href="crewqci.html">CrewQCI</a></li>
-        <li><a href="studiobooks.html">Studiobooks</a></li>
-        <li><a href="ourspace.html">OurSpace</a></li>
-        <li><a href="almoner.html">Almoner</a></li>
-        <li><a href="services.html">Custom builds</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="nav-cta" href="mailto:peter@edwardsapps.co.uk">Contact</a></li>
+        <li><details class="nav-apps"><summary>Our apps</summary><div class="nav-apps-panel"><div class="nav-app-grid"><a href="/crewbook.html"><img src="/img/product-crewbook.png" alt="" width="40" height="40"><strong>CrewBook</strong><span>Contractor operations</span></a>
+<a href="/crewqci.html"><img src="/img/product-crewqci.png" alt="" width="40" height="40"><strong>CrewQCI</strong><span>Quotes, contracts & invoices</span></a>
+<a href="/studiobooks.html"><img src="/img/product-studiobooks.png" alt="" width="40" height="40"><strong>Studiobooks</strong><span>The studio back office</span></a>
+<a href="/ourspace.html"><img src="/img/product-ourspace.png" alt="" width="40" height="40"><strong>OurSpace</strong><span>Life, shared</span></a>
+<a href="/almoner.html"><img src="/img/product-almoner.png" alt="" width="40" height="40"><strong>Almoner</strong><span>Charity governance</span></a></div><a class="nav-app-help" href="/index.html#products-heading"><span>Not sure which fits? Explore the collection.</span><span aria-hidden="true">↗</span></a></div></details></li>
+        <li><a href="/services.html">Custom builds</a></li>
+        <li><a href="/articles.html">Articles</a></li>
+        <li><a href="/guides.html">Guides</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/enquiry.html" class="nav-cta">Let’s talk <span aria-hidden="true">↗</span></a></li>
       </ul>
     </nav>
   </header>
-  <aside class="articles-discovery" aria-label="Articles"><a href="articles.html"><span>Articles &amp; practical guides</span><span class="articles-discovery-detail">Build notes, code &amp; Builder prompts</span><span aria-hidden="true">↗</span></a></aside>
+  <aside class="articles-discovery" aria-label="Latest from the studio"><a href="/base44-mfa-guide.html"><span>From the workbench</span><span class="articles-discovery-detail">A practical guide to admin MFA on Base44</span><span aria-hidden="true">↗</span></a></aside>
 
   <main id="main">
-    <section class="hero">
+    <section class="hero company-hero">
       <div class="wrap">
         <p class="kicker">Cookies</p>
         <h1>Your choice, remembered.</h1>
@@ -58,14 +62,16 @@
     </section>
 
     <section class="section">
-      <div class="wrap legal-copy">
+      <div class="wrap legal-layout">
+        <aside class="legal-sidebar"><p class="kicker">In this notice</p><nav aria-label="On this page"><ol><li><a href="#essential-preference-storage">Essential preference storage</a></li><li><a href="#optional-analytics">Optional analytics</a></li><li><a href="#more-information">More information</a></li></ol></nav><a class="legal-settings" href="#" data-consent-settings>Cookie settings <span aria-hidden="true">↗</span></a></aside>
+        <div class="legal-copy">
         <p><strong>Last updated:</strong> 17 August 2026</p>
 
-        <h2>Essential preference storage</h2>
+        <h2 id="essential-preference-storage">Essential preference storage</h2>
         <p>The site stores a value named <code>ea-consent</code> in your browser's local storage. It records whether you accepted or declined analytics so the banner does not ask on every page. It contains only the word <code>granted</code> or <code>denied</code> and is not used to identify you.</p>
         <p>This preference remains until you change it, clear the site's stored data or use a browser setting that removes it.</p>
 
-        <h2>Optional analytics</h2>
+        <h2 id="optional-analytics">Optional analytics</h2>
         <p>If you select “Accept analytics”, the site loads Google Analytics. Google Analytics may then use cookies or similar identifiers to measure visits, pages viewed, broad device information, referral sources and approximate location. EdwardsApps uses this information to understand which pages are useful and improve the site.</p>
         <p>If you decline, the Google Analytics script is not loaded. Advertising storage, personalisation and user-data consent remain denied on this website.</p>
 
@@ -74,8 +80,9 @@
           <p>Open <a href="#" data-consent-settings>Cookie settings</a> at any time. Your new choice takes effect immediately for future activity.</p>
         </div>
 
-        <h2>More information</h2>
+        <h2 id="more-information">More information</h2>
         <p>See the <a href="privacy.html">EdwardsApps privacy notice</a> for how information is handled. Google also explains how it uses information on sites and apps that use its services in <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">Google's privacy information</a>.</p>
+      </div>
       </div>
     </section>
 
@@ -90,36 +97,14 @@
 
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <img src="img/logo.png" alt="EdwardsApps" width="437" height="68">
-        <p>Practical software for businesses, organisations and everyday life.</p>
-      </div>
-      <nav aria-label="Products">
-        <h3>Products</h3>
-        <ul>
-          <li><a href="crewbook.html">CrewBook</a></li>
-          <li><a href="crewqci.html">CrewQCI</a></li>
-          <li><a href="studiobooks.html">Studiobooks</a></li>
-          <li><a href="ourspace.html">OurSpace</a></li>
-          <li><a href="almoner.html">Almoner</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Company">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="guides.html">User guides</a></li>
-          <li><a href="services.html">Custom builds</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="mailto:peter@edwardsapps.co.uk">peter@edwardsapps.co.uk</a></li>
-        </ul>
-      </nav>
+      <div class="footer-brand"><a href="/" aria-label="EdwardsApps home"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a><p>Practical software.<br>Built from the inside.</p><p class="footer-note">An independent studio by Peter Edwards.</p></div>
+      <nav aria-label="Products"><h3>The apps</h3><ul><li><a href="/crewbook.html">CrewBook</a></li><li><a href="/crewqci.html">CrewQCI</a></li><li><a href="/studiobooks.html">Studiobooks</a></li><li><a href="/ourspace.html">OurSpace</a></li><li><a href="/almoner.html">Almoner</a></li></ul></nav>
+      <nav aria-label="Studio"><h3>The studio</h3><ul><li><a href="/services.html">Custom builds</a></li><li><a href="/about.html">About Peter</a></li><li><a href="/enquiry.html">Start a conversation</a></li><li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing ↗</a></li></ul></nav>
+      <nav aria-label="Resources"><h3>Useful things</h3><ul><li><a href="/articles.html">Articles & build notes</a></li><li><a href="/guides.html">User guides</a></li><li><a href="/base44-mfa-guide.html">Base44 MFA guide</a></li><li><a href="/keystone-demo/">Keystone demo</a></li><li><a href="mailto:peter@edwardsapps.co.uk">Email Peter ↗</a></li></ul></nav>
     </div>
-    <div class="wrap">
-      <p class="fineprint">© 2026 EdwardsApps. CrewBook, CrewQCI, Studiobooks, OurSpace and Almoner are EdwardsApps products. <a href="privacy.html">Privacy</a> · <a href="cookies.html" aria-current="page">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a>.</p>
-    </div>
+    <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html" aria-current="page">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js?v=2"></script>
 </body>
 </html>

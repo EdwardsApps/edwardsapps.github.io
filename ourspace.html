@@ -22,7 +22,7 @@
   <meta name="twitter:description" content="£2.99 once on the App Store, free on Google Play and the web. Shared household plans, lists and budgets — now with optional Claude, ChatGPT and Le Chat connections.">
   <meta name="twitter:image" content="https://edwardsapps.co.uk/img/og-ourspace-v2.png">
   <meta name="twitter:image:alt" content="OurSpace on two phones with App Store and Google Play availability.">
-  <meta name="theme-color" content="#12161D">
+  <meta name="theme-color" content="#111813">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,38 +51,45 @@
   <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13">
   <link rel="stylesheet" href="css/ourspace-ai.css?v=1">
+  <link rel="stylesheet" href="css/products-revamp.css?v=1">
   <script src="js/consent.js" defer></script>
+  <link rel="stylesheet" href="/css/revamp.css?v=1">
 </head>
-<body>
+<body class="product-page product-ourspace">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <nav class="nav" aria-label="Main">
-      <a class="brand" href="index.html"><img src="img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <a class="brand" href="/"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul id="nav-links" class="nav-links">
-        <li><a href="crewbook.html">CrewBook</a></li>
-        <li><a href="crewqci.html">CrewQCI</a></li>
-        <li><a href="studiobooks.html">Studiobooks</a></li>
-        <li><a href="ourspace.html" aria-current="page">OurSpace</a></li>
-        <li><a href="almoner.html">Almoner</a></li>
-        <li><a href="services.html">Custom builds</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="nav-cta" href="mailto:peter@edwardsapps.co.uk">Contact</a></li>
+        <li><details class="nav-apps"><summary>Our apps</summary><div class="nav-apps-panel"><div class="nav-app-grid"><a href="/crewbook.html"><img src="/img/product-crewbook.png" alt="" width="40" height="40"><strong>CrewBook</strong><span>Contractor operations</span></a>
+<a href="/crewqci.html"><img src="/img/product-crewqci.png" alt="" width="40" height="40"><strong>CrewQCI</strong><span>Quotes, contracts & invoices</span></a>
+<a href="/studiobooks.html"><img src="/img/product-studiobooks.png" alt="" width="40" height="40"><strong>Studiobooks</strong><span>The studio back office</span></a>
+<a href="/ourspace.html" aria-current="page"><img src="/img/product-ourspace.png" alt="" width="40" height="40"><strong>OurSpace</strong><span>Life, shared</span></a>
+<a href="/almoner.html"><img src="/img/product-almoner.png" alt="" width="40" height="40"><strong>Almoner</strong><span>Charity governance</span></a></div><a class="nav-app-help" href="/index.html#products-heading"><span>Not sure which fits? Explore the collection.</span><span aria-hidden="true">↗</span></a></div></details></li>
+        <li><a href="/services.html">Custom builds</a></li>
+        <li><a href="/articles.html">Articles</a></li>
+        <li><a href="/guides.html">Guides</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/enquiry.html" class="nav-cta">Let’s talk <span aria-hidden="true">↗</span></a></li>
       </ul>
     </nav>
   </header>
-  <aside class="articles-discovery" aria-label="Articles"><a href="articles.html"><span>Articles &amp; practical guides</span><span class="articles-discovery-detail">Build notes, code &amp; Builder prompts</span><span aria-hidden="true">↗</span></a></aside>
+  <aside class="articles-discovery" aria-label="Latest from the studio"><a href="/base44-mfa-guide.html"><span>From the workbench</span><span class="articles-discovery-detail">A practical guide to admin MFA on Base44</span><span aria-hidden="true">↗</span></a></aside>
 
   <main id="main">
 
-    <section class="hero">
-      <div class="wrap hero-product">
-        <div>
-          <img class="app-icon" src="img/product-ourspace.png" alt="OurSpace app icon" width="72" height="72">
-          <p class="kicker">OurSpace</p>
-          <h1>One household. One app.</h1>
-          <p class="lede">OurSpace keeps a household's moving parts in one place — shared tasks, calendars, meals, budgets, lists and reminders — so the mental load is easier to share. It's live on the Apple App Store and Google Play.</p>
+    <section class="hero product-hero">
+      <div class="wrap">
+        <div class="product-identity-row">
+          <div class="product-identity"><img class="app-icon" src="img/product-ourspace.png" alt="OurSpace app icon" width="72" height="72"><p class="kicker">OurSpace</p></div>
+          <p class="product-status"><span aria-hidden="true"></span>For the household you share</p>
+        </div>
+        <div class="hero-product product-hero-layout">
+          <div class="product-hero-copy">
+            <h1>One household.<br><span>One app.</span></h1>
+            <p class="lede">OurSpace keeps a household's moving parts in one place — shared tasks, calendars, meals, budgets, lists and reminders — so the mental load is easier to share. It's live on the Apple App Store and Google Play.</p>
           <p class="ourspace-ai-announcement"><a href="#ai-connections"><span>New</span> Connect OurSpace to your AI assistant <span aria-hidden="true">↗</span></a></p>
           <p class="hero-price-line"><strong>£2.99 once on iPhone</strong><span>Free on Android and the web.</span></p>
           <div class="cta-row">
@@ -90,10 +97,24 @@
             <a class="button button-primary" href="https://play.google.com/store/apps/details?id=com.base6a0d9576def7780fc56eeb7e.app" rel="noopener">Get it on Google Play</a>
           </div>
           <p class="hero-note">Prefer the browser? OurSpace also runs at <a href="https://our-space.me" rel="noopener">our-space.me</a>.</p>
+          </div>
+          <div class="product-preview">
+            <div class="product-preview-heading"><span class="product-preview-dot" aria-hidden="true"></span><span>A little less to keep in your head</span><span aria-hidden="true">↗</span></div>
+            <div class="product-screen-stage"><a class="hero-product-shot shot-link" href="img/shots/ourspace-hero.webp"><img src="img/shots/ourspace-hero.webp" alt="Three phones showing OurSpace's calendar, the home screen with its bin reminder and noticeboard, and the shared shopping list, side by side on the app's purple background" width="1400" height="840" fetchpriority="high"></a></div>
+            <p class="product-preview-caption">OurSpace on your phone: your calendar, home and shopping list, together.</p>
+            <div class="product-workflow" aria-label="The OurSpace workflow"><span>Share the plans</span><span>Sort the everyday</span><span>Keep in sync</span></div>
+          </div>
         </div>
-        <a class="hero-product-shot shot-link" href="img/shots/ourspace-hero.webp"><img src="img/shots/ourspace-hero.webp" alt="Three phones showing OurSpace's calendar, the home screen with its bin reminder and noticeboard, and the shared shopping list, side by side on the app's purple background" width="1400" height="840" fetchpriority="high"></a>
+        <dl class="product-facts" aria-label="OurSpace at a glance">
+            <div><dt>£2.99 once</dt><dd>On iPhone · no subscription</dd></div>
+            <div><dt>Free</dt><dd>On Android and the web</dd></div>
+            <div><dt>Together</dt><dd>The same household on both phones</dd></div>
+        </dl>
       </div>
     </section>
+    <nav class="product-contents" aria-label="Explore OurSpace">
+      <div class="wrap"><span>Explore OurSpace</span><div><a href="#ai-connections">AI connections<span aria-hidden="true">↗</span></a><a href="#ourspace-does-heading">Features<span aria-hidden="true">↗</span></a><a href="#ourspace-shots-heading">Inside the app<span aria-hidden="true">↗</span></a><a href="#ourspace-pricing-heading">Pricing<span aria-hidden="true">↗</span></a></div></div>
+    </nav>
 
     <section class="ourspace-ai" id="ai-connections" aria-labelledby="ourspace-assistant-heading">
       <div class="wrap">
@@ -143,7 +164,7 @@
       </div>
     </section>
 
-    <section class="section section-alt" aria-labelledby="ourspace-problem-heading">
+    <section class="section section-alt product-problem" aria-labelledby="ourspace-problem-heading">
       <div class="wrap">
         <p class="kicker">The problem</p>
         <h2 id="ourspace-problem-heading" class="sheet-head">Did you book that?</h2>
@@ -157,23 +178,23 @@
         <p class="kicker">What it does</p>
         <h2 id="ourspace-does-heading" class="sheet-head">The household admin, handled together.</h2>
         <p class="measure">Shared to-do lists that both of you can see and tick off. A calendar that shows the whole household's week, not just one person's. Budgets and money overviews you can talk about over the same screen. In full:</p>
-        <ul class="checklist" role="list">
-          <li>Both calendars in one view: each of you connects your own Google Calendar (read-only — OurSpace can look, never change anything) and the events appear side by side. You can add events inside OurSpace too, which both of you see.</li>
-          <li>Shared tasks: due dates, priorities, who's doing it, and a place on the map so the errand can be found as well as remembered.</li>
-          <li>One shopping list: live on both phones, with quantities, who's picking it up, and quick search links to Amazon or your own supermarket. Tell it which shop you're heading to and it sorts itself into aisle order, then learns the way round your branch from the order you tick things off.</li>
-          <li>Dinner plans: an AI meal planner drafts the week's dinners around your tastes; accept the ones you fancy and the ingredients land on the shopping list in a tap.</li>
-          <li>A recipe library: save the dinners you'd happily eat again, and future weeks are drafted around your own favourites first, using your ingredients and steps exactly as you saved them.</li>
-          <li>A household handbook: the Wi-Fi password, how the front door works, where the stopcock is, who to ring — written down once, and shareable with a grandparent, sitter or guest as a read-only link that expires when you say.</li>
-          <li>Budgets and money: accounts, direct debits, debts, pensions and assets, totalled into one net-worth figure.</li>
-          <li>Setting up without the typing: download a ready-made spreadsheet, fill in what you already have, and upload it — accounts, assets, direct debits and contracts all land at once.</li>
-          <li>Or hand it a statement: upload a bank statement PDF and OurSpace reads off the closing balance and the payments that look regular, then asks you to approve each one before anything changes.</li>
-          <li>Household contracts: insurance, utilities, broadband and the rest, each with its renewal date, account details and notes, and a reminder in the app before it rolls over.</li>
-          <li>Bin days: tell it your collection rotation once (weekly, fortnightly or monthly) and the app shows which bins go out, the day before and on the day.</li>
-          <li>Birthdays: pulled from your Google Calendar, with a week's notice and gift ideas on tap.</li>
-          <li>The kids' week (optional): each child's school days, clubs and routines, with who's dropping off and who's collecting.</li>
-          <li>A noticeboard for the two of you: sticky notes, doodles and links, each clearing itself after 24 hours.</li>
-          <li>Catch Up: a short digest, written for you each time you open the app, of what your partner has added or ticked off since you last looked.</li>
-          <li>Your own AI assistant, if you want one: connect Claude, ChatGPT or Mistral’s Le Chat, and ask it about the household instead of opening the app. It's optional, it stays off until you set it up, and the connection guide above explains how.</li>
+        <ul class="checklist product-capabilities" role="list">
+          <li data-spotlight><strong>Both calendars in one view:</strong> each of you connects your own Google Calendar (read-only — OurSpace can look, never change anything) and the events appear side by side. You can add events inside OurSpace too, which both of you see.</li>
+          <li data-spotlight><strong>Shared tasks:</strong> due dates, priorities, who's doing it, and a place on the map so the errand can be found as well as remembered.</li>
+          <li data-spotlight><strong>One shopping list:</strong> live on both phones, with quantities, who's picking it up, and quick search links to Amazon or your own supermarket. Tell it which shop you're heading to and it sorts itself into aisle order, then learns the way round your branch from the order you tick things off.</li>
+          <li data-spotlight><strong>Dinner plans:</strong> an AI meal planner drafts the week's dinners around your tastes; accept the ones you fancy and the ingredients land on the shopping list in a tap.</li>
+          <li data-spotlight><strong>A recipe library:</strong> save the dinners you'd happily eat again, and future weeks are drafted around your own favourites first, using your ingredients and steps exactly as you saved them.</li>
+          <li data-spotlight><strong>A household handbook:</strong> the Wi-Fi password, how the front door works, where the stopcock is, who to ring — written down once, and shareable with a grandparent, sitter or guest as a read-only link that expires when you say.</li>
+          <li data-spotlight><strong>Budgets and money:</strong> accounts, direct debits, debts, pensions and assets, totalled into one net-worth figure.</li>
+          <li data-spotlight><strong>Setting up without the typing:</strong> download a ready-made spreadsheet, fill in what you already have, and upload it — accounts, assets, direct debits and contracts all land at once.</li>
+          <li data-spotlight><strong>Or hand it a statement:</strong> upload a bank statement PDF and OurSpace reads off the closing balance and the payments that look regular, then asks you to approve each one before anything changes.</li>
+          <li data-spotlight><strong>Household contracts:</strong> insurance, utilities, broadband and the rest, each with its renewal date, account details and notes, and a reminder in the app before it rolls over.</li>
+          <li data-spotlight><strong>Bin days:</strong> tell it your collection rotation once (weekly, fortnightly or monthly) and the app shows which bins go out, the day before and on the day.</li>
+          <li data-spotlight><strong>Birthdays:</strong> pulled from your Google Calendar, with a week's notice and gift ideas on tap.</li>
+          <li data-spotlight><strong>The kids' week (optional):</strong> each child's school days, clubs and routines, with who's dropping off and who's collecting.</li>
+          <li data-spotlight><strong>A noticeboard for the two of you:</strong> sticky notes, doodles and links, each clearing itself after 24 hours.</li>
+          <li data-spotlight><strong>Catch Up:</strong> a short digest, written for you each time you open the app, of what your partner has added or ticked off since you last looked.</li>
+          <li data-spotlight><strong>Your own AI assistant, if you want one:</strong> connect Claude, ChatGPT or Mistral’s Le Chat, and ask it about the household instead of opening the app. It's optional, it stays off until you set it up, and the connection guide above explains how.</li>
         </ul>
         <p class="measure">OurSpace also runs in the browser at our-space.me, and installs straight to your home screen from there. The stores are the easy route; the web app is the same thing.</p>
         <div class="cta-row">
@@ -187,7 +208,7 @@
         <p class="kicker">A look inside</p>
         <h2 id="ourspace-shots-heading" class="sheet-head">Built for the phone in your pocket.</h2>
         <p class="measure">Your day, your lists and your money — side by side, so both of you are looking at the same thing. Shown here with sample data from a made-up household.</p>
-        <div class="phone-shots">
+        <div class="phone-shots product-phone-gallery">
           <figure>
             <a class="shot-link" href="img/shots/ourspace-home.webp"><img class="feature-shot" src="img/shots/ourspace-home.webp" width="1080" height="2433" loading="lazy" alt="OurSpace's home screen: today's events split into two columns, one per partner, above an AI-written digest summarising what the other person added or ticked off since you last looked"></a>
             <figcaption>Home — the day, and what changed</figcaption>
@@ -229,7 +250,7 @@
         <p class="kicker">On a bigger screen</p>
         <h2 id="ourspace-desktop-heading" class="sheet-head">And the same household on a laptop.</h2>
         <p class="measure">OurSpace is a web app as well as a phone one, so the same household opens at our-space.me in any browser — the same data, with more of it in front of you at once. Useful for the Sunday-night sort-out, when you're going through the month's money or planning the week's dinners properly.</p>
-        <div class="desktop-shots">
+        <div class="desktop-shots product-desktop-gallery">
           <figure>
             <a class="shot-link" href="img/shots/ourspace-desktop-home.webp"><img class="feature-shot" src="img/shots/ourspace-desktop-home.webp" width="1400" height="983" loading="lazy" alt="OurSpace's home screen in a browser: the day's greeting and bin reminder across the top, then three columns holding each partner's events, the upcoming tasks, the monthly budget and the financial snapshot"></a>
             <figcaption>Home — the whole day without scrolling</figcaption>
@@ -364,37 +385,14 @@
 
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <img src="img/logo.png" alt="EdwardsApps" width="437" height="68">
-        <p>Practical software for businesses, organisations and everyday life.</p>
-      </div>
-      <nav aria-label="Products">
-        <h3>Products</h3>
-        <ul>
-          <li><a href="crewbook.html">CrewBook</a></li>
-          <li><a href="crewqci.html">CrewQCI</a></li>
-          <li><a href="studiobooks.html">Studiobooks</a></li>
-          <li><a href="ourspace.html" aria-current="page">OurSpace</a></li>
-          <li><a href="almoner.html">Almoner</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Company">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="guides.html">User guides</a></li>
-          <li><a href="services.html">Custom builds</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing</a></li>
-          <li><a href="mailto:peter@edwardsapps.co.uk">peter@edwardsapps.co.uk</a></li>
-        </ul>
-      </nav>
+      <div class="footer-brand"><a href="/" aria-label="EdwardsApps home"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a><p>Practical software.<br>Built from the inside.</p><p class="footer-note">An independent studio by Peter Edwards.</p></div>
+      <nav aria-label="Products"><h3>The apps</h3><ul><li><a href="/crewbook.html">CrewBook</a></li><li><a href="/crewqci.html">CrewQCI</a></li><li><a href="/studiobooks.html">Studiobooks</a></li><li><a href="/ourspace.html" aria-current="page">OurSpace</a></li><li><a href="/almoner.html">Almoner</a></li></ul></nav>
+      <nav aria-label="Studio"><h3>The studio</h3><ul><li><a href="/services.html">Custom builds</a></li><li><a href="/about.html">About Peter</a></li><li><a href="/enquiry.html">Start a conversation</a></li><li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing ↗</a></li></ul></nav>
+      <nav aria-label="Resources"><h3>Useful things</h3><ul><li><a href="/articles.html">Articles & build notes</a></li><li><a href="/guides.html">User guides</a></li><li><a href="/base44-mfa-guide.html">Base44 MFA guide</a></li><li><a href="/keystone-demo/">Keystone demo</a></li><li><a href="mailto:peter@edwardsapps.co.uk">Email Peter ↗</a></li></ul></nav>
     </div>
-    <div class="wrap">
-      <p class="fineprint">© 2026 EdwardsApps. CrewBook, CrewQCI, Studiobooks, OurSpace and Almoner are EdwardsApps products. <a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a>.</p>
-    </div>
+    <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js?v=2"></script>
 </body>
 </html>

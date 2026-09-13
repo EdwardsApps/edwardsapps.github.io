@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="CrewBook, CrewQCI, Almoner and OurSpace shown as real app screenshots beside the headline: software that fits the way the work already happens.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#12161D">
+  <meta name="theme-color" content="#111813">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -38,66 +38,61 @@
   <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13">
   <script src="js/consent.js" defer></script>
+  <link rel="stylesheet" href="/css/revamp.css?v=1">
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <nav class="nav" aria-label="Main">
-      <a class="brand" href="index.html"><img src="img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <a class="brand" href="/"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul id="nav-links" class="nav-links">
-        <li><a href="crewbook.html">CrewBook</a></li>
-        <li><a href="crewqci.html">CrewQCI</a></li>
-        <li><a href="studiobooks.html">Studiobooks</a></li>
-        <li><a href="ourspace.html">OurSpace</a></li>
-        <li><a href="almoner.html">Almoner</a></li>
-        <li><a href="services.html">Custom builds</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="nav-cta" href="mailto:peter@edwardsapps.co.uk">Contact</a></li>
+        <li><details class="nav-apps"><summary>Our apps</summary><div class="nav-apps-panel"><div class="nav-app-grid"><a href="/crewbook.html"><img src="/img/product-crewbook.png" alt="" width="40" height="40"><strong>CrewBook</strong><span>Contractor operations</span></a>
+<a href="/crewqci.html"><img src="/img/product-crewqci.png" alt="" width="40" height="40"><strong>CrewQCI</strong><span>Quotes, contracts & invoices</span></a>
+<a href="/studiobooks.html"><img src="/img/product-studiobooks.png" alt="" width="40" height="40"><strong>Studiobooks</strong><span>The studio back office</span></a>
+<a href="/ourspace.html"><img src="/img/product-ourspace.png" alt="" width="40" height="40"><strong>OurSpace</strong><span>Life, shared</span></a>
+<a href="/almoner.html"><img src="/img/product-almoner.png" alt="" width="40" height="40"><strong>Almoner</strong><span>Charity governance</span></a></div><a class="nav-app-help" href="/index.html#products-heading"><span>Not sure which fits? Explore the collection.</span><span aria-hidden="true">↗</span></a></div></details></li>
+        <li><a href="/services.html">Custom builds</a></li>
+        <li><a href="/articles.html">Articles</a></li>
+        <li><a href="/guides.html">Guides</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/enquiry.html" class="nav-cta">Let’s talk <span aria-hidden="true">↗</span></a></li>
       </ul>
     </nav>
   </header>
-  <aside class="articles-discovery" aria-label="Articles"><a href="articles.html"><span>Articles &amp; practical guides</span><span class="articles-discovery-detail">Build notes, code &amp; Builder prompts</span><span aria-hidden="true">↗</span></a></aside>
+  <aside class="articles-discovery" aria-label="Latest from the studio"><a href="/base44-mfa-guide.html"><span>From the workbench</span><span class="articles-discovery-detail">A practical guide to admin MFA on Base44</span><span aria-hidden="true">↗</span></a></aside>
 
   <main id="main">
 
     <section class="hero hero-home">
       <div class="wrap hero-home-grid">
         <div class="hero-home-copy">
-          <p class="kicker">Software from real work</p>
-          <h1>Software that fits the way the work already happens.</h1>
-          <p class="lede">Five apps in daily use — in a working contractor, a software studio, a registered charity and a busy household — and custom builds for the awkward processes that nothing off the shelf quite covers.</p>
+          <p class="hero-studio-status"><span class="status-dot" aria-hidden="true"></span>Independent software studio · Built from real work</p>
+          <h1>Less admin.<span>More actual work.</span></h1>
+          <p class="lede">Practical apps, built from the inside. For the business you run, the people you support, and the life you share.</p>
           <div class="cta-row">
-            <a class="button button-primary" href="#products-heading">Explore our apps</a>
-            <a class="button button-ghost" href="enquiry.html">Tell us what you need</a>
+            <a class="button button-primary" href="#products-heading">Find your app</a>
+            <a class="button button-ghost" href="enquiry.html">Let’s build something</a>
           </div>
-          <p class="hero-note"><strong>Focused custom builds from £300.</strong> You'd be talking to the person who designs and builds it.</p>
+          <p class="hero-note"><strong>Five apps already in daily use.</strong> Or a focused custom build from £300, working directly with Peter.</p>
         </div>
-
-        <div class="home-showcase" aria-label="A look inside EdwardsApps products">
-          <a class="showcase-card showcase-crewbook" href="crewbook.html">
-            <img src="img/shots/schedule.png" alt="CrewBook's weekly job and crew schedule" width="1400" height="508" fetchpriority="high">
-            <span><strong>CrewBook</strong> Contractor operations</span>
-          </a>
-          <a class="showcase-card showcase-studiobooks" href="studiobooks.html">
-            <img src="img/shots/studiobooks-dashboard.webp" alt="The Studiobooks dashboard for a software studio" width="1400" height="1155" loading="lazy">
-            <span><strong>Studiobooks</strong> Studio back office</span>
-          </a>
-          <a class="showcase-card showcase-crewqci" href="crewqci.html">
-            <img src="img/shots/crewqci-quotes.webp" alt="CrewQCI's quotes register, colour-coded by status" width="1400" height="470" loading="lazy">
-            <span><strong>CrewQCI</strong> Sales &amp; debt chasing</span>
-          </a>
-          <a class="showcase-card showcase-almoner" href="almoner.html">
-            <img src="img/shots/almoner-dashboard.webp" alt="Almoner's charity operations dashboard" width="1600" height="956">
-            <span><strong>Almoner</strong> Charity governance</span>
-          </a>
-          <a class="showcase-card showcase-ourspace" href="ourspace.html">
-            <img src="img/shots/ourspace-home.webp" alt="The OurSpace household app home screen" width="1080" height="2433">
-            <span><strong>OurSpace</strong> Shared life</span>
-          </a>
+        <div class="app-stage" aria-label="Explore the EdwardsApps products">
+          <div class="app-stage-top"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>REAL APPS. REAL WORKING DAYS.</span><span>01 / 05</span></div>
+          <div class="app-switcher" aria-label="Choose an app preview">
+              <button type="button" role="tab" id="app-tab-crewbook" aria-controls="app-preview" aria-selected="true" tabindex="0" data-app="crewbook" data-title="CrewBook" data-caption="Contractor operations" data-image="img/shots/schedule.png" data-alt="CrewBook’s weekly job and crew schedule" data-width="1400" data-height="508"><img src="img/product-crewbook.png" alt="" width="28" height="28">CrewBook</button>
+              <button type="button" role="tab" id="app-tab-crewqci" aria-controls="app-preview" aria-selected="false" tabindex="-1" data-app="crewqci" data-title="CrewQCI" data-caption="From first enquiry to cleared payment" data-image="img/shots/crewqci-quotes.webp" data-alt="CrewQCI quotes register" data-width="1400" data-height="470"><img src="img/product-crewqci.png" alt="" width="28" height="28">CrewQCI</button>
+              <button type="button" role="tab" id="app-tab-studiobooks" aria-controls="app-preview" aria-selected="false" tabindex="-1" data-app="studiobooks" data-title="Studiobooks" data-caption="A studio’s business, in one place" data-image="img/shots/studiobooks-dashboard.webp" data-alt="Studiobooks studio dashboard" data-width="1400" data-height="1155"><img src="img/product-studiobooks.png" alt="" width="28" height="28">Studiobooks</button>
+              <button type="button" role="tab" id="app-tab-almoner" aria-controls="app-preview" aria-selected="false" tabindex="-1" data-app="almoner" data-title="Almoner" data-caption="Every pot and every claim, on the record" data-image="img/shots/almoner-dashboard.webp" data-alt="Almoner charity operations dashboard" data-width="1600" data-height="956"><img src="img/product-almoner.png" alt="" width="28" height="28">Almoner</button>
+              <button type="button" role="tab" id="app-tab-ourspace" aria-controls="app-preview" aria-selected="false" tabindex="-1" data-app="ourspace" data-title="OurSpace" data-caption="A little less to keep in your head" data-image="img/shots/ourspace-home.webp" data-alt="OurSpace shared household home screen" data-width="1080" data-height="2433"><img src="img/product-ourspace.png" alt="" width="28" height="28">OurSpace</button>
+          </div>
+          <div id="app-preview">
+            <div class="app-preview-image"><img src="img/shots/schedule.png" alt="CrewBook’s weekly job and crew schedule" width="1400" height="508" fetchpriority="high"></div>
+            <div class="app-preview-caption"><div><strong>CrewBook</strong><span>Contractor operations</span></div><a href="crewbook.html" aria-label="Explore CrewBook">↗</a></div>
+          </div>
         </div>
       </div>
+      <div class="wrap"><div class="hero-bottom-line"><p>Built alongside a working contractor, a studio, a charity and a busy household.</p><a href="about.html">The story behind the software <span aria-hidden="true">↗</span></a></div></div>
     </section>
 
     <aside class="proof-strip" aria-label="About EdwardsApps">
@@ -124,12 +119,17 @@
         <div class="section-intro">
           <div>
             <p class="kicker">Ready to use</p>
-            <h2 id="products-heading" class="sheet-head">Five apps, each built for a particular kind of work.</h2>
+            <h2 id="products-heading" class="sheet-head">Good software. A particular purpose.</h2>
           </div>
-          <p>Each one began as an answer to a problem we had ourselves, took its shape from real working days, and is supported by the person who built it.</p>
+          <p>Five apps in daily use — in a working contractor, a software studio, a registered charity and a busy household. Each started with a problem we had ourselves.</p>
         </div>
 
-        <article class="product-card product-card-featured">
+        <div class="product-filter" aria-label="Filter apps by purpose">
+          <div class="product-filter-controls"><button type="button" data-filter="all" aria-pressed="true">All apps</button><button type="button" data-filter="business" aria-pressed="false">Work &amp; business</button><button type="button" data-filter="charity" aria-pressed="false">Charity</button><button type="button" data-filter="home" aria-pressed="false">Home &amp; family</button></div>
+          <span class="product-filter-output" role="status">5 apps to explore</span>
+        </div>
+        <div class="product-collection">
+        <article class="product-card product-card-featured" data-category="business" data-spotlight>
           <div class="product-card-copy">
             <div class="product-title-row">
               <img class="product-icon" src="img/product-crewbook.png" alt="" width="96" height="96">
@@ -154,7 +154,7 @@
           </a>
         </article>
 
-        <article class="product-card product-card-featured">
+        <article class="product-card product-card-featured" data-category="business" data-spotlight>
           <div class="product-card-copy">
             <div class="product-title-row">
               <img class="product-icon" src="img/product-crewqci.png" alt="" width="96" height="96">
@@ -179,7 +179,7 @@
           </a>
         </article>
 
-        <article class="product-card product-card-featured">
+        <article class="product-card product-card-featured" data-category="business" data-spotlight>
           <div class="product-card-copy">
             <div class="product-title-row">
               <img class="product-icon" src="img/product-studiobooks.png" alt="" width="96" height="96">
@@ -206,7 +206,7 @@
         </article>
 
         <div class="product-card-grid">
-          <article class="product-card">
+          <article class="product-card" data-category="charity" data-spotlight>
             <div class="product-card-copy">
               <div class="product-title-row">
                 <img class="product-icon" src="img/product-almoner.png" alt="" width="96" height="96">
@@ -228,7 +228,7 @@
             </a>
           </article>
 
-          <article class="product-card product-card-phone">
+          <article class="product-card product-card-phone" data-category="home" data-spotlight>
             <div class="product-card-copy">
               <div class="product-title-row">
                 <img class="product-icon" src="img/product-ourspace.png" alt="" width="96" height="96">
@@ -265,6 +265,7 @@
             </div>
           </article>
         </div>
+        </div>
       </div>
     </section>
 
@@ -282,7 +283,7 @@
           <p class="reassurance">Plain English is fine — and if Peter doesn't think it's worth building, he'll say so.</p>
         </div>
         <ol class="build-steps">
-          <li>
+          <li data-spotlight>
             <span>01</span>
             <div><h3>Where the work sticks</h3><p>No technical brief needed — just what happens now, and what a good day would look like.</p></div>
           </li>
@@ -302,7 +303,7 @@
       <div class="wrap operator-grid">
         <div>
           <p class="kicker">Behind the apps</p>
-          <h2 id="operator-heading" class="sheet-head">Built by someone who has had to make the numbers, the people and the day line up.</h2>
+          <h2 id="operator-heading" class="sheet-head">Good software starts with knowing the work.</h2>
         </div>
         <div class="operator-copy">
           <p>Peter Edwards is a director of a working surfacing and groundworks contractor, chairman of a poverty-prevention charity, and spent nine years as a pub landlord. That background tends to show up in the questions asked and the details noticed.</p>
@@ -316,18 +317,25 @@
       </div>
     </section>
 
+    <section class="section article-home" aria-labelledby="articles-heading">
+      <div class="wrap article-home-grid">
+        <div><p class="kicker">From the workbench</p><h2 id="articles-heading">Good ideas are worth sharing.</h2><p class="measure">Build notes, practical guides and the details behind the apps. Start with a look at admin MFA on Base44, complete with code and lessons from building it.</p><div class="cta-row"><a class="button button-primary" href="base44-mfa.html">Read the build notes</a><a class="button button-ghost" href="articles.html">All articles</a></div></div>
+        <a class="article-home-visual" href="base44-mfa.html"><img src="img/articles/mfa-owner.png" alt="Example admin security settings from the Base44 MFA article" width="1440" height="1000" loading="lazy"><span>FIELD NOTES / SECURITY &amp; BASE44 <span aria-hidden="true">↗</span></span></a>
+      </div>
+    </section>
+
     <section class="section band-contact home-contact" aria-labelledby="contact-heading">
       <div class="wrap">
         <p class="kicker">Start a conversation</p>
         <h2 id="contact-heading">What would make work feel lighter?</h2>
         <p class="contact-lede">Whether one of the apps fits or you need something of your own, Peter is glad to hear what is getting in the way.</p>
         <div class="contact-options">
-          <a class="contact-option" href="enquiry.html">
+          <a class="contact-option" data-spotlight href="enquiry.html">
             <span class="contact-option-label">CrewBook, CrewQCI, Studiobooks, OurSpace or Almoner</span>
             <strong>Help me choose an app</strong>
             <span>Say a little about the work and we will suggest which one fits — or say if none of them does. <b aria-hidden="true">→</b></span>
           </a>
-          <a class="contact-option" href="enquiry.html">
+          <a class="contact-option" data-spotlight href="enquiry.html">
             <span class="contact-option-label">Custom builds from £300</span>
             <strong>I need a custom app</strong>
             <span>A plain-English description of the awkward bit is enough to start. <b aria-hidden="true">→</b></span>
@@ -337,42 +345,19 @@
       </div>
     </section>
 
-    <section class="section article-home" aria-labelledby="articles-heading"><div class="wrap"><p class="kicker">From the build</p><h2 id="articles-heading">What happens behind the login screen?</h2><p class="measure">A practical look at adding admin MFA to a Base44 app, with code and the lessons from building it.</p><a class="button" href="base44-mfa.html">Read Peter’s build notes</a> <a href="articles.html">All articles</a></div></section>
+
   </main>
 
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <img src="img/logo.png" alt="EdwardsApps" width="437" height="68">
-        <p>Practical software for businesses, organisations and everyday life.</p>
-      </div>
-      <nav aria-label="Products">
-        <h3>Products</h3>
-        <ul>
-          <li><a href="crewbook.html">CrewBook</a></li>
-          <li><a href="crewqci.html">CrewQCI</a></li>
-          <li><a href="studiobooks.html">Studiobooks</a></li>
-          <li><a href="ourspace.html">OurSpace</a></li>
-          <li><a href="almoner.html">Almoner</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Company">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="guides.html">User guides</a></li>
-          <li><a href="services.html">Custom builds</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing</a></li>
-          <li><a href="mailto:peter@edwardsapps.co.uk">peter@edwardsapps.co.uk</a></li>
-        </ul>
-      </nav>
+      <div class="footer-brand"><a href="/" aria-label="EdwardsApps home"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a><p>Practical software.<br>Built from the inside.</p><p class="footer-note">An independent studio by Peter Edwards.</p></div>
+      <nav aria-label="Products"><h3>The apps</h3><ul><li><a href="/crewbook.html">CrewBook</a></li><li><a href="/crewqci.html">CrewQCI</a></li><li><a href="/studiobooks.html">Studiobooks</a></li><li><a href="/ourspace.html">OurSpace</a></li><li><a href="/almoner.html">Almoner</a></li></ul></nav>
+      <nav aria-label="Studio"><h3>The studio</h3><ul><li><a href="/services.html">Custom builds</a></li><li><a href="/about.html">About Peter</a></li><li><a href="/enquiry.html">Start a conversation</a></li><li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing ↗</a></li></ul></nav>
+      <nav aria-label="Resources"><h3>Useful things</h3><ul><li><a href="/articles.html">Articles & build notes</a></li><li><a href="/guides.html">User guides</a></li><li><a href="/base44-mfa-guide.html">Base44 MFA guide</a></li><li><a href="/keystone-demo/">Keystone demo</a></li><li><a href="mailto:peter@edwardsapps.co.uk">Email Peter ↗</a></li></ul></nav>
     </div>
-    <div class="wrap">
-      <p class="fineprint">© 2026 EdwardsApps. CrewBook, CrewQCI, Studiobooks, OurSpace and Almoner are EdwardsApps products. <a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a>.</p>
-    </div>
+    <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js?v=2"></script>
 </body>
 </html>

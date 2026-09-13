@@ -6,6 +6,7 @@
 
   var dlg = document.createElement('dialog');
   dlg.className = 'shot-lightbox';
+  dlg.setAttribute('aria-label', 'Enlarged screenshot');
   dlg.innerHTML = '<div class="shot-frame">' +
     '<button class="shot-close" aria-label="Close enlarged screenshot">×</button>' +
     '<img alt=""></div>';
@@ -32,6 +33,121 @@
   dlg.addEventListener('close', function () {
     if (opener) opener.focus({ preventScroll: true });
     if (window.scrollY !== scrollY) window.scrollTo(0, scrollY);
+  });
+})();
+
+/* Shared navigation: native disclosure works without JS; enhancement closes
+   it predictably on Escape, outside clicks, focus leaving and following a link. */
+(function () {
+  var details = document.querySelector('.nav-apps');
+  var menu = document.getElementById('nav-links');
+  var toggle = document.querySelector('.nav-toggle');
+  if (!details || !menu || !toggle) return;
+  function closeMenu() {
+    details.open = false;
+    menu.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+  document.addEventListener('click', function (event) {
+    if (!details.contains(event.target)) details.open = false;
+    if (menu.contains(event.target) && event.target.closest('a')) closeMenu();
+  });
+  details.addEventListener('focusout', function (event) {
+    // A known outside target covers keyboard navigation without removing a
+    // pointer's click target when a browser temporarily reports no focus.
+    if (event.relatedTarget && !details.contains(event.relatedTarget)) details.open = false;
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape' || !details.open) return;
+    var returnFocus = details.contains(document.activeElement);
+    details.open = false;
+    if (returnFocus) details.querySelector('summary').focus();
+  });
+  window.matchMedia('(min-width: 961px)').addEventListener('change', closeMenu);
+})();
+
+/* Homepage app preview. No autoplay; arrow keys, Home and End follow the
+   tab pattern. The first screenshot and all product links work without JS. */
+(function () {
+  var tabs = document.querySelector('.app-switcher');
+  var panel = document.getElementById('app-preview');
+  if (!tabs || !panel) return;
+  var buttons = Array.from(tabs.querySelectorAll('[data-app]'));
+  var counter = document.querySelector('.app-stage-top > span:last-child');
+  function select(button, focus) {
+    buttons.forEach(function (item) {
+      var chosen = item === button;
+      item.setAttribute('aria-selected', String(chosen));
+      item.tabIndex = chosen ? 0 : -1;
+    });
+    var data = button.dataset;
+    var image = panel.querySelector('img');
+    image.src = data.image;
+    image.alt = data.alt;
+    image.width = Number(data.width);
+    image.height = Number(data.height);
+    image.classList.toggle('is-phone', data.app === 'ourspace');
+    panel.querySelector('strong').textContent = data.title;
+    panel.querySelector('.app-preview-caption span').textContent = data.caption;
+    var link = panel.querySelector('a');
+    link.href = data.app + '.html';
+    link.setAttribute('aria-label', 'Explore ' + data.title);
+    panel.setAttribute('aria-labelledby', button.id);
+    counter.textContent = '0' + (buttons.indexOf(button) + 1) + ' / 05';
+    if (focus) button.focus();
+  }
+  buttons.forEach(function (button, index) {
+    button.addEventListener('click', function () { select(button, false); });
+    button.addEventListener('keydown', function (event) {
+      var next;
+      if (event.key === 'ArrowRight') next = (index + 1) % buttons.length;
+      if (event.key === 'ArrowLeft') next = (index + buttons.length - 1) % buttons.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = buttons.length - 1;
+      if (next === undefined) return;
+      event.preventDefault();
+      select(buttons[next], true);
+    });
+  });
+  tabs.setAttribute('role', 'tablist');
+  panel.setAttribute('role', 'tabpanel');
+  panel.setAttribute('aria-labelledby', buttons[0].id);
+  tabs.classList.add('is-ready');
+})();
+
+/* A small, local-only app finder. Filtering never changes source content. */
+(function () {
+  var filters = document.querySelector('.product-filter');
+  if (!filters) return;
+  var buttons = filters.querySelectorAll('[data-filter]');
+  var cards = document.querySelectorAll('.product-collection [data-category]');
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var filter = button.dataset.filter;
+      var count = 0;
+      buttons.forEach(function (item) { item.setAttribute('aria-pressed', String(item === button)); });
+      cards.forEach(function (card) {
+        card.hidden = filter !== 'all' && card.dataset.category !== filter;
+        if (!card.hidden) count += 1;
+      });
+      filters.querySelector('[role="status"]').textContent = count + (count === 1 ? ' app' : ' apps') + ' to explore';
+    });
+  });
+  filters.classList.add('is-ready');
+})();
+
+/* MIT Hirael Feature 08 / Mohammad Shehadeh, via 21st.dev. Native pointer
+   adaptation avoids a framework dependency and respects reduced motion. */
+(function () {
+  var motion = window.matchMedia('(prefers-reduced-motion: no-preference)');
+  var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+  document.querySelectorAll('[data-spotlight]').forEach(function (card) {
+    card.addEventListener('pointermove', function (event) {
+      if (!motion.matches || !finePointer.matches) return;
+      var rect = card.getBoundingClientRect();
+      card.style.setProperty('--mx', (event.clientX - rect.left) + 'px');
+      card.style.setProperty('--my', (event.clientY - rect.top) + 'px');
+    }, { passive: true });
   });
 })();
 

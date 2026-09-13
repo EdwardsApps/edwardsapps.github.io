@@ -20,7 +20,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="CrewBook, CrewQCI, Almoner and OurSpace shown as real app screenshots beside the headline: software that fits the way the work already happens.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#12161D">
+  <meta name="theme-color" content="#111813">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,36 +41,53 @@
   <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/company-revamp.css?v=1">
   <script src="js/consent.js" defer></script>
+  <link rel="stylesheet" href="/css/revamp.css?v=1">
 </head>
-<body>
+<body class="company-page about-page">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <nav class="nav" aria-label="Main">
-      <a class="brand" href="index.html"><img src="img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <a class="brand" href="/"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul id="nav-links" class="nav-links">
-        <li><a href="crewbook.html">CrewBook</a></li>
-        <li><a href="crewqci.html">CrewQCI</a></li>
-        <li><a href="studiobooks.html">Studiobooks</a></li>
-        <li><a href="ourspace.html">OurSpace</a></li>
-        <li><a href="almoner.html">Almoner</a></li>
-        <li><a href="services.html">Custom builds</a></li>
-        <li><a href="about.html" aria-current="page">About</a></li>
-        <li><a class="nav-cta" href="mailto:peter@edwardsapps.co.uk">Contact</a></li>
+        <li><details class="nav-apps"><summary>Our apps</summary><div class="nav-apps-panel"><div class="nav-app-grid"><a href="/crewbook.html"><img src="/img/product-crewbook.png" alt="" width="40" height="40"><strong>CrewBook</strong><span>Contractor operations</span></a>
+<a href="/crewqci.html"><img src="/img/product-crewqci.png" alt="" width="40" height="40"><strong>CrewQCI</strong><span>Quotes, contracts & invoices</span></a>
+<a href="/studiobooks.html"><img src="/img/product-studiobooks.png" alt="" width="40" height="40"><strong>Studiobooks</strong><span>The studio back office</span></a>
+<a href="/ourspace.html"><img src="/img/product-ourspace.png" alt="" width="40" height="40"><strong>OurSpace</strong><span>Life, shared</span></a>
+<a href="/almoner.html"><img src="/img/product-almoner.png" alt="" width="40" height="40"><strong>Almoner</strong><span>Charity governance</span></a></div><a class="nav-app-help" href="/index.html#products-heading"><span>Not sure which fits? Explore the collection.</span><span aria-hidden="true">↗</span></a></div></details></li>
+        <li><a href="/services.html">Custom builds</a></li>
+        <li><a href="/articles.html">Articles</a></li>
+        <li><a href="/guides.html">Guides</a></li>
+        <li><a href="/about.html" aria-current="page">About</a></li>
+        <li><a href="/enquiry.html" class="nav-cta">Let’s talk <span aria-hidden="true">↗</span></a></li>
       </ul>
     </nav>
   </header>
-  <aside class="articles-discovery" aria-label="Articles"><a href="articles.html"><span>Articles &amp; practical guides</span><span class="articles-discovery-detail">Build notes, code &amp; Builder prompts</span><span aria-hidden="true">↗</span></a></aside>
+  <aside class="articles-discovery" aria-label="Latest from the studio"><a href="/base44-mfa-guide.html"><span>From the workbench</span><span class="articles-discovery-detail">A practical guide to admin MFA on Base44</span><span aria-hidden="true">↗</span></a></aside>
 
   <main id="main">
 
-    <section class="hero">
-      <div class="wrap">
+    <section class="hero company-hero">
+      <div class="wrap company-hero-grid about-hero-grid">
+        <div class="company-hero-copy">
         <p class="kicker">About EdwardsApps</p>
         <h1>The software came last. The work came first.</h1>
         <p class="lede">EdwardsApps wasn't founded as a software company. It grew out of working lives — <a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing</a>, the family asphalt firm; <a href="https://www.impactbuckingham.com" rel="noopener">Impact Buckingham</a>, the charity Peter Edwards founded; The Mitre, the pub he kept for nine years; and <a href="https://www.theredbullets.com" rel="noopener">The Red Bullets</a>, the band he fronts — and out of the tools he built because those jobs needed them.</p>
+        <a class="company-text-link" href="#worlds-heading">Meet the four worlds <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="story-canvas">
+          <p class="canvas-topline">A LIFE OUTSIDE THE SOFTWARE</p>
+          <div class="story-logo-grid">
+            <a href="#world-surfacing"><span class="story-logo"><img src="img/logo-edwards-surfacing.png" alt="Edwards Surfacing" width="553" height="400"></span><span>The family firm <span aria-hidden="true">↗</span></span></a>
+            <a href="#world-charity"><span class="story-logo"><img src="img/logo-impact-buckingham.png" alt="Impact Buckingham" width="400" height="400"></span><span>The charity <span aria-hidden="true">↗</span></span></a>
+            <a href="#world-pub"><span class="story-logo"><img src="img/logo-the-mitre.png" alt="The Mitre" width="400" height="400"></span><span>The pub <span aria-hidden="true">↗</span></span></a>
+            <a href="#world-band"><span class="story-logo"><img src="img/logo-the-red-bullets.png" alt="The Red Bullets" width="340" height="156"></span><span>The band <span aria-hidden="true">↗</span></span></a>
+          </div>
+          <div class="story-canvas-foot"><span class="canvas-dot" aria-hidden="true"></span> Real experience. Useful software.</div>
+        </div>
       </div>
     </section>
 
@@ -79,22 +96,22 @@
         <p class="kicker">Four worlds</p>
         <h2 id="worlds-heading" class="sheet-head">Four working lives, and the tools that came out of them.</h2>
         <ul class="chapter-grid" role="list">
-          <li class="chapter chapter-es">
+          <li data-spotlight class="chapter chapter-es" id="world-surfacing">
             <h3 class="chapter-mark"><img src="img/logo-edwards-surfacing.png" alt="Edwards Surfacing" width="553" height="400" loading="lazy"></h3>
             <p class="daybook-tag">Family-run since 2006</p>
             <p>Founded by Peter's father, Ken Edwards, after thirty years in the paving industry — a small portacabin, the family name on the door, and Wembley Stadium won within months of opening. Simon Edwards learned the craft on the tools and now leads the firm as Managing Director; Peter built the office. Twenty years on it's still family-run, laying roads, driveways and car parks across Buckinghamshire, London and the South East from its home at Great Horwood — see <a href="https://www.edwardssurfacing.co.uk" rel="noopener">edwardssurfacing.co.uk</a>.</p>
           </li>
-          <li class="chapter chapter-ib">
+          <li data-spotlight class="chapter chapter-ib" id="world-charity">
             <h3 class="chapter-mark"><img src="img/logo-impact-buckingham.png" alt="Impact Buckingham" width="400" height="400" loading="lazy"></h3>
             <p class="daybook-tag">Registered charity 1216036</p>
             <p>Impact Buckingham supports families in Buckingham and the surrounding villages who are facing financial hardship. It began at The Mitre: a radio report about neighbours dreading the cost of Christmas struck a nerve, and a plan to send out a few hampers from the pub snowballed — local businesses pledged, the regulars rallied, and in December 2025 it became a registered charity, delivering 75 festive hampers through partner schools within four weeks. Peter founded it and chairs its trustees — and the paperwork that comes with running a charity properly is where <a href="almoner.html">Almoner</a> began. Read the full story at <a href="https://www.impactbuckingham.com" rel="noopener">impactbuckingham.com</a>.</p>
           </li>
-          <li class="chapter chapter-mitre">
+          <li data-spotlight class="chapter chapter-mitre" id="world-pub">
             <h3 class="chapter-mark"><img src="img/logo-the-mitre.png" alt="The Mitre" width="400" height="400" loading="lazy"></h3>
             <p class="daybook-tag">Nine years behind the bar</p>
             <p>For nine years from May 2017, Peter kept The Mitre in Buckingham until handing it on recently. Under his care it became a premier live-music venue and a real-ale champion: CAMRA Pub of the Year for Milton Keynes &amp; North Bucks in 2020, 2023 and 2025, and Buckinghamshire's Pub of the Year in 2025. And it's where Impact Buckingham was born, built by the regulars at the bar.</p>
           </li>
-          <li class="chapter chapter-rb">
+          <li data-spotlight class="chapter chapter-rb" id="world-band">
             <h3 class="chapter-mark"><img src="img/logo-the-red-bullets.png" alt="The Red Bullets" width="340" height="156" loading="lazy"></h3>
             <p class="daybook-tag">Formed 2007</p>
             <p>Peter's band — formed with his brother Mark as an outlet for Peter's songs, many co-written with lyricist and bass player John Bailey. They toured Dubai in 2008 and the French Alps in 2009, released <em>Drama in the Drawing Room</em> in 2012, and played the British Grand Prix to a crowd of seven thousand, with guitarist Stuart Hartland and singer-songwriter Ben Weston completing the five-piece. A loyal following keeps the band growing and evolving — catch them at <a href="https://www.theredbullets.com" rel="noopener">theredbullets.com</a>.</p>
@@ -103,10 +120,14 @@
       </div>
     </section>
 
-    <section class="section section-alt" aria-labelledby="story-heading">
-      <div class="wrap">
+    <section class="section section-alt company-history" aria-labelledby="story-heading">
+      <div class="wrap history-grid">
+        <div class="history-heading">
         <p class="kicker">The story</p>
         <h2 id="story-heading" class="sheet-head">Twenty years in the making.</h2>
+        <p class="history-caption">From a portacabin in Buckinghamshire to the tools that make work feel lighter.</p>
+        <span class="history-years" aria-hidden="true">2005<br><span>↓</span><br>2026</span>
+        </div>
         <ol class="timeline" role="list">
           <li>
             <span class="tl-year">2005</span>
@@ -152,7 +173,7 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="today-heading">
+    <section class="section company-insight" aria-labelledby="today-heading">
       <div class="wrap">
         <p class="kicker">Today</p>
         <h2 id="today-heading" class="sheet-head">Software built from the inside.</h2>
@@ -173,37 +194,14 @@
 
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <img src="img/logo.png" alt="EdwardsApps" width="437" height="68">
-        <p>Practical software for businesses, organisations and everyday life.</p>
-      </div>
-      <nav aria-label="Products">
-        <h3>Products</h3>
-        <ul>
-          <li><a href="crewbook.html">CrewBook</a></li>
-          <li><a href="crewqci.html">CrewQCI</a></li>
-          <li><a href="studiobooks.html">Studiobooks</a></li>
-          <li><a href="ourspace.html">OurSpace</a></li>
-          <li><a href="almoner.html">Almoner</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Company">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="articles.html">Articles</a></li>
-          <li><a href="guides.html">User guides</a></li>
-          <li><a href="services.html">Custom builds</a></li>
-          <li><a href="about.html" aria-current="page">About</a></li>
-          <li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing</a></li>
-          <li><a href="mailto:peter@edwardsapps.co.uk">peter@edwardsapps.co.uk</a></li>
-        </ul>
-      </nav>
+      <div class="footer-brand"><a href="/" aria-label="EdwardsApps home"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a><p>Practical software.<br>Built from the inside.</p><p class="footer-note">An independent studio by Peter Edwards.</p></div>
+      <nav aria-label="Products"><h3>The apps</h3><ul><li><a href="/crewbook.html">CrewBook</a></li><li><a href="/crewqci.html">CrewQCI</a></li><li><a href="/studiobooks.html">Studiobooks</a></li><li><a href="/ourspace.html">OurSpace</a></li><li><a href="/almoner.html">Almoner</a></li></ul></nav>
+      <nav aria-label="Studio"><h3>The studio</h3><ul><li><a href="/services.html">Custom builds</a></li><li><a href="/about.html" aria-current="page">About Peter</a></li><li><a href="/enquiry.html">Start a conversation</a></li><li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing ↗</a></li></ul></nav>
+      <nav aria-label="Resources"><h3>Useful things</h3><ul><li><a href="/articles.html">Articles & build notes</a></li><li><a href="/guides.html">User guides</a></li><li><a href="/base44-mfa-guide.html">Base44 MFA guide</a></li><li><a href="/keystone-demo/">Keystone demo</a></li><li><a href="mailto:peter@edwardsapps.co.uk">Email Peter ↗</a></li></ul></nav>
     </div>
-    <div class="wrap">
-      <p class="fineprint">© 2026 EdwardsApps. CrewBook, CrewQCI, Studiobooks, OurSpace and Almoner are EdwardsApps products. <a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a>.</p>
-    </div>
+    <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint"><a href="/privacy.html">Privacy</a> · <a href="/cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js?v=2"></script>
 </body>
 </html>
