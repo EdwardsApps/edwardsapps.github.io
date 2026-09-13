@@ -59,3 +59,11 @@ These are local checks. Production publication and real enquiry delivery are sep
 - All 18 structural checks and JavaScript syntax checks pass. New visual guide styles are screen-only; the already verified 73-page/86-page PDFs retain their first-pass output.
 
 This second pass updates the same draft PR; it does not publish the production site.
+
+## Readability and spacing refinement
+
+- Removed all fixed custom-build starting-price claims. The homepage and enquiry now describe competitive pricing, with the scope and quote agreed before work begins. Individual app prices remain unchanged.
+- Screenshots retain their natural proportions instead of being shrunk into landscape frames. At a 1280px viewport, homepage desktop screenshots render at 918px wide; the OurSpace phone is 320px wide (previously about 146px). It renders at about 302px on a 390px phone viewport and 231px at 320px.
+- Product-page phone mode uses a portrait frame around the screenshot and its controls, with the caption beside it on desktop and below it on mobile. Narrow phone galleries use one readable column.
+- Reduced hero, section, frame and editorial spacing. Feature collections use pairs, with a final unpaired card spanning the row, removing empty half-rows. Removed the decorative overlay that obscured the article's admin screenshot.
+- Rechecked all 19 routes at 1440, 390 and 320px: no document overflow, missing images, duplicate main headings or removed-price claims. Verified natural image proportions, screenshot zoom and OurSpace device switching. All 18 structural checks pass; guide print styling is unchanged.
