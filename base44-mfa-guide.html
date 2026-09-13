@@ -20,7 +20,7 @@
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="css/style.css?v=12">
+  <link rel="stylesheet" href="css/style.css?v=13">
   <link rel="stylesheet" href="css/articles.css?v=1">
   <script src="js/consent.js" defer></script>
 </head>
@@ -42,6 +42,7 @@
       </ul>
     </nav>
   </header>
+  <aside class="articles-discovery" aria-label="Articles"><a href="articles.html"><span>Articles &amp; practical guides</span><span class="articles-discovery-detail">Build notes, code &amp; Builder prompts</span><span aria-hidden="true">↗</span></a></aside>
   <main id="main"><section class="hero article-hero"><div class="wrap"><a class="article-back" href="base44-mfa.html">← Read the story behind this guide</a><p class="kicker">Practical guide · Base44</p><h1>Add admin MFA to a Base44 app, step by step.</h1><p class="lede">A Builder-led implementation guide with copyable prompts, one small worked feature and checks that tell you whether the protection actually holds.</p><p class="article-byline">By Peter Edwards · Checked 13 September 2026 · Guide version 1.0</p></div></section>
 <div class="wrap article-layout"><aside class="article-toc" aria-label="Guide contents"><p class="kicker">Build in this order</p><ol><li><a href="#step-1">Check the app before changing it</a></li><li><a href="#step-2">Prove the database operation first</a></li><li><a href="#step-3">Build the security records and shared verifier</a></li><li><a href="#step-4">Prepare owner setup without a public shortcut</a></li><li><a href="#step-5">Build enrolment, verification and recovery</a></li><li><a href="#step-6">Protect the complete AdminNote pilot</a></li><li><a href="#step-7">Connect the rest of the admin work</a></li><li><a href="#step-8">Run and record the acceptance checks</a></li><li><a href="#step-9">Prepare the release and operating notes</a></li></ol><a href="#troubleshooting">Troubleshooting</a><br><a href="#downloads">Downloads</a></aside><article class="article-body">
 <p class="article-opening">If you want to do this in your own app, start small. Protect one harmless admin feature properly, prove that it cannot be bypassed, then apply the pattern to the rest of the app.</p>
