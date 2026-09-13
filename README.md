@@ -28,7 +28,7 @@ node --check js/consent.js
 
 The same checks run automatically for pull requests and changes to `main`.
 
-The header/footer are static HTML on every page. After intentionally changing their template, run `python scripts/update_site_shell.py` to keep all 18 root pages consistent. It preserves page bodies and specific styles. The Keystone demo keeps its own navigation.
+The header/footer are static HTML on every page. After intentionally changing their template, run `python scripts/update_site_shell.py` to keep all 18 root pages consistent. It preserves page bodies and specific styles. The former public Keystone demo has been removed.
 
 PDF exports use a temporary local HTTP server to resolve root-relative assets. To reuse an existing Playwright install, set `PLAYWRIGHT_MODULE` to its `index.mjs`; set `PLAYWRIGHT_CHROMIUM` to an installed Chromium/Edge executable when needed.
 

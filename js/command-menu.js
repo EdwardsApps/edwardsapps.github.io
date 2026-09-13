@@ -36,7 +36,6 @@
     ['Read & learn', 'User guides', 'The manuals for day-to-day work', '/guides.html', '≡', 'help handbook manual documentation pdf download'],
     ['Read & learn', 'CrewBook user guide', 'From the dashboard to payroll and Sage exports', '/crewbook-guide.html', '≡', 'guide crewbook instructions manual handbook help scheduling cis'],
     ['Read & learn', 'CrewQCI user guide', 'From the first enquiry to paid invoices', '/crewqci-guide.html', '≡', 'guide crewqci instructions manual handbook help quotes contracts credit control'],
-    ['Try it', 'Keystone demo', 'Explore the security operations role demo', '/keystone-demo/', '↗', 'guard security scheduling customer admin interactive example'],
     ['Information', 'Privacy', 'How information is handled', '/privacy.html', 'i', 'data personal policy privacy gdpr'],
     ['Information', 'Cookies', 'Browser storage and your analytics choice', '/cookies.html', 'i', 'consent tracking analytics settings cookies']
   ];

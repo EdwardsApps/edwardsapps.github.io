@@ -29,6 +29,4 @@ jobs:
           node --check js/command-menu.js
           node --check js/product-explorer.js
           node --check js/build-planner.js
-          node --check keystone-demo/demo.js
-          node --check keystone-demo/location.js
           node --check scripts/build_guide_pdfs.mjs
