@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add('js')</script>
+  <title>Adding admin MFA to a Base44 app — EdwardsApps</title>
+  <meta name="description" content="Peter Edwards on adding owner-approved admin MFA to Base44: backend permissions, authenticator setup, session proofs and the details that needed fixing.">
+  <link rel="canonical" href="https://edwardsapps.co.uk/base44-mfa.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="EdwardsApps">
+  <meta property="og:title" content="Adding admin MFA to a Base44 app">
+  <meta property="og:description" content="Peter Edwards on adding owner-approved admin MFA to Base44: backend permissions, authenticator setup, session proofs and the details that needed fixing.">
+  <meta property="og:url" content="https://edwardsapps.co.uk/base44-mfa.html">
+  <meta property="og:image" content="https://edwardsapps.co.uk/img/og.png?v=2">
+  <meta property="og:image:alt" content="EdwardsApps — practical software for real work">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#12161D">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Adding admin MFA to a Base44 app", "description": "Peter Edwards on adding owner-approved admin MFA to Base44: backend permissions, authenticator setup, session proofs and the details that needed fixing.", "url": "https://edwardsapps.co.uk/base44-mfa.html", "author": {"@type": "Person", "name": "Peter Edwards", "url": "https://edwardsapps.co.uk/about.html"}, "datePublished": "2026-09-13", "dateModified": "2026-09-13", "publisher": {"@type": "Organization", "name": "EdwardsApps", "url": "https://edwardsapps.co.uk/"}}</script>
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css?v=12">
+  <link rel="stylesheet" href="css/articles.css?v=1">
+  <script src="js/consent.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="index.html"><img src="img/logo.png" alt="EdwardsApps" width="437" height="68"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="crewbook.html">CrewBook</a></li>
+        <li><a href="crewqci.html">CrewQCI</a></li>
+        <li><a href="studiobooks.html">Studiobooks</a></li>
+        <li><a href="ourspace.html">OurSpace</a></li>
+        <li><a href="almoner.html">Almoner</a></li>
+        <li><a href="services.html">Custom builds</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="nav-cta" href="mailto:peter@edwardsapps.co.uk">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+<section class="hero article-hero"><div class="wrap">
+  <a class="article-back" href="articles.html">← All articles</a>
+  <p class="kicker">Build notes · Authentication</p>
+  <h1>A password shouldn’t be enough to run the whole app.</h1>
+  <p class="lede">How I added an extra admin check to a Base44 app — and why most of the work was behind the six-digit code.</p>
+  <p class="article-byline">By Peter Edwards <span>·</span> <time datetime="2026-09-13">13 September 2026</time> <span>·</span> 9 minute read</p>
+</div></section>
+<div class="wrap article-layout">
+<aside class="article-toc" aria-label="In this article"><p class="kicker">In this article</p><ol>
+  <li><a href="#requirement">Start with the requirement</a></li>
+  <li><a href="#boundary">Protect the data</a></li>
+  <li><a href="#approval">Approve the person first</a></li>
+  <li><a href="#proof">Check every admin request</a></li>
+  <li><a href="#lessons">What needed fixing</a></li>
+  <li><a href="#testing">Test more than the screen</a></li>
+  <li><a href="#limits">What this does and doesn’t do</a></li>
+</ol></aside>
+<article class="article-body">
+<p class="article-opening">I didn’t start this job wanting to build an authentication system. I wanted a straightforward answer to a straightforward question: if somebody gets hold of an administrator’s password, can they get into the admin side of the app?</p>
+<p>For Keystone, that mattered. It’s an app for a security business, bringing together people, properties, patrols and office work. The people using it have different jobs and need different access. The office needs more authority than a guard checking their next shift or a client reading a report.</p>
+<p>Base44 had already done the sign-in plumbing. The extra requirement was to make administrative access depend on my approval and an authenticator check. Guards and clients should still be able to use the sign-in options configured for them.</p>
+
+<h2 id="requirement">Start with what you need to prevent</h2>
+<p>The first conversation was about Microsoft accounts and MFA. That is a reasonable place to start, but “they sign in with Microsoft” and “our app has verified a second factor for this admin session” are different claims.</p>
+<p>We needed to answer the second one. I kept the platform login and added a separate check before the app would do administrative work. This is an application-level authenticator check. It is not Microsoft Conditional Access or a claim that a particular Microsoft tenant performed MFA.</p>
+<p>I use AI coding tools to help build these apps. This was a good example of where I still have to be specific about the result I want. “Add MFA” leaves quite a lot open. “A signed-in person without a valid second-factor check must not be able to read or change admin data” gives us something we can test.</p>
+
+<figure class="article-flow"><figcaption>The admin access journey</figcaption><ol>
+<li><b>01</b><strong>Sign in</strong><span>Base44 identifies the account.</span></li>
+<li><b>02</b><strong>Get approved</strong><span>The owner authorises admin access.</span></li>
+<li><b>03</b><strong>Verify</strong><span>The person uses their authenticator.</span></li>
+<li><b>04</b><strong>Do the work</strong><span>The backend checks each privileged request.</span></li>
+</ol></figure>
+
+<h2 id="boundary">The screen was the easy part</h2>
+<p>You can put a six-digit-code screen in front of a dashboard quite quickly. But the browser also talks to the database and backend functions. If those still accept an ordinary admin login without checking MFA, the new screen can be skipped.</p>
+<p>So the important change was to move privileged reads and writes through checked backend functions, and remove the old direct admin access to the relevant application records. A hidden menu and a redirect are useful for navigation. They do not settle what a person is allowed to do.</p>
+<p>For a backend-only security entity, the direct-access rules look like this:</p>
+<div class="article-code"><p>Direct-access rules · backend-owned security entity</p><pre tabindex="0" aria-label="Direct-access rules · backend-owned security entity"><code>&quot;rls&quot;: {
+  &quot;read&quot;: false,
+  &quot;create&quot;: false,
+  &quot;update&quot;: false,
+  &quot;delete&quot;: false
+}</code></pre></div>
+<p>That example is for a security record, not a rule to paste across every table without a plan. Guards and clients have their own permitted operations. Denying direct access also means providing the correctly authorised backend route for legitimate work.</p>
+<p>The platform-managed user record is another boundary to check separately. I would not tell someone that changing a few custom entity rules removes every permission the platform can grant.</p>
+
+<h2 id="approval">Approve the person before they enrol</h2>
+<p>I wanted to be the person who authorises new administrators. After approval, each person sets up their own authenticator. That sounds simple, but the first setup needs protection too.</p>
+<p>If knowing the password is enough to enrol the first authenticator, somebody with a stolen password could enrol theirs. Our approval flow therefore produces a separate, single-use activation credential. I give that to the person through a separately verified channel. It lasts 15 minutes.</p>
+<p>The person then scans a QR code and confirms a code from their authenticator. The QR is generated inside the app; it is not sent to an external QR-image service. The authenticator secret is encrypted using a dedicated backend key and cryptographically bound to the account it belongs to.</p>
+<p>The admin approval record is backend-owned. It is separate from ordinary profile fields, because something a person can edit about themselves cannot be the authority for approving them.</p>
+<figure class="article-screenshot"><a class="shot-link" href="img/articles/mfa-owner.png"><img src="img/articles/mfa-owner.png" alt="Admin security panel showing fresh owner verification, account approval and revoke controls, using example accounts" width="1440" height="1000" loading="lazy"></a><figcaption>Owner approval and authenticator management. Screenshot of the implementation in an isolated UI preview with synthetic accounts; no live account details or credentials are shown. Select to enlarge.</figcaption></figure>
+
+<h2 id="proof">A code opens a verified session, not permanent access</h2>
+<p>After a correct authenticator code, the server issues a random proof token. The browser carries it on admin requests; the server stores its hash. The check ties it to the authenticated user, their current login token and the current version of their admin verification.</p>
+<p>These are the timings in the implementation at the time of writing:</p>
+<div class="article-code"><p>Current timings · TypeScript</p><pre tabindex="0" aria-label="Current timings · TypeScript"><code>const MFA_SESSION_MS = 8 * 60 * 60 * 1000;
+const MFA_FRESH_MS = 5 * 60 * 1000;
+const ACTIVATION_MS = 15 * 60 * 1000;</code></pre></div>
+<p>Eight hours is the maximum life of that admin proof, not a promise that everyone only types one code a day. A new login, signing out or a reset can require another check sooner. Changing admin security requires verification within the last five minutes.</p>
+<div class="article-phone-layout"><figure class="article-phone"><img src="img/articles/mfa-verify.png" alt="Keystone asks for a six-digit authenticator code before continuing to admin work" width="390" height="1000" loading="lazy"><figcaption>The verification screen, rendered with test data. The important checks happen behind it.</figcaption></figure><div><h3>What the server checks</h3><ul>
+<li>The account is approved and active.</li><li>The proof belongs to this account and login session.</li><li>It has not expired or been revoked.</li><li>Its verification version still matches the account.</li><li>The operation has the permissions it needs.</li>
+</ul><p>Signing out rotates that version, so the person’s other admin proofs stop matching too. Resetting or revoking access invalidates them in the same way.</p><p>That stops further authorised requests. It cannot pull back a file somebody has already downloaded, and an already-issued file link has its own expiry.</p></div></div>
+<p>The shape of a protected operation is deliberately boring:</p>
+<div class="article-code"><p>Illustrative backend sequence · supporting helpers omitted</p><pre tabindex="0" aria-label="Illustrative backend sequence · supporting helpers omitted"><code>const identity = await sdk.auth.me();
+
+await requireAdminMfa(
+  req,
+  identity,
+  sdk.asServiceRole.entities,
+  { owner: true, fresh: true }
+);
+
+// Only now validate and perform the owner-only operation.
+// Never accept the caller&#x27;s identity from the request body.</code></pre></div>
+<p>This is an illustrative excerpt, not a complete MFA implementation. <code>requireAdminMfa</code> is our own helper, not a Base44 API. It has to validate the stored proof; the business operation still needs its own scope and input checks. Service-role access is powerful, so the backend must never become an unrestricted proxy for whatever the browser asks it to do.</p>
+
+<h2 id="lessons">The details that needed attention</h2>
+<h3>Keep the decision on the server</h3>
+<p>An early version used a build-time flag to decide whether the browser installed the MFA adapter. That was one more setting that could differ between local development and the published app. The current client always installs the adapter and asks the server what verification is required.</p>
+<p>The backend still has an explicit activation setting. If that is off, it is off. Removing a frontend switch is not a substitute for checking deployed backend configuration and access rules together.</p>
+<h3>Read the request body once</h3>
+<p>Some operations parse their JSON before checking MFA. A request body is a stream: you cannot assume it will be there to read a second time. We either extract the proof before consuming the body or pass the already-parsed proof to the helper. File uploads and nested function calls need the same care.</p>
+<h3>Don’t let two requests spend the same code</h3>
+<p>The implementation limits credential attempts to five per minute and records accepted time-steps to prevent code reuse. Those counters are no use if two simultaneous requests can overwrite each other.</p>
+<p>State changes therefore match a revision number and increment it. A losing request gets a conflict instead of silently replacing the winner’s work:</p>
+<div class="article-code"><p>Conditional update · adapted from the account helper</p><pre tabindex="0" aria-label="Conditional update · adapted from the account helper"><code>const result = await accounts.updateMany(
+  { id: row.id, user_id: row.user_id, revision: row.revision },
+  { $set: { ...patch, revision: row.revision + 1 } }
+);
+
+if (result?.success !== true ||
+    result.updated !== 1 || result.has_more !== false) {
+  throw new Error(&quot;Verification changed. Please try again.&quot;);
+}</code></pre></div>
+<p>This is the expected store contract, not proof that a hosted database fulfils it. The concurrency probe has to run against the actual platform. A rate-limit response and two successful conflicting updates are different failures; record what happened rather than treating every failed probe as broken atomicity.</p>
+<h3>Give people a recovery route</h3>
+<p>There is no password-only “reset my authenticator” shortcut. Ordinary resets go through the owner. Owner recovery uses the separately protected Base44 workspace and a documented procedure. I already use Google MFA for that workspace login.</p>
+<p>The recovery procedure keeps the existing encryption key. Replacing it to fix one person’s authenticator would create a problem for everyone else. This is the sort of detail I want written down before I need it.</p>
+
+<h2 id="testing">I want to test the request that should fail</h2>
+<p>It is satisfying to enter a code and watch the dashboard open. The more useful test is to stop before entering it and try to fetch the same information directly.</p>
+<p>The checks I want recorded include a missing proof, a proof from another login, an expired proof, revocation, competing verification attempts and interrupted enrolment. They also include normal work: reports, invoices, uploads and the guard and client journeys. A security change that breaks the working day has not finished the job.</p>
+<p>MFA is now running in the app and I have confirmed it working. That is different from an independent security certification or a claim that every possible platform access path has been audited. The screenshots here illustrate the interface; they are not evidence of a production penetration test.</p>
+
+<h2 id="limits">Be clear about what you’ve built</h2>
+<p>This approach adds an authenticator requirement to administrative work. It does not force Microsoft sign-in, approve every new guard or client account, or replace the app’s normal data permissions. Those are separate requirements.</p>
+<p>Authenticator codes can also be phished. <a href="https://pages.nist.gov/800-63-4/sp800-63b/authenticators/">NIST explicitly distinguishes OTPs from phishing-resistant authentication</a>. If phishing resistance is the requirement, that should change the design rather than the wording on the login page.</p>
+<p>I’m not suggesting every Base44 app should build its own MFA layer. Where a managed identity solution can meet the requirement, assess that first. In this case the useful lesson was to follow the whole path from a person signing in to the data they could reach.</p>
+<p class="article-takeaway">The code screen is what the user sees. Whether a request is allowed through is what I need to be able to explain.</p>
+
+<section class="article-sources" aria-labelledby="sources"><h2 id="sources">Code and further reading</h2><p>The examples are adapted from our implementation and are deliberately incomplete. Timings and behaviour were checked against the source on 13 September 2026. Platform capabilities can change.</p><ul>
+<li><a href="https://docs.base44.com/developers/references/sdk/docs/interfaces/auth">Base44 authentication and sign-in providers</a></li>
+<li><a href="https://docs.base44.com/developers/references/sdk/getting-started/client">Base44 clients and backend service-role access</a></li>
+<li><a href="https://docs.base44.com/developers/backend/resources/entities/security">Base44 entity permissions</a></li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc6238">RFC 6238: time-based one-time passwords</a></li>
+<li><a href="https://pages.nist.gov/800-63-4/sp800-63b/authenticators/">NIST: authenticator requirements and limitations</a></li></ul></section>
+<div class="article-author"><p class="kicker">Peter Edwards · EdwardsApps</p><p>I build practical software around the work people actually do. If you have an app that needs to fit a particular operation, <a href="enquiry.html">tell me what you need it to do</a>.</p></div>
+</article></div>
+</main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="EdwardsApps" width="437" height="68">
+        <p>Practical software for businesses, organisations and everyday life.</p>
+      </div>
+      <nav aria-label="Products">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="crewbook.html">CrewBook</a></li>
+          <li><a href="crewqci.html">CrewQCI</a></li>
+          <li><a href="studiobooks.html">Studiobooks</a></li>
+          <li><a href="ourspace.html">OurSpace</a></li>
+          <li><a href="almoner.html">Almoner</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="guides.html">User guides</a></li>
+          <li><a href="services.html">Custom builds</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing</a></li>
+          <li><a href="mailto:peter@edwardsapps.co.uk">peter@edwardsapps.co.uk</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrap">
+      <p class="fineprint">© 2026 EdwardsApps. CrewBook, CrewQCI, Studiobooks, OurSpace and Almoner are EdwardsApps products. <a href="privacy.html">Privacy</a> · <a href="cookies.html">Cookies</a> · <a href="#" data-consent-settings>Cookie settings</a>.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

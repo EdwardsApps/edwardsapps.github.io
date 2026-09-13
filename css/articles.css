@@ -1,0 +1,45 @@
+/* Editorial pages: shared EdwardsApps palette and typography. */
+.article-hero h1 { max-width: 21ch; }
+.article-back { display:inline-block; margin-bottom:2rem; color:var(--lime); font-size:.9rem; }
+.article-byline { display:flex; flex-wrap:wrap; gap:.65rem; margin-top:1.8rem; font-size:.9rem; color:#c0c8cc; }
+.article-layout { display:grid; grid-template-columns:13rem minmax(0,1fr); gap:4rem; padding-block:3.5rem 5rem; }
+.article-toc { align-self:start; position:sticky; top:6rem; font-size:.9rem; }
+.article-toc ol { padding-left:1.2rem; }
+.article-toc li { margin:.8rem 0; }
+.article-body { max-width:47rem; min-width:0; }
+.article-body h2 { margin-top:3rem; font-size:clamp(1.45rem,3vw,2rem); scroll-margin-top:7rem; }
+.article-body h3 { margin-top:2rem; font-size:1.2rem; }
+.article-body p { line-height:1.85; }
+.article-opening { font-size:1.25rem; }
+.article-body li { margin-bottom:.65rem; }
+.article-body figure { margin:2rem 0; }
+.article-body figcaption { font-size:.85rem; line-height:1.6; margin-top:.8rem; color:var(--ink-2,#4b5660); }
+.article-code { margin:1.8rem 0; border-radius:.5rem; overflow:hidden; background:#12161d; color:#eaf2f1; }
+.article-code p { padding:.8rem 1.2rem; margin:0; background:#222a32; font-size:.8rem; color:#aaec58; }
+.article-code pre { overflow:auto; margin:0; padding:1.25rem; font-size:.82rem; line-height:1.8; tab-size:2; }
+.article-code pre:focus-visible { outline-offset:-3px; outline-color:#aaec58; }
+.article-flow { padding:1.5rem; background:#edf2e9; border:1px solid #d6dfcf; border-radius:.5rem; }
+.article-flow figcaption { margin:0 0 1rem; font-weight:700; color:#253326; }
+.article-flow ol { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); list-style:none; padding:0; gap:1.5rem; margin:0; }
+.article-flow li { margin:0; display:grid; gap:.3rem; }
+.article-flow b { color:#446224; font-size:.8rem; }
+.article-flow span { font-size:.9rem; line-height:1.5; }
+.article-screenshot img { width:100%; height:auto; border:1px solid #dbe0e4; border-radius:.5rem; }
+.article-phone-layout { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1fr); gap:2rem; align-items:center; }
+.article-phone img { width:100%; height:auto; display:block; border:1px solid #dbe0e4; border-radius:1rem; }
+.article-takeaway { border-left:4px solid var(--green); padding:1.3rem 1.5rem; margin-top:2rem; font-size:1.25rem; background:#edf2e9; }
+.article-sources { border-top:1px solid #d4dbd2; margin-top:3rem; font-size:.9rem; }
+.article-author { padding:1.5rem; margin-top:2rem; border:1px solid #d4dbd2; border-radius:.5rem; }
+.article-feature { display:grid; grid-template-columns:1.3fr 1fr; gap:3rem; text-decoration:none; border-top:2px solid var(--ink); padding-top:2rem; }
+.article-feature h2 { max-width:23ch; font-size:clamp(1.5rem,3vw,2.4rem); margin-top:1rem; }
+.article-tag { font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; color:var(--green-ink); }
+.article-read { display:inline-flex; align-items:center; gap:1rem; margin-top:1rem; font-weight:700; text-decoration:underline; text-underline-offset:.3em; }
+.article-feature-art { display:flex; flex-direction:column; justify-content:center; padding:2.4rem; background:#12161d; color:#fff; border-radius:.6rem; min-height:300px; }
+.article-feature-art>span { color:#aaec58; font-size:.75rem; letter-spacing:.1em; }
+.code-dots { font-size:clamp(1rem,2vw,1.7rem); margin:1.7rem 0; letter-spacing:.12em; white-space:nowrap; }
+.article-feature-art p { font-size:1.5rem; line-height:1.4; }
+.article-feature-art .article-art-rule { padding-top:1rem; border-top:1px solid #415044; letter-spacing:0; }
+.article-home { border-top:1px solid #d4dbd2; }
+@media(max-width:60em) { .article-layout { grid-template-columns:1fr; gap:1rem; } .article-toc { position:static; border-bottom:1px solid #d4dbd2; padding-bottom:1rem; } .article-toc ol { columns:2; } .article-body { max-width:none; } }
+@media(max-width:40em) { .article-layout { padding-top:2rem; } .article-feature { grid-template-columns:1fr; gap:1.5rem; } .article-feature-art { min-height:230px; } .article-phone-layout { grid-template-columns:1fr; gap:0; } .article-phone { max-width:300px; margin-inline:auto!important; } .article-toc ol { columns:1; } .article-flow { padding:1rem; } .article-flow ol { gap:1rem; } .article-code pre { font-size:.75rem; padding:1rem; } }
+@media print { .site-header,.site-footer,.article-toc,.article-back { display:none; } .article-layout { display:block; } .hero { background:white!important; color:black!important; } .article-body { max-width:none; } .article-code pre { white-space:pre-wrap; } }

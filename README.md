@@ -26,3 +26,7 @@ node --check js/consent.js
 ```
 
 The same checks run automatically for pull requests and changes to `main`.
+
+## Articles
+
+`articles.html` is the article index; `base44-mfa.html` is the first article. Editorial styles are in `css/articles.css`. The MFA screenshots in `img/articles/` show isolated component previews with synthetic accounts, not live customer data. Code excerpts are explanatory, not a drop-in authentication library. Review copy and hosted-platform claims before publication.
