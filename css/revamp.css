@@ -79,6 +79,8 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
 .site-footer li { margin: .6rem 0; font-size: .88rem; }
 .footer-signoff { padding-top: 1.5rem; border-top: 1px solid #ffffff19; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8rem 2rem; }
 .footer-signoff p { margin: 0; }
+.footer-contact { order: 1; flex-basis: 100%; }
+.footer-legal { order: 2; flex-basis: 100%; font-size: .72rem; line-height: 1.6; color: #aebda8; opacity: .72; max-width: 100ch; }
 .footer-note { font-size: .72rem; color: #aebda8; }
 .consent-banner { inset: auto 1rem 1rem auto; width: min(36rem, calc(100% - 2rem)); border: 1px solid #738765; border-radius: 16px; padding: 1.3rem; justify-content: flex-start; box-shadow: 0 12px 65px #0005; }
 .consent-banner p { font-size: .86rem; }
