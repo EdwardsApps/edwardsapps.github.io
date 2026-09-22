@@ -175,7 +175,8 @@
           <li>Enter your <span class="ui">Email</span>, <span class="ui">Password</span> and <span class="ui">Confirm Password</span>, and click <span class="ui">Create account</span> — or use one of the <span class="ui">Continue with…</span> buttons.</li>
           <li>Type the 6-digit code from the <span class="ui">Verify your email</span> screen and click <span class="ui">Verify</span>. <span class="step-detail">No code? Click <span class="ui">Resend</span> and check spam.</span></li>
         </ol>
-        <div class="callout callout-warn"><strong>The cookie banner, and what “Accept all” now means</strong>On your first visit CrewBook asks about cookies, with two buttons: <span class="ui">Essential only</span> and <span class="ui">Accept all</span>. Essential cookies keep you signed in and are always on. <strong><span class="ui">Accept all</span> turns on Google analytics <em>and</em> Google advertising cookies</strong> — advertising storage, advertising user data and ad personalisation, which is how the app's own advertising is measured. Choosing <span class="ui">Essential only</span> leaves every one of them switched off, and nothing about the app works differently either way. Your choice is remembered in that browser; clearing the site's stored data asks again.</div>
+        <div class="callout callout-warn"><strong>The cookie banner, and what “Accept all” now means</strong>On your first visit CrewBook asks about cookies, with two buttons: <span class="ui">Essential only</span> and <span class="ui">Accept all</span>. Essential cookies keep you signed in, remember which company you're working in and hold short-lived view preferences; they are always on. <strong><span class="ui">Accept all</span> turns on Google analytics <em>and</em> Google advertising cookies together</strong> — it grants all four of Google's consent signals at once (analytics storage, advertising storage, advertising user data and ad personalisation), which both measures whether CrewBook's adverts lead to sign-ups <em>and</em> lets Google show you CrewBook adverts on other websites (remarketing). <span class="ui">Essential only</span> refuses all four and leaves only the essential cookies; there is no partial option, and nothing about the app works differently either way. Your choice is stored in that browser only and never sent to us — so you'll be asked again on another device or after clearing site data.</div>
+        <div class="callout"><strong>Changing your mind later</strong>The banner doesn't come back by itself. Open <span class="path">Account → Privacy Policy</span>, scroll to <strong>Cookies and Similar Technologies</strong>, and click <span class="ui">Change your cookie choices</span> — that clears the stored choice and puts the banner back up so you can pick again.</div>
         <p>Forgotten password? Click <span class="ui">Forgot password?</span> on the log-in page, enter your email, and follow the emailed link to set a new one. If you originally signed up with Google, Microsoft, Facebook or Apple, there's no CrewBook password to reset — use the same <span class="ui">Continue with…</span> button every time.</p>
 
         <h3 id="account-fix">If something's not right<a class="anchor-link" href="#account-fix" aria-label="Link to this section">#</a></h3>
@@ -195,6 +196,10 @@
           <details class="ts-item" id="ts-bk-access-restricted">
             <summary>"Access Restricted — you are not registered to use this application"</summary>
             <div class="ts-body"><p class="ts-cause">The login you're using isn't registered for the app.</p><p>Check you're signed in with the right account, try logging out and back in, or contact your administrator for access.</p></div>
+          </details>
+          <details class="ts-item" id="ts-bk-cookie-banner-gone">
+            <summary>The cookie banner has gone and you want to change your answer</summary>
+            <div class="ts-body"><p class="ts-cause">The banner only shows until you press one of its buttons; the answer is then stored in that browser.</p><p>Go to <span class="path">Account → Privacy Policy</span>, find <strong>Cookies and Similar Technologies</strong>, and click <span class="ui">Change your cookie choices</span>. The banner comes back and your next press replaces the old answer. Clearing the site's stored data does the same thing.</p></div>
           </details>
         </div>
       </section>
@@ -241,8 +246,8 @@
 
       <section id="team-access" aria-labelledby="team-access-h">
         <h2 id="team-access-h">Your team and who sees what<a class="anchor-link" href="#team-access" aria-label="Link to this section">#</a></h2>
-        <p>Staff are invited from <span class="path">Admin → Users &amp; Access</span> ("Invite users, set access tiers, link logins to workers, and choose visible pages"): type their email, pick a tier, click <span class="ui">Invite</span>. If the address already has a CrewBook login it joins your company immediately; otherwise they're attached automatically the first time they sign up with that email.</p>
-        <div class="callout"><strong>Who may send an invite</strong>Only the company <strong>Owner</strong> — whoever created the company — or someone on the <strong>Super Admin</strong> tier. Anyone else gets "Only company admins can invite members." and nothing is sent. Admins can still set tiers, page chips and linked workers on people already in the company; it is adding a new person that is reserved.</div>
+        <p>Staff are invited from <span class="path">Admin → Users &amp; Access</span>: type their email, pick a tier, click <span class="ui">Invite</span>. If the address already has a CrewBook login it joins your company immediately; otherwise they're attached automatically the first time they sign up with that email.</p>
+        <div class="callout"><strong>Who may send an invite</strong>Only the company <strong>Owner</strong> — whoever created the company — or someone on the <strong>Super Admin</strong> tier. For anyone else the invite box isn't shown at all, and the panel says to ask the owner instead: there's no form to fill in and be refused. Admins can still set tiers, page chips and linked workers on people already in the company; it is adding a new person that is reserved.</div>
         <div class="guide-table-scroll">
           <table class="guide-table">
             <thead><tr><th scope="col">Access tier</th><th scope="col">What they see by default</th></tr></thead>
@@ -1037,6 +1042,7 @@
           <li><a href="#ts-bk-verify-code">"Invalid verification code" when signing up</a></li>
           <li><a href="#ts-bk-reset-link">"Invalid reset link" when resetting a password</a></li>
           <li><a href="#ts-bk-access-restricted">"Access Restricted — you are not registered to use this application"</a></li>
+          <li><a href="#ts-bk-cookie-banner-gone">The cookie banner has gone and you want to change your answer</a></li>
         </ul>
         <h3>Your company, the setup wizard and subscribing</h3>
         <ul>
