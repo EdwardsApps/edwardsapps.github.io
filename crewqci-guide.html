@@ -290,16 +290,28 @@
       <section id="finding-your-way" aria-labelledby="finding-your-way-h">
         <h2 id="finding-your-way-h">Finding your way around<a class="anchor-link" href="#finding-your-way" aria-label="Link to this section">#</a></h2>
         <p>The quickest route to help is always the <span class="ui">?</span> button in the app's header: it opens this guide in a new tab, at the chapter for the page you're on.</p>
-        <p>After signing in you land on the <strong>Sales Pipeline</strong> overview — the flow "Lead → Quote → Contract → Invoice / Proforma → Retention" with a tile for every area: Leads, Quotes, Contracts, Invoicing, Proformas/Applications, Retentions, Clients, Credit Control, Settings and Reports, plus a <span class="ui">View insights</span> button for the charts. Which tiles work for you depends on your <a href="#team-access">access tier</a>.</p>
+        <p>After signing in you land on the <strong>Sales Pipeline</strong> overview, under the flow "Lead → Quote → Contract → Invoice / Proforma → Retention". Two figures sit in its header and answer the first question anyone asks: <span class="ui">Outstanding today</span>, everything unpaid, and <span class="ui">Overdue</span>, the part of it that is late — red as soon as there is any. Which tiles work for you depends on your <a href="#team-access">access tier</a>.</p>
+        <p>The tiles are gathered into four groups, so the page reads in the order the work happens:</p>
+        <ul>
+          <li><strong>Sales pipeline</strong> ("From enquiry to won work") — <span class="ui">Leads</span>, <span class="ui">Quotes</span>, <span class="ui">Contracts</span>, <span class="ui">Prospecting</span>.</li>
+          <li><strong>Money in</strong> ("Billing, applications &amp; getting paid") — <span class="ui">Invoicing</span>, <span class="ui">Proformas/Applications</span>, <span class="ui">Retentions</span>, <span class="ui">Credit Control</span>.</li>
+          <li><strong>Pricing &amp; performance</strong> ("Cost the work, then see how it went") — <span class="ui">Insights</span> and <span class="ui">Reports</span>.</li>
+          <li><strong>Records &amp; setup</strong> ("The register behind everything") — <span class="ui">Clients</span> and <span class="ui">Settings</span>.</li>
+        </ul>
+        <p>Several tiles carry a <strong>live pill</strong> in their corner rather than a plain arrow: Leads shows "N new", Invoicing the outstanding total, Credit Control the overdue count (green at nought, red above it), Clients how many are on file. Below the groups sits the <span class="ui">Overdue invoices</span> table — invoice, client, due date, days overdue, credit limit and owing, worst first, colour-banded by age. It shows the <strong>worst eight</strong>, with <span class="ui">Show all N overdue</span> underneath to open the lot and <span class="ui">Show the worst 8 only</span> to fold it back. <span class="ui">Chase in Credit Control →</span> takes the list where it can be acted on.</p>
         <p>The bar under the header carries the pages you work in all day: <span class="ui">Overview</span>, <span class="ui">Leads</span>, <span class="ui">Quotes</span>, <span class="ui">Contracts</span>, <span class="ui">Invoicing</span>, <span class="ui">Proformas/Applications</span>, <span class="ui">Retentions</span>, <span class="ui">Credit Control</span>, <span class="ui">Prospecting</span> and <span class="ui">Insights</span>. On a phone the same bar sits along the bottom of the screen. Two pages sit outside it:</p>
         <ul>
           <li><strong>Settings</strong> — the <span class="ui">⚙</span> cog in the header, to the left of the <span class="ui">?</span> button. It's on every page, including on a phone.</li>
+          <li><strong>Back</strong> — a <span class="ui">Back</span> button at the left end of the header, on every page. It steps back one page the way the browser's own back button does, so following a search result or a link and returning is one click rather than a hunt through the pill bar. <span class="step-detail">It hides itself when there is nowhere to go back to — the first page of a session, or a link opened straight into the app.</span></li>
           <li><strong>Reports</strong> — open <span class="ui">Insights</span> and click <span class="ui">Reports &amp; exports</span> at the top right. Insights is the at-a-glance picture; <a href="#reports">Reports</a> is where a figure gets filtered, printed and sent. Both are also tiles on the Overview.</li>
         </ul>
 
         <h3 id="search">Search: one box for everything<a class="anchor-link" href="#search" aria-label="Link to this section">#</a></h3>
         <p>The header search box — "Search the pipeline… use # to be exact" — finds clients, credit control, leads, quotes, contracts, invoices, proformas, retentions and prospects from one place. Press Enter for the results page. Results are grouped into one card per area, with a count strip across the top showing which areas the term appears in; click a count to jump to that card, or any result to open the record on its own page. Areas with hits sort to the front, and a long list shows the first six with <span class="ui">Show {n} more</span> underneath.</p>
+        <p><strong>The search runs on the server.</strong> Each area asks the database for the records that match, instead of pulling a whole register into your browser and sifting it there. That means a term is checked against your complete history, however many years of it there are — not just the most recent few thousand rows.</p>
         <ul>
+          <li><strong>Each area returns at most 200 matches.</strong> An area that fills up shows its count as <span class="ui">200+</span> rather than a number. Read that as "there are more", and narrow the term — the reference with <strong>#</strong> is usually the quickest way.</li>
+          <li><strong>An area that fails says so.</strong> If one area can't be reached, its card reads "Couldn't search leads — there may be matches here" with a <span class="ui">Retry</span> button, and a line above the results names every area that failed. A broken area never reads as an empty one: when something failed and nothing was found, the page says "Nothing found in the areas that loaded" rather than "Nothing found in any area".</li>
           <li>An ordinary search matches anywhere: reference numbers, client names, sites, sectors, contacts, emails, notes and feedback.</li>
           <li><strong>Punctuation and spacing are ignored</strong>, so "A &amp; C Hobbs", "A and C Hobbs" and "A+C Hobbs" all find the account stored as "A&amp;C Hobbs Ltd". Company endings like Ltd and plc are ignored too. This matters because the same client is rarely typed the same way twice.</li>
           <li>Client accounts match on their <strong>alias names</strong> as well, so a merged account is found under every name it has ever been invoiced under.</li>
@@ -307,6 +319,18 @@
           <li>Searching a contract number also surfaces the quote it came from. Draft documents are excluded until issued.</li>
         </ul>
         <div class="callout"><strong>Tip</strong>To pull together everything on one job — contract, source quote, invoices, retentions, the original lead — search its number with #. One search, the whole story.</div>
+
+        <h3 id="finding-your-way-fix">If something's not right<a class="anchor-link" href="#finding-your-way-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-search-area-failed">
+            <summary>"Couldn't search … — there may be matches here"</summary>
+            <div class="ts-body"><p class="ts-cause">That one area couldn't be reached — usually a connection blip. The other areas searched normally.</p><p>Click <span class="ui">Retry</span> on the card. Until you do, treat that area as unknown rather than empty — the page deliberately refuses to report a failure as "no matches".</p></div>
+          </details>
+          <details class="ts-item" id="ts-search-200-plus">
+            <summary>An area's count shows "200+" instead of a number</summary>
+            <div class="ts-body"><p class="ts-cause">Each area returns at most 200 matches, and that one filled up.</p><p>Search something narrower — the reference with <strong>#</strong>, or the client name together with the site. The record you want may well sit outside the 200 you can see.</p></div>
+          </details>
+        </div>
       </section>
       <section id="registers" aria-labelledby="registers-h">
         <h2 id="registers-h">Working the registers<a class="anchor-link" href="#registers" aria-label="Link to this section">#</a></h2>
@@ -390,7 +414,7 @@
         <h3 id="quotes-add">Adding a quote<a class="anchor-link" href="#quotes-add" aria-label="Link to this section">#</a></h3>
         <ol class="step-list">
           <li>Click <span class="ui">Add Quote</span> (top right). The dialog opens with today's date, and <span class="ui">Quote number</span> briefly shows "Allocating…" while the next number in sequence is fetched. <span class="step-detail">It fills in by itself — or you can overtype your own number at any time.</span></li>
-          <li>Complete the required fields (marked *): <span class="ui">Quote number</span>, <span class="ui">Client</span>, <span class="ui">Sector</span>, <span class="ui">Lead source</span>, <span class="ui">Quoted by</span>, <span class="ui">Status</span> and <span class="ui">Value (£)</span> — the value must be greater than zero. <span class="step-detail">Picking the client from the list links the quote to that account rather than just copying the name, which is what lets the lifetime figures on <a href="#insights">Insights</a> follow the client.</span></li>
+          <li>Complete the required fields (marked *): <span class="ui">Quote number</span>, <span class="ui">Client</span>, <span class="ui">Sector</span>, <span class="ui">Lead source</span>, <span class="ui">Quoted by</span>, <span class="ui">Status</span> and <span class="ui">Value (£)</span> — the value must be greater than zero. <span class="step-detail">A new quote opens at <span class="ui">Quoted</span>, the first status in the list; change it here only if the quote is already further on.</span> <span class="step-detail">Picking the client from the list links the quote to that account rather than just copying the name, which is what lets the lifetime figures on <a href="#insights">Insights</a> follow the client.</span></li>
           <li>If the client is already on file and you have worked for them before, <span class="ui">Lead source</span> fills in as <span class="ui">Existing Customer</span> by itself, with a small line beneath saying where they originally came from — "Originally acquired via Google, 2021". <span class="step-detail">Overtype it whenever this particular enquiry came from somewhere else; typing your own choice stops it being changed again.</span></li>
           <li>Optionally add <span class="ui">Site</span>, contact details and <span class="ui">Feedback</span>.</li>
           <li>Click <span class="ui">Save</span>. <span class="step-detail">If anything required is missing, the dialog footer lists it ("Required: …") and the save is refused with "Please complete: …" naming exactly what's needed.</span></li>
@@ -634,6 +658,7 @@
       <section id="documents" aria-labelledby="documents-h">
         <h2 id="documents-h">Printing, emailing and filing documents<a class="anchor-link" href="#documents" aria-label="Link to this section">#</a></h2>
         <p>Every document raised in the app opens in a PDF preview — click the document icon on any register row, or <span class="ui">Preview PDF</span> inside a dialog. From the preview you can <span class="ui">Print</span>, <span class="ui">Download PDF</span>, <span class="ui">Email…</span> the client, <span class="ui">Sent emails</span> to see what has already gone out, or <span class="ui">File to SharePoint</span>.</p>
+        <p><strong>Downloaded files are named after the document, not the job</strong>, so a folder of them stays readable: "Invoice 1234 - Acme Ltd.pdf", "Credit Note CR1234 - Acme Ltd.pdf", "Proforma Invoice 87 - Acme Ltd.pdf". <span class="step-detail">Proformas used to be named after the contract, so every proforma raised against the same job downloaded over the top of the last one. Applications for payment and payment certificates carry their own number and the contract number as well.</span></p>
 
         <h3 id="documents-email">Emailing a document to the client<a class="anchor-link" href="#documents-email" aria-label="Link to this section">#</a></h3>
         <ol class="step-list">
@@ -804,7 +829,7 @@
       </section>
       <section id="credit-control" aria-labelledby="credit-control-h">
         <h2 id="credit-control-h">Credit control: how chasing works<a class="anchor-link" href="#credit-control" aria-label="Link to this section">#</a></h2>
-        <p>Credit Control is where the money gets collected. Every open invoice ages from its due date and climbs a <strong>chase ladder</strong> you control — out of the box: a friendly reminder 7 days <em>before</em> it falls due, a note on the day, a first chaser at 7 days over, a second at 21, and a final notice at 45. A client gets <strong>one email per run</strong>, at the most severe stage they've reached, under your company name. Everything is driven straight from the invoice register, so the figure on screen is always the figure in the email.</p>
+        <p>Credit Control is where the money gets collected. Every open invoice ages from its due date and climbs a <strong>chase ladder</strong> you control — out of the box: a friendly reminder 7 days <em>before</em> it falls due, a note on the day, a first chaser at 7 days over, a second at 21, and a final notice at 45. Invoices on <span class="ui">On Receipt</span> terms are the exception: they fall due three days after they are issued, so every <em>before</em>-due rung is skipped for them and their first email is the one on the due date. A client gets <strong>one email per run</strong>, at the most severe stage they've reached, under your company name. Everything is driven straight from the invoice register, so the figure on screen is always the figure in the email.</p>
         <p>The page has six tabs — <span class="ui">Chasing</span>, <span class="ui">Statements</span>, <span class="ui">Retentions</span>, <span class="ui">Thank yous</span>, <span class="ui">Credit Limits</span> and <span class="ui">Settings</span> — with the total overdue figure and today's queue count always in the header. It's an admin area: Admin and Super Admin tiers only.</p>
         <figure class="guide-shot">
           <a class="shot-link" href="img/shots/crewqci-chasing.webp"><img class="feature-shot" src="img/shots/crewqci-chasing.webp" width="1400" height="860" loading="lazy" alt="CrewQCI's chasing queue: an aged debt summary, then four clients due a chaser with their stage, days overdue and amount, one held back because they promised to pay"></a>
@@ -818,7 +843,7 @@
         <h3 id="chasing-send">Sending chasers<a class="anchor-link" href="#chasing-send" aria-label="Link to this section">#</a></h3>
         <ol class="step-list">
           <li>Click the eye icon on a row (<span class="ui">Read the email before it goes</span>) — the preview shows the To address, subject and the exact email.</li>
-          <li>Click <span class="ui">Send now</span> — or, for a batch, tick clients and click <span class="ui">Send N chasers</span>. <span class="step-detail">The toast reports the outcome per client: "5 sent, 1 skipped, 1 failed".</span></li>
+          <li>Click <span class="ui">Send now</span> — or, for a batch, tick clients and click <span class="ui">Send N chasers</span>. <span class="step-detail">The toast reports the outcome per client: "5 sent, 1 skipped, 1 failed".</span> A batch of more than one client also emails the <span class="ui">Daily run summary to</span> address the same report the morning run sends, with “— sent by hand” on the end of the subject — so a hand-send leaves the same paper trail as an automatic one. <span class="step-detail">Sending one client's chaser on its own doesn't raise a summary.</span></li>
           <li>Or let the automatic morning run do it — see <a href="#chase-settings">switching it on safely</a>.</li>
         </ol>
         <p>The <span class="ui">Dry run</span> button asks what today's automatic run would do — "would send N chasers covering £X, hold back N, and send N statements" — without sending a thing. The <span class="ui">History</span> button shows the audit trail: every email Sent (green), Test (blue), Failed (red) or Skipped (grey), so "why didn't this client get chased?" is always answerable.</p>
@@ -893,11 +918,13 @@
 
         <h3 id="chase-rules">The rules and the ladder<a class="anchor-link" href="#chase-rules" aria-label="Link to this section">#</a></h3>
         <p>The <span class="ui">Rules</span> card sets the guard-rails: minimum balance to chase, minimum days between chasers (7 by default), <span class="ui">Weekdays only</span>, how many invoice copies to attach per chaser, <span class="ui">Leave disputed invoices alone</span>, <span class="ui">Exclude retention from the chased amount</span> ("retention is not due until its release date — chasing it is what annoys a quantity surveyor"), and a <span class="ui">Never chase these clients</span> list.</p>
-        <p>The <span class="ui">Chase ladder</span> itself is fully editable: each stage has a name, its timing in days relative to the due date (negative = before it falls due), a tone (Friendly / Firm / Final), subject, opening and closing paragraphs, an on/off switch, and an optional attached statement. Placeholders like <span class="ui">{client}</span>, <span class="ui">{total}</span>, <span class="ui">{count}</span> and <span class="ui">{oldestDays}</span> fill in automatically — with grammar helpers so the wording reads right for one invoice or several.</p>
+        <p>The <span class="ui">Chase ladder</span> itself is fully editable: each stage has a name, its timing in days relative to the due date (negative = before it falls due), a tone (Friendly / Firm / Final), subject, opening and closing paragraphs, an on/off switch, and an optional attached statement. A stage timed before the due date carries the reminder "7 days before due · not sent on On Receipt invoices", because that rung never applies to them however you word it. Placeholders like <span class="ui">{client}</span>, <span class="ui">{total}</span>, <span class="ui">{count}</span> and <span class="ui">{oldestDays}</span> fill in automatically — with grammar helpers so the wording reads right for one invoice or several.</p>
         <p>The <span class="ui">Who it comes from</span> card carries the sign-off (name, title, phone), an internal copy address, the <span class="ui">Daily run summary to</span> address, and small print for the foot of every email.</p>
 
         <h3 id="daily-run">The automatic morning run<a class="anchor-link" href="#daily-run" aria-label="Link to this section">#</a></h3>
-        <p>Once live, a scheduled early-morning job does the whole round: one chaser per client at their most severe pending stage (worst debt first), the monthly statements on or after the configured day, retention release requests, and thank-yous — then emails the office a one-line summary like "5 chasers (£12,340), 3 held back, 0 failed, 12 statements". <span class="ui">Weekdays only</span> holds back chasers at the weekend but never the statements (month-end on a Saturday still runs) or thank-yous. Per-run caps keep it civilised — chasers, thank-yous and retention requests over the cap are picked up the next morning, and nothing is ever sent twice. Statements are the one exception: with more than 120 due in a run, the remainder wait for the next month (or send them by hand from the Statements tab).</p>
+        <p>Once live, a scheduled early-morning job does the whole round: one chaser per client at their most severe pending stage (worst debt first), the monthly statements on or after the configured day, retention release requests, and thank-yous — then emails the <span class="ui">Daily run summary to</span> address a report of the whole round. The subject is the headline — "Credit control — 3 chasers, 1 statement, 2 thank-yous sent, 1 failed" — and inside are three tables: what was sent (client, stage, address, amount), what was held back and why, and anything that failed, with the total chased.</p>
+        <p><strong>A quiet morning still gets its summary</strong>, under the subject "Credit control — nothing due today". A run that sends nothing and says nothing looks exactly like a run that never happened, so silence is kept for a real problem rather than spent on a slow week. The one exception is a weekend that <span class="ui">Weekdays only</span> has closed and on which nothing else happened either — no note goes out then, because a quiet-day email every Saturday and Sunday is only noise. A <span class="ui">Dry run</span> never sends a summary at all.</p>
+        <p><span class="ui">Weekdays only</span> holds back chasers at the weekend but never the statements (month-end on a Saturday still runs) or thank-yous. Per-run caps keep it civilised — chasers, thank-yous and retention requests over the cap are picked up the next morning, and nothing is ever sent twice. Statements are the one exception: with more than 120 due in a run, the remainder wait for the next month (or send them by hand from the Statements tab).</p>
 
         <h3 id="chase-settings-fix">If something's not right<a class="anchor-link" href="#chase-settings-fix" aria-label="Link to this section">#</a></h3>
         <div class="ts-list">
@@ -907,7 +934,7 @@
           </details>
           <details class="ts-item" id="ts-cc-no-summary">
             <summary>No daily summary email arrives</summary>
-            <div class="ts-body"><p class="ts-cause">Either <span class="ui">Daily run summary to</span> is blank, or nothing at all happened that day — quiet days genuinely send no summary.</p><p>Set an address under <span class="path">Settings → Who it comes from</span>.</p></div>
+            <div class="ts-body"><p class="ts-cause">A quiet day is not the explanation: the summary goes out every working morning, including the ones with nothing to do. A missing summary means something stopped it.</p><p>Check three things, in this order. <strong>One:</strong> <span class="ui">Daily run summary to</span> under <span class="path">Settings → Who it comes from</span> — blank means no summary. <strong>Two:</strong> the sender identity on the same card — without a <span class="ui">Reply-to address</span> nothing can be sent at all, the summary included, and with the <span class="ui">From name</span> and your company name both blank there is nothing to sign it with. <strong>Three:</strong> the run itself — if <span class="ui">Send chasers automatically</span> is off, or the morning schedule didn't fire, there was no round to report on. <span class="step-detail">Two silences are deliberate and not faults: a weekend closed by <span class="ui">Weekdays only</span> on which nothing else happened, and a <span class="ui">Dry run</span>.</span></p></div>
           </details>
           <details class="ts-item" id="ts-cc-never-chase-missed">
             <summary>A client on the "Never chase" list still got chased</summary>
@@ -970,11 +997,20 @@
 
         <h3 id="credit-requests">Requests and approvals<a class="anchor-link" href="#credit-requests" aria-label="Link to this section">#</a></h3>
         <ol class="step-list">
-          <li>Anyone can raise a request: <span class="ui">Request Limit</span>, pick or type the client, enter the <span class="ui">Limit requested (£)</span>, add notes and attachments, and <span class="ui">Send Request</span>. It's emailed to the credit contacts set in Settings, with a copy to you.</li>
+          <li>Anyone can raise a request: <span class="ui">Request Limit</span>, pick or type the client ("Select an existing client or type a new name…"), enter the <span class="ui">Limit requested (£)</span>, add notes and attachments, and <span class="ui">Send Request</span>. It's emailed to the credit contacts set in Settings, with a copy to you. <span class="step-detail">Type a name that isn't on file and an amber line reads "Not on file — a new client request will be raised". If anything close exists, <span class="ui">Did you mean:</span> offers it as a chip — one click ties the request to the real account instead of starting a second one.</span></li>
           <li>Pending requests sit in a rose panel at the top of the tab. An admin (or configured stand-in) clicks <span class="ui">Respond</span> and chooses <span class="ui">Approve</span> (setting the <span class="ui">Limit granted</span>, which may differ from the ask), <span class="ui">With underwriter</span> (keeps it open), or <span class="ui">Decline</span>.</li>
           <li><span class="ui">Send Decision</span> emails the requester — and an approved limit is written straight onto the client record, so credit checks use it immediately.</li>
+          <li>Finished with a request that should never have been raised? The <strong>bin icon</strong> beside <span class="ui">Respond</span> (<span class="ui">Delete this credit request</span>) removes it. It asks "Delete the credit limit request for …?" with "This cannot be undone.", then confirms "Credit request deleted." <span class="step-detail">The bin is shown to exactly the people who can <span class="ui">Respond</span> — company admins and anyone named in the credit request recipients — so a site login that can reach the page cannot destroy a credit record.</span></li>
         </ol>
+
         <p>Going the other way, the flag icon on a client's row raises a <strong>review request</strong> — "this limit can be reduced or removed". It emails the credit contacts and sits in an amber panel until actioned; <span class="ui">Done in Sage</span> also updates the limit in the app.</p>
+
+        <h3 id="credit-approve-writes">What approving actually writes<a class="anchor-link" href="#credit-approve-writes" aria-label="Link to this section">#</a></h3>
+        <ul>
+          <li><strong>The limit lands on the client.</strong> Where the request was raised under a spelling the account doesn't use, the match is still made and the toast says which account it went on — "Limit recorded against Hobbs Groundworks Ltd." That spelling is then <strong>kept on the account as an alias</strong>, because it is what the office will type next time.</li>
+          <li><strong>A client with no account gets one.</strong> Approving a name with nothing behind it reads "No client record matches … — approving will raise a pending client with this limit on it and email accounts to set it up." A stub account is raised, the limit goes on it, and it carries the Sage code PENDING (shown as "(account pending)") until your accounts team puts the real code on.</li>
+          <li><strong>A flagged credit status is cleared.</strong> If the granted limit covers what was asked for, a client sitting at <span class="ui">Needs Checking</span> or <span class="ui">No Credit</span> is moved to <span class="ui">OK</span>. A part-grant leaves the flag alone — and a deliberate <span class="ui">Percentage Upfront</span> or <span class="ui">Special Authority</span> is a standing instruction that a limit decision never overwrites.</li>
+        </ul>
 
         <h3 id="credit-limits-fix">If something's not right<a class="anchor-link" href="#credit-limits-fix" aria-label="Link to this section">#</a></h3>
         <div class="ts-list">
@@ -987,8 +1023,20 @@
             <div class="ts-body"><p class="ts-cause">Nobody is set up to receive credit limit request emails.</p><p>An admin should add the credit request recipients in Settings. The request itself is saved and still appears in the pending panel.</p></div>
           </details>
           <details class="ts-item" id="ts-cl-no-client">
-            <summary>"No client record matches … — the limit will not be recorded against a client."</summary>
-            <div class="ts-body"><p class="ts-cause">The request names a client with no matching record, so the approved limit has nowhere to live.</p><p>Add the client on the Clients page (or add the name as an alias to the right client), then set the limit from the Credit Limits list.</p></div>
+            <summary>"No client record matches … — approving will raise a pending client with this limit on it"</summary>
+            <div class="ts-body"><p class="ts-cause">The request names a client with no account behind it yet.</p><p>You can approve anyway: a stub account is raised, the limit is written onto it, and accounts are emailed to set it up properly — it shows as "(account pending)" with the Sage code PENDING until they do. Better still, check the <span class="ui">Did you mean:</span> chips first: if the client is already on file under another spelling, pick it and the limit goes on the real account.</p></div>
+          </details>
+          <details class="ts-item" id="ts-cl-not-recorded">
+            <summary>"… and the account could not be raised — the approved limit is NOT recorded anywhere."</summary>
+            <div class="ts-body"><p class="ts-cause">Approving tried to raise the stub account for an unknown client and couldn't.</p><p>Nothing was saved, so don't assume the limit is live. Add the client on the Clients page yourself, then set the limit from the Credit Limits list.</p></div>
+          </details>
+          <details class="ts-item" id="ts-cl-delete-refused">
+            <summary>"Could not delete the credit request."</summary>
+            <div class="ts-body"><p class="ts-cause">The delete didn't reach the server, or the request had already gone.</p><p>Refresh the page. If the request is still in the panel, try the bin again; if it isn't, it has already been deleted.</p></div>
+          </details>
+          <details class="ts-item" id="ts-cl-no-bin">
+            <summary>There's no bin icon on a pending request</summary>
+            <div class="ts-body"><p class="ts-cause">Deleting is gated on the same permission as responding, so you can see requests without being able to remove them.</p><p>Ask an administrator, or whoever is named in the credit request recipients, to delete it.</p></div>
           </details>
           <details class="ts-item" id="ts-cl-already-decided">
             <summary>"This request has already been approved/declined by …"</summary>
@@ -1047,7 +1095,7 @@
       </section>
       <section id="reports" aria-labelledby="reports-h">
         <h2 id="reports-h">Reports<a class="anchor-link" href="#reports" aria-label="Link to this section">#</a></h2>
-        <p>Open Reports from <span class="ui">Insights</span> — the <span class="ui">Reports &amp; exports</span> button at the top right — or from the <span class="ui">Reports</span> tile on the Overview. The Reports page is the catalogue: each card opens a full report with filters, key figures, a chart, a sortable table and <span class="ui">PDF</span> / <span class="ui">Excel</span> / <span class="ui">CSV</span> downloads. Every report is calculated from the same engines the credit-control emails use, so a report can never disagree with a chaser that's been sent. Reports are admin-level — Sales and Viewer tiers see "No reports available for your access level."</p>
+        <p>Open Reports from <span class="ui">Insights</span> — the <span class="ui">Reports &amp; exports</span> button at the top right — or from the <span class="ui">Reports</span> tile on the Overview. The Reports page is the catalogue, its cards gathered under group headings — <span class="ui">Sales &amp; Credit</span> holds <a href="#report-aged-debtors">Aged Debtors</a>, the <a href="#report-retention-register">Retention Register</a> and <a href="#report-chase-effectiveness">Chasing Effectiveness</a>. Each card opens a full report with filters, key figures, a chart, a sortable table and <span class="ui">PDF</span> / <span class="ui">Excel</span> / <span class="ui">CSV</span> downloads. Every report is calculated from the same engines the credit-control emails use, so a report can never disagree with a chaser that's been sent. Reports are admin-level — Sales and Viewer tiers see "No reports available for your access level."</p>
         <ul>
           <li><strong>PDF</strong> — a branded A4 document with your logo and the filters printed on it, for handing over.</li>
           <li><strong>Excel</strong> — a branded spreadsheet with frozen headers, live totals and a second <em>Basis</em> sheet listing the filters, assumptions and warnings.</li>
@@ -1068,11 +1116,12 @@
               <tr><td><span class="ui">Full financial year</span></td><td>This financial year in full, 1 April to 31 March.</td></tr>
               <tr><td><span class="ui">Last financial year</span></td><td>The previous 1 April to 31 March.</td></tr>
               <tr><td><span class="ui">Calendar year to date</span></td><td>1 January to today.</td></tr>
+              <tr><td><span class="ui">Calendar year</span></td><td>A whole January-to-December year, chosen with the <span class="ui">Year</span> box beside it.</td></tr>
               <tr><td><span class="ui">Custom range</span></td><td>Your own <span class="ui">From</span> and <span class="ui">To</span> dates.</td></tr>
             </tbody>
           </table>
         </div>
-        <p>Whichever you pick is printed on the report and on every export, so a figure never travels without its period. <span class="step-detail">Financial years run April to March.</span></p>
+        <p>Whichever you pick is printed on the report and on every export, so a figure never travels without its period. <span class="step-detail">Financial years run April to March. The <span class="ui">Year</span> box reaches ten years back and one year forward, so an old period is a click away without dropping to a custom range.</span></p>
 
         <h3 id="report-aged-debtors">Aged Debtors<a class="anchor-link" href="#report-aged-debtors" aria-label="Link to this section">#</a></h3>
         <p>Who owes you money, how old it is, and who's already being chased — always "as at today". Three <span class="ui">Detail</span> levels: <span class="ui">One line per client</span> (ageing buckets: Not yet due, 1–30, 31–60, 61–90, 90+ days), <span class="ui">Client with invoices</span> (a headline per client with its open invoices beneath), and <span class="ui">Invoice by invoice</span>. Filter the <span class="ui">Ageing</span> (e.g. "90 days and over") and <span class="ui">Chasing</span> ("Being chased" / "Chasing paused").</p>
@@ -1081,6 +1130,27 @@
 
         <h3 id="report-retention-register">Retention Register<a class="anchor-link" href="#report-retention-register" aria-label="Link to this section">#</a></h3>
         <p>Retention held against your invoices, when it falls due, and what's already overdue — including, unlike the Retentions page, retentions already returned. Like the page, it shows <strong>one line per contract</strong>: the <span class="ui">Invoices</span> column lists what was issued, the money columns are the contract's totals, and the due date is the latest across its invoices, with "mixed due dates" in the Status column where they disagree. The default <span class="ui">Status</span> filter, <span class="ui">Still held</span>, matches the Retentions page exactly; switch to <span class="ui">Returned</span> or <span class="ui">All</span> for the history. Set <span class="ui">Due</span> to <span class="ui">Overdue only</span> to list retention you can now invoice back — the warning line totals it for you.</p>
+
+        <h3 id="report-chase-effectiveness">Chasing Effectiveness<a class="anchor-link" href="#report-chase-effectiveness" aria-label="Link to this section">#</a></h3>
+        <p>What happened after each chaser went out. It pairs every reminder that actually reached a client with what then became of the thing it chased — an invoice paid, a retention returned — and reports the pattern stage by stage.</p>
+        <div class="guide-table-scroll">
+          <table class="guide-table">
+            <thead><tr><th scope="col">Column</th><th scope="col">What it means</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><span class="ui">Chasing</span></th><td>Which system did the chasing: credit control, or retention chasing.</td></tr>
+              <tr><th scope="row"><span class="ui">Stage</span></th><td>The rung of the ladder the email went at — shown only at the <span class="ui">Stage by stage</span> detail level.</td></tr>
+              <tr><th scope="row"><span class="ui">Chasers sent</span></th><td>How many reminders reached a client in the period.</td></tr>
+              <tr><th scope="row"><span class="ui">Items chased</span></th><td>How many invoices or retentions those reminders covered.</td></tr>
+              <tr><th scope="row"><span class="ui">Value chased</span></th><td>What those items were worth.</td></tr>
+              <tr><th scope="row"><span class="ui">Then happened</span></th><td>How many of them were settled inside the window you set.</td></tr>
+              <tr><th scope="row"><span class="ui">Value landed</span></th><td>What those settled items were worth.</td></tr>
+              <tr><th scope="row"><span class="ui">Conversion</span></th><td>Then happened as a share of Items chased.</td></tr>
+              <tr><th scope="row"><span class="ui">Median days to outcome</span></th><td>The typical gap between the chaser and the outcome.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Four filters shape it: the <span class="ui">Period</span>; <span class="ui">Detail</span> (<span class="ui">One line per system</span> or <span class="ui">Stage by stage</span>); <span class="ui">Chasing</span> (<span class="ui">Both</span>, <span class="ui">Credit control</span> or <span class="ui">Retention chasing</span>); and <span class="ui">Counts an outcome within</span>, the window an outcome must fall inside to be paired with the chaser — <span class="ui">14 days of the chaser</span> through to <span class="ui">90 days of the chaser</span>, 30 days by default.</p>
+        <div class="callout callout-warn"><strong>Association, not cause</strong>This report shows what happened <em>after</em> a chaser, not what the chaser caused. An invoice paid five days after a reminder may well have been paid anyway. The same warning prints on the report, on the PDF and in the Excel Basis sheet — and the honest way to read Conversion is "settled within the window", never "recovered by chasing". Quoting it as money the chasing brought in is the one thing this report cannot support.</div>
 
         <h3 id="reports-fix">If something's not right<a class="anchor-link" href="#reports-fix" aria-label="Link to this section">#</a></h3>
         <div class="ts-list">
@@ -1098,14 +1168,14 @@
           </details>
           <details class="ts-item" id="ts-rep-no-access">
             <summary>"You don't have access to this report."</summary>
-            <div class="ts-body"><p class="ts-cause">Your access tier doesn't include it — both current reports are admin-level.</p><p>Ask an administrator to raise your tier, or to run it for you.</p></div>
+            <div class="ts-body"><p class="ts-cause">Your access tier doesn't include it — every report here is admin-level.</p><p>Ask an administrator to raise your tier, or to run it for you.</p></div>
           </details>
         </div>
       </section>
 
       <section id="insights" aria-labelledby="insights-h">
         <h2 id="insights-h">Insights<a class="anchor-link" href="#insights" aria-label="Link to this section">#</a></h2>
-        <p>Insights is the charts page — pipeline, win-rate, invoiced revenue and outstanding balances — with the <strong>Overdue invoices</strong> list at the top: colour-banded by age (orange over 15 days, pink over 30, red over 45), most overdue first, each invoice number a link straight to the register. Hover any bar or point for the exact £ figure, and draft documents are excluded from every figure.</p>
+        <p>Insights is the charts page — pipeline, win-rate, invoiced revenue and outstanding balances — with the <strong>Overdue invoices</strong> list at the top: colour-banded by age (orange over 15 days, pink over 30, red over 45), most overdue first, each invoice number a link straight to the register. Hover any bar or point for the exact £ figure. <strong>Draft documents are excluded from every figure here</strong> — a draft has no number and is not owed by anyone — and there is no hidden start date: an unpaid invoice counts towards Outstanding and Overdue however old it is. <span class="step-detail">If these figures look higher than you remember, that is why. Older unpaid invoices used to be quietly left out; they are not any more.</span></p>
         <p><strong>One period selector drives the whole page.</strong> Pick <span class="ui">This financial year</span>, <span class="ui">Last financial year</span>, or the last <span class="ui">3</span>, <span class="ui">6</span>, <span class="ui">12</span> or <span class="ui">24</span> months, and every headline figure and chart moves together — no two cards can quietly cover different windows. The line under the heading always says which period you are looking at and what it is compared against. The comparison is like-for-like: the same-length period immediately before, or the same dates a year earlier for a financial year.</p>
         <p>Four headline figures sit across the top — <span class="ui">Invoiced revenue</span>, <span class="ui">Quotes won</span>, <span class="ui">Average days to pay</span> and <span class="ui">Outstanding today</span> — each with a green or red percentage against the comparison period. Green always means "better", so a <em>fall</em> in days-to-pay shows green.</p>
         <div class="callout"><strong>"As of today" cards</strong>Two cards deliberately ignore the period selector, because a balance is a snapshot and not a period figure: <span class="ui">Outstanding today</span> and <span class="ui">Top clients by outstanding balance</span>. Both say so on the card.</div>
@@ -1258,6 +1328,11 @@
           <li><a href="#ts-confirming-payment">The page stays on "Confirming your payment…"</a></li>
           <li><a href="#ts-sub-page-paid">The team keeps seeing the subscription page after paying</a></li>
         </ul>
+        <h3>Finding your way around</h3>
+        <ul>
+          <li><a href="#ts-search-area-failed">"Couldn't search … — there may be matches here"</a></li>
+          <li><a href="#ts-search-200-plus">An area's count shows "200+" instead of a number</a></li>
+        </ul>
         <h3>Leads</h3>
         <ul>
           <li><a href="#ts-leads-save-greyed">The Save button is greyed out in the lead dialog</a></li>
@@ -1349,7 +1424,10 @@
         <ul>
           <li><a href="#ts-cl-mismatch">The Outstanding here differs from the balance on the Chasing tab</a></li>
           <li><a href="#ts-cl-no-recipients">"No credit request recipients are configured — set them in Settings."</a></li>
-          <li><a href="#ts-cl-no-client">"No client record matches … — the limit will not be recorded against a client."</a></li>
+          <li><a href="#ts-cl-no-client">"No client record matches … — approving will raise a pending client with this limit on it"</a></li>
+          <li><a href="#ts-cl-not-recorded">"… and the account could not be raised — the approved limit is NOT recorded anywhere."</a></li>
+          <li><a href="#ts-cl-delete-refused">"Could not delete the credit request."</a></li>
+          <li><a href="#ts-cl-no-bin">There's no bin icon on a pending request</a></li>
           <li><a href="#ts-cl-already-decided">"This request has already been approved/declined by …"</a></li>
         </ul>
         <h3>The client register</h3>
