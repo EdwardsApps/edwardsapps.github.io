@@ -125,6 +125,7 @@
             <li><a href="#purchase-invoices">Invoice checking</a></li>
             <li><a href="#credit-check">Credit checks</a></li>
             <li><a href="#costings">Costings (P&amp;L)</a></li>
+            <li><a href="#reports">Reports</a></li>
           </ul>
         </div>
         <div class="toc-group">
@@ -174,6 +175,7 @@
           <li>Enter your <span class="ui">Email</span>, <span class="ui">Password</span> and <span class="ui">Confirm Password</span>, and click <span class="ui">Create account</span> — or use one of the <span class="ui">Continue with…</span> buttons.</li>
           <li>Type the 6-digit code from the <span class="ui">Verify your email</span> screen and click <span class="ui">Verify</span>. <span class="step-detail">No code? Click <span class="ui">Resend</span> and check spam.</span></li>
         </ol>
+        <div class="callout callout-warn"><strong>The cookie banner, and what “Accept all” now means</strong>On your first visit CrewBook asks about cookies, with two buttons: <span class="ui">Essential only</span> and <span class="ui">Accept all</span>. Essential cookies keep you signed in and are always on. <strong><span class="ui">Accept all</span> turns on Google analytics <em>and</em> Google advertising cookies</strong> — advertising storage, advertising user data and ad personalisation, which is how the app's own advertising is measured. Choosing <span class="ui">Essential only</span> leaves every one of them switched off, and nothing about the app works differently either way. Your choice is remembered in that browser; clearing the site's stored data asks again.</div>
         <p>Forgotten password? Click <span class="ui">Forgot password?</span> on the log-in page, enter your email, and follow the emailed link to set a new one. If you originally signed up with Google, Microsoft, Facebook or Apple, there's no CrewBook password to reset — use the same <span class="ui">Continue with…</span> button every time.</p>
 
         <h3 id="account-fix">If something's not right<a class="anchor-link" href="#account-fix" aria-label="Link to this section">#</a></h3>
@@ -206,7 +208,7 @@
         <ol class="step-list">
           <li><strong>Company Details</strong> — company name (required), logo, contact details and address.</li>
           <li><strong>Job Types</strong> — the pick-lists offered when creating jobs. It starts with Groundworks, Tarmac, Concrete, Drainage, Roofing and Fencing plus categories (Preparation, Main Works, Finishing, Remedial, Survey); add your own with Enter, remove with the ×. Editable later in Settings.</li>
-          <li><strong>SharePoint</strong> — optional. Choose <span class="ui">Yes, we use SharePoint / Microsoft 365</span> and enter your SharePoint site name (how CrewBook finds your Contracts list), or <span class="ui">No, we don't use SharePoint</span>. You must pick one; you can change it later.</li>
+          <li><strong>SharePoint</strong> — optional: "CrewBook can file the sales documents it produces onto your site, and can keep your nightly backup there". Choose <span class="ui">Yes, we use SharePoint / Microsoft 365</span> and enter your SharePoint site name (the word or two CrewBook matches to find your site), or <span class="ui">No, we don't use SharePoint</span> ("Keep documents and backups in CrewBook or on Google Drive instead"). You must pick one; you can change it later.</li>
           <li><strong>Add Workers</strong> — your first team members (name and phone). The rest can be added later on the Workers page.</li>
           <li><strong>Notifications</strong> — who gets emailed about what: holiday approvals and reminders, weekly wages, new suppliers, new clients, photo uploads. Leave a field blank to disable that notification.</li>
           <li><strong>Optional Features</strong> — <span class="ui">WhatsApp job briefs</span> (needs a one-off setup from <span class="path">Admin → Integrations</span> afterwards, about 20 minutes) and <span class="ui">Daily Google Drive backups</span> (nightly export of the whole database — works as soon as it's on).</li>
@@ -239,13 +241,14 @@
 
       <section id="team-access" aria-labelledby="team-access-h">
         <h2 id="team-access-h">Your team and who sees what<a class="anchor-link" href="#team-access" aria-label="Link to this section">#</a></h2>
-        <p>Staff are invited from <span class="path">Admin → Users &amp; Access</span>: type their email, pick a tier, click <span class="ui">Invite</span>. If the address already has a CrewBook login it joins your company immediately; otherwise they're attached automatically the first time they sign up with that email.</p>
+        <p>Staff are invited from <span class="path">Admin → Users &amp; Access</span> ("Invite users, set access tiers, link logins to workers, and choose visible pages"): type their email, pick a tier, click <span class="ui">Invite</span>. If the address already has a CrewBook login it joins your company immediately; otherwise they're attached automatically the first time they sign up with that email.</p>
+        <div class="callout"><strong>Who may send an invite</strong>Only the company <strong>Owner</strong> — whoever created the company — or someone on the <strong>Super Admin</strong> tier. Anyone else gets "Only company admins can invite members." and nothing is sent. Admins can still set tiers, page chips and linked workers on people already in the company; it is adding a new person that is reserved.</div>
         <div class="guide-table-scroll">
           <table class="guide-table">
             <thead><tr><th scope="col">Access tier</th><th scope="col">What they see by default</th></tr></thead>
             <tbody>
               <tr><th scope="row">Super Admin</th><td>Everything, always — page chips can't lock them out. The only tier with the Data Explorer. The company creator starts here.</td></tr>
-              <tr><th scope="row">Admin</th><td>Every page, including Admin Settings, Costings, Backup and QCI Sales; can invite and manage users.</td></tr>
+              <tr><th scope="row">Admin</th><td>Every page, including Admin Settings, Costings, Backup and QCI Sales; can manage existing users' tiers and permissions, though sending a new invite is the Owner's or a Super Admin's job.</td></tr>
               <tr><th scope="row">Office Staff</th><td>Dashboard, Calendar, Day View, Credit, Invoices, Workers, Holidays, Mileage Log, Message Delivery, Guide and Account.</td></tr>
               <tr><th scope="row">Site Staff</th><td>Dashboard, Calendar, Day View, Holidays, Mileage Log, Guide and Account — built for crews checking the day's work from a phone.</td></tr>
             </tbody>
@@ -257,10 +260,11 @@
 
       <section id="finding-your-way" aria-labelledby="finding-your-way-h">
         <h2 id="finding-your-way-h">Finding your way around<a class="anchor-link" href="#finding-your-way" aria-label="Link to this section">#</a></h2>
-        <p>The header holds the main pages — <span class="ui">Dashboard</span>, <span class="ui">Calendar</span>, <span class="ui">Day View</span>, <span class="ui">Credit</span>, <span class="ui">Invoices</span> — plus the <span class="ui">Team</span> dropdown (Workers, Holidays, Wages, Petty Cash, Mileage Log, Message Delivery). Sales lives in its own QCI area, entered via the <strong>QCI logo button</strong>. <span class="ui">Admin</span> (Settings, Costings, Backup) sits at the top right, along with your round initial button for Account and Logout. On a phone, less-used pages tuck behind <span class="ui">More</span> in the bottom bar.</p>
+        <p>The header holds the main pages — <span class="ui">Dashboard</span>, <span class="ui">Calendar</span>, <span class="ui">Day View</span>, <span class="ui">Credit</span>, <span class="ui">Invoices</span> — plus the <span class="ui">Team</span> dropdown (Workers, Holidays, Wages, Petty Cash, Mileage Log, Message Delivery). Sales lives in its own QCI area, entered via the <strong>QCI logo button</strong>. <span class="ui">Admin</span> (Settings, Backup) sits at the top right, along with your round initial button for Account and Logout. <a href="#costings">Costings</a> is no longer one of them — it lives in the QCI area now. On a phone, less-used pages tuck behind <span class="ui">More</span> in the bottom bar.</p>
         <ul>
           <li>You only see the pages your tier or custom permissions grant — a missing menu item usually means a missing page chip, not a fault.</li>
           <li>The <strong>search box</strong> in the header jumps straight to any contract number, client or site.</li>
+          <li>A <span class="ui">Back</span> button sits at the left end of the header on every page. It steps back one page exactly as the browser's own back button does, so following a search result or a job link and coming back is one click. <span class="step-detail">It hides itself when there is nowhere to go back to — the first page of a session, or a link opened straight into the app.</span></li>
           <li>Like CrewQCI, the app installs from the browser: <span class="path">Account → Install App</span> (on iPhone: Safari's Share → Add to Home Screen).</li>
           <li>The <span class="ui">?</span> button in the header opens this guide at the chapter for the page you're on — and inside the QCI area it opens the <a href="crewqci-guide.html">CrewQCI guide</a> instead, where the sales side is documented in full. The in-app <span class="ui">Guide</span> page is a condensed version, always to hand from the navigation.</li>
         </ul>
@@ -299,13 +303,13 @@
         <h3 id="calendar-add-job">Adding a job<a class="anchor-link" href="#calendar-add-job" aria-label="Link to this section">#</a></h3>
         <ol class="step-list">
           <li>Click <span class="ui">+ Add Job</span> and set the <span class="ui">Job Date</span> — or click <span class="ui">Multi-day?</span> and set start and end dates; the dialog confirms "This will create N working day jobs (weekends &amp; holidays excluded)."</li>
-          <li>If SharePoint is connected, type into <span class="ui">Select Contract from SharePoint</span> — picking a contract auto-fills the contract number, client, site, coordinator and contacts. Otherwise fill the fields by hand.</li>
+          <li>Type into <span class="ui">Select contract</span> ("Search by contract #, client, or site…") — it searches <strong>your own contract register</strong> as you type, listing each match as its contract number with the client and site beneath. Picking one auto-fills the contract number, client, site, coordinator and contacts. Otherwise fill the fields by hand. <span class="step-detail">This used to read from SharePoint, which meant no lookup at all unless you happened to keep a Contracts list there. It now reads the register you actually maintain, so it works for everyone.</span></li>
           <li>Add the <span class="ui">Full Address</span> (this is what puts the job on the Live Map and behind the Maps links), <span class="ui">What3Words</span> and contact details.</li>
           <li>Pick a <span class="ui">Job Category</span> and <span class="ui">Job Co-Ordinator</span>, set <span class="ui">Desired Workers</span>, tick <span class="ui">Remedial Job</span> if it's a return visit, and click <span class="ui">Add Job</span>.</li>
         </ol>
 
         <h3 id="calendar-provisional">Provisional bookings<a class="anchor-link" href="#calendar-provisional" aria-label="Link to this section">#</a></h3>
-        <p>Work that isn't signed off yet is pencilled in with <span class="ui">+ Prov.</span> — no contract number needed, just a client and/or site and the dates. Provisionals show as white dashed-border cards with a ⬡ badge. When the job is confirmed, click the green <span class="ui">→ Confirm</span> button, look up (or type) the contract number, and resolve any differences the dialog flags between what was pencilled in and what SharePoint says. Costs booked on a provisional follow it into Costings once it has its number.</p>
+        <p>Work that isn't signed off yet is pencilled in with <span class="ui">+ Prov.</span> — no contract number needed, just a client and/or site and the dates. Provisionals show as white dashed-border cards with a ⬡ badge. When the job is confirmed, click the green <span class="ui">→ Confirm</span> button, look up (or type) the contract number, and resolve any differences the dialog flags between what was pencilled in and what the contract register says. Costs booked on a provisional follow it into Costings once it has its number.</p>
         <p>The <span class="ui">Full Address</span> field has a <span class="ui">Use client's address</span> button beside it, which pulls the postal address straight off the client's account rather than making you re-key it. It fills in as one line, and you can edit it afterwards like any other address. <span class="step-detail">It needs a client name in the dialog, and an address saved on that client's account.</span></p>
 
         <h3 id="calendar-move">Rescheduling, deleting and closed periods<a class="anchor-link" href="#calendar-move" aria-label="Link to this section">#</a></h3>
@@ -318,8 +322,8 @@
         <h3 id="calendar-fix">If something's not right<a class="anchor-link" href="#calendar-fix" aria-label="Link to this section">#</a></h3>
         <div class="ts-list">
           <details class="ts-item" id="ts-cal-contract-search">
-            <summary>The contract search shows "No contracts found" or sits on "Loading contracts…"</summary>
-            <div class="ts-body"><p class="ts-cause">The SharePoint contract list hasn't loaded yet, or nothing matches what you typed.</p><p>Wait a moment and retype — the list retries automatically — or fill in the Contract No. and the other fields by hand. If it never loads, check the SharePoint connection under Admin.</p></div>
+            <summary>The contract search shows "No contracts found"</summary>
+            <div class="ts-body"><p class="ts-cause">Nothing in your contract register matches what you typed. The lookup searches contract number, client and site, and only contracts that exist in <a href="crewqci-guide.html#contracts">the QCI contract register</a> can be found.</p><p>Try fewer characters, or the client name instead of the number. If the contract genuinely isn't on the register yet, fill in the Contract No. and the other fields by hand and add the contract in QCI afterwards.</p></div>
           </details>
           <details class="ts-item" id="ts-cal-drop-refused">
             <summary>A job can't be dropped on a particular day</summary>
@@ -667,13 +671,14 @@
 
       <section id="mileage" aria-labelledby="mileage-h">
         <h2 id="mileage-h">Mileage log<a class="anchor-link" href="#mileage" aria-label="Link to this section">#</a></h2>
-        <p>Workers log business journeys and turn them into expense claims. Journeys are valued at the HMRC 45p/mile personal-car rate, or at the quarterly HMRC Advisory Fuel Rate matching the worker's company vehicle and engine size (set on their worker record). Everyone logs their own; admins see and log for anyone.</p>
+        <p>Workers log business journeys and turn them into expense claims. Journeys are valued at the <strong>55p/mile</strong> personal-car rate, or at the quarterly HMRC Advisory Fuel Rate matching the worker's company vehicle and engine size (set on their worker record). Everyone logs their own; admins see and log for anyone.</p>
         <figure class="guide-shot">
           <a class="shot-link" href="img/shots/mileage.png"><img class="feature-shot" src="img/shots/mileage.png" width="1400" height="508" loading="lazy" alt="CrewBook's mileage log showing journeys with miles, rates and values ready to claim"></a>
           <figcaption>Journeys ready to claim — tick several and convert them into one expense claim.</figcaption>
         </figure>
         <ol class="step-list">
           <li>Click <span class="ui">Log Journey</span>. Capture the route with <span class="ui">Locate</span> at each end (GPS, with road-distance lookup), type both addresses and use <span class="ui">Calculate Road Distance from Addresses</span>, or just type the miles.</li>
+          <li><strong>A journey can have as many stops as it really had.</strong> The form starts with <span class="ui">From</span> and <span class="ui">To</span>; <span class="ui">Add another stop</span> adds a leg, each one labelled <span class="ui">Then</span>, and the × on a row (<span class="ui">Remove this stop</span>) takes one out again. The last row is always the final destination. <span class="step-detail">The whole route then travels with the journey, joined by arrows — "Yard → Site A → Site B → Yard" — in the <span class="ui">From → To</span> column and on the expense claim it becomes, so a day spent hopping between sites reads as one journey instead of four.</span></li>
           <li>Tick <span class="ui">Return journey</span> for there-and-back (miles are doubled) and fill in the <span class="ui">Purpose</span>. <span class="step-detail">The form auto-saves as a draft while you type, so closing it mid-trip loses nothing.</span></li>
           <li>Check the <span class="ui">Claim Rate</span>. An <span class="ui">Extra</span> p/mile can be added where agreed — the amber panel then requires photo evidence.</li>
           <li>Click <span class="ui">Log Journey</span>, then later <span class="ui">Claim</span> on the row — or tick several and <span class="ui">Claim Selected</span> for one batch claim. <span class="step-detail">Either way a Pending expense claim is created in the Private Vehicle Use category, and the journeys move to "claimed". Deleting that claim later puts the journeys back, so no miles are ever lost.</span></li>
@@ -710,8 +715,9 @@
         <ol class="step-list">
           <li>Work the <span class="ui">Differences only</span> list: for each red figure, either tick <span class="ui">Invoice OK</span> to accept it, or click <span class="ui">+ Raise Query</span>.</li>
           <li>A query records the date, who raised it, the reason (price, quantity, quality, delivery, wrong job…) and the details — and can be emailed straight to the supplier's <span class="ui">Queries To</span> contact, copy to you.</li>
-          <li>If the query isn't resolved within 7 days, whoever raised it is emailed a reminder — repeating weekly until it's marked <span class="ui">Resolved</span>. When the credit note lands, click <span class="ui">Credit Received</span>.</li>
+          <li>If the query isn't resolved within 7 days, whoever raised it is emailed a reminder — repeating weekly until it's marked <span class="ui">Resolved</span>. When the credit note lands, click <span class="ui">Credit Received</span>. <span class="step-detail">Both are toggles that tick themselves once set: <span class="ui">Resolved</span> becomes <span class="ui">✓ Resolved</span>, <span class="ui">Credit Received</span> becomes <span class="ui">✓ Credit Received</span>.</span></li>
         </ol>
+        <p><strong>A query has three states, and they no longer look alike.</strong> Untouched, the control reads <span class="ui">+ Raise Query</span>. Once raised it reads <span class="ui">Queried: 14 Sep</span> with the reason beside it, in purple, and clicking it reopens the query to edit (the dialog is titled <span class="ui">Edit query</span> rather than <span class="ui">Raise a query</span>, and offers <span class="ui">Remove Query</span>). Once ticked <span class="ui">✓ Resolved</span> it keeps its date but drops to a quieter outline. The same control sits on a job in <a href="#day-view">Day View</a>, where it reads <span class="ui">Raise a query</span> and then <span class="ui">Queried 14 Sep</span> — and <strong>Other Costs</strong> rows carry it too, so a disputed one-off cost is chased exactly like a disputed load of material. <span class="step-detail">An open query and a resolved one used to look identical, which is how a settled query got chased a second time.</span></p>
 
         <h3 id="suppliers-tab">Suppliers<a class="anchor-link" href="#suppliers-tab" aria-label="Link to this section">#</a></h3>
         <p>The supplier list behind all of this: account code, legal and display names, the <span class="ui">Queries To</span> email, and the CIS toggle (CIS suppliers export with reverse-charge VAT code T21). Click any cell to edit in place. Suppliers created in a hurry carry the code PENDING, highlighted amber, until the real code from your accounting system is entered.</p>
@@ -753,16 +759,18 @@
 
       <section id="costings" aria-labelledby="costings-h">
         <h2 id="costings-h">Costings — the monthly P&amp;L<a class="anchor-link" href="#costings" aria-label="Link to this section">#</a></h2>
-        <p>Costings (admin only) is the per-contract profit and loss: every job's subcontractors, materials, hired plant, own plant, small tools and labour against its sales — live from the QCI invoicing, updating automatically. Pick <span class="ui">Monthly</span>, <span class="ui">FY YTD</span> (from 1 April) or <span class="ui">CY YTD</span> (from 1 January); click any row to drill into the contract's full cost breakdown, down to the individual items and the days they sit on.</p>
+        <p>Costings is the per-contract profit and loss: every job's subcontractors, materials, hired plant, own plant, small tools and labour against its sales — live from the QCI invoicing, updating automatically. Pick <span class="ui">Monthly</span>, <span class="ui">FY YTD</span> (from 1 April) or <span class="ui">CY YTD</span> (from 1 January); click any row to drill into the contract's full cost breakdown, down to the individual items and the days they sit on.</p>
+        <p><strong>Where to find it, and who can.</strong> Costings sits in the <a href="#qci-area">QCI area</a>, as the <span class="ui">Costings</span> tile under <strong>Pricing &amp; performance</strong> on the QCI Overview. It is no longer in the Admin menu, and the old address still works — an old bookmark lands in the right place. Access is its own <span class="ui">Costings</span> page chip rather than a rank: Admin and Super Admin have it by default, and an admin can switch it on for an Office or Site Staff login from <span class="path">Admin → Users &amp; Access</span> without handing over anything else. The <a href="#accruals">Accrual Log</a> is behind the same chip, being a drill-down of the same figures.</p>
+        <p>It <strong>opens on last month</strong>, not this one: costings are worked in arrears, and the current month is still filling up with jobs. Change the month at the top when you want a different one.</p>
         <figure class="guide-shot">
           <a class="shot-link" href="img/shots/costs.png"><img class="feature-shot" src="img/shots/costs.png" width="1400" height="508" loading="lazy" alt="CrewBook's costings page showing per-contract costs, sales, profit and margin for the month"></a>
           <figcaption>The month's P&amp;L — amber figures are accrued costs still waiting for their supplier invoice.</figcaption>
         </figure>
         <ul>
-          <li><strong>Overheads</strong> — enter <span class="ui">Plant Depreciation (£/month)</span> (divided across the period's paver days for the Own Plant rate) and <span class="ui">Small Tools &amp; Plant Repairs (£/month)</span> (spread across every job day). Both save as you type, per period.</li>
-          <li><strong>Reading the Sales column</strong> — green is invoiced; purple includes proforma/application revenue or an adjustment (marked *); a "← Prev mth" / "Next mth →" badge means the invoice was issued in a different month; a red REMEDIAL badge means no sales are expected.</li>
+          <li><strong>Overheads</strong> — enter <span class="ui">Plant Depreciation (£/month)</span> (divided across the period's paver days for the Own Plant rate) and <span class="ui">Small Tools &amp; Plant Repairs (£/month)</span> (spread across every job day). Both save as you type, per period. <span class="step-detail">A report covering several months adds up each month's own figures rather than repeating one month's across the window, so a quarter or a financial year recovers what you actually entered. Months you never filled in recover nothing, and the <a href="#report-contract-profitability">Contract Profitability</a> report names them.</span></li>
+          <li><strong>Reading the Sales column</strong> — green is invoiced; purple includes proforma/application revenue or an adjustment (marked *); a timing badge means the invoice was issued in a different month — <span class="ui">← Prev mth</span>, <span class="ui">Next mth →</span>, <span class="ui">← / →</span> when it is split across both, or <span class="ui">Other mth</span> for anything further away; a red REMEDIAL badge means no sales are expected. <span class="step-detail">The badge now comes from the sales documents themselves rather than a hand-set invoice date on the job, so contracts that used to show a blank Sales column and no badge at all — and so read as never invoiced — are correctly marked as billed in the month next door.</span></li>
           <li><strong>Moving revenue between months</strong> — the <span class="ui">Income Deferrals &amp; Accruals</span> panel records a deferral (push revenue later) or an accrual (pull it earlier) per contract, and both months' figures adjust with the * marker.</li>
-          <li><strong>Exports</strong> — <span class="ui">CSV</span> or a styled <span class="ui">Excel</span> workbook including the overhead inputs and the adjusted revenue summary; <span class="ui">Report</span> opens the matching profitability report for the same period.</li>
+          <li><strong>Exports</strong> — <span class="ui">CSV</span> or a styled <span class="ui">Excel</span> workbook including the overhead inputs and the adjusted revenue summary; <span class="ui">Report</span> opens the matching <a href="#report-contract-profitability">Contract Profitability</a> report for the same period.</li>
         </ul>
 
         <h3 id="accruals">Month-end accruals and the Accrual Log<a class="anchor-link" href="#accruals" aria-label="Link to this section">#</a></h3>
@@ -788,6 +796,54 @@
           </details>
         </div>
       </section>
+      <section id="reports" aria-labelledby="reports-h">
+        <h2 id="reports-h">Reports<a class="anchor-link" href="#reports" aria-label="Link to this section">#</a></h2>
+        <p>The Reports page is the catalogue of everything the app will total, filter, print and export for you. Open it from the <span class="ui">Reports</span> tile on the <a href="#qci-area">QCI Overview</a>, or from <span class="ui">Insights</span> via <span class="ui">Reports &amp; exports</span> at the top right. The cards are grouped: <strong>People</strong> holds the <a href="#absence-cost">Absence &amp; Cost</a> report, <strong>Money</strong> holds Contract Profitability and Invoices Not Received, and <strong>Sales &amp; Credit</strong> holds Aged Debtors, the Retention Register and Chasing Effectiveness — the three documented in the <a href="crewqci-guide.html#reports">CrewQCI guide</a>, which behave identically here.</p>
+        <p>Every report works the same way: filters across the top, key figures, a chart, a sortable table, and <span class="ui">PDF</span> / <span class="ui">Excel</span> / <span class="ui">CSV</span> downloads that match exactly what is on screen. Each carries a collapsible <span class="ui">How these figures are calculated</span> panel, and those same plain-English assumptions print on the PDF and in the Excel <em>Basis</em> sheet — so a figure can go to your accountant with its rules attached. Filters live in the web address, so a report can be bookmarked or its link shared. Reports are admin-level.</p>
+        <p>Reports covering a span of time share one <span class="ui">Period</span> picker: <span class="ui">Month</span>, <span class="ui">Last month</span>, <span class="ui">Last 3 months</span>, <span class="ui">Last 6 months</span>, <span class="ui">Last 12 months</span>, <span class="ui">Financial year to date</span>, <span class="ui">Full financial year</span>, <span class="ui">Last financial year</span>, <span class="ui">Calendar year to date</span>, <span class="ui">Calendar year</span> and <span class="ui">Custom range</span>. <span class="step-detail">Financial years run April to March. The <span class="ui">Year</span> box reaches ten years back and one year forward.</span></p>
+
+        <h3 id="report-contract-profitability">Contract Profitability<a class="anchor-link" href="#report-contract-profitability" aria-label="Link to this section">#</a></h3>
+        <p>The <a href="#costings">Costings</a> page for a whole period rather than one month: every contract's costs against its sales, with the profit and margin worked out. The columns are <span class="ui">Job No</span>, <span class="ui">Client</span>, <span class="ui">Site</span>, <span class="ui">Co-ord</span>, then the cost breakdown — <span class="ui">Subs</span>, <span class="ui">Materials</span>, <span class="ui">Hired Plant</span>, <span class="ui">Own Plant</span>, <span class="ui">Small Tools</span>, <span class="ui">Labour</span>, <span class="ui">Accrued</span>, <span class="ui">Total Cost</span> — then <span class="ui">Sales</span>, <span class="ui">Of which applied for</span>, <span class="ui">Profit</span> and <span class="ui">Margin</span>.</p>
+        <div class="callout"><strong>Overheads are added up month by month</strong>Own plant and small tools are recovered from the <span class="ui">Plant Depreciation (£/month)</span> and <span class="ui">Small Tools &amp; Plant Repairs (£/month)</span> figures you enter on the Costings page. Across a period of several months the report <strong>adds up each month's own figure</strong>. It does not take one month's number and multiply it by the number of months — so a quarter in which you raised depreciation halfway through recovers what you actually entered, not three times the first month. Months with nothing entered recover nothing, and the report says which ones: "No plant depreciation is set on the Costings page for …".</div>
+        <p><strong>Contracts with sales but no job costs</strong> are still listed — they are money in that the period can't explain — but their <span class="ui">Profit</span> and <span class="ui">Margin</span> are left blank and they are kept out of the totals, because a profit figure against no costs would be a fiction. A warning counts them: "N contracts have sales but no job cost records in this period — shown with blank profit and left out of the totals."</p>
+
+        <h3 id="report-invoices-not-received">Invoices Not Received<a class="anchor-link" href="#report-invoices-not-received" aria-label="Link to this section">#</a></h3>
+        <p>Everything you have ordered and used that no supplier has billed you for yet — the chasing list for the purchase side, and the answer to "what is still to come in?". One row per outstanding cost: <span class="ui">Job date</span>, <span class="ui">Days waiting</span>, <span class="ui">Supplier</span>, <span class="ui">Type</span>, <span class="ui">Description</span>, <span class="ui">Contract</span>, <span class="ui">Client</span>, <span class="ui">Site</span>, <span class="ui">Expected cost</span>, <span class="ui">Chased</span> and <span class="ui">Queries to</span>.</p>
+        <div class="guide-table-scroll">
+          <table class="guide-table">
+            <thead><tr><th scope="col">Filter</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><td><span class="ui">Waiting</span></td><td><span class="ui">Any age</span> (the default), <span class="ui">30+ days</span>, <span class="ui">60+ days</span> or <span class="ui">90+ days</span>.</td></tr>
+              <tr><td><span class="ui">Type</span></td><td><span class="ui">All types</span>, <span class="ui">Materials</span>, <span class="ui">Hired plant</span>, <span class="ui">Subcontractors</span> or <span class="ui">Dayworks &amp; haulage</span>.</td></tr>
+              <tr><td><span class="ui">Chased</span></td><td><span class="ui">All</span>, <span class="ui">Query raised</span> or <span class="ui">Not yet chased</span>.</td></tr>
+              <tr><td><span class="ui">Supplier</span></td><td><span class="ui">All suppliers</span>, or one of them — the list is built from the suppliers actually appearing in the report, so it only ever offers names with something outstanding.</td></tr>
+              <tr><td><span class="ui">Client</span></td><td><span class="ui">All clients</span>, or one of them.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-warn"><strong>Read the basis before you quote it</strong>Three things make this report different from the ones next to it. The amounts are <strong>ex VAT</strong> and they are the <strong>ordered</strong> or quoted cost, not an invoiced one — no invoice has arrived, so every figure is what you expect to be charged rather than what you have been. It is a <strong>position as at today</strong>, not a period report: run it tomorrow and the figures differ. And although it sits close to the purchase accrual, it is <strong>not</strong> the frozen snapshot the <a href="#accruals">Costings page takes at month end</a>. For a month-end reconciliation use the snapshot, not this.</div>
+        <p><strong>How far back it reaches</strong> is set once, by <span class="ui">Chase purchases from</span> under <span class="path">Admin → Lists &amp; Options</span>: job dates before it are ignored. Set it to the day you started entering purchases in the app, so work migrated from your old system isn't chased for invoices that were settled years ago. Left blank, everything is counted however old, and the report says so.</p>
+
+        <h3 id="reports-bk-fix">If something's not right<a class="anchor-link" href="#reports-bk-fix" aria-label="Link to this section">#</a></h3>
+        <div class="ts-list">
+          <details class="ts-item" id="ts-rep-bk-chase-from">
+            <summary>"Every purchase line in the app is counted, however old."</summary>
+            <div class="ts-body"><p class="ts-cause"><span class="ui">Chase purchases from</span> is blank, so Invoices Not Received is reaching back to your very first record — including anything migrated from a previous system, which nobody is waiting on an invoice for.</p><p>Set it under <span class="path">Admin → Lists &amp; Options</span> to the date you began entering purchases here, and the permanent backlog disappears.</p></div>
+          </details>
+          <details class="ts-item" id="ts-rep-bk-blank-profit">
+            <summary>A contract shows sales but its Profit is blank</summary>
+            <div class="ts-body"><p class="ts-cause">It has sales in the period but no job cost records, so there is nothing to subtract. It is deliberately left out of the totals rather than shown at 100% margin.</p><p>Usually the work sits in another month, or the contract number on the jobs doesn't match the one on the invoice. Check the jobs on that number and the period you've chosen.</p></div>
+          </details>
+          <details class="ts-item" id="ts-rep-bk-no-overheads">
+            <summary>"No plant depreciation is set on the Costings page for …"</summary>
+            <div class="ts-body"><p class="ts-cause">Contract Profitability adds up each month's own overhead figures, and those months have none entered — so no own plant or small tools cost is recovered for them.</p><p>Open <a href="#costings">Costings</a> at each month the warning names and fill in <span class="ui">Plant Depreciation (£/month)</span> and <span class="ui">Small Tools &amp; Plant Repairs (£/month)</span>, then run the report again.</p></div>
+          </details>
+          <details class="ts-item" id="ts-rep-bk-haulage-blank">
+            <summary>Plant-haulage rows export with no Supplier Ref</summary>
+            <div class="ts-body"><p class="ts-cause"><span class="ui">Plant haulage supplier</span> in Settings is blank, or the name in it doesn't match a record on the <a href="#suppliers-tab">Suppliers</a> tab. A plant movement records what moved, not who moved it, so the export has nothing to look up.</p><p>Set the name exactly as the supplier is stored, and check that supplier has an account code. Until then the column is left empty for the bookkeeper to complete — which is safer than guessing an account.</p></div>
+          </details>
+        </div>
+      </section>
       <section id="qci-area" aria-labelledby="qci-area-h">
         <h2 id="qci-area-h">The QCI sales area<a class="anchor-link" href="#qci-area" aria-label="Link to this section">#</a></h2>
         <p>Sales lives in its own area — QCI — with its own dark teal-and-gold look: leads, quotes, contracts, invoicing, proformas and applications, retentions, credit control, prospecting, insights and reports. It's the same sales pipeline as the standalone CrewQCI product, woven into your schedule — so this chapter covers how the two sides join, and the <a href="crewqci-guide.html">CrewQCI user guide</a> covers every sales page in full detail. The <span class="ui">?</span> Help button in the QCI header takes you straight there, at the chapter for the page you're on.</p>
@@ -797,11 +853,14 @@
         </figure>
 
         <h3 id="qci-entry">Getting in and out<a class="anchor-link" href="#qci-entry" aria-label="Link to this section">#</a></h3>
-        <p>Click the <strong>QCI logo button</strong> (the dark pill with a gold border) in the top navigation — or the bottom bar on a phone. You land on the QCI Overview with its own pill bar: Overview, Leads, Quotes, Contracts, Invoicing, Proformas/Applications, Retentions, Credit Control, Prospecting and Insights. Three areas sit off that bar, and all three are tiles on the QCI Overview: <strong>Settings</strong> is also the <span class="ui">⚙</span> cog in the QCI header, next to the <span class="ui">?</span> button; <strong>Reports</strong> also opens from <span class="ui">Insights</span> via <span class="ui">Reports &amp; exports</span> at the top right; and the client register is the <span class="ui">Clients</span> tile. <span class="ui">← CrewBook</span> at the top left brings you back. The button only appears for users with the <span class="ui">QCI Sales</span> page permission (Admin and Super Admin tiers have it by default). The QCI search box reads "Search QCI and planned works… use # to be exact" — results include a "Job days (The Book)" area, so one search spans sales <em>and</em> the schedule.</p>
+        <p>Click the <strong>QCI logo button</strong> (the dark pill with a gold border) in the top navigation — or the bottom bar on a phone. You land on the QCI Overview with its own pill bar: Overview, Leads, Quotes, Contracts, Invoicing, Proformas/Applications, Retentions, Credit Control, Prospecting and Insights. The Overview itself carries two figures in its header — <span class="ui">Outstanding today</span> and <span class="ui">Overdue</span>, red as soon as there is any — and groups its tiles in the order the work happens: <strong>Sales pipeline</strong> (Leads, Quotes, Contracts, Prospecting), <strong>Money in</strong> (Invoicing, Proformas/Applications, Retentions, Credit Control), <strong>Pricing &amp; performance</strong> (<a href="#costings">Costings</a>, Insights, Reports) and <strong>Records &amp; setup</strong> (Clients, Settings). Several tiles carry a live pill: Leads "N new", Invoicing the outstanding total, Credit Control the overdue count (green at nought, red above it), Clients how many are on file. Below them sits the <span class="ui">Overdue invoices</span> table — invoice, client, due date, days overdue, credit limit and owing — showing the worst eight, with <span class="ui">Show all N overdue</span> to open the lot and <span class="ui">Show the worst 8 only</span> to fold it back. Three areas sit off that bar, and all three are tiles on the QCI Overview: <strong>Settings</strong> is also the <span class="ui">⚙</span> cog in the QCI header, next to the <span class="ui">?</span> button; <strong>Reports</strong> also opens from <span class="ui">Insights</span> via <span class="ui">Reports &amp; exports</span> at the top right; and the client register is the <span class="ui">Clients</span> tile. <span class="ui">← CrewBook</span> at the top left brings you back. The button only appears for users with the <span class="ui">QCI Sales</span> page permission (Admin and Super Admin tiers have it by default). The QCI search box reads "Search QCI and planned works… use # to be exact" — results include a "Job days (The Book)" area, so one search spans sales <em>and</em> the schedule.</p>
 
         <h3 id="qci-search">Searching sales and the schedule together<a class="anchor-link" href="#qci-search" aria-label="Link to this section">#</a></h3>
         <p>Press Enter in the QCI search box for the results page. Results are grouped into one card per area — clients, credit control, leads, quotes, contracts, invoices and credit notes, proformas and applications, retentions, prospects, suppliers and job days — with a count strip across the top showing which areas the term appears in. Click a count to jump to that card, or any result to open the record on its own page. Areas with hits sort to the front, and a long list shows the first six with <span class="ui">Show {n} more</span> underneath.</p>
+        <p>The search runs on the server — each area asks the database for its matches rather than downloading a register into your browser — so it reaches your whole history rather than the most recent few thousand rows.</p>
         <ul>
+          <li><strong>Each area returns at most 200 matches.</strong> An area that fills up shows its count as <span class="ui">200+</span> instead of a number: narrow the term, don't assume 200 is all there is.</li>
+          <li><strong>An area that fails says so.</strong> Its card reads "Couldn't search job days (the book) — there may be matches here" with a <span class="ui">Retry</span> button, and a line above the results names every area that failed. A broken area is never reported as an empty one.</li>
           <li><strong>Punctuation and spacing are ignored</strong>, so "A &amp; C Hobbs", "A and C Hobbs" and "A+C Hobbs" all find the account stored as "A&amp;C Hobbs Ltd". Company endings like Ltd and plc are ignored too — the same client is rarely typed the same way twice.</li>
           <li>Client accounts match on their <strong>alias names</strong> as well, so a merged account is found under every name it has ever been invoiced under.</li>
           <li>Prefix with <strong>#</strong> (e.g. <span class="ui">#6532</span>) for an exact reference search — it matches the whole number only, so #6532 will not return 16532.</li>
@@ -868,11 +927,16 @@
         <h2 id="settings-h">Settings<a class="anchor-link" href="#settings" aria-label="Link to this section">#</a></h2>
         <p>The <span class="ui">Admin</span> button (top right) opens the settings page — "System settings, backups and admin tools". Changes save automatically as you leave each field; there's no Save button. The cards, top to bottom:</p>
         <ul>
-          <li><strong>Quick links</strong> — Costings, Backup &amp; Restore, the in-app User Guide, <span class="ui">Re-run Setup</span> (walk the setup wizard again), Data Explorer (Super Admins only) and Your account.</li>
+          <li><strong>Quick links</strong> — Backup &amp; Restore, the in-app User Guide, <span class="ui">Re-run Setup</span> (walk the setup wizard again), Data Explorer (Super Admins only) and Your account. <span class="step-detail"><a href="#costings">Costings</a> is not among them any more — it is a tile on the QCI Overview.</span></li>
           <li><strong>Integrations</strong> — WhatsApp, email, SharePoint and the backup destination: covered in the <a href="#integrations">next chapter</a>.</li>
           <li><strong>Users &amp; Access</strong> — invites, tiers, page chips and linked workers: covered under <a href="#team-access">your team</a>.</li>
           <li><strong>Recipients</strong> — who gets emailed about credit limit requests, new client requests and approvals, plus the <span class="ui">Expense approver email</span> and <span class="ui">Expense payer email</span>. An empty list means "saved but not emailed", so fill these in early.</li>
-          <li><strong>Lists &amp; Options</strong> — the dropdown lists used across the app: sectors, lead sources, payment terms, quote statuses, credit authorisers, job titles, plant/equipment types, the Dashboard tonnage suppliers and paver plant types, and the Day View heavy plant list. Type and press Enter to add; × to remove.</li>
+          <li><strong>Lists &amp; Options</strong> — the dropdown lists used across the app: sectors, lead sources, payment terms, quote statuses, credit authorisers, job titles, plant/equipment types, the Dashboard tonnage suppliers and paver plant types, and the Day View heavy plant list. Type and press Enter to add; × to remove. Two free-standing fields at the foot of the same card drive the purchase side:
+            <ul>
+              <li><span class="ui">Plant haulage supplier</span> — "Who carries your plant between sites. Shown as the supplier on plant-haulage lines in Purchase Invoices (blank = no supplier on those lines)". Type the name exactly as it appears on the <a href="#suppliers-tab">Suppliers</a> tab: the <a href="#purchase-export">Sage export</a> looks it up there and writes that supplier's account code into the <span class="ui">Supplier Ref</span> column on every plant-haulage row. <span class="step-detail">Left blank, or set to a name with no supplier record behind it, those rows export with Supplier Ref empty for the bookkeeper to complete — which is what they always did before this field existed.</span></li>
+              <li><span class="ui">Chase purchases from</span> — "The date you started entering purchases here. Invoices Not Received ignores anything earlier, so migrated history is not chased (blank = everything)". It is the reach-back for the <a href="#report-invoices-not-received">Invoices Not Received</a> report and nothing else.</li>
+            </ul>
+          </li>
           <li><strong>Suppliers → Sage</strong> — exports supplier records in the Sage template, stamping what's been sent.</li>
           <li><strong>Backup &amp; Restore</strong> and <strong>HMRC Fuel Rates</strong> — below.</li>
         </ul>
@@ -897,7 +961,7 @@
         <p>No setup needed — notifications, wage summaries and sales documents are emailed automatically under your company name. If you'd rather sends came from your own mailbox, set the <span class="ui">Preferred connected mailbox</span> (Outlook or Gmail) and the <span class="ui">Sender name on emails</span>.</p>
 
         <h3 id="sharepoint-integration">SharePoint<a class="anchor-link" href="#sharepoint-integration" aria-label="Link to this section">#</a></h3>
-        <p>Optional. Enter your <span class="ui">SharePoint site name</span> — part of the site's name is enough; this is the field that makes the connection work — and turn on <span class="ui">Use SharePoint</span>. CrewBook can then pre-fill jobs from your Contracts list as you type a contract number.</p>
+        <p>Optional — "File the sales documents CrewBook produces onto your SharePoint site, and keep your nightly backup there." Enter your <span class="ui">SharePoint site name</span> (part of the site's name is enough; this is the field that makes the connection work) and turn on <span class="ui">Use SharePoint</span>. You may also need to connect your Microsoft account in Settings afterwards. <span class="step-detail">Filing documents and backups is all it does now. Looking a contract up when you book a job no longer goes near SharePoint — that reads <a href="#calendar-add-job">your own contract register</a>, so it works whether you use SharePoint or not.</span></p>
 
         <h3 id="integrations-fix">If something's not right<a class="anchor-link" href="#integrations-fix" aria-label="Link to this section">#</a></h3>
         <div class="ts-list">
@@ -983,7 +1047,7 @@
         </ul>
         <h3>Calendar</h3>
         <ul>
-          <li><a href="#ts-cal-contract-search">The contract search shows "No contracts found" or sits on "Loading contracts…"</a></li>
+          <li><a href="#ts-cal-contract-search">The contract search shows "No contracts found"</a></li>
           <li><a href="#ts-cal-drop-refused">A job can't be dropped on a particular day</a></li>
           <li><a href="#ts-cal-failed-create">"Failed to create job / move job / delete job — please try again."</a></li>
           <li><a href="#ts-cal-no-capacity">No green "+N" capacity number on a day</a></li>
@@ -1060,6 +1124,13 @@
           <li><a href="#ts-cost-own-plant">The Own Plant column is all dashes</a></li>
           <li><a href="#ts-cost-freeze-greyed">"Freeze accruals at this date" is greyed out</a></li>
           <li><a href="#ts-cost-record-deleted">An Accrual Log line shows "Record deleted"</a></li>
+        </ul>
+        <h3>Reports</h3>
+        <ul>
+          <li><a href="#ts-rep-bk-chase-from">"Every purchase line in the app is counted, however old."</a></li>
+          <li><a href="#ts-rep-bk-blank-profit">A contract shows sales but its Profit is blank</a></li>
+          <li><a href="#ts-rep-bk-no-overheads">"No plant depreciation is set on the Costings page for …"</a></li>
+          <li><a href="#ts-rep-bk-haulage-blank">Plant-haulage rows export with no Supplier Ref</a></li>
         </ul>
         <h3>The QCI sales area</h3>
         <ul>
