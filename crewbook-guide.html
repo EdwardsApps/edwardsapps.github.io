@@ -359,7 +359,7 @@
         <p>Chip colours carry live information: blue = WhatsApp brief sent, green = brief read, amber = the worker has a day status (sick, holiday…) and probably shouldn't be on the job.</p>
 
         <h3 id="day-view-booking">Booking materials, plant and subs<a class="anchor-link" href="#day-view-booking" aria-label="Link to this section">#</a></h3>
-        <p>Every material, hired plant item, subcontractor and other cost has a circle icon — click it once the order is actually placed and the chip turns yellow with a tick. The Dashboard's Unbooked Items card is driven by exactly these ticks. Booking a material opens inline boxes for the order reference and delivered quantities on every material, whoever the supplier is, so tonnages can be trued up after the day. An amber ⚠ triangle on a chip means it carries a note — tap to read it.</p>
+        <p>Every material, hired plant item, subcontractor and other cost has a circle icon — click it once the order is actually placed and the chip turns yellow with a tick. These ticks drive the Dashboard's Unbooked Items card, which counts the materials, hired plant and subcontractors among them. A <span class="ui">Split Load Charge</span> is the one exception: it sits under the material it belongs to and its circle mirrors that material's — tick either one and both are booked. Booking a material opens inline boxes for the order reference and delivered quantities on every material, whoever the supplier is, so tonnages can be trued up after the day. An amber ⚠ triangle on a chip means it carries a note — tap to read it.</p>
         <p>When you type a supplier name that isn't on file, CrewBook checks for near-misses first — typos, part-names and spacing differences, so "FM Conway" finds "F M Conway Ltd". Any it finds are listed under <span class="ui">Similar suppliers already exist — is it one of these?</span>, and the add button reads <span class="ui">None of these — add "…" as new</span> so you have to mean it. While that list is showing, pressing Enter won't create the supplier. The client name on a job does the same, offering a <span class="ui">Did you mean:</span> row of existing accounts before it raises a new-client request.</p>
         <p>Each job card also carries its <strong>credit status</strong> badge (click to change — Needs Checking, OK, No Credit, Percentage Upfront, Special Authority) and its <strong>invoice status</strong> badge (Not Invoiced red, Draft Raised blue, Invoiced green, Proforma amber) — click it to set the status and which job days it applies to. Both feed the Dashboard's checklists.</p>
 
@@ -381,6 +381,10 @@
             <summary>"[Worker] is already on this job"</summary>
             <div class="ts-body"><p class="ts-cause">The name was dragged or tapped onto the same job twice — CrewBook refuses the second one rather than showing the worker on the job twice.</p><p>Nothing to fix; the worker is already there. To move them elsewhere, drag their existing chip to the other job.</p></div>
           </details>
+          <details class="ts-item" id="ts-dv-split-charge-tick">
+            <summary>Ticking a Split Load charge ticks its material too</summary>
+            <div class="ts-body"><p class="ts-cause">The charge has no booked state of its own: its circle shows the material's, and clicking either toggles both.</p><p>That's deliberate — the charge belongs to the material it sits under, which is also why it's kept out of the loose daywork and haulage chips. Two chips turn yellow, but the Unbooked Items card only ever counted the material.</p></div>
+          </details>
         </div>
       </section>
 
@@ -396,7 +400,7 @@
           <li><strong>Job Setup</strong> — click any row to edit the client, contract number, site, coordinator, address, What3Words and contacts. Changing the contract number offers to apply it to the site's other days and stamp it onto linked costs; editing the site or client on a numbered contract syncs across its other days automatically. Job actions live here too: <span class="ui">WhatsApp gang</span>, <span class="ui">Move day</span> (everything moves with it), <span class="ui">Add another day</span> (same details, fresh costs), and the danger zone — <span class="ui">Cancel job…</span> with a reason (stays on the calendar, struck through, reinstatable) or a two-step permanent delete.</li>
           <li><strong>Workers</strong> — the gang with shifts, driver ticks, and subsistence/hotel allowances per worker.</li>
           <li><strong>Own Plant</strong> — tick the company plant on site (Big Plant, Smaller Plant, Incidentals &amp; Tools). Picking a paver adds its usual rollers and opens the haulage form — movement, quoted cost (auto-filled), from/to, and an invoice check. <strong>Changes here only save when you click <span class="ui">Save plant</span>.</strong></li>
-          <li><strong>Materials</strong> — orders with supplier, quantity, unit and price; <span class="ui">From Yard</span> for own stock; <span class="ui">Split Load</span> for two materials on one wagon (its charge line is added automatically); delivery times with an auto-fill for multi-load tonnage runs; daywork charges; and a per-item <strong>invoice check</strong> — enter the invoiced figures and the icons tell you green = matches, amber = under, red = over. <span class="ui">Contra Charge</span> records a credit note due from the supplier.</li>
+          <li><strong>Materials</strong> — orders with supplier, quantity, unit and price; <span class="ui">From Yard</span> for own stock; <span class="ui">Split Load</span> for two materials on one wagon — its charge line is added automatically, stays tied to that material and follows the material's booked tick rather than a separate one you tick yourself. Where a day has more than one split load, each charge is matched to its own material by order reference first and then by supplier, so editing one load's supplier or order reference updates the right charge instead of the first one found; delivery times with an auto-fill for multi-load tonnage runs; daywork charges; and a per-item <strong>invoice check</strong> — enter the invoiced figures and the icons tell you green = matches, amber = under, red = over. <span class="ui">Contra Charge</span> records a credit note due from the supplier.</li>
           <li><strong>Hired Plant / Subcontractors</strong> — rates, ordered prices and invoice checks. Setting a hire's from/to dates puts it on every job day it spans; <span class="ui">Invoice logged elsewhere</span> and <span class="ui">Apply invoice to another day?</span> stop a multi-day invoice being counted twice. Ticking <span class="ui">CIS Deductible</span> on a sub shows the 20%-of-labour deduction live.</li>
           <li><strong>Other Costs</strong> — grab lorries, testing, traffic management, drawings, with the same booking and invoice checks.</li>
           <li><strong>Media</strong> — photos, videos, sign-off sheets and documents uploaded from site; notes, category badges, automatic compression, and one summary email per batch to the office. Uploads surface on the Dashboard for a month. See <a href="#job-editor-notes">notes on site photos</a> below.</li>
@@ -676,7 +680,7 @@
 
       <section id="mileage" aria-labelledby="mileage-h">
         <h2 id="mileage-h">Mileage log<a class="anchor-link" href="#mileage" aria-label="Link to this section">#</a></h2>
-        <p>Workers log business journeys and turn them into expense claims. Journeys are valued at the <strong>55p/mile</strong> personal-car rate, or at the quarterly HMRC Advisory Fuel Rate matching the worker's company vehicle and engine size (set on their worker record). Everyone logs their own; admins see and log for anyone.</p>
+        <p>Workers log business journeys and turn them into expense claims. Everyone logs their own; admins see and log for anyone. What a journey is worth depends on the vehicle on the worker's record. A <strong>personal car</strong> is paid 55p a mile for the first 10,000 business miles in the tax year and 25p a mile above that. A <strong>company car</strong> is paid the quarterly HMRC Advisory Fuel Rate matching its fuel type and engine size, with no 10,000-mile band at all. See <a href="#mileage-band">the 10,000-mile band</a> below.</p>
         <figure class="guide-shot">
           <a class="shot-link" href="img/shots/mileage.png"><img class="feature-shot" src="img/shots/mileage.png" width="1400" height="508" loading="lazy" alt="CrewBook's mileage log showing journeys with miles, rates and values ready to claim"></a>
           <figcaption>Journeys ready to claim — tick several and convert them into one expense claim.</figcaption>
@@ -685,9 +689,45 @@
           <li>Click <span class="ui">Log Journey</span>. Capture the route with <span class="ui">Locate</span> at each end (GPS, with road-distance lookup), type both addresses and use <span class="ui">Calculate Road Distance from Addresses</span>, or just type the miles.</li>
           <li><strong>A journey can have as many stops as it really had.</strong> The form starts with <span class="ui">From</span> and <span class="ui">To</span>; <span class="ui">Add another stop</span> adds a leg, each one labelled <span class="ui">Then</span>, and the × on a row (<span class="ui">Remove this stop</span>) takes one out again. The last row is always the final destination. <span class="step-detail">The whole route then travels with the journey, joined by arrows — "Yard → Site A → Site B → Yard" — in the <span class="ui">From → To</span> column and on the expense claim it becomes, so a day spent hopping between sites reads as one journey instead of four.</span></li>
           <li>Tick <span class="ui">Return journey</span> for there-and-back (miles are doubled) and fill in the <span class="ui">Purpose</span>. <span class="step-detail">The form auto-saves as a draft while you type, so closing it mid-trip loses nothing.</span></li>
-          <li>Check the <span class="ui">Claim Rate</span>. An <span class="ui">Extra</span> p/mile can be added where agreed — the amber panel then requires photo evidence.</li>
-          <li>Click <span class="ui">Log Journey</span>, then later <span class="ui">Claim</span> on the row — or tick several and <span class="ui">Claim Selected</span> for one batch claim. <span class="step-detail">Either way a Pending expense claim is created in the Private Vehicle Use category, and the journeys move to "claimed". Deleting that claim later puts the journeys back, so no miles are ever lost.</span></li>
+          <li>Check the <span class="ui">Claim Rate</span>. An <span class="ui">Extra</span> p/mile can be added where agreed — an amber <span class="ui">Evidence required for higher rate</span> panel then asks for a photo (the journey still saves without one, so take it). <span class="step-detail">Underneath, the form shows what the journey will come to: <span class="ui">Total: £84.70 (55p × 154 miles)</span>. If the journey would take the claimant past 10,000 business miles for the year, that estimate turns amber instead, gives the rate breakdown and adds a second line — <span class="ui">Joe Bloggs already has 9,900 business miles in 2026/27. Miles past 10,000 are paid at 25p (HMRC approved rate).</span></span></li>
+          <li>Click <span class="ui">Log Journey</span>, then later <span class="ui">Claim</span> on the row — or tick several and use <span class="ui">Claim Selected (3)</span>, or <span class="ui">Claim All (12)</span>, for one batch claim. <span class="step-detail">Either way a Pending expense claim is created in the Private Vehicle Use category, and the journeys move to "claimed". Deleting that claim later puts the journeys back, so no miles are ever lost.</span></li>
         </ol>
+
+        <h3 id="mileage-band">The 10,000-mile band<a class="anchor-link" href="#mileage-band" aria-label="Link to this section">#</a></h3>
+        <p>A personal car is paid <strong>55p a mile for the first 10,000 business miles</strong> a claimant drives in a tax year, and <strong>25p a mile</strong> for every mile after that. Both figures are per person and per tax year, and the tax year runs 6 April to 5 April — a journey dated 6 April starts the new year's allowance whatever time of day it was logged. Company cars are on advisory fuel rates and have no band: their journeys are valued exactly as they are stored and are never split.</p>
+        <p>Only <strong>claimed</strong> and <strong>logged</strong> journeys count towards the 10,000. Drafts are left out of every total, and a draft's <span class="ui">Rate</span> column is simply its own rate — drafts never show a split. A split rate is worked out live for the journeys-to-claim list only; a claimed row below shows whatever rate is stored on the journey itself, and the claim's own description and notes are the full record either way.</p>
+        <p>Above the journey list sits a <strong>tax-year card</strong> per claimant: one for the worker you have selected, for this tax year, plus one for every worker and tax year that still has a journey waiting to be claimed. Set the filter to <span class="ui">All workers</span> and the card for today drops off, leaving only the ones with miles outstanding. Each card reads:</p>
+        <ol class="step-list">
+          <li>The heading, top left — <span class="ui">Joe Bloggs · business miles, tax year 2026/27 (6 Apr 2026 – 5 Apr 2027)</span>.</li>
+          <li>The running total, top right — <span class="ui">9,950.5 of 10,000 at 55p</span>, counting miles already claimed plus miles still to claim.</li>
+          <li>A bar 10,000 miles wide: solid blue for miles claimed, paler blue alongside for miles still to claim. Under it, <span class="ui">Claimed 8,200 · to claim 1,750.5 · 49.5 left at 55p</span> — or, once the two together pass the line, <span class="ui">Claimed 9,000 · to claim 1,240.5 · 240.5 past 10,000</span> with the last part in amber.</li>
+        </ol>
+        <div class="callout"><strong>The card's colour is the early warning.</strong>It is blue below 9,000 miles, tints a light amber from 9,000, and goes fully amber once the claimant is past 10,000. No message says someone is getting close: until the line is actually crossed all you have is that colour and the running figures under the bar — the miles counted so far and how many are left at 55p — so glance at the card before promising anyone a rate.</div>
+        <p>Past that, the card spells the position out. When the miles <em>already claimed</em> have passed the line it warns <span class="ui">Past 10,000 claimed miles: every further mile in 2026/27 is paid at 25p (HMRC approved rate).</span> When the claimed miles are still under but the journeys waiting to be claimed would cross it, the warning reads <span class="ui">The journeys to claim cross 10,000 miles: 240.5 mi at 25p instead of 55p, £72.15 less. Rows past the line are marked below; values assume they are claimed in date order.</span></p>
+        <p>A worker on a company car gets no card at all — just a plain grey line reading <span class="ui">Joe Bloggs · company car — paid advisory fuel rates, no 10,000-mile band.</span></p>
+
+        <h3 id="mileage-crossing">Journeys that cross the line<a class="anchor-link" href="#mileage-crossing" aria-label="Link to this section">#</a></h3>
+        <p>A journey with miles on both sides of 10,000 is tinted amber in the journeys-to-claim list, on desktop and on a phone alike, and its <span class="ui">Rate</span> cell shows both halves instead of one rate — <span class="ui">100 mi @ 55p + 100 mi @ 25p</span>, with <span class="ui">Past 10,000 business miles in 2026/27</span> on hover. On a phone the same row reads <span class="ui">100 mi @ 55p + 100 mi @ 25p (past 10,000)</span>. A journey wholly past the line shows the 25p half only; one wholly under it shows a single rate as it always did. The tint and the two-part rate belong to that list alone — once a journey is claimed it drops to the claimed list, which is never tinted and shows the rate stored on the journey.</p>
+        <p>Where a journey carries its own agreed <span class="ui">Extra</span> p/mile it shows as <span class="ui">+5p</span> beside the rate, and that extra is added on top of <em>both</em> bands — so a mile past 10,000 on a journey with 5p extra is paid 30p, not 25p.</p>
+        <div class="callout"><strong>Claiming out of order can't cost anyone money.</strong>Miles already claimed in the tax year use up the 10,000 first, and the values in the list assume the journeys still to claim are taken in date order. Claim a later journey before an earlier one and the earlier one simply takes whatever is left of the band — no more than 10,000 miles in a tax year can ever be paid at 55p, whichever order you claim in.</div>
+
+        <h3 id="mileage-claiming">What a claim shows before you commit<a class="anchor-link" href="#mileage-claiming" aria-label="Link to this section">#</a></h3>
+        <p>Ticking several journeys and claiming them opens <span class="ui">Review Batch Claim</span>, with the number of journeys underneath the title. Each journey is listed, and any that meets the line is annotated in amber: <span class="ui">Crosses 10,000 business miles for 2026/27 partway through this journey</span>, or <span class="ui">Already past 10,000 business miles for 2026/27</span> when there are no full-rate miles left for it at all.</p>
+        <p>Below the list is the before-and-after panel, one box per tax year the claim touches. Its first line is <span class="ui">Joe Bloggs · tax year 2026/27: 8,200 → 9,950.5 business miles claimed</span> — what the claimant had claimed in that year, and what they will have claimed once you confirm. The second line is the part worth reading:</p>
+        <div class="guide-table-scroll">
+          <table class="guide-table">
+            <thead><tr><th scope="col">The box is</th><th scope="col">and the second line reads</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Blue</th><td><span class="ui">49.5 miles left at the full rate after this claim.</span> — the whole claim is inside the band.</td></tr>
+              <tr><th scope="row">Amber</th><td><span class="ui">This claim goes past 10,000: 240.5 mi at 25p (HMRC approved rate above 10,000), £72.15 less than at the full rate.</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The total miles sit bottom left as <span class="ui">1750.5 total miles</span>, with <span class="ui">Cancel</span> and <span class="ui">Confirm Claim</span> on the right. Confirming gives you <span class="ui">3 journeys claimed</span> — that toast always says "journeys", even for one. Only a personal car's journeys feed the before-and-after panel, so a company car's miles in the same batch add nothing to it.</p>
+        <p>Claiming a single journey from its row asks <span class="ui">Convert to expense claim?</span> and prices it fresh before it asks. Where it crosses the line the question spells out the split, and where claiming it on its own would be worth something different from the figure in the list, it says both: <span class="ui">154 miles, Yard → Site A → Yard — £68.50 — 100 mi @ 55p + 54 mi @ 25p: past 10,000 business miles in 2026/27 (the list shows £38.50 assuming earlier journeys are claimed first; claimed on its own now it is £68.50)</span>. <span class="ui">Yes, create claim</span> commits it.</p>
+        <p>Whichever route you take, the split is written into the expense claim itself. The claim's notes carry <span class="ui">Past 10,000 business miles in tax year 2026/27: 240.5 mi paid at 25p (HMRC approved rate above 10,000).</span>, and a blanket extra rate entered on a batch adds <span class="ui">Includes blanket additional 5p/mile</span> above it. Once a journey has been claimed, what it was worth is fixed — nothing claimed later re-prices it. Stored rates are never rewritten either, so an old journey logged at 45p stays 45p.</p>
+        <div class="callout"><strong>The claim is the record of what was paid.</strong>When you need the exact 55p/25p split for a claim — to answer a query, or to check a wage run — open the claim on <a href="#petty-cash">Petty cash &amp; expenses</a> and read its description and notes. That is where the breakdown is written out in full.</div>
+
         <div class="ts-list">
           <details class="ts-item" id="ts-mi-location-denied">
             <summary>"Location access denied. Please allow in browser settings."</summary>
@@ -700,6 +740,34 @@
           <details class="ts-item" id="ts-mi-address">
             <summary>"Could not find one of the addresses"</summary>
             <div class="ts-body"><p class="ts-cause">The address couldn't be located, or no driving route was found.</p><p>Use a fuller address with the postcode — or type the miles in yourself.</p></div>
+          </details>
+          <details class="ts-item" id="ts-mi-low-value">
+            <summary>A claim came out lower than miles × 55p</summary>
+            <div class="ts-body"><p class="ts-cause">The claimant has passed 10,000 business miles for the tax year, so some or all of those miles are paid at 25p.</p><p>Check the tax-year card above the list: it shows how much of the band is left, and an amber row in the journeys-to-claim list shows which journeys are split. This isn't an error — 55p only covers the first 10,000 business miles a person drives between 6 April and 5 April. The exact split is written into the claim's description and notes on <a href="#petty-cash">Petty cash &amp; expenses</a>.</p></div>
+          </details>
+          <details class="ts-item" id="ts-mi-two-figures">
+            <summary>The confirm dialog quotes a different amount from the row</summary>
+            <div class="ts-body"><p class="ts-cause">The list prices every journey as though the ones before it have already been claimed. Claim one on its own, out of order, and it takes whatever band is actually free at that moment instead.</p><p>The dialog says so in as many words — <span class="ui">the list shows £38.50 assuming earlier journeys are claimed first; claimed on its own now it is £68.50</span>. The dialog's figure is the one that will be claimed. Claim in date order, or use <span class="ui">Claim All</span>, and the two agree.</p></div>
+          </details>
+          <details class="ts-item" id="ts-mi-split-not-stamped">
+            <summary>"The 55p/25p split is in the claim notes but could not be saved on the journeys yet (MileageLog needs publishing in the Builder)."</summary>
+            <div class="ts-body"><p class="ts-cause">The claim went through, but the journey record can't yet hold the 55p/25p split — the mileage fields it is written onto haven't been published in the Builder.</p><p>The claim is unaffected: its amount is right, and its description and notes carry the breakdown in full on <a href="#petty-cash">Petty cash &amp; expenses</a>. All that's missing is the copy of the split on the journeys themselves, so a claimed row shows one rate rather than the two halves. An admin publishing the mileage entity in the Builder clears it, and claims made after that stamp their journeys as well. A single journey says the same thing in the singular — <span class="ui">…could not be saved on the journey yet…</span></p></div>
+          </details>
+          <details class="ts-item" id="ts-mi-value-changed">
+            <summary>"The claim's value changed while you were reviewing it (another claim was made). Check the new figures and confirm again."</summary>
+            <div class="ts-body"><p class="ts-cause">Somebody else claimed journeys for the same person in the same tax year while your review was open, so the band moved underneath it. Rather than write a figure you never saw, CrewBook stops.</p><p>Nothing was written and no miles are lost. The list refreshes itself, the window stays open and re-prices itself — read the new before-and-after figures and confirm again. A single journey gives the same guard in different words: <span class="ui">This journey's value changed while you were confirming — check it and claim again.</span></p></div>
+          </details>
+          <details class="ts-item" id="ts-mi-two-people">
+            <summary>"These journeys belong to 2 people (…). A claim is for one person…"</summary>
+            <div class="ts-body"><p class="ts-cause">The ticked journeys aren't all the same worker's, and one claim can only be made for one claimant.</p><p><span class="ui">Confirm Claim</span> stays greyed out until they are. Close the window, choose the worker at the top of the page, claim their journeys, then do the next person.</p></div>
+          </details>
+          <details class="ts-item" id="ts-mi-count-failed">
+            <summary>"Could not count this year's business miles, so the claim cannot be checked against the 10,000-mile band. Close and try again."</summary>
+            <div class="ts-body"><p class="ts-cause">The year's journeys couldn't be read back from the server, so there's no safe way to know where the claimant sits against 10,000.</p><p><span class="ui">Confirm Claim</span> stays disabled and nothing is written. Close the window and try again. The card above the list reports the same problem in red — <span class="ui">Could not count Joe Bloggs's 2026/27 miles. Values of journeys to claim may not show the 25p rate above 10,000.</span> — so treat the values in the list as unreliable until it clears.</p></div>
+          </details>
+          <details class="ts-item" id="ts-mi-claim-disabled">
+            <summary>The Claim buttons are greyed out</summary>
+            <div class="ts-body"><p class="ts-cause">The worker records haven't finished loading. Until they have, CrewBook doesn't know who is on a personal car and who is on a company car — and it would rather wait than split a company car's miles at 10,000 by mistake.</p><p>Give the page a moment: <span class="ui">Claim</span>, <span class="ui">Claim Selected</span> and <span class="ui">Claim All</span> come back on their own. If they stay greyed, refresh the page.</p></div>
           </details>
         </div>
       </section>
@@ -716,13 +784,15 @@
         <p>Every contract with days of work not yet billed to the client, one amber card each. Click <span class="ui">Mark as Invoiced</span>, tick the date chips the invoice covers, set the date and save — those days flip to <span class="ui">Invoice Issued</span> and drop off. Or send the paperwork to the office instead: <span class="ui">Raise draft document</span> sends a draft invoice, credit note, proforma or application to the front desk, who add the detail, check the VAT and issue it with the next document number (see <a href="#qci-area">the QCI area</a>).</p>
 
         <h3 id="purchase-invoices-tab">Purchase Invoices<a class="anchor-link" href="#purchase-invoices-tab" aria-label="Link to this section">#</a></h3>
-        <p>Line-by-line reconciliation of supplier invoices against what was ordered — materials, hired plant, dayworks, subs and haulage. The <span class="ui">Diff</span> column tells the story: a green tick is matched, an amber clock means no invoice received yet, a red figure is an overcharge, purple means a query is open. Filter with <span class="ui">Differences only</span>, <span class="ui">No invoice received</span> and <span class="ui">Queries Pending</span>; clicking a row jumps to that day's record.</p>
+        <p>Line-by-line reconciliation of supplier invoices against what was ordered — materials, hired plant, dayworks, subs and haulage. The <span class="ui">Diff</span> column tells the story: a green tick is matched, an amber clock means no invoice received yet, a red figure is an overcharge, purple means a query is open. Filter with <span class="ui">Differences only</span>, <span class="ui">No invoice received</span> and <span class="ui">Queries Pending</span>; clicking a row opens that day in <a href="#day-view">Day View</a>, and the back arrow there returns you to Invoice checking rather than the Calendar.</p>
+        <p><strong>The page remembers where you were.</strong> The tab you're on, whatever is typed in <span class="ui">Search by supplier, ref, contract...</span>, all three filter toggles and any open query are kept in the page address. Refresh, bookmark it, send it to a colleague or come back with the browser's back button, and the same view comes back — including the query dialog, reopened on freshly loaded figures rather than a stale copy. Typing in the search box and flicking filters doesn't pile up browser history either, so back still takes you where you actually came from.</p>
         <ol class="step-list">
           <li>Work the <span class="ui">Differences only</span> list: for each red figure, either tick <span class="ui">Invoice OK</span> to accept it, or click <span class="ui">+ Raise Query</span>.</li>
           <li>A query records the date, who raised it, the reason (price, quantity, quality, delivery, wrong job…) and the details — and can be emailed straight to the supplier's <span class="ui">Queries To</span> contact, copy to you.</li>
           <li>If the query isn't resolved within 7 days, whoever raised it is emailed a reminder — repeating weekly until it's marked <span class="ui">Resolved</span>. When the credit note lands, click <span class="ui">Credit Received</span>. <span class="step-detail">Both are toggles that tick themselves once set: <span class="ui">Resolved</span> becomes <span class="ui">✓ Resolved</span>, <span class="ui">Credit Received</span> becomes <span class="ui">✓ Credit Received</span>.</span></li>
         </ol>
         <p><strong>A query has three states, and they no longer look alike.</strong> Untouched, the control reads <span class="ui">+ Raise Query</span>. Once raised it reads <span class="ui">Queried: 14 Sep</span> with the reason beside it, in purple, and clicking it reopens the query to edit (the dialog is titled <span class="ui">Edit query</span> rather than <span class="ui">Raise a query</span>, and offers <span class="ui">Remove Query</span>). Once ticked <span class="ui">✓ Resolved</span> it keeps its date but drops to a quieter outline. The same control sits on a job in <a href="#day-view">Day View</a>, where it reads <span class="ui">Raise a query</span> and then <span class="ui">Queried 14 Sep</span> — and <strong>Other Costs</strong> rows carry it too, so a disputed one-off cost is chased exactly like a disputed load of material. <span class="step-detail">An open query and a resolved one used to look identical, which is how a settled query got chased a second time.</span></p>
+        <p><strong>You can open the cost line behind a query without losing your place.</strong> Near the top of the query dialog, under the item it refers to, is <span class="ui">Open item in Dayview job edit</span>. It takes you to that cost's job in <a href="#day-view">Day View</a>, on the right date, with the job window already on the tab the cost sits on — a material line opens <span class="ui">Materials</span>, hired plant opens <span class="ui">Hired Plant</span>, a subcontractor opens <span class="ui">Subcontractors</span>, plant haulage opens <span class="ui">Own Plant</span>, and grab lorries, material testing, traffic management and drawings open <span class="ui">Other Costs</span>. Correct what needs correcting, then click <span class="ui">Back to query</span> at the top left of the job window's header: you land back on Invoice checking with the tab, the search, the filters and that same query dialog exactly as you left them. <span class="step-detail">The button is greyed out for the moment a query is saving, and it isn't shown at all on a cost line CrewBook can't tie to a date.</span></p>
 
         <h3 id="suppliers-tab">Suppliers<a class="anchor-link" href="#suppliers-tab" aria-label="Link to this section">#</a></h3>
         <p>The supplier list behind all of this: account code, legal and display names, the <span class="ui">Queries To</span> email, and the CIS toggle (CIS suppliers export with reverse-charge VAT code T21). Click any cell to edit in place. Suppliers created in a hurry carry the code PENDING, highlighted amber, until the real code from your accounting system is entered.</p>
@@ -747,6 +817,18 @@
           <details class="ts-item" id="ts-pi-draft-no-email">
             <summary>"Draft saved. No notify email is set in QCI → Settings…"</summary>
             <div class="ts-body"><p class="ts-cause">The draft reached the front desk's queue, but nobody was emailed about it.</p><p>Tell the front desk directly this time, and set the draft notifications email in the QCI Settings so future drafts announce themselves.</p></div>
+          </details>
+          <details class="ts-item" id="ts-pi-wrong-tab">
+            <summary>The job window opened on the wrong tab</summary>
+            <div class="ts-body"><p class="ts-cause">Not every cost type has a tab of its own, and a few open <span class="ui">Materials</span> when the line actually lives elsewhere. Daywork, haulage and opening charges belong to the <span class="ui">Haulage / Charges</span> card on the job's <span class="ui">Summary</span> tab, and a line typed simply as "Other" sits on <span class="ui">Other Costs</span>.</p><p>The line is on the job — just not on the tab you landed on. Click <span class="ui">Summary</span> for daywork, haulage and opening charges, or <span class="ui">Other Costs</span> for an "Other" line. A split load charge is the exception among these: it really is on <span class="ui">Materials</span>, shown inside the material row it belongs to. An unrecognised tab never leaves you with a blank pane — the window falls back to <span class="ui">Summary</span>.</p></div>
+          </details>
+          <details class="ts-item" id="ts-pi-no-open-button">
+            <summary>There's no "Open item in Dayview job edit" button on a query</summary>
+            <div class="ts-body"><p class="ts-cause">CrewBook couldn't work out which day to open. The cost line matches no job — neither by its own job nor by contract number and date — and carries no date of its own.</p><p>Put a contract number and a date on the job the cost belongs to, then reopen the query. The same gap makes the row unclickable in the list: a row with no date has no pointer cursor and doesn't respond.</p></div>
+          </details>
+          <details class="ts-item" id="ts-pi-no-back-to-query">
+            <summary>"Back to query" isn't on the job window</summary>
+            <div class="ts-body"><p class="ts-cause">That button only appears when you arrived from an open query. Clicking a purchase-invoice row opens the day with no query to go back to.</p><p>Use the back arrow instead — from a purchase-invoice row it still returns you to Invoice checking, not the Calendar. To come back to the query itself, open the row's query first and go through <span class="ui">Open item in Dayview job edit</span>.</p></div>
           </details>
         </div>
       </section>
@@ -1064,6 +1146,7 @@
           <li><a href="#ts-dv-plant-red">A plant chip has gone red with "⚠ 3/2"</a></li>
           <li><a href="#ts-dv-save-failed">"Failed to save — please try again."</a></li>
           <li><a href="#ts-dv-already-on-job">"[Worker] is already on this job"</a></li>
+          <li><a href="#ts-dv-split-charge-tick">Ticking a Split Load charge ticks its material too</a></li>
         </ul>
         <h3>The job editor</h3>
         <ul>
@@ -1116,6 +1199,13 @@
           <li><a href="#ts-mi-location-denied">"Location access denied. Please allow in browser settings."</a></li>
           <li><a href="#ts-mi-no-rate">No standard rate fills in for a company vehicle</a></li>
           <li><a href="#ts-mi-address">"Could not find one of the addresses"</a></li>
+          <li><a href="#ts-mi-low-value">A claim came out lower than miles × 55p</a></li>
+          <li><a href="#ts-mi-two-figures">The confirm dialog quotes a different amount from the row</a></li>
+          <li><a href="#ts-mi-split-not-stamped">"The 55p/25p split is in the claim notes but could not be saved on the journeys yet (MileageLog needs publishing in the Builder)."</a></li>
+          <li><a href="#ts-mi-value-changed">"The claim's value changed while you were reviewing it (another claim was made). Check the new figures and confirm again."</a></li>
+          <li><a href="#ts-mi-two-people">"These journeys belong to 2 people (…). A claim is for one person…"</a></li>
+          <li><a href="#ts-mi-count-failed">"Could not count this year's business miles, so the claim cannot be checked against the 10,000-mile band. Close and try again."</a></li>
+          <li><a href="#ts-mi-claim-disabled">The Claim buttons are greyed out</a></li>
         </ul>
         <h3>Invoice checking</h3>
         <ul>
@@ -1123,6 +1213,9 @@
           <li><a href="#ts-pi-blocked-export">"N invoiced costs were left out of the CSV — needs a contract number"</a></li>
           <li><a href="#ts-pi-stamp-failed">"CSV downloaded, but N records were NOT marked as exported…"</a></li>
           <li><a href="#ts-pi-draft-no-email">"Draft saved. No notify email is set in QCI → Settings…"</a></li>
+          <li><a href="#ts-pi-wrong-tab">The job window opened on the wrong tab</a></li>
+          <li><a href="#ts-pi-no-open-button">There's no "Open item in Dayview job edit" button on a query</a></li>
+          <li><a href="#ts-pi-no-back-to-query">"Back to query" isn't on the job window</a></li>
         </ul>
         <h3>Costings — the monthly P&amp;L</h3>
         <ul>
@@ -1166,6 +1259,7 @@
         </ul>
         <h3>Questions people ask</h3>
         <ul>
+          <li><a href="#faq-price">What does CrewBook cost, and how does the trial work?</a></li>
           <li><a href="#faq-worker-logins">Do my workers need their own logins?</a></li>
           <li><a href="#faq-page-missing">A page my colleague has is missing from my menu</a></li>
           <li><a href="#faq-rained-off">A job's been rained off — cancel, move or delete?</a></li>
