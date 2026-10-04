@@ -30,23 +30,25 @@ for path in sorted(root.glob('*.html')):
     source = re.sub(r'<aside class="articles-discovery".*?</aside>', '<aside class="articles-discovery" aria-label="Latest from the studio"><a href="/building-keystone-sg.html"><span>From the workbench</span><span class="articles-discovery-detail">Building Keystone SG — and the app it inspired</span><span aria-hidden="true">↗</span></a></aside>', source, flags=re.S)
     footer = f'''  <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div class="footer-brand"><a href="/" aria-label="EdwardsApps home"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a><p>Practical software.<br>Built from the inside.</p><p class="footer-note">An independent studio by Peter Edwards.</p></div>
+      <div class="footer-brand"><a href="/" aria-label="EdwardsApps home"><img src="/img/logo.png" alt="EdwardsApps" width="437" height="68"></a><p>Practical software.<br>Built from the inside.</p><p class="footer-note">An independent studio by Peter Edwards, part of KAE Ltd.</p></div>
       <nav aria-label="Products"><h3>The apps</h3><ul>{''.join('<li>'+link(key+'.html',label)+'</li>' for key,label,_ in apps)}</ul></nav>
       <nav aria-label="Studio"><h3>The studio</h3><ul><li>{link('services.html','Custom builds')}</li><li>{link('about.html','About Peter')}</li><li>{link('enquiry.html','Start a conversation')}</li><li><a href="https://www.edwardssurfacing.co.uk" rel="noopener">Edwards Surfacing ↗</a></li></ul></nav>
       <nav aria-label="Resources"><h3>Useful things</h3><ul><li>{link('articles.html','Articles & build notes')}</li><li>{link('guides.html','User guides')}</li><li>{link('base44-mfa-guide.html','Base44 MFA guide')}</li><li><a href="mailto:peter@edwardsapps.co.uk">Email Peter ↗</a></li></ul></nav>
     </div>
-    <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 EdwardsApps. Built with care, for real work.</p><p class="fineprint">{link('privacy.html','Privacy')} · {link('cookies.html','Cookies')} · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
+    <div class="wrap"><div class="footer-signoff"><p class="fineprint">© 2026 KAE Ltd t/a EdwardsApps. Built with care, for real work.</p><p class="fineprint footer-legal">EdwardsApps is a trading name of KAE Limited, a company registered in England and Wales, company number 05612373. Registered office: C/O Dickinsons, Brandon House, First Floor, 90 The Broadway, Chesham, HP5 1EG. Trading address: 1 Millfield, Greenway Business Park, Winslow Road, Great Horwood, Buckinghamshire, MK17 0NP. VAT registration number GB 874 664 382. Registered with the Information Commissioner’s Office, reference ZA811294.</p><p class="fineprint footer-contact"><a href="mailto:peter@edwardsapps.co.uk">peter@edwardsapps.co.uk</a> · <a href="tel:+441296714445">01296 714445</a></p><p class="fineprint">{link('privacy.html','Privacy')} · {link('terms.html','Terms')} · {link('cookies.html','Cookies')} · <a href="#" data-consent-settings>Cookie settings</a></p></div></div>
   </footer>'''
     source = re.sub(r'  <footer class="site-footer">.*?</footer>', lambda _: footer, source, flags=re.S)
-    source = re.sub(r'\s*<link rel="stylesheet" href="/?css/revamp.css(?:\?[^\"]*)?">', '', source)
     # Keep per-page second-pass styles between the shared foundation and finish.
-    source = re.sub(r'\s*<link rel="stylesheet" href="/?css/elevate.css(?:\?[^\"]*)?">', '', source)
-    extra = re.findall(r'\s*<link rel="stylesheet" href="/?css/resources-elevate.css(?:\?[^\"]*)?">', source)
-    source = re.sub(r'\s*<link rel="stylesheet" href="/?css/resources-elevate.css(?:\?[^\"]*)?">', '', source)
-    source = source.replace('</head>', '  <link rel="stylesheet" href="/css/revamp.css?v=2">\n' + ''.join(extra) + '\n  <link rel="stylesheet" href="/css/elevate.css?v=2">\n</head>')
+    # Rebuild the block where it already sits, so page-specific sheets after elevate.css still override it.
+    shared_css = r'\s*<link rel="stylesheet" href="/?css/(?:revamp|resources-elevate|elevate)\.css(?:\?[^\"]*)?">'
+    extra = re.findall(r'<link rel="stylesheet" href="/?css/resources-elevate\.css(?:\?[^\"]*)?">', source)
+    css = '\n  <link rel="stylesheet" href="/css/revamp.css?v=2">\n' + ''.join('\n  ' + tag for tag in extra) + '\n  <link rel="stylesheet" href="/css/elevate.css?v=2">'
+    first = re.search(shared_css, source)
+    at = first.start() if first else source.index('\n</head>')
+    source = source[:at] + css + re.sub(shared_css, '', source[at:])
     source = re.sub(r'src="(/?js/main.js)(?:\?[^\"]*)?"', 'src="/js/main.js?v=3"', source)
     source = re.sub(r'\s*<script src="/?js/command-menu.js(?:\?[^\"]*)?"(?: defer)?></script>', '', source)
     source = source.replace('</body>', '  <script src="/js/command-menu.js?v=3" defer></script>\n</body>')
-    source = source.replace('content="#12161D"', 'content="#111813"')
+    source = re.sub(r'<meta name="theme-color" content="[^"]*">', '<meta name="theme-color" content="#111813">', source)
     path.write_text(source, encoding='utf-8')
 print('Shared shell refreshed across all root pages.')
