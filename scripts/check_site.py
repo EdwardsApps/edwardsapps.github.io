@@ -12,6 +12,8 @@ from xml.etree import ElementTree
 
 
 ROOT = Path(__file__).resolve().parents[1]
+# The footer carries the KAE Limited company disclosures; the company number stands in for them.
+COMPANY_NUMBER = "05612373"
 
 
 class PageParser(HTMLParser):
@@ -28,6 +30,8 @@ class PageParser(HTMLParser):
         self.references: list[tuple[str, str, int]] = []
         self.json_ld: list[str] = []
         self._json_ld_parts: list[str] | None = None
+        self.footer_depth = 0
+        self.footer_text: list[str] = []
         self.errors: list[str] = []
 
     def handle_starttag(self, tag: str, attrs_list: list[tuple[str, str | None]]) -> None:
@@ -42,6 +46,8 @@ class PageParser(HTMLParser):
             self.description = attrs.get("content", "").strip()
         elif tag == "h1":
             self.h1_count += 1
+        elif tag == "footer":
+            self.footer_depth += 1
         elif tag == "img" and "alt" not in attrs:
             self.errors.append(f"line {line}: image is missing an alt attribute")
 
@@ -61,6 +67,8 @@ class PageParser(HTMLParser):
     def handle_endtag(self, tag: str) -> None:
         if tag == "title":
             self.in_title = False
+        elif tag == "footer" and self.footer_depth:
+            self.footer_depth -= 1
         elif tag == "script" and self._json_ld_parts is not None:
             self.json_ld.append("".join(self._json_ld_parts).strip())
             self._json_ld_parts = None
@@ -70,6 +78,8 @@ class PageParser(HTMLParser):
             self.title_parts.append(data)
         if self._json_ld_parts is not None:
             self._json_ld_parts.append(data)
+        if self.footer_depth:
+            self.footer_text.append(data)
 
     @property
     def title(self) -> str:
@@ -122,6 +132,8 @@ def main() -> int:
             errors.append(f"{label}: missing meta description")
         if parser.h1_count != 1:
             errors.append(f"{label}: expected one h1, found {parser.h1_count}")
+        if COMPANY_NUMBER not in "".join(parser.footer_text):
+            errors.append(f"{label}: footer is missing company number {COMPANY_NUMBER}")
         for duplicate in sorted(parser.duplicate_ids):
             errors.append(f"{label}: duplicate id {duplicate!r}")
         errors.extend(f"{label}: {message}" for message in parser.errors)
