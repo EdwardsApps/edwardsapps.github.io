@@ -3,7 +3,7 @@
 The EdwardsApps marketing site — static HTML/CSS/JS served by GitHub Pages from the root of `main`.
 
 - No framework, no build step. Edit the HTML/CSS directly and push.
-- Base styles live in `css/style.css`; the shared refresh tokens/overrides are in `css/revamp.css`, loaded last. Product, company and resource compositions have separate scoped stylesheets.
+- Base styles live in `css/style.css`. Product, company and resource compositions have separate scoped stylesheets, loaded after it. The shared refresh tokens/overrides in `css/revamp.css` come next, then `css/resources-elevate.css` on resource pages, then the shared second pass in `css/elevate.css`. `about.html`, `articles.html`, `base44-mfa.html` and `building-keystone-sg.html` load their own stylesheet after `elevate.css`; `update_site_shell.py` keeps that order.
 - `js/main.js` handles menus, screenshot enlargement, homepage app previews/filters and pointer spotlights. `js/resources-revamp.js` adds mobile contents controls and reading progress.
 - Analytics and the consent controls live in `js/consent.js`; Google Analytics loads only after a visitor accepts analytics.
 - Pages: `index.html`, `crewbook.html`, `crewqci.html`, `studiobooks.html`, `ourspace.html`, `almoner.html`, `services.html`, `about.html`, `enquiry.html`, `articles.html`, `base44-mfa.html`, `base44-mfa-guide.html`, `building-keystone-sg.html`, `privacy.html`, `terms.html`, `cookies.html`, the three user-guide pages below, plus `404.html`.
