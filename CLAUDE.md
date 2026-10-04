@@ -13,6 +13,6 @@ Peter's Claude Project "EdwardsApps" relies on a knowledge file whose master is 
 When a session changes how the site or any EdwardsApps app is set up (pages, prices, domains, analytics or consent, store status, repos, how something is deployed), update the matching section of that file in the same session, change its "Last updated" line, and tell Peter to re-upload it to the Project.
 
 - On Peter's PC the file is at `C:/Users/Peter/OneDrive - Edwards Surfacing/Apps/EdwardsApps/`: edit it there.
-- In a cloud session the Microsoft 365 connector can read the master but not write it: read it, make the change, and send Peter the updated file to save over the master.
+- In a cloud session, read the master through the Microsoft 365 connector, make the change, and save it back with `sharepoint_upload_file` (replace) into the same folder. OneDrive keeps the earlier versions. If the save is refused, send Peter the updated file to save himself.
 
 The knowledge file is private. It never goes in this repo.
