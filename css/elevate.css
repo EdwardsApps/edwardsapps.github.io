@@ -89,7 +89,8 @@
   .hero-bottom-line { margin-top: 1.25rem; padding-top: 1rem; }
   .hero-bottom-line p, .hero-bottom-line a { font-size: .78rem; }
   .proof-strip { border-bottom: 1px solid var(--line); }
-  .proof-grid li { position: relative; padding: 1.3rem 1.5rem 1.3rem 2.4rem; }
+  /* Keep the arrow gutter on every item, including the base sibling rule. */
+  .home-page .proof-grid li { position: relative; padding: 1.3rem 1.5rem 1.3rem 2.4rem; }
   .proof-grid li::before { content: '↗'; position: absolute; left: 0; top: 1.2rem; color: #4a7630; font-size: 1.5rem; }
   .proof-grid strong { font-size: 1rem; }
   .proof-grid span { font-size: .88rem; line-height: 1.6; }
@@ -216,7 +217,7 @@
     .app-preview-caption .app-explore { width: 100%; font-size: .9rem; }
     .hero-bottom-line { flex-direction: column; gap: .5rem; }
     .hero-bottom-line p { max-width: 50ch; }
-    .proof-grid li { padding: 1.1rem 0 1.1rem 2rem; }
+    .home-page .proof-grid li { padding: 1.1rem 0 1.1rem 2rem; }
     .proof-grid li::before { top: 1rem; }
     .proof-grid strong { font-size: .95rem; }
     .product-collection .product-card-grid { grid-template-columns: minmax(0, 1fr); }
