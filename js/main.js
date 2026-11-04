@@ -215,7 +215,8 @@
   var STORE_LISTINGS = [
     { match: 'id6807538781', app: 'Studiobooks' },
     { match: 'id6775036547', app: 'OurSpace' },
-    { match: 'com.base6a0d9576def7780fc56eeb7e.app', app: 'OurSpace' }
+    { match: 'com.base6a0d9576def7780fc56eeb7e.app', app: 'OurSpace' },
+    { match: 'id6824189810', app: 'Almoner' }
   ];
 
   function appForLink(href) {

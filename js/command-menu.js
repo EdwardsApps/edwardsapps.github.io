@@ -25,7 +25,7 @@
     ['Apps', 'CrewBook', 'Scheduling, crews, job costs and invoicing', '/crewbook.html', 'crewbook', 'contractor construction groundworks surfacing team cis sage jobs payroll'],
     ['Apps', 'CrewQCI', 'Quotes, contracts, invoices and credit control', '/crewqci.html', 'crewqci', 'construction trades lead retention debt payment commercial applications'],
     ['Apps', 'Studiobooks', 'Proposals, monthly billing and a client portal', '/studiobooks.html', 'studiobooks', 'software studio app agency contract invoices free apple'],
-    ['Apps', 'Almoner', 'Donations, Gift Aid and charity governance', '/almoner.html', 'almoner', 'charity charities trustees restricted funds pots collection compliance'],
+    ['Apps', 'Almoner', 'Donations, Gift Aid and charity governance', '/almoner.html', 'almoner', 'charity charities trustees restricted funds pots collection compliance gift aid iphone ipad apple watch'],
     ['Apps', 'OurSpace', 'A shared calendar, tasks, lists and meal plans', '/ourspace.html', 'ourspace', 'home household family kids budget mcp ai iphone android meals'],
     ['The studio', 'Custom builds', 'Shape your idea with the interactive brief builder', '/services.html#build-planner', '+', 'bespoke custom app software build developer spreadsheet automate automation process price cost'],
     ['The studio', 'About Peter', 'The people and work behind the software', '/about.html', '↗', 'story timeline founder operator contractor charity pub'],
