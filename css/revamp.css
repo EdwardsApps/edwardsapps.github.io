@@ -39,7 +39,7 @@ button, summary, a { -webkit-tap-highlight-color: transparent; }
 .nav-apps > summary::after { content: '⌄'; display: inline-block; margin-left: .45rem; color: var(--lime); }
 .nav-apps[open] > summary::after { transform: rotate(180deg); }
 .nav-apps-panel { position: absolute; left: max(var(--pad), calc((100% - var(--wrap)) / 2 + var(--pad))); right: max(var(--pad), calc((100% - var(--wrap)) / 2 + var(--pad))); top: calc(100% - 1px); padding: 1.25rem; background: #fff; color: var(--ink); border: 1px solid var(--line); border-radius: 0 0 18px 18px; box-shadow: 0 25px 50px #08150925; }
-.nav-app-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .6rem; }
+.nav-app-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .6rem; }
 .nav-app-grid a { display: flex; flex-direction: column; align-items: flex-start; gap: .35rem; padding: 1rem; color: var(--ink); border-radius: 11px; white-space: normal; }
 .nav-app-grid a:hover { color: var(--ink); background: var(--panel); text-decoration: none; }
 .nav-app-grid img { width: 40px; height: 40px; border-radius: 10px; margin-bottom: .45rem; }

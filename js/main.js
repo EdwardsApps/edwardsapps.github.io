@@ -93,9 +93,11 @@
     link.href = data.app + '.html';
     link.setAttribute('aria-label', 'Explore ' + data.title);
     panel.querySelector('.app-preview-image').href = data.image;
-    panel.querySelector('.app-preview-image').setAttribute('aria-label', 'Enlarge ' + data.title + ' screenshot');
+    panel.querySelector('.app-preview-image').setAttribute('aria-label', 'Enlarge ' + data.title + (data.app === 'securibeacon' ? ' introduction image' : ' screenshot'));
+    panel.querySelector('.preview-zoom').textContent = data.app === 'securibeacon' ? '↗   Enlarge image' : '↗   Enlarge screen';
     panel.closest('.app-stage').dataset.activeApp = data.app;
     var features = {
+      securibeacon: ['Officers', 'Control room', 'Clients'],
       crewbook: ['Schedule the week', 'Allocate the crew', 'See the job costs'],
       crewqci: ['Send the quote', 'Agree the work', 'Chase the payment'],
       studiobooks: ['Win the proposal', 'Run the billing', 'Keep clients informed'],
@@ -106,7 +108,7 @@
       item.textContent = features[data.app][index];
     });
     panel.setAttribute('aria-labelledby', button.id);
-    counter.textContent = '0' + (buttons.indexOf(button) + 1) + ' / 05';
+    counter.textContent = '0' + (buttons.indexOf(button) + 1) + ' / ' + String(buttons.length).padStart(2, '0');
     if (focus) button.focus();
   }
   buttons.forEach(function (button, index) {

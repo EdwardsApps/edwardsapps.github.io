@@ -22,6 +22,7 @@
     '<div class="command-results" aria-label="Search results"></div><div class="command-footer"><p id="command-count" role="status"></p><p class="command-shortcuts"><kbd>↑</kbd> <kbd>↓</kbd> to explore &nbsp; <kbd>Enter</kbd> to open &nbsp; <kbd>Esc</kbd> to close</p></div></div>';
   document.body.appendChild(dialog);
   var rows = [
+    ['Apps', 'SecuriBeacon', 'New · Connected security operations · Early access', '/securibeacon.html', 'securibeacon', 'security officers control room clients sites shifts patrol incident report early access'],
     ['Apps', 'CrewBook', 'Scheduling, crews, job costs and invoicing', '/crewbook.html', 'crewbook', 'contractor construction groundworks surfacing team cis sage jobs payroll'],
     ['Apps', 'CrewQCI', 'Quotes, contracts, invoices and credit control', '/crewqci.html', 'crewqci', 'construction trades lead retention debt payment commercial applications'],
     ['Apps', 'Studiobooks', 'Proposals, monthly billing and a client portal', '/studiobooks.html', 'studiobooks', 'software studio app agency contract invoices free apple'],
