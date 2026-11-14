@@ -37,3 +37,7 @@ See `REVAMP-REVIEW.md` for coverage and verification, and `DESIGN-SOURCES.md` fo
 ## Articles
 
 `articles.html` is the article index; `base44-mfa.html` is the first article. Editorial styles are in `css/articles.css`. The MFA screenshots in `img/articles/` show isolated component previews with synthetic accounts, not live customer data. Code excerpts are explanatory, not a drop-in authentication library. Review copy and hosted-platform claims before publication.
+
+## SecuriBeacon screenshots
+
+The four `img/shots/securibeacon-*.png` images are unaltered captures of the working web development client, using isolated demonstration records. They cover the control-room overview, scheduling, officer workspace and client reports on mobile web. The public captions identify them as development screenshots with demonstration data; they do not show released native apps or live customer records. Keep those captions when reusing the images.

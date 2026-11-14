@@ -93,8 +93,7 @@
     link.href = data.app + '.html';
     link.setAttribute('aria-label', 'Explore ' + data.title);
     panel.querySelector('.app-preview-image').href = data.image;
-    panel.querySelector('.app-preview-image').setAttribute('aria-label', 'Enlarge ' + data.title + (data.app === 'securibeacon' ? ' introduction image' : ' screenshot'));
-    panel.querySelector('.preview-zoom').textContent = data.app === 'securibeacon' ? '↗   Enlarge image' : '↗   Enlarge screen';
+    panel.querySelector('.app-preview-image').setAttribute('aria-label', 'Enlarge ' + data.title + ' screenshot');
     panel.closest('.app-stage').dataset.activeApp = data.app;
     var features = {
       securibeacon: ['Officers', 'Control room', 'Clients'],
