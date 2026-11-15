@@ -1,0 +1,77 @@
+/* Christmas campaign: shared visual language, scoped to festive components. */
+.santa-page { color-scheme: light; margin: 0; color: #243d33; background: #faf5e9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.7; }
+.santa-page * { box-sizing: border-box; }
+.santa-page a { color: #9e2239; text-underline-offset: 4px; }
+.santa-page a:hover { color: #69172a; }
+.santa-page :focus-visible, .santa-campaign :focus-visible { outline: 3px solid #d8ad52; outline-offset: 5px; }
+.santa-page .skip-link { position: absolute; top: -100px; left: 12px; padding: 12px; background: white; z-index: 10; }
+.santa-page .skip-link:focus { top: 10px; }
+.santa-header { max-width: 1180px; margin: auto; padding: 15px 28px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.santa-logo { display: block; width: clamp(160px, 22vw, 250px); height: auto; }
+.santa-header > a:last-child { font-size: .88rem; font-weight: 700; white-space: nowrap; }
+.santa-campaign { position: relative; isolation: isolate; overflow: hidden; background: #123e32; color: #fff8e7; padding: 76px 0 64px; scroll-margin-top: 110px; }
+.santa-campaign::before { content: ''; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: radial-gradient(circle at 10% 15%, #f7d99d65 0 1px, transparent 2px), radial-gradient(circle at 65% 38%, #f7d99d60 0 1px, transparent 2px), radial-gradient(ellipse at 90% 20%, #2b6552 0, transparent 58%); background-size: 119px 113px, 173px 167px, 100% 100%; }
+.santa-campaign::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: repeating-linear-gradient(130deg, #b32941 0 13px, #fff3dc 13px 26px); }
+.santa-inner { width: min(1120px, calc(100% - 56px)); margin: auto; }
+.santa-hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: clamp(32px, 6vw, 85px); }
+.santa-campaign .santa-eyebrow { color: #f1ce86; font-size: .75rem; font-weight: 750; letter-spacing: .18em; text-transform: uppercase; margin: 0 0 20px; }
+.santa-campaign .santa-title { color: #fff8e7; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.6rem, 5.1vw, 4.8rem); font-weight: 400; letter-spacing: -.045em; line-height: 1.05; max-width: 13ch; margin: 0 0 24px; text-wrap: balance; }
+.santa-campaign .santa-title em { color: #f0ce87; font-weight: 400; }
+.santa-campaign .santa-lede { color: #e0e9df; max-width: 48ch; font-size: 1.05rem; line-height: 1.75; margin: 0 0 24px; }
+.santa-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 22px; margin-top: 26px; }
+.santa-campaign a.santa-button, .santa-page a.santa-button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; gap: 22px; padding: 12px 23px; background: #b52b43; border: 1px solid #e46d78; border-radius: 8px; color: #fff; text-decoration: none; font-size: .95rem; font-weight: 700; box-shadow: 0 8px 24px #051f2326; }
+.santa-campaign a.santa-button:hover, .santa-page a.santa-button:hover { background: #912039; color: #fff; }
+.santa-campaign .santa-text-link { color: #fff3d6; font-size: .9rem; text-underline-offset: 5px; }
+.santa-campaign .santa-small { color: #e0e9df; font-size: .82rem; margin: 20px 0 0; line-height: 1.7; }
+.santa-art { position: relative; margin: 0; padding: 20px; background: #fff6e5; border: 1px solid #eadbb8; border-radius: 28px 28px 8px 8px; transform: rotate(3deg); box-shadow: 0 25px 65px #061e3255; }
+.santa-art img { display: block; width: 100%; height: auto; border-radius: 14px; }
+.santa-art figcaption { color: #244337; text-align: center; font: italic 1.3rem Georgia, serif; padding: 18px 4px 4px; }
+.santa-art::before, .santa-art::after { content: '✦'; position: absolute; color: #f5d589; font-size: 58px; line-height: 1; text-shadow: 0 2px 20px #f5d58945; }
+.santa-art::before { top: -25px; right: -24px; }
+.santa-art::after { bottom: 20px; left: -32px; font-size: 43px; }
+.santa-benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; border-top: 1px solid #ffffff30; margin: 54px 0 0; padding: 26px 0 0; list-style: none; }
+.santa-benefits li { color: #dce8de; font-size: .87rem; line-height: 1.7; margin: 0; }
+.santa-benefits strong { display: block; color: #f5d589; font-size: .98rem; margin-bottom: 5px; }
+.santa-content { width: min(1000px, calc(100% - 48px)); margin: auto; padding: 60px 0; }
+.santa-content section { margin: 0 0 56px; }
+.santa-content h2 { color: #193e31; font-family: Georgia, serif; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.18; letter-spacing: -.03em; font-weight: 400; margin: 0 0 24px; }
+.santa-content h3 { color: #244337; font-size: 1.05rem; margin: 28px 0 8px; }
+.santa-content p { margin: 12px 0; }
+.santa-content .santa-steps { padding: 0; margin: 0 0 25px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; list-style: none; counter-reset: steps; }
+.santa-steps li { counter-increment: steps; background: #fffdf6; border: 1px solid #e6ddca; border-radius: 14px; padding: 24px; font-size: .95rem; }
+.santa-steps li::before { content: '0' counter(steps); display: block; color: #ab2b42; font: italic 1.8rem Georgia, serif; margin-bottom: 12px; }
+.santa-steps strong { display: block; margin-bottom: 8px; color: #193e31; }
+.santa-content #cost { background: #f1e7d5; border-left: 4px solid #ae2c43; padding: 30px; border-radius: 0 16px 16px 0; }
+.santa-content .note { padding: 22px 28px; border: 1px solid #d7c7a7; border-radius: 12px; }
+.santa-content footer { text-align: center; padding-top: 32px; font-size: .85rem; }
+.santa-faq { max-width: 760px; }
+/* EdwardsApps keeps its own header; the product gets its seasonal branding. */
+.product-ourspace .product-identity .santa-product-logo { width: min(280px, 64vw); height: auto; padding: 8px 13px; background: #fff8eb; border-radius: 14px; }
+.product-ourspace .santa-product-hero { border-top: 7px solid #ab2a40; }
+.product-ourspace .santa-product-hero .ourspace-ai-announcement a[href="#free-secret-santa"] { background: #b52b43; color: white; border-color: #e6808b; }
+.product-ourspace .santa-product-hero .ourspace-ai-announcement a[href="#free-secret-santa"] span:first-child { color: #ffe4aa; }
+.product-ourspace .santa-campaign .santa-host-note { color: #dce8de; font-size: .84rem; max-width: 85ch; border-top: 1px solid #ffffff30; padding-top: 22px; margin-top: 28px; }
+.product-ourspace .santa-campaign .santa-logo-panel { background: #fff7e8; padding: 12px 22px; border-radius: 12px; margin: 0 0 28px; width: fit-content; }
+.product-ourspace .santa-campaign .santa-logo-panel img { width: 235px; max-width: 100%; height: auto; display: block; }
+@media (max-width: 700px) {
+ .santa-header { padding: 12px 20px; gap: 12px; }
+ .santa-header > a:last-child { font-size: .8rem; }
+ .santa-logo { width: 160px; }
+ .santa-campaign { padding: 40px 0; }
+ .santa-inner { width: calc(100% - 40px); }
+ .santa-hero-grid { grid-template-columns: 1fr; gap: 35px; }
+ .santa-campaign .santa-title { font-size: clamp(2.7rem, 10vw, 4rem); max-width: 15ch; }
+ .santa-art { max-width: 320px; width: calc(100% - 22px); margin: 0 auto; padding: 14px; }
+ .santa-art figcaption { font-size: 1.1rem; padding-top: 12px; }
+ .santa-art::before { right: -15px; font-size: 40px; }.santa-art::after { left: -18px; }
+ .santa-benefits { grid-template-columns: 1fr; gap: 18px; margin-top: 36px; }
+ .santa-content { padding: 36px 0; }
+ .santa-content .santa-steps { grid-template-columns: 1fr; }
+ .santa-content #cost { padding: 22px; }
+ .santa-actions { gap: 16px; }
+ .santa-page .santa-button { width: 100%; }
+ .santa-content section { margin-bottom: 38px; }
+}
+
+.product-ourspace .product-household-heading { font-size: clamp(2.35rem, 3.9vw, 4rem); line-height: 1.08; letter-spacing: -.052em; max-width: 20ch; margin: 0 0 1.25rem; }
+.product-ourspace .product-household-heading span { color: #b7ee63; }
