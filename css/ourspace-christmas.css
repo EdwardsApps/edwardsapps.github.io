@@ -75,3 +75,35 @@
 
 .product-ourspace .product-household-heading { font-size: clamp(2.35rem, 3.9vw, 4rem); line-height: 1.08; letter-spacing: -.052em; max-width: 20ch; margin: 0 0 1.25rem; }
 .product-ourspace .product-household-heading span { color: #b7ee63; }
+
+/* Phone illustration of the reveal card (shared with our-space.me/christmas.css). */
+/* The phone illustration: an HTML mock of the real reveal card, so it is crisp and translated. */
+.santa-phone-wrap { position: relative; justify-self: center; width: min(330px, 100%); }
+.santa-phone { position: relative; padding: 12px; border-radius: 48px; background: linear-gradient(145deg, #2a2a30, #0d0d10); box-shadow: 0 26px 50px #03140f70, inset 0 0 0 2px #ffffff18; transform: rotate(3deg); }
+.santa-phone-screen { position: relative; overflow: hidden; border-radius: 38px; padding: 46px 16px 22px; background: radial-gradient(circle at 15% 10%, #f7d99d55 0 1px, transparent 2px), linear-gradient(160deg, #164936, #0f3329); background-size: 61px 57px, 100% 100%; min-height: 560px; }
+.santa-phone-notch { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 92px; height: 26px; border-radius: 20px; background: #0d0d10; }
+.santa-phone-logo { display: block; width: 58%; height: auto; border-radius: 9px; margin: 0 0 14px; }
+.santa-mock-card { background: #fff7e8; color: #193e31; border-radius: 18px; border-top: 5px solid #b52b43; padding: 16px; box-shadow: 0 14px 30px #00000040; font-size: .78rem; }
+.santa-mock-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.santa-mock-top span { color: #a1263d; font-size: .58rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.santa-mock-top b { background: #b52b43; color: #fff; border-radius: 999px; padding: 3px 9px; font-size: .62rem; white-space: nowrap; }
+.santa-mock-title { font: 400 1.35rem/1.15 Georgia, serif; margin: 10px 0; }
+.santa-mock-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-weight: 700; }
+.santa-mock-facts div { background: #f2e6cf; border-radius: 9px; padding: 6px 9px; }
+.santa-mock-facts small { display: block; font-size: .55rem; text-transform: uppercase; letter-spacing: .12em; color: #8a6d3b; }
+.santa-mock-reveal { margin: 10px 0; padding: 14px; border-radius: 12px; background: radial-gradient(circle at 85% 15%, #2c6a52 0, transparent 55%), #164936; color: #fff7e8; }
+.santa-mock-star { color: #f1ce86; font-size: 1.2rem; display: inline-block; animation: santa-twinkle 2.6s ease-in-out infinite; }
+.santa-mock-reveal p { margin: 4px 0 6px; font-size: 1rem; line-height: 1.35; }
+.santa-mock-reveal strong { color: #ffe0a0; }
+.santa-mock-reveal small { color: #d6e2d8; }
+.santa-mock-label { margin: 12px 0 6px; font-size: .58rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #a1263d; }
+.santa-mock-wish { background: #f2e6cf; border-radius: 10px; padding: 9px 11px; display: grid; gap: 2px; }
+.santa-mock-wish span { color: #4a5a50; }
+.santa-float { position: absolute; z-index: 2; padding: 9px 14px; border-radius: 999px; font-size: .8rem; font-weight: 750; white-space: nowrap; box-shadow: 0 12px 28px #00000040; }
+.santa-float-a { top: 18%; left: -18%; background: #fff7e8; color: #193e31; transform: rotate(-4deg); }
+.santa-float-b { bottom: -3%; right: -10%; background: #f1ce86; color: #3a2a0c; transform: rotate(3deg); }
+@keyframes santa-twinkle { 0%, 100% { transform: scale(1) rotate(0); opacity: 1; } 50% { transform: scale(1.35) rotate(70deg); opacity: .75; } }
+@media (prefers-reduced-motion: reduce) { .santa-mock-star { animation: none; } }
+
+@media (max-width: 900px) { .santa-phone-wrap { width: min(300px, 82%); margin: 10px auto 0; } .santa-float-a { left: -10%; } .santa-float-b { right: -8%; } }
+@media (max-width: 700px) { .santa-float { font-size: .72rem; padding: 7px 11px; } }
