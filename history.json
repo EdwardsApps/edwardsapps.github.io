@@ -1,0 +1,54 @@
+{
+ "episodes": [
+  {
+   "ended": "2026-11-17T22:30:31Z",
+   "level": "major",
+   "started": "2026-11-17T16:45:00Z",
+   "svc": "apple",
+   "title": "iCloud Account & Sign In: issue"
+  },
+  {
+   "ended": "2026-11-17T22:30:31Z",
+   "level": "minor",
+   "started": "2026-11-17T19:36:39Z",
+   "svc": "dropbox",
+   "title": "Sign in with Apple is not working as expected for some users"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-17T19:00:24Z",
+   "svc": "notion",
+   "title": "Login with Apple unavailable"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-12T09:51:10Z",
+   "svc": "xero",
+   "title": "UK: CIS - Error when verifying CIS contractors"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-16T13:22:04Z",
+   "svc": "sage",
+   "title": "Banking Service - Partial Outage"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-17T17:46:15Z",
+   "svc": "chatgpt",
+   "title": "Costs API data is delayed"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-16T15:10:15Z",
+   "svc": "claude",
+   "title": "Claude unable to join meetings"
+  }
+ ],
+ "tracking_since": "2026-11-17T20:55:16Z"
+}

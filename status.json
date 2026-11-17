@@ -1,0 +1,802 @@
+{
+ "attempted_at": "2026-11-18T00:34:41Z",
+ "banners": [],
+ "checked_at": "2026-11-18T00:34:41Z",
+ "counts": {
+  "major": 0,
+  "minor": 5,
+  "ok": 70,
+  "unknown": 0
+ },
+ "recent": [
+  {
+   "ended": "2026-11-17T22:30:31Z",
+   "level": "minor",
+   "started": "2026-11-17T19:36:39Z",
+   "svc": "dropbox",
+   "title": "Sign in with Apple is not working as expected for some users"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-17T19:00:24Z",
+   "svc": "notion",
+   "title": "Login with Apple unavailable"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-17T17:46:15Z",
+   "svc": "chatgpt",
+   "title": "Costs API data is delayed"
+  },
+  {
+   "ended": "2026-11-17T22:30:31Z",
+   "level": "major",
+   "started": "2026-11-17T16:45:00Z",
+   "svc": "apple",
+   "title": "iCloud Account & Sign In: issue"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-16T15:10:15Z",
+   "svc": "claude",
+   "title": "Claude unable to join meetings"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-16T13:22:04Z",
+   "svc": "sage",
+   "title": "Banking Service - Partial Outage"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-12T09:51:10Z",
+   "svc": "xero",
+   "title": "UK: CIS - Error when verifying CIS contractors"
+  }
+ ],
+ "services": {
+  "amazon": {
+   "items": [],
+   "level": "ok",
+   "name": "Amazon shopping",
+   "notes": [],
+   "source": "probe"
+  },
+  "apple": {
+   "items": [],
+   "level": "ok",
+   "name": "Apple",
+   "notes": [],
+   "source": "official"
+  },
+  "asana": {
+   "items": [],
+   "level": "ok",
+   "name": "Asana",
+   "notes": [],
+   "source": "official"
+  },
+  "aws": {
+   "items": [],
+   "level": "ok",
+   "name": "Amazon Web Services",
+   "notes": [
+    "Problems reported in other regions (UAE and Bahrain), which are unlikely to affect UK users."
+   ],
+   "source": "official"
+  },
+  "azure": {
+   "items": [],
+   "level": "ok",
+   "name": "Microsoft Azure",
+   "notes": [],
+   "source": "official"
+  },
+  "base44": {
+   "items": [],
+   "level": "ok",
+   "name": "Base44",
+   "notes": [],
+   "source": "official"
+  },
+  "bbc-iplayer": {
+   "items": [],
+   "level": "ok",
+   "name": "BBC iPlayer",
+   "notes": [],
+   "source": "probe"
+  },
+  "box": {
+   "items": [],
+   "level": "ok",
+   "name": "Box",
+   "notes": [],
+   "source": "official"
+  },
+  "calendly": {
+   "items": [],
+   "level": "ok",
+   "name": "Calendly",
+   "notes": [],
+   "source": "official"
+  },
+  "canva": {
+   "items": [],
+   "level": "ok",
+   "name": "Canva",
+   "notes": [],
+   "source": "official"
+  },
+  "chatgpt": {
+   "items": [
+    {
+     "detail": "We've pushed a fix and are monitoring the recovery.",
+     "started": "2026-11-17T17:46:15Z",
+     "title": "Costs API data is delayed",
+     "url": "https://status.openai.com"
+    }
+   ],
+   "level": "minor",
+   "name": "ChatGPT (OpenAI)",
+   "notes": [],
+   "since": "2026-11-17T17:46:15Z",
+   "source": "official"
+  },
+  "claude": {
+   "items": [
+    {
+     "detail": "Claude Meetings (beta) is joining calls more reliably, and we are monitoring it. It remains enabled for all Enterprise customers. Team customers can again add Claude to new calls manually, and Auto-join is being restored gradually for…",
+     "started": "2026-11-16T15:10:15Z",
+     "title": "Claude unable to join meetings",
+     "url": "https://stspg.io/01qq3kzyyqzl"
+    }
+   ],
+   "level": "minor",
+   "name": "Claude (Anthropic)",
+   "notes": [],
+   "since": "2026-11-16T15:10:15Z",
+   "source": "official"
+  },
+  "cloudflare": {
+   "items": [],
+   "level": "ok",
+   "name": "Cloudflare",
+   "notes": [
+    "2 smaller notices on their status page that should not affect most people."
+   ],
+   "source": "official"
+  },
+  "companies-house": {
+   "items": [],
+   "level": "ok",
+   "name": "Companies House",
+   "notes": [],
+   "source": "probe"
+  },
+  "discord": {
+   "items": [],
+   "level": "ok",
+   "name": "Discord",
+   "notes": [],
+   "source": "official"
+  },
+  "dropbox": {
+   "items": [],
+   "level": "ok",
+   "name": "Dropbox",
+   "notes": [],
+   "source": "official"
+  },
+  "ebay": {
+   "items": [],
+   "level": "ok",
+   "name": "eBay",
+   "notes": [],
+   "source": "probe"
+  },
+  "epic": {
+   "items": [],
+   "level": "ok",
+   "name": "Epic Games and Fortnite",
+   "notes": [],
+   "source": "official"
+  },
+  "facebook": {
+   "items": [],
+   "level": "ok",
+   "name": "Facebook",
+   "notes": [],
+   "source": "mixed"
+  },
+  "figma": {
+   "items": [],
+   "level": "ok",
+   "name": "Figma",
+   "notes": [],
+   "source": "official"
+  },
+  "freeagent": {
+   "items": [],
+   "level": "ok",
+   "name": "FreeAgent",
+   "notes": [],
+   "source": "official"
+  },
+  "github": {
+   "items": [],
+   "level": "ok",
+   "name": "GitHub",
+   "notes": [],
+   "source": "official"
+  },
+  "gocardless": {
+   "items": [],
+   "level": "ok",
+   "name": "GoCardless",
+   "notes": [],
+   "source": "official"
+  },
+  "godaddy": {
+   "items": [],
+   "level": "ok",
+   "name": "GoDaddy",
+   "notes": [],
+   "source": "official"
+  },
+  "google-cloud": {
+   "items": [],
+   "level": "ok",
+   "name": "Google Cloud",
+   "notes": [],
+   "source": "official"
+  },
+  "google-workspace": {
+   "items": [],
+   "level": "ok",
+   "name": "Google Workspace",
+   "notes": [],
+   "source": "official"
+  },
+  "govnotify": {
+   "items": [],
+   "level": "ok",
+   "name": "GOV.UK Notify",
+   "notes": [],
+   "source": "official"
+  },
+  "govpay": {
+   "items": [],
+   "level": "ok",
+   "name": "GOV.UK Pay",
+   "notes": [],
+   "source": "official"
+  },
+  "hmrc": {
+   "items": [],
+   "level": "ok",
+   "name": "HMRC online services",
+   "notes": [],
+   "source": "official"
+  },
+  "hmrc-cis": {
+   "items": [],
+   "level": "ok",
+   "name": "HMRC: Construction Industry Scheme",
+   "notes": [
+    "HMRC lists 7 known issues, starting with “CIS online service verification issues”."
+   ],
+   "source": "official"
+  },
+  "hmrc-ct": {
+   "items": [],
+   "level": "ok",
+   "name": "HMRC: Corporation Tax",
+   "notes": [],
+   "source": "official"
+  },
+  "hmrc-mtd": {
+   "items": [],
+   "level": "ok",
+   "name": "HMRC: Making Tax Digital for Income Tax",
+   "notes": [
+    "Planned downtime: Friday 27 November 2026 5pm to 9am Monday 30 November 2026 Friday 11 December 2026 5pm…"
+   ],
+   "source": "official"
+  },
+  "hmrc-paye": {
+   "items": [],
+   "level": "ok",
+   "name": "HMRC: PAYE for employers",
+   "notes": [
+    "Planned downtime: Saturday 28 November 2026 8:05am to 4:15pm Sunday 29 November 2026."
+   ],
+   "source": "official"
+  },
+  "hmrc-sa": {
+   "items": [],
+   "level": "ok",
+   "name": "HMRC: Self Assessment",
+   "notes": [],
+   "source": "official"
+  },
+  "hmrc-vat": {
+   "items": [],
+   "level": "ok",
+   "name": "HMRC: VAT online",
+   "notes": [
+    "Planned downtime: Saturday 28 November 2026 8:05am to 4:15pm Sunday 29 November 2026.",
+    "HMRC lists 6 known issues, starting with “Viewing payment history”."
+   ],
+   "source": "official"
+  },
+  "hubspot": {
+   "items": [],
+   "level": "ok",
+   "name": "HubSpot",
+   "notes": [],
+   "source": "official"
+  },
+  "instagram": {
+   "items": [],
+   "level": "ok",
+   "name": "Instagram",
+   "notes": [],
+   "source": "mixed"
+  },
+  "linkedin": {
+   "items": [],
+   "level": "ok",
+   "name": "LinkedIn",
+   "notes": [],
+   "source": "official"
+  },
+  "messenger": {
+   "items": [],
+   "level": "ok",
+   "name": "Messenger",
+   "notes": [],
+   "source": "mixed"
+  },
+  "microsoft365": {
+   "items": [],
+   "level": "ok",
+   "name": "Microsoft 365",
+   "notes": [],
+   "source": "official"
+  },
+  "monday": {
+   "items": [],
+   "level": "ok",
+   "name": "monday.com",
+   "notes": [],
+   "source": "official"
+  },
+  "monzo": {
+   "items": [],
+   "level": "ok",
+   "name": "Monzo",
+   "notes": [],
+   "source": "official"
+  },
+  "netflix": {
+   "items": [],
+   "level": "ok",
+   "name": "Netflix",
+   "notes": [],
+   "source": "probe"
+  },
+  "netlify": {
+   "items": [],
+   "level": "ok",
+   "name": "Netlify",
+   "notes": [],
+   "source": "official"
+  },
+  "notion": {
+   "items": [
+    {
+     "detail": "Login with Apple is currently unavailable in Notion due to an outage affecting Apple’s sign-in service. Apple is reporting issues on its [System Status page](https://www.apple.com/support/systemstatus/).",
+     "started": "2026-11-17T19:00:24Z",
+     "title": "Login with Apple unavailable",
+     "url": "https://www.notion-status.com"
+    }
+   ],
+   "level": "minor",
+   "link": "Apple",
+   "name": "Notion",
+   "notes": [],
+   "since": "2026-11-17T19:00:24Z",
+   "source": "official"
+  },
+  "onelogin": {
+   "items": [],
+   "level": "ok",
+   "name": "GOV.UK One Login",
+   "notes": [],
+   "source": "official"
+  },
+  "onepassword": {
+   "items": [],
+   "level": "ok",
+   "name": "1Password",
+   "notes": [],
+   "source": "official"
+  },
+  "paypal": {
+   "items": [],
+   "level": "ok",
+   "name": "PayPal",
+   "notes": [],
+   "source": "official"
+  },
+  "playstation": {
+   "items": [],
+   "level": "ok",
+   "name": "PlayStation Network",
+   "notes": [],
+   "source": "official"
+  },
+  "quickbooks": {
+   "items": [],
+   "level": "ok",
+   "name": "QuickBooks",
+   "notes": [],
+   "source": "official"
+  },
+  "reddit": {
+   "items": [],
+   "level": "ok",
+   "name": "Reddit",
+   "notes": [],
+   "source": "official"
+  },
+  "sage": {
+   "items": [
+    {
+     "detail": "We are continuing to investigate the cause of the issue. Thank you for your patience as we work to resolve this issue.",
+     "started": "2026-11-16T13:22:04Z",
+     "title": "Banking Service - Partial Outage",
+     "url": "https://stspg.io/9nvk6m7b6j4d"
+    }
+   ],
+   "level": "minor",
+   "name": "Sage",
+   "notes": [],
+   "since": "2026-11-16T13:22:04Z",
+   "source": "official"
+  },
+  "shopify": {
+   "items": [],
+   "level": "ok",
+   "name": "Shopify",
+   "notes": [],
+   "source": "official"
+  },
+  "slack": {
+   "items": [],
+   "level": "ok",
+   "name": "Slack",
+   "notes": [],
+   "source": "official"
+  },
+  "snapchat": {
+   "items": [],
+   "level": "ok",
+   "name": "Snapchat",
+   "notes": [],
+   "source": "probe"
+  },
+  "spotify": {
+   "items": [],
+   "level": "ok",
+   "name": "Spotify",
+   "notes": [],
+   "source": "official"
+  },
+  "square": {
+   "items": [],
+   "level": "ok",
+   "name": "Square",
+   "notes": [],
+   "source": "official"
+  },
+  "squarespace": {
+   "items": [],
+   "level": "ok",
+   "name": "Squarespace",
+   "notes": [],
+   "source": "official"
+  },
+  "stripe": {
+   "items": [],
+   "level": "ok",
+   "name": "Stripe",
+   "notes": [],
+   "source": "probe"
+  },
+  "sumup": {
+   "items": [],
+   "level": "ok",
+   "name": "SumUp",
+   "notes": [],
+   "source": "official"
+  },
+  "telegram": {
+   "items": [],
+   "level": "ok",
+   "name": "Telegram",
+   "notes": [],
+   "source": "probe"
+  },
+  "tide": {
+   "items": [],
+   "level": "ok",
+   "name": "Tide",
+   "notes": [],
+   "source": "official"
+  },
+  "tiktok": {
+   "items": [],
+   "level": "ok",
+   "name": "TikTok",
+   "notes": [],
+   "source": "probe"
+  },
+  "trello": {
+   "items": [],
+   "level": "ok",
+   "name": "Trello",
+   "notes": [],
+   "source": "official"
+  },
+  "twilio": {
+   "items": [],
+   "level": "ok",
+   "name": "Twilio",
+   "notes": [
+    "5 smaller notices on their status page that should not affect most people."
+   ],
+   "source": "official"
+  },
+  "twitch": {
+   "items": [],
+   "level": "ok",
+   "name": "Twitch",
+   "notes": [],
+   "source": "official"
+  },
+  "vercel": {
+   "items": [],
+   "level": "ok",
+   "name": "Vercel",
+   "notes": [],
+   "source": "official"
+  },
+  "whatsapp": {
+   "items": [],
+   "level": "ok",
+   "name": "WhatsApp",
+   "notes": [],
+   "source": "mixed"
+  },
+  "wise": {
+   "items": [],
+   "level": "ok",
+   "name": "Wise",
+   "notes": [],
+   "source": "official"
+  },
+  "wix": {
+   "items": [],
+   "level": "ok",
+   "name": "Wix",
+   "notes": [],
+   "source": "official"
+  },
+  "x": {
+   "items": [],
+   "level": "ok",
+   "name": "X (Twitter)",
+   "notes": [],
+   "source": "probe"
+  },
+  "xbox": {
+   "items": [],
+   "level": "ok",
+   "name": "Xbox",
+   "notes": [],
+   "source": "official"
+  },
+  "xero": {
+   "items": [
+    {
+     "detail": "HMRC have confirmed there are currently known issues with the CIS verification service and you can find more information on their website…",
+     "started": "2026-11-12T09:51:10Z",
+     "title": "UK: CIS - Error when verifying CIS contractors",
+     "url": "https://stspg.io/38lr0j3n9n8c"
+    }
+   ],
+   "level": "minor",
+   "link": "HMRC",
+   "name": "Xero",
+   "notes": [],
+   "since": "2026-11-12T09:51:10Z",
+   "source": "official"
+  },
+  "youtube": {
+   "items": [],
+   "level": "ok",
+   "name": "YouTube",
+   "notes": [],
+   "source": "probe"
+  },
+  "zoom": {
+   "items": [],
+   "level": "ok",
+   "name": "Zoom",
+   "notes": [
+    "Planned maintenance under way: Zoom Phone Maintenance - SA01 - KSA1 Data Center: November 16, 2026"
+   ],
+   "source": "official"
+  }
+ },
+ "state": {
+  "amazon": {
+   "fails": 0
+  },
+  "apple": {},
+  "asana": {},
+  "aws": {},
+  "azure": {},
+  "base44": {},
+  "bbc-iplayer": {
+   "fails": 0
+  },
+  "box": {},
+  "calendly": {},
+  "canva": {},
+  "chatgpt": {},
+  "claude": {},
+  "cloudflare": {},
+  "companies-house": {
+   "fails": 0
+  },
+  "discord": {},
+  "dropbox": {},
+  "ebay": {
+   "fails": 0
+  },
+  "epic": {},
+  "facebook": {
+   "fails": 0
+  },
+  "figma": {},
+  "freeagent": {},
+  "github": {},
+  "gocardless": {},
+  "godaddy": {},
+  "google-cloud": {},
+  "google-workspace": {},
+  "govnotify": {},
+  "govpay": {},
+  "hmrc": {},
+  "hmrc-cis": {},
+  "hmrc-ct": {},
+  "hmrc-mtd": {},
+  "hmrc-paye": {},
+  "hmrc-sa": {},
+  "hmrc-vat": {},
+  "hubspot": {},
+  "instagram": {
+   "fails": 0
+  },
+  "linkedin": {},
+  "messenger": {
+   "fails": 0
+  },
+  "microsoft365": {},
+  "monday": {},
+  "monzo": {},
+  "netflix": {
+   "fails": 0
+  },
+  "netlify": {},
+  "notion": {},
+  "onelogin": {},
+  "onepassword": {},
+  "paypal": {},
+  "playstation": {},
+  "quickbooks": {},
+  "reddit": {},
+  "sage": {},
+  "shopify": {},
+  "slack": {},
+  "snapchat": {
+   "fails": 0
+  },
+  "spotify": {},
+  "square": {},
+  "squarespace": {},
+  "stripe": {
+   "fails": 0
+  },
+  "sumup": {},
+  "telegram": {
+   "fails": 0
+  },
+  "tide": {},
+  "tiktok": {
+   "fails": 0
+  },
+  "trello": {},
+  "twilio": {},
+  "twitch": {},
+  "vercel": {},
+  "whatsapp": {
+   "fails": 0
+  },
+  "wise": {},
+  "wix": {},
+  "x": {
+   "fails": 0
+  },
+  "xbox": {},
+  "xero": {},
+  "youtube": {
+   "fails": 0
+  },
+  "zoom": {}
+ },
+ "stats": {
+  "apple": {
+   "m30": 345,
+   "m90": 345,
+   "n30": 1,
+   "n90": 1
+  },
+  "chatgpt": {
+   "m30": 408,
+   "m90": 408,
+   "n30": 1,
+   "n90": 1
+  },
+  "claude": {
+   "m30": 2004,
+   "m90": 2004,
+   "n30": 1,
+   "n90": 1
+  },
+  "dropbox": {
+   "m30": 173,
+   "m90": 173,
+   "n30": 1,
+   "n90": 1
+  },
+  "notion": {
+   "m30": 334,
+   "m90": 334,
+   "n30": 1,
+   "n90": 1
+  },
+  "sage": {
+   "m30": 2112,
+   "m90": 2112,
+   "n30": 1,
+   "n90": 1
+  },
+  "xero": {
+   "m30": 8083,
+   "m90": 8083,
+   "n30": 1,
+   "n90": 1
+  }
+ },
+ "tracking_since": "2026-11-17T20:55:16Z",
+ "trouble": false,
+ "version": 1
+}
