@@ -1,0 +1,34 @@
+<!doctype html><html lang="en-GB"><meta charset="utf-8"><title>Status page social image source</title><style>
+/* Source for img/status-social-v1.png (1200x630) and the square version (1080x1080).
+   The readings shown are the real ones from the evening the page went live, 17 November 2026. */
+@font-face{font-family:Poppins;src:url('../fonts/poppins-600.woff2');font-weight:600}@font-face{font-family:Poppins;src:url('../fonts/poppins-700.woff2');font-weight:700}
+*{box-sizing:border-box}body{margin:0;width:100vw;height:100vh;background:#12161d;color:#f5f7f7;font-family:Poppins,Arial,sans-serif;overflow:hidden}
+.card{height:100%;padding:48px 60px;position:relative;background:radial-gradient(ellipse at 100% 0%,#33442a 0%,transparent 58%)}
+.brand{width:310px;height:auto;display:block}
+.edition{position:absolute;right:60px;top:54px;font:600 15px Poppins;letter-spacing:3px;color:#aaec58;border:1px solid #657950;border-radius:30px;padding:12px 20px}
+.main{display:grid;grid-template-columns:430px 1fr;gap:44px;align-items:start;margin-top:36px}
+h1{font-size:68px;line-height:1.12;letter-spacing:-2.8px;margin:6px 0 15px;font-weight:700}h1 span{display:block;color:#aaec58}
+.intro{font-size:21px;line-height:1.35;color:#d3dcd1;margin:0}
+.names{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{font-size:16px;background:#232b31;border:1px solid #455048;border-radius:12px;padding:9px 14px}.chip.all{background:transparent;border-color:#657950;color:#aaec58}
+.panel{background:#fff;color:#191a1f;border-radius:16px;border-top:7px solid #cf3027;padding:20px 26px 12px;box-shadow:0 22px 50px #00000066}
+.label{font:600 12.5px Poppins;letter-spacing:2.2px;color:#555d66;text-transform:uppercase;margin:0}
+.panel h2{font:700 28px/1.2 Poppins;letter-spacing:-.6px;margin:8px 0 14px}
+.clue{margin:0;background:#fff7e0;border-left:5px solid #e08a00;border-radius:0 10px 10px 0;padding:12px 16px;font:500 18px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
+.rows{margin:8px 0 0;padding:0;list-style:none}
+.row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid #d5dad5;font:600 21px Poppins}.row:last-child{border-bottom:0}
+.state{display:flex;align-items:center;gap:8px;font:700 16.5px -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}.state::before{content:'';width:11px;height:11px;border-radius:50%;background:currentColor}
+.major{color:#a3211a}.minor{color:#8a4b00}.ok{color:#2f6b1f}
+.bottom{position:absolute;bottom:32px;left:60px;right:60px;border-top:1px solid #3a453c;padding-top:19px;display:flex;justify-content:space-between;color:#bfcbbf;font:600 15px Poppins}.bottom span:last-child{color:#aaec58}
+@media (max-aspect-ratio:1/1){
+.card{padding:64px}.brand{width:350px}.edition{right:64px;top:72px;font-size:17px}
+.main{grid-template-columns:1fr;gap:30px;margin-top:44px}
+h1{font-size:92px;letter-spacing:-3.8px;margin:0 0 18px}.intro{font-size:29px}.names{display:none}
+.panel{border-top-width:9px;padding:28px 34px 16px;border-radius:20px}.label{font-size:15px}.panel h2{font-size:41px;margin:10px 0 18px}
+.clue{font-size:25.5px;padding:16px 22px;border-left-width:7px}.rows{margin-top:10px}.row{font-size:30px;padding:12px 0}.row:nth-child(3){border-bottom:0}.row:nth-child(4){display:none}.state{font-size:23px;gap:11px}.state::before{width:15px;height:15px}
+.bottom{bottom:44px;left:64px;right:64px;font-size:19px;padding-top:22px}
+}
+</style><div class="card"><img class="brand" src="../img/logo.png" alt="EdwardsApps"><div class="edition">SERVICE STATUS</div>
+<div class="main"><div><h1>Is it them,<span>or is it me?</span></h1><p class="intro">Check before you restart the router.</p><div class="names"><span class="chip">WhatsApp</span><span class="chip">Apple</span><span class="chip">Google</span><span class="chip">Microsoft</span><span class="chip">HMRC</span><span class="chip">Xero</span><span class="chip">PayPal</span><span class="chip all">75 in all</span></div></div>
+<div class="panel"><p class="label">Launch night · 17 November 2026</p><h2>7 of 75 services have problems</h2><p class="clue">Dropbox, Notion and Claude all say their problem involves Apple. That points to Apple, not to them or to you.</p><ul class="rows"><li class="row">Apple<span class="state major">Major problems</span></li><li class="row">Dropbox<span class="state minor">Some problems</span></li><li class="row">Microsoft 365<span class="state ok">No problems reported</span></li><li class="row">WhatsApp<span class="state ok">No problems reported</span></li></ul></div></div>
+<div class="bottom"><span>Live status for the services you rely on, in plain English. Free.</span><span>edwardsapps.co.uk/status ↗</span></div></div></html>
