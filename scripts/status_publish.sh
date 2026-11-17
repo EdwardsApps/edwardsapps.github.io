@@ -26,6 +26,24 @@ else
   first_run=true
 fi
 
+# The timer asks more often than a check is needed. Skip unless the last one is old enough
+# (STATUS_MIN_GAP_SECONDS, default nine minutes) or the job was started by hand (STATUS_FORCE=1).
+if [ "$first_run" = false ] && [ "${STATUS_FORCE:-}" != "1" ]; then
+  age="$(python3 -c '
+import datetime as dt, json
+try:
+    checked = json.load(open("status.json"))["checked_at"]
+    then = dt.datetime.strptime(checked, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=dt.timezone.utc)
+    print(int((dt.datetime.now(dt.timezone.utc) - then).total_seconds()))
+except Exception:
+    print(999999)
+')"
+  if [ "$age" -lt "${STATUS_MIN_GAP_SECONDS:-540}" ]; then
+    echo "Last check was ${age} seconds ago. Nothing to do yet."
+    exit 0
+  fi
+fi
+
 python3 "$root/scripts/status_check.py" run --data "$work"
 
 # Never publish an empty or broken reading.
