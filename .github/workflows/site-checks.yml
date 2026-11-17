@@ -29,7 +29,14 @@ jobs:
           node --check js/command-menu.js
           node --check js/product-explorer.js
           node --check js/build-planner.js
+          node --check js/status.js
           node --check scripts/build_guide_pdfs.mjs
+
+      - name: Check the service status checker
+        run: |
+          python scripts/status_check_test.py
+          python scripts/status_check.py render --check
+          bash -n scripts/status_publish.sh
 
       - name: Verify analytics and marketing consent gates
         run: node --test scripts/consent.test.cjs

@@ -35,6 +35,7 @@
     ['Read & learn', 'Building Keystone SG', 'The security app and the work that became Studiobooks', '/building-keystone-sg.html', '{}', 'keystone security encryption build case study studiobooks patrol site memory plan b'],
     ['Read & learn', 'Admin MFA on Base44', 'The architecture, code and lessons from building it', '/base44-mfa.html', '{}', 'security authentication two factor otp totp password mfa code admin'],
     ['Read & learn', 'Base44 MFA Builder guide', 'A step-by-step implementation with copyable prompts', '/base44-mfa-guide.html', '{}', 'security tutorial builder entity schema prompt how install implement'],
+    ['Read & learn', 'Service status', 'Is it them or is it me? Live status for the services you rely on', '/status.html', '●', 'status down outage is it down whatsapp apple google microsoft hmrc xero facebook instagram working not working'],
     ['Read & learn', 'User guides', 'The manuals for day-to-day work', '/guides.html', '≡', 'help handbook manual documentation pdf download'],
     ['Read & learn', 'CrewBook user guide', 'From the dashboard to payroll and Sage exports', '/crewbook-guide.html', '≡', 'guide crewbook instructions manual handbook help scheduling cis'],
     ['Read & learn', 'CrewQCI user guide', 'From the first enquiry to paid invoices', '/crewqci-guide.html', '≡', 'guide crewqci instructions manual handbook help quotes contracts credit control'],

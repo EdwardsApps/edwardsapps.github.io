@@ -41,3 +41,16 @@ See `REVAMP-REVIEW.md` for coverage and verification, and `DESIGN-SOURCES.md` fo
 ## SecuriBeacon screenshots
 
 The four `img/shots/securibeacon-*.png` images are unaltered captures of the working web development client, using isolated demonstration records. They cover the control-room overview, scheduling, officer workspace and client reports on mobile web. The public captions identify them as development screenshots with demonstration data; they do not show released native apps or live customer records. Keep those captions when reusing the images.
+
+## Service status page
+
+`status.html` shows whether the services people rely on are working ("Is it them, or is it me?").
+
+- `status/services.json` is the list of services and how each one is read. After changing it, run `python scripts/status_check.py render` to rebuild the cards inside `status.html` (the pull-request checks fail if the two are out of step).
+- `scripts/status_check.py run --data DIR` reads every feed and writes `status.json` (what the page shows) and `history.json` (the record of every problem, used for "Recent problems" and the reliability table).
+- `.github/workflows/status-check.yml` runs that about every 15 minutes and stores the two files on the `status-data` branch through `scripts/status_publish.sh`. The page loads `status.json` straight from that branch, so `main` and the built site are untouched by routine checks. The branch gets a new commit only when a problem starts or ends; routine re-checks replace the latest commit.
+- To preview locally: `python scripts/status_check.py run --data .status-preview`, serve the repository, and open `/status.html`. On localhost the page reads `.status-preview/status.json` (git-ignored).
+- `python scripts/status_check_test.py` tests the readers with small made-up feeds.
+- Most services come from the company's official feed. A few with no feed (X, Netflix, TikTok and the everyday Meta apps) are tested for reachability only, and the cards say so. A reachability test must fail twice running before it shows, and it never shows as a major problem on its own.
+- If a company changes its feed, that card shows "Status unavailable" after about an hour and the job log names the feed. Fix the matching `read_…` function in `scripts/status_check.py`.
+

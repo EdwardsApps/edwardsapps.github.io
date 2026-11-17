@@ -6,6 +6,10 @@ How to work on the site (checks to run before pushing, guide PDFs, social images
 
 **Don't run `scripts/update_site_shell.py`** until its footer template carries the company disclosures added on 19 Sep 2026. As of 4 Oct 2026 it would strip the KAE Limited details, the Terms link and the phone number from every page, and `check_site.py` wouldn't notice.
 
+## Service status page
+
+`status.html` is kept current by a scheduled job, not by hand; how it fits together is in `README.md` under "Service status page". The `status-data` branch holds only the job's two data files: never merge it into `main`, and never delete it (it carries the history behind the reliability table). Text shown on the page from other companies' feeds is inserted as plain text only; keep it that way.
+
 ## Keep the EdwardsApps knowledge base current
 
 Peter's Claude Project "EdwardsApps" relies on a knowledge file whose master is in his OneDrive: `Apps/EdwardsApps/EdwardsApps - Claude Project Knowledge.md`, alongside `EdwardsApps - Claude Project Instructions.md`.
