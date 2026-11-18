@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-18T23:45:21Z",
+ "attempted_at": "2026-11-19T00:36:36Z",
  "banners": [],
- "checked_at": "2026-11-18T23:45:21Z",
+ "checked_at": "2026-11-19T00:36:36Z",
  "counts": {
-  "major": 1,
+  "major": 0,
   "minor": 4,
-  "ok": 70,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-18T23:55:32Z",
    "level": "major",
    "started": "2026-11-18T20:44:33Z",
    "svc": "vercel",
@@ -585,7 +585,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "5 smaller notices on their status page that should not affect most people."
+    "4 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -597,18 +597,10 @@
    "source": "official"
   },
   "vercel": {
-   "items": [
-    {
-     "detail": "A fix has been implemented, and recovery is in process. We are monitoring the results and will provide additional updates as we have them.",
-     "started": "2026-11-18T20:44:33Z",
-     "title": "Delays in observability data",
-     "url": "https://stspg.io/mskmcg5p67tp"
-    }
-   ],
-   "level": "major",
+   "items": [],
+   "level": "ok",
    "name": "Vercel",
    "notes": [],
-   "since": "2026-11-18T20:44:33Z",
    "source": "official"
   },
   "whatsapp": {
@@ -788,8 +780,8 @@
  },
  "stats": {
   "apple": {
-   "m30": 818,
-   "m90": 818,
+   "m30": 869,
+   "m90": 869,
    "n30": 2,
    "n90": 2
   },
@@ -800,8 +792,8 @@
    "n90": 1
   },
   "claude": {
-   "m30": 3395,
-   "m90": 3395,
+   "m30": 3446,
+   "m90": 3446,
    "n30": 1,
    "n90": 1
   },
@@ -836,20 +828,20 @@
    "n90": 1
   },
   "sage": {
-   "m30": 3503,
-   "m90": 3503,
+   "m30": 3554,
+   "m90": 3554,
    "n30": 1,
    "n90": 1
   },
   "vercel": {
-   "m30": 180,
-   "m90": 180,
+   "m30": 190,
+   "m90": 190,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 9474,
-   "m90": 9474,
+   "m30": 9525,
+   "m90": 9525,
    "n30": 1,
    "n90": 1
   }
