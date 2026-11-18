@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-18T08:54:34Z",
+ "attempted_at": "2026-11-18T09:24:54Z",
  "banners": [],
- "checked_at": "2026-11-18T08:54:34Z",
+ "checked_at": "2026-11-18T09:24:54Z",
  "counts": {
   "major": 0,
-  "minor": 4,
-  "ok": 71,
+  "minor": 5,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-18T09:00:12Z",
+   "svc": "github",
+   "title": "Degraded Availability for MAI Code 2 Flash in Copilot"
+  },
   {
    "ended": "2026-11-17T22:30:31Z",
    "level": "minor",
@@ -228,10 +235,18 @@
    "source": "official"
   },
   "github": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability.",
+     "started": "2026-11-18T09:00:12Z",
+     "title": "Degraded Availability for MAI Code 2 Flash in Copilot",
+     "url": "https://stspg.io/3sbmvyy2ctyx"
+    }
+   ],
+   "level": "minor",
    "name": "GitHub",
    "notes": [],
+   "since": "2026-11-18T09:00:12Z",
    "source": "official"
   },
   "gocardless": {
@@ -751,20 +766,26 @@
    "n90": 1
   },
   "chatgpt": {
-   "m30": 908,
-   "m90": 908,
+   "m30": 938,
+   "m90": 938,
    "n30": 1,
    "n90": 1
   },
   "claude": {
-   "m30": 2504,
-   "m90": 2504,
+   "m30": 2534,
+   "m90": 2534,
    "n30": 1,
    "n90": 1
   },
   "dropbox": {
    "m30": 173,
    "m90": 173,
+   "n30": 1,
+   "n90": 1
+  },
+  "github": {
+   "m30": 24,
+   "m90": 24,
    "n30": 1,
    "n90": 1
   },
@@ -775,14 +796,14 @@
    "n90": 1
   },
   "sage": {
-   "m30": 2612,
-   "m90": 2612,
+   "m30": 2642,
+   "m90": 2642,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 8583,
-   "m90": 8583,
+   "m30": 8613,
+   "m90": 8613,
    "n30": 1,
    "n90": 1
   }

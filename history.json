@@ -48,6 +48,13 @@
    "started": "2026-11-16T15:10:15Z",
    "svc": "claude",
    "title": "Claude unable to join meetings"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-18T09:00:12Z",
+   "svc": "github",
+   "title": "Degraded Availability for MAI Code 2 Flash in Copilot"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
