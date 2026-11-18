@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-18T19:09:17Z",
+ "attempted_at": "2026-11-18T19:19:35Z",
  "banners": [],
- "checked_at": "2026-11-18T19:09:17Z",
+ "checked_at": "2026-11-18T19:19:35Z",
  "counts": {
-  "major": 1,
+  "major": 0,
   "minor": 4,
-  "ok": 70,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
@@ -17,7 +17,7 @@
    "title": "Gaming and social: degraded"
   },
   {
-   "ended": "",
+   "ended": "2026-11-18T19:19:35Z",
    "level": "major",
    "started": "2026-11-18T18:41:15Z",
    "svc": "epic",
@@ -213,18 +213,10 @@
    "source": "probe"
   },
   "epic": {
-   "items": [
-    {
-     "detail": "We're actively working to resolve an issue impacting logins and matchmaking in Fortnite. We'll share an update as soon as this resolved, or we have more information to share.",
-     "started": "2026-11-18T18:41:15Z",
-     "title": "Fortnite Login and Matchmaking Issues",
-     "url": "https://stspg.io/sj043808mycb"
-    }
-   ],
-   "level": "major",
+   "items": [],
+   "level": "ok",
    "name": "Epic Games and Fortnite",
    "notes": [],
-   "since": "2026-11-18T18:41:15Z",
    "source": "official"
   },
   "facebook": {
@@ -787,8 +779,8 @@
    "n90": 1
   },
   "claude": {
-   "m30": 3119,
-   "m90": 3119,
+   "m30": 3129,
+   "m90": 3129,
    "n30": 1,
    "n90": 1
   },
@@ -799,8 +791,8 @@
    "n90": 1
   },
   "epic": {
-   "m30": 28,
-   "m90": 28,
+   "m30": 38,
+   "m90": 38,
    "n30": 1,
    "n90": 1
   },
@@ -817,20 +809,20 @@
    "n90": 1
   },
   "playstation": {
-   "m30": 11,
-   "m90": 11,
+   "m30": 21,
+   "m90": 21,
    "n30": 1,
    "n90": 1
   },
   "sage": {
-   "m30": 3227,
-   "m90": 3227,
+   "m30": 3237,
+   "m90": 3237,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 9198,
-   "m90": 9198,
+   "m30": 9208,
+   "m90": 9208,
    "n30": 1,
    "n90": 1
   }
