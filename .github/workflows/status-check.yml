@@ -3,16 +3,20 @@ name: Status check
 # Reads every service's status feed and stores the result on the status-data branch,
 # which status.html loads directly. Nothing on main changes, so the site is not rebuilt.
 #
-# GitHub's timer often runs late and sometimes skips a slot, so it is asked every five
-# minutes. The job itself does nothing unless the last check is at least nine minutes old,
-# which gives a check about every ten minutes when the timer behaves and the best GitHub
-# can manage when it does not. Starting the job by hand always runs a check.
+# The regular checks come from the "Status timer" workflow, which keeps itself going.
+# This workflow is the safety net around it. It runs when GitHub's scheduler fires (which
+# is late, patchy and at times not at all), whenever the site is updated, and when started
+# by hand. Each time, it checks the services if the last check is getting old (14 minutes;
+# a run started by hand always checks) and then starts either timer if it has stopped.
 on:
   schedule:
     - cron: '3,8,13,18,23,28,33,38,43,48,53,58 * * * *'
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: write
 
 concurrency:
@@ -33,4 +37,12 @@ jobs:
         env:
           STATUS_REMOTE: https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git
           STATUS_FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
+          # The timer checks about every ten minutes. Only step in when it is running late.
+          STATUS_MIN_GAP_SECONDS: '840'
         run: bash scripts/status_publish.sh
+
+      - name: Make sure the timers are running
+        if: ${{ !cancelled() }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/status_timer.py ensure
