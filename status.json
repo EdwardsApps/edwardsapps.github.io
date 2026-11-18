@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-18T18:48:51Z",
+ "attempted_at": "2026-11-18T19:09:17Z",
  "banners": [],
- "checked_at": "2026-11-18T18:48:51Z",
+ "checked_at": "2026-11-18T19:09:17Z",
  "counts": {
   "major": 1,
-  "minor": 3,
-  "ok": 71,
+  "minor": 4,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-18T18:58:08Z",
+   "svc": "playstation",
+   "title": "Gaming and social: degraded"
+  },
   {
    "ended": "",
    "level": "major",
@@ -415,9 +422,7 @@
    "items": [],
    "level": "ok",
    "name": "Notion",
-   "notes": [
-    "1 smaller notice on their status page that should not affect most people."
-   ],
+   "notes": [],
    "source": "official"
   },
   "onelogin": {
@@ -442,10 +447,18 @@
    "source": "official"
   },
   "playstation": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "You might have difficulty launching games, apps or network features. We're working to resolve the issue as soon as possible. Thank you for your patience.",
+     "started": "2026-11-18T18:58:08Z",
+     "title": "Gaming and social: degraded",
+     "url": "https://status.playstation.com/en-gb/"
+    }
+   ],
+   "level": "minor",
    "name": "PlayStation Network",
    "notes": [],
+   "since": "2026-11-18T18:58:08Z",
    "source": "official"
   },
   "quickbooks": {
@@ -647,6 +660,7 @@
    "level": "ok",
    "name": "Zoom",
    "notes": [
+    "1 smaller notice on their status page that should not affect most people.",
     "Planned maintenance under way: Zoom Phone Maintenance - SA01 - KSA1 Data Center: November 16, 2026"
    ],
    "source": "official"
@@ -773,8 +787,8 @@
    "n90": 1
   },
   "claude": {
-   "m30": 3098,
-   "m90": 3098,
+   "m30": 3119,
+   "m90": 3119,
    "n30": 1,
    "n90": 1
   },
@@ -785,8 +799,8 @@
    "n90": 1
   },
   "epic": {
-   "m30": 7,
-   "m90": 7,
+   "m30": 28,
+   "m90": 28,
    "n30": 1,
    "n90": 1
   },
@@ -802,15 +816,21 @@
    "n30": 1,
    "n90": 1
   },
+  "playstation": {
+   "m30": 11,
+   "m90": 11,
+   "n30": 1,
+   "n90": 1
+  },
   "sage": {
-   "m30": 3206,
-   "m90": 3206,
+   "m30": 3227,
+   "m90": 3227,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 9177,
-   "m90": 9177,
+   "m30": 9198,
+   "m90": 9198,
    "n30": 1,
    "n90": 1
   }
