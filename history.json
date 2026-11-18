@@ -76,6 +76,13 @@
    "started": "2026-11-18T20:44:33Z",
    "svc": "vercel",
    "title": "Delays in observability data"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-18T15:52:00Z",
+   "svc": "apple",
+   "title": "Stocks: issue"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"

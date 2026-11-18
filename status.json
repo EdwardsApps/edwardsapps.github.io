@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-18T21:01:52Z",
+ "attempted_at": "2026-11-18T23:45:21Z",
  "banners": [],
- "checked_at": "2026-11-18T21:01:52Z",
+ "checked_at": "2026-11-18T23:45:21Z",
  "counts": {
   "major": 1,
-  "minor": 3,
-  "ok": 71,
+  "minor": 4,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
@@ -29,6 +29,13 @@
    "started": "2026-11-18T18:41:15Z",
    "svc": "epic",
    "title": "Fortnite Login and Matchmaking Issues"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-18T15:52:00Z",
+   "svc": "apple",
+   "title": "Stocks: issue"
   },
   {
    "ended": "2026-11-18T09:35:21Z",
@@ -96,10 +103,18 @@
    "source": "probe"
   },
   "apple": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "Users are experiencing issues with Stocks. Some users are affected.",
+     "started": "2026-11-18T15:52:00Z",
+     "title": "Stocks: outage",
+     "url": "https://www.apple.com/uk/support/systemstatus/"
+    }
+   ],
+   "level": "minor",
    "name": "Apple",
    "notes": [],
+   "since": "2026-11-18T15:52:00Z",
    "source": "official"
   },
   "asana": {
@@ -584,7 +599,7 @@
   "vercel": {
    "items": [
     {
-     "detail": "The issue has been identified and a fix is being implemented.",
+     "detail": "A fix has been implemented, and recovery is in process. We are monitoring the results and will provide additional updates as we have them.",
      "started": "2026-11-18T20:44:33Z",
      "title": "Delays in observability data",
      "url": "https://stspg.io/mskmcg5p67tp"
@@ -773,10 +788,10 @@
  },
  "stats": {
   "apple": {
-   "m30": 345,
-   "m90": 345,
-   "n30": 1,
-   "n90": 1
+   "m30": 818,
+   "m90": 818,
+   "n30": 2,
+   "n90": 2
   },
   "chatgpt": {
    "m30": 1410,
@@ -785,8 +800,8 @@
    "n90": 1
   },
   "claude": {
-   "m30": 3231,
-   "m90": 3231,
+   "m30": 3395,
+   "m90": 3395,
    "n30": 1,
    "n90": 1
   },
@@ -821,20 +836,20 @@
    "n90": 1
   },
   "sage": {
-   "m30": 3339,
-   "m90": 3339,
+   "m30": 3503,
+   "m90": 3503,
    "n30": 1,
    "n90": 1
   },
   "vercel": {
-   "m30": 17,
-   "m90": 17,
+   "m30": 180,
+   "m90": 180,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 9310,
-   "m90": 9310,
+   "m30": 9474,
+   "m90": 9474,
    "n30": 1,
    "n90": 1
   }
