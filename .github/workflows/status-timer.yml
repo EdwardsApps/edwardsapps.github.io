@@ -1,0 +1,74 @@
+name: Status timer
+run-name: Status timer (${{ inputs.lane }})
+
+# Keeps the status check going without GitHub's scheduler, which runs late, skips slots and,
+# on this repository, did not fire at all in the hours after the status page went live.
+#
+# Each run waits, starts the next run, then checks the services. The wait is a "wait timer"
+# on a GitHub environment, so nothing runs and no runner is used while it waits:
+#   status-timer-fast   10 minutes    keeps the page fresh
+#   status-timer-slow   180 minutes   restarts the fast one if it ever stops (and the reverse)
+# The waits are settings on those two environments (repository Settings > Environments),
+# not in this file. Do not remove them: a run that did not wait refuses to start another.
+# scripts/status_timer.py holds the rules; README.md explains the rest.
+#
+# The run-name above is how the runs of each timer are told apart. Keep it in step with
+# TITLE in scripts/status_timer.py (the site checks compare the two).
+#
+# To stop it: disable this workflow in the Actions tab. To start it again: enable it and
+# run "Status check" by hand, which starts any timer that is not running.
+on:
+  workflow_dispatch:
+    inputs:
+      lane:
+        description: Which timer this run belongs to
+        type: choice
+        options: [fast, slow]
+        default: fast
+
+permissions: {}
+
+jobs:
+  tick:
+    name: Wait, then start the next run
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      actions: write
+      contents: read
+    environment:
+      name: status-timer-${{ inputs.lane }}
+      deployment: false
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Start the next run of this timer
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          LANE: ${{ inputs.lane }}
+        run: python3 scripts/status_timer.py tick "$LANE"
+
+  check:
+    name: Check the services
+    needs: tick
+    # Check even if the step above failed. The timer and the check do not depend on each other.
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Read the status feeds and store the readings
+        env:
+          STATUS_REMOTE: https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git
+          # The timer sets the pace, so only skip when something else has just checked.
+          STATUS_MIN_GAP_SECONDS: '300'
+        run: bash scripts/status_publish.sh

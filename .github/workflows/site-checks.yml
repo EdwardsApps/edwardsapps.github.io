@@ -36,6 +36,7 @@ jobs:
         run: |
           python scripts/status_check_test.py
           python scripts/status_check.py render --check
+          python scripts/status_timer_test.py
           bash -n scripts/status_publish.sh
 
       - name: Verify analytics and marketing consent gates
