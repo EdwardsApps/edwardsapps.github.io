@@ -28,6 +28,13 @@
 .resource-library-book small { display: block; color: #60705a; font-size: .75rem; margin-top: .2rem; }
 .resource-page .hero a.resource-library-book { color: #111813; text-decoration: none; }
 .resource-page .hero a.resource-library-book:hover { background: #eaf3df; }
+.resource-library-grid { grid-template-columns: 1fr 1fr; gap: .6rem; }
+.resource-library-grid .resource-library-book { gap: .7rem; padding: .8rem .85rem; border-left-width: 5px; box-shadow: 0 10px 20px #0002; min-width: 0; }
+.resource-library-grid .resource-library-book:nth-child(2) { margin-left: 0; transform: none; }
+.resource-library-grid .resource-library-book img { height: 36px; width: 36px; border-radius: 9px; flex: none; }
+.resource-library-grid .resource-library-book b { font-size: .92rem; }
+.resource-library-grid .resource-library-book small { font-size: .68rem; line-height: 1.35; }
+@media (max-width: 26em) { .resource-library-grid { grid-template-columns: 1fr; } }
 .resource-library-number { font-family: var(--font-display); font-size: 2rem; line-height: 1; color: #306339; margin-right: .3rem; }
 .resource-cover-shot { display: block; width: 100%; height: auto; margin-top: 1.6rem; border-radius: 10px; border: 1px solid #ffffff2e; box-shadow: 0 15px 30px #0003; }
 .resource-page .resource-hero .resource-cover .resource-cover-link { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 1.5rem; color: #b7ee63; text-decoration: none; font-size: .82rem; font-weight: 600; padding-block: .4rem; }

@@ -39,6 +39,10 @@
     ['Read & learn', 'User guides', 'The manuals for day-to-day work', '/guides.html', '≡', 'help handbook manual documentation pdf download'],
     ['Read & learn', 'CrewBook user guide', 'From the dashboard to payroll and Sage exports', '/crewbook-guide.html', '≡', 'guide crewbook instructions manual handbook help scheduling cis'],
     ['Read & learn', 'CrewQCI user guide', 'From the first enquiry to paid invoices', '/crewqci-guide.html', '≡', 'guide crewqci instructions manual handbook help quotes contracts credit control'],
+    ['Read & learn', 'SecuriBeacon user guide', 'From assigned shift to approved report', '/securibeacon-guide.html', '≡', 'guide securibeacon instructions manual handbook help security officers control room clients shifts reports location'],
+    ['Read & learn', 'Studiobooks user guide', 'From enquiry and proposal to paid invoice', '/studiobooks-guide.html', '≡', 'guide studiobooks instructions manual handbook help proposals contracts billing invoices portal'],
+    ['Read & learn', 'OurSpace user guide', 'Every part of the household, step by step', '/ourspace-guide.html', '≡', 'guide ourspace instructions manual handbook help family household lists calendar meals budget'],
+    ['Read & learn', 'Almoner user guide', 'From the pot on the counter to the bank', '/almoner-guide.html', '≡', 'guide almoner instructions manual handbook help charity pots collections gift aid volunteers'],
     ['Information', 'Privacy', 'How information is handled', '/privacy.html', 'i', 'data personal policy privacy gdpr'],
     ['Information', 'Cookies', 'Browser storage and your analytics choice', '/cookies.html', 'i', 'consent tracking analytics settings cookies']
   ];
