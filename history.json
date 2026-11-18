@@ -69,6 +69,13 @@
    "started": "2026-11-18T18:58:08Z",
    "svc": "playstation",
    "title": "Gaming and social: degraded"
+  },
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-18T20:44:33Z",
+   "svc": "vercel",
+   "title": "Delays in observability data"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
