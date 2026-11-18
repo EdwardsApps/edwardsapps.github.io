@@ -34,11 +34,12 @@ def raw(run_id, title, status, created):
 class FakeGitHub:
     """Stands in for GitHub. A started run shows up after `lag` further listings."""
 
-    def __init__(self, runs, lag=1, appears=True, fail_dispatch=0, next_id=1000):
+    def __init__(self, runs, lag=1, appears=True, fail_dispatch=0, next_id=1000, refuse=False):
         self.listed = list(runs)
         self.lag = lag
         self.appears = appears
         self.fail_dispatch = fail_dispatch
+        self.refuse = refuse
         self.next_id = next_id
         self.pending = []
         self.dispatched = []
@@ -57,6 +58,8 @@ class FakeGitHub:
         return next(item for item in self.listed if item["id"] == run_id)
 
     def dispatch(self, lane):
+        if self.refuse:
+            raise urllib.error.HTTPError("https://api.github.com", 403, "Forbidden", None, None)
         if self.fail_dispatch:
             self.fail_dispatch -= 1
             raise urllib.error.HTTPError("https://api.github.com", 502, "Bad Gateway", None, None)
@@ -250,6 +253,11 @@ class ATick(unittest.TestCase):
 
     def test_a_tick_that_did_not_wait_fails_and_starts_no_more_of_itself(self):
         gh = FakeGitHub([run(10, "fast", "in_progress", 0.2), run(9, "slow", "waiting", 60)])
+        self.assertEqual(self.tick(gh, "fast", 10), 1)
+        self.assertEqual(gh.dispatched, [])
+
+    def test_a_switched_off_timer_ends_the_chain_without_a_crash(self):
+        gh = FakeGitHub([run(10, "fast", "in_progress", 10.5)], refuse=True)
         self.assertEqual(self.tick(gh, "fast", 10), 1)
         self.assertEqual(gh.dispatched, [])
 

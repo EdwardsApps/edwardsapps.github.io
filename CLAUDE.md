@@ -8,7 +8,9 @@ How to work on the site (checks to run before pushing, guide PDFs, social images
 
 ## Service status page
 
-`status.html` is kept current by a scheduled job, not by hand; how it fits together is in `README.md` under "Service status page". The `status-data` branch holds only the job's two data files: never merge it into `main`, and never delete it (it carries the history behind the reliability table). Text shown on the page from other companies' feeds is inserted as plain text only; keep it that way.
+`status.html` is kept current by a job that restarts itself (the "Status timer" workflow), not by hand and not by GitHub's scheduler; how it fits together is in `README.md` under "Service status page". The `status-data` branch holds only the job's two data files: never merge it into `main`, and never delete it (it carries the history behind the reliability table). Text shown on the page from other companies' feeds is inserted as plain text only; keep it that way.
+
+The timer's waits are wait timers on two GitHub environments, `status-timer-fast` and `status-timer-slow`. Never delete those environments or their wait timers, and don't cancel the timer's waiting runs: the checks stop if you do. To stop the checks on purpose, disable the "Status timer" workflow; to restart them, enable it and run "Status check" by hand.
 
 ## Keep the EdwardsApps knowledge base current
 

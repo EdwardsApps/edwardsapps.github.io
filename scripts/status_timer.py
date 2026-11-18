@@ -242,7 +242,13 @@ def tick(gh, lane, run_id, patience, dry_run=False, pause=time.sleep, clock=utc_
     go, fine, why = plan_tick(runs, mine, lane, clock())
     print(why)
     if go and not dry_run:
-        fine = start(gh, lane, run_id, patience, pause, clock)
+        try:
+            fine = start(gh, lane, run_id, patience, pause, clock)
+        except (urllib.error.URLError, OSError) as error:
+            # A refusal here would be repeated for the other timer, so stop.
+            print(f"Could not start the next {lane} run: {error}. "
+                  "That is expected if the Status timer workflow has been disabled.")
+            return 1
         if not fine:
             print(f"Could not start the next {lane} run.")
     # Whatever happened above, make sure the other timer is alive.
