@@ -55,6 +55,13 @@
    "started": "2026-11-18T09:00:12Z",
    "svc": "github",
    "title": "Degraded Availability for MAI Code 2 Flash in Copilot"
+  },
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-18T18:41:15Z",
+   "svc": "epic",
+   "title": "Fortnite Login and Matchmaking Issues"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
