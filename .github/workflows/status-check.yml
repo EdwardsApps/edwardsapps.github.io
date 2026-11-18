@@ -10,7 +10,8 @@ name: Status check
 # a run started by hand always checks) and then starts either timer if it has stopped.
 on:
   schedule:
-    - cron: '3,8,13,18,23,28,33,38,43,48,53,58 * * * *'
+    # A safety net only needs to look every quarter of an hour.
+    - cron: '7,22,37,52 * * * *'
   push:
     branches: [main]
   workflow_dispatch:
