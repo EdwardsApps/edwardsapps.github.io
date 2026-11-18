@@ -22,6 +22,10 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const GUIDES = [
   { page: 'crewbook-guide.html', pdf: 'downloads/crewbook-user-guide.pdf', title: 'CrewBook user guide' },
   { page: 'crewqci-guide.html', pdf: 'downloads/crewqci-user-guide.pdf', title: 'CrewQCI user guide' },
+  { page: 'securibeacon-guide.html', pdf: 'downloads/securibeacon-user-guide.pdf', title: 'SecuriBeacon user guide' },
+  { page: 'studiobooks-guide.html', pdf: 'downloads/studiobooks-user-guide.pdf', title: 'Studiobooks user guide' },
+  { page: 'ourspace-guide.html', pdf: 'downloads/ourspace-user-guide.pdf', title: 'OurSpace user guide' },
+  { page: 'almoner-guide.html', pdf: 'downloads/almoner-user-guide.pdf', title: 'Almoner user guide' },
 ];
 
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE
@@ -65,7 +69,13 @@ try {
   await mkdir(path.join(ROOT, 'downloads'), { recursive: true });
   const page = await browser.newPage();
 
-  for (const guide of GUIDES) {
+  // Name one or more guide pages on the command line to rebuild only those:
+  //   node scripts/build_guide_pdfs.mjs almoner-guide.html
+  const only = process.argv.slice(2);
+  const unknown = only.filter((name) => !GUIDES.some((g) => g.page === name));
+  if (unknown.length) throw new Error(`Not a guide page: ${unknown.join(', ')}`);
+
+  for (const guide of GUIDES.filter((g) => !only.length || only.includes(g.page))) {
     const url = `${origin}/${guide.page}`;
     await page.goto(url, { waitUntil: 'networkidle' });
 
