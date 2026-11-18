@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-18T00:34:41Z",
+ "attempted_at": "2026-11-18T08:54:34Z",
  "banners": [],
- "checked_at": "2026-11-18T00:34:41Z",
+ "checked_at": "2026-11-18T08:54:34Z",
  "counts": {
   "major": 0,
-  "minor": 5,
-  "ok": 70,
+  "minor": 4,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
@@ -17,7 +17,7 @@
    "title": "Sign in with Apple is not working as expected for some users"
   },
   {
-   "ended": "",
+   "ended": "2026-11-18T00:45:05Z",
    "level": "minor",
    "started": "2026-11-17T19:00:24Z",
    "svc": "notion",
@@ -167,7 +167,7 @@
    "level": "ok",
    "name": "Cloudflare",
    "notes": [
-    "2 smaller notices on their status page that should not affect most people."
+    "1 smaller notice on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -398,19 +398,10 @@
    "source": "official"
   },
   "notion": {
-   "items": [
-    {
-     "detail": "Login with Apple is currently unavailable in Notion due to an outage affecting Apple’s sign-in service. Apple is reporting issues on its [System Status page](https://www.apple.com/support/systemstatus/).",
-     "started": "2026-11-17T19:00:24Z",
-     "title": "Login with Apple unavailable",
-     "url": "https://www.notion-status.com"
-    }
-   ],
-   "level": "minor",
-   "link": "Apple",
+   "items": [],
+   "level": "ok",
    "name": "Notion",
    "notes": [],
-   "since": "2026-11-17T19:00:24Z",
    "source": "official"
   },
   "onelogin": {
@@ -760,14 +751,14 @@
    "n90": 1
   },
   "chatgpt": {
-   "m30": 408,
-   "m90": 408,
+   "m30": 908,
+   "m90": 908,
    "n30": 1,
    "n90": 1
   },
   "claude": {
-   "m30": 2004,
-   "m90": 2004,
+   "m30": 2504,
+   "m90": 2504,
    "n30": 1,
    "n90": 1
   },
@@ -778,20 +769,20 @@
    "n90": 1
   },
   "notion": {
-   "m30": 334,
-   "m90": 334,
+   "m30": 344,
+   "m90": 344,
    "n30": 1,
    "n90": 1
   },
   "sage": {
-   "m30": 2112,
-   "m90": 2112,
+   "m30": 2612,
+   "m90": 2612,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 8083,
-   "m90": 8083,
+   "m30": 8583,
+   "m90": 8583,
    "n30": 1,
    "n90": 1
   }
