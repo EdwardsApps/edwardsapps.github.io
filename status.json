@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-18T17:06:18Z",
+ "attempted_at": "2026-11-18T18:38:41Z",
  "banners": [],
- "checked_at": "2026-11-18T17:06:18Z",
+ "checked_at": "2026-11-18T18:38:41Z",
  "counts": {
   "major": 0,
-  "minor": 4,
-  "ok": 71,
+  "minor": 3,
+  "ok": 72,
   "unknown": 0
  },
  "recent": [
@@ -31,7 +31,7 @@
    "title": "Login with Apple unavailable"
   },
   {
-   "ended": "",
+   "ended": "2026-11-18T17:16:29Z",
    "level": "minor",
    "started": "2026-11-17T17:46:15Z",
    "svc": "chatgpt",
@@ -140,18 +140,10 @@
    "source": "official"
   },
   "chatgpt": {
-   "items": [
-    {
-     "detail": "We've pushed a fix and are monitoring the recovery.",
-     "started": "2026-11-17T17:46:15Z",
-     "title": "Costs API data is delayed",
-     "url": "https://status.openai.com"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "ChatGPT (OpenAI)",
    "notes": [],
-   "since": "2026-11-17T17:46:15Z",
    "source": "official"
   },
   "claude": {
@@ -408,7 +400,9 @@
    "items": [],
    "level": "ok",
    "name": "Notion",
-   "notes": [],
+   "notes": [
+    "1 smaller notice on their status page that should not affect most people."
+   ],
    "source": "official"
   },
   "onelogin": {
@@ -758,14 +752,14 @@
    "n90": 1
   },
   "chatgpt": {
-   "m30": 1400,
-   "m90": 1400,
+   "m30": 1410,
+   "m90": 1410,
    "n30": 1,
    "n90": 1
   },
   "claude": {
-   "m30": 2996,
-   "m90": 2996,
+   "m30": 3088,
+   "m90": 3088,
    "n30": 1,
    "n90": 1
   },
@@ -788,14 +782,14 @@
    "n90": 1
   },
   "sage": {
-   "m30": 3104,
-   "m90": 3104,
+   "m30": 3196,
+   "m90": 3196,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 9075,
-   "m90": 9075,
+   "m30": 9167,
+   "m90": 9167,
    "n30": 1,
    "n90": 1
   }
