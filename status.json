@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-19T21:46:33Z",
+ "attempted_at": "2026-11-19T22:17:07Z",
  "banners": [],
- "checked_at": "2026-11-19T21:46:33Z",
+ "checked_at": "2026-11-19T22:17:07Z",
  "counts": {
-  "major": 1,
+  "major": 0,
   "minor": 5,
-  "ok": 69,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-19T21:56:43Z",
    "level": "major",
    "started": "2026-11-19T21:39:24Z",
    "svc": "godaddy",
@@ -249,7 +249,7 @@
    "level": "ok",
    "name": "Cloudflare",
    "notes": [
-    "2 smaller notices on their status page that should not affect most people."
+    "1 smaller notice on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -324,18 +324,10 @@
    "source": "official"
   },
   "godaddy": {
-   "items": [
-    {
-     "detail": "We are aware of an issue affecting the ability to log into GoDaddy accounts. Thank you for your patience.",
-     "started": "2026-11-19T21:39:24Z",
-     "title": "Account Login Degraded",
-     "url": "https://stspg.io/33xvgprskv87"
-    }
-   ],
-   "level": "major",
+   "items": [],
+   "level": "ok",
    "name": "GoDaddy",
    "notes": [],
-   "since": "2026-11-19T21:39:24Z",
    "source": "official"
   },
   "google-cloud": {
@@ -893,14 +885,14 @@
    "n90": 3
   },
   "godaddy": {
-   "m30": 7,
-   "m90": 7,
+   "m30": 17,
+   "m90": 17,
    "n30": 1,
    "n90": 1
   },
   "hmrc-cis": {
-   "m30": 1863,
-   "m90": 1863,
+   "m30": 1893,
+   "m90": 1893,
    "n30": 1,
    "n90": 1
   },
@@ -917,14 +909,14 @@
    "n90": 2
   },
   "sage": {
-   "m30": 4824,
-   "m90": 4824,
+   "m30": 4855,
+   "m90": 4855,
    "n30": 1,
    "n90": 1
   },
   "sumup": {
-   "m30": 292,
-   "m90": 292,
+   "m30": 323,
+   "m90": 323,
    "n30": 1,
    "n90": 1
   },
@@ -935,14 +927,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 219,
-   "m90": 219,
+   "m30": 249,
+   "m90": 249,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 10795,
-   "m90": 10795,
+   "m30": 10825,
+   "m90": 10825,
    "n30": 1,
    "n90": 1
   }
