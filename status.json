@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-19T02:08:41Z",
+ "attempted_at": "2026-11-19T05:32:50Z",
  "banners": [],
- "checked_at": "2026-11-19T02:08:41Z",
+ "checked_at": "2026-11-19T05:32:50Z",
  "counts": {
   "major": 0,
-  "minor": 3,
-  "ok": 72,
+  "minor": 2,
+  "ok": 73,
   "unknown": 0
  },
  "recent": [
@@ -73,7 +73,7 @@
    "title": "iCloud Account & Sign In: issue"
   },
   {
-   "ended": "",
+   "ended": "2026-11-19T02:18:48Z",
    "level": "minor",
    "started": "2026-11-16T15:10:15Z",
    "svc": "claude",
@@ -175,18 +175,10 @@
    "source": "official"
   },
   "claude": {
-   "items": [
-    {
-     "detail": "Claude Meetings (beta) is joining calls more reliably, and we are monitoring it. It remains enabled for all Enterprise customers. Team customers can again add Claude to new calls manually, and Auto-join is being restored gradually for…",
-     "started": "2026-11-16T15:10:15Z",
-     "title": "Claude unable to join meetings",
-     "url": "https://stspg.io/01qq3kzyyqzl"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "Claude (Anthropic)",
    "notes": [],
-   "since": "2026-11-16T15:10:15Z",
    "source": "official"
   },
   "cloudflare": {
@@ -194,7 +186,7 @@
    "level": "ok",
    "name": "Cloudflare",
    "notes": [
-    "2 smaller notices on their status page that should not affect most people."
+    "1 smaller notice on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -577,7 +569,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "4 smaller notices on their status page that should not affect most people."
+    "5 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -657,9 +649,7 @@
    "items": [],
    "level": "ok",
    "name": "Zoom",
-   "notes": [
-    "Planned maintenance under way: Zoom Phone Maintenance - SA01 - KSA1 Data Center: November 16, 2026"
-   ],
+   "notes": [],
    "source": "official"
   }
  },
@@ -784,8 +774,8 @@
    "n90": 1
   },
   "claude": {
-   "m30": 3538,
-   "m90": 3538,
+   "m30": 3548,
+   "m90": 3548,
    "n30": 1,
    "n90": 1
   },
@@ -820,8 +810,8 @@
    "n90": 1
   },
   "sage": {
-   "m30": 3646,
-   "m90": 3646,
+   "m30": 3850,
+   "m90": 3850,
    "n30": 1,
    "n90": 1
   },
@@ -832,8 +822,8 @@
    "n90": 1
   },
   "xero": {
-   "m30": 9617,
-   "m90": 9617,
+   "m30": 9821,
+   "m90": 9821,
    "n30": 1,
    "n90": 1
   }

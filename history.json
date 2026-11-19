@@ -43,7 +43,7 @@
    "title": "Costs API data is delayed"
   },
   {
-   "ended": "",
+   "ended": "2026-11-19T02:18:48Z",
    "level": "minor",
    "started": "2026-11-16T15:10:15Z",
    "svc": "claude",
