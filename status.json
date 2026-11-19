@@ -1,7 +1,7 @@
 {
- "attempted_at": "2026-11-19T16:48:26Z",
+ "attempted_at": "2026-11-19T16:58:36Z",
  "banners": [],
- "checked_at": "2026-11-19T16:48:26Z",
+ "checked_at": "2026-11-19T16:58:36Z",
  "counts": {
   "major": 0,
   "minor": 4,
@@ -11,6 +11,13 @@
  "recent": [
   {
    "ended": "",
+   "level": "minor",
+   "started": "2026-11-19T16:53:51Z",
+   "svc": "sumup",
+   "title": "SumUp POS fiscal signing issues in Germany"
+  },
+  {
+   "ended": "2026-11-19T16:58:36Z",
    "level": "major",
    "started": "2026-11-19T16:01:12Z",
    "svc": "chatgpt",
@@ -203,18 +210,10 @@
    "source": "official"
   },
   "chatgpt": {
-   "items": [
-    {
-     "detail": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery.",
-     "started": "2026-11-19T16:01:12Z",
-     "title": "Elevated error rates for gpt-6 Luna API requests",
-     "url": "https://status.openai.com"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "ChatGPT (OpenAI)",
    "notes": [],
-   "since": "2026-11-19T16:01:12Z",
    "source": "official"
   },
   "claude": {
@@ -581,10 +580,18 @@
    "source": "probe"
   },
   "sumup": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "We’ve escalated this issue to our fiscalization provider and are continuing to investigate the fiscal signing failures affecting SumUp POS transactions in Germany.",
+     "started": "2026-11-19T16:53:51Z",
+     "title": "SumUp POS fiscal signing issues in Germany",
+     "url": "https://status.sumup.com"
+    }
+   ],
+   "level": "minor",
    "name": "SumUp",
    "notes": [],
+   "since": "2026-11-19T16:53:51Z",
    "source": "official"
   },
   "telegram": {
@@ -620,7 +627,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "5 smaller notices on their status page that should not affect most people."
+    "4 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -819,8 +826,8 @@
    "n90": 2
   },
   "chatgpt": {
-   "m30": 1457,
-   "m90": 1457,
+   "m30": 1467,
+   "m90": 1467,
    "n30": 2,
    "n90": 2
   },
@@ -849,8 +856,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 1565,
-   "m90": 1565,
+   "m30": 1575,
+   "m90": 1575,
    "n30": 1,
    "n90": 1
   },
@@ -867,8 +874,14 @@
    "n90": 2
   },
   "sage": {
-   "m30": 4526,
-   "m90": 4526,
+   "m30": 4536,
+   "m90": 4536,
+   "n30": 1,
+   "n90": 1
+  },
+  "sumup": {
+   "m30": 4,
+   "m90": 4,
    "n30": 1,
    "n90": 1
   },
@@ -879,8 +892,8 @@
    "n90": 1
   },
   "xero": {
-   "m30": 10497,
-   "m90": 10497,
+   "m30": 10507,
+   "m90": 10507,
    "n30": 1,
    "n90": 1
   }
