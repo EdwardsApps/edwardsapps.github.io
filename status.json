@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-19T16:27:57Z",
+ "attempted_at": "2026-11-19T16:48:26Z",
  "banners": [],
- "checked_at": "2026-11-19T16:27:57Z",
+ "checked_at": "2026-11-19T16:48:26Z",
  "counts": {
   "major": 0,
-  "minor": 5,
-  "ok": 70,
+  "minor": 4,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
@@ -17,7 +17,7 @@
    "title": "Elevated error rates for gpt-6 Luna API requests"
   },
   {
-   "ended": "",
+   "ended": "2026-11-19T16:38:12Z",
    "level": "minor",
    "started": "2026-11-19T15:56:02Z",
    "svc": "github",
@@ -229,7 +229,7 @@
    "level": "ok",
    "name": "Cloudflare",
    "notes": [
-    "1 smaller notice on their status page that should not affect most people."
+    "2 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -290,18 +290,10 @@
    "source": "official"
   },
   "github": {
-   "items": [
-    {
-     "detail": "We are experiencing degraded availability for the GPT-6 Luna model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another…",
-     "started": "2026-11-19T15:56:02Z",
-     "title": "Degraded availability for GPT-6 Luna in Copilot",
-     "url": "https://stspg.io/vv0kzmyd9wqs"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "GitHub",
    "notes": [],
-   "since": "2026-11-19T15:56:02Z",
    "source": "official"
   },
   "gocardless": {
@@ -827,8 +819,8 @@
    "n90": 2
   },
   "chatgpt": {
-   "m30": 1436,
-   "m90": 1436,
+   "m30": 1457,
+   "m90": 1457,
    "n30": 2,
    "n90": 2
   },
@@ -851,14 +843,14 @@
    "n90": 1
   },
   "github": {
-   "m30": 66,
-   "m90": 66,
+   "m30": 77,
+   "m90": 77,
    "n30": 2,
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 1544,
-   "m90": 1544,
+   "m30": 1565,
+   "m90": 1565,
    "n30": 1,
    "n90": 1
   },
@@ -875,8 +867,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 4505,
-   "m90": 4505,
+   "m30": 4526,
+   "m90": 4526,
    "n30": 1,
    "n90": 1
   },
@@ -887,8 +879,8 @@
    "n90": 1
   },
   "xero": {
-   "m30": 10476,
-   "m90": 10476,
+   "m30": 10497,
+   "m90": 10497,
    "n30": 1,
    "n90": 1
   }
