@@ -97,6 +97,13 @@
    "started": "2026-11-19T09:10:24Z",
    "svc": "claude",
    "title": "Elevated errors for Claude Mythos 5.2 and Claude Fable 5.2"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-19T15:08:50Z",
+   "svc": "hmrc-cis",
+   "title": "CIS subcontractor verification delays"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"

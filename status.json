@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-19T15:05:55Z",
+ "attempted_at": "2026-11-19T15:08:50Z",
  "banners": [],
- "checked_at": "2026-11-19T15:05:55Z",
+ "checked_at": "2026-11-19T15:08:50Z",
  "counts": {
   "major": 0,
-  "minor": 2,
-  "ok": 73,
+  "minor": 3,
+  "ok": 72,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-19T15:08:50Z",
+   "svc": "hmrc-cis",
+   "title": "CIS subcontractor verification delays"
+  },
   {
    "ended": "2026-11-19T09:38:15Z",
    "level": "minor",
@@ -317,12 +324,20 @@
    "source": "official"
   },
   "hmrc-cis": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "We are aware of an issue affecting the online Construction Industry Scheme (CIS) verification service. Currently, some verification requests are taking longer than usual to process. You may experience delays in receiving confirmation of a…",
+     "started": "2026-11-18T14:43:08Z",
+     "title": "CIS subcontractor verification delays",
+     "url": "https://www.gov.uk/government/publications/construction-industry-scheme-service-availability-and-issues/construction-industry-scheme-cis-service-availability-and-issues"
+    }
+   ],
+   "level": "minor",
    "name": "HMRC: Construction Industry Scheme",
    "notes": [
-    "HMRC lists 8 known issues, starting with “CIS subcontractor verification delays”."
+    "HMRC lists 6 known issues, starting with “CIS online service verification issues”."
    ],
+   "since": "2026-11-19T15:08:50Z",
    "source": "official"
   },
   "hmrc-ct": {
@@ -641,7 +656,7 @@
   "xero": {
    "items": [
     {
-     "detail": "HMRC are continuing to investigate the issue they're experiencing with CIS verification - You can find more information on their availability page . To verify a sub contractor in the mean time you can sign in to the Construction Industry…",
+     "detail": "HMRC are continuing to investigate the issue they're experiencing with CIS verification - You can find more information on their availability page. To verify a sub contractor in the mean time you can sign in to the Construction Industry…",
      "started": "2026-11-19T09:50:38Z",
      "title": "UK: CIS - Error when verifying CIS contractors",
      "url": "https://stspg.io/38lr0j3n9n8c"
@@ -813,6 +828,12 @@
    "n30": 1,
    "n90": 1
   },
+  "hmrc-cis": {
+   "m30": 0,
+   "m90": 0,
+   "n30": 1,
+   "n90": 1
+  },
   "notion": {
    "m30": 344,
    "m90": 344,
@@ -826,8 +847,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 4423,
-   "m90": 4423,
+   "m30": 4426,
+   "m90": 4426,
    "n30": 1,
    "n90": 1
   },
@@ -838,8 +859,8 @@
    "n90": 1
   },
   "xero": {
-   "m30": 10394,
-   "m90": 10394,
+   "m30": 10397,
+   "m90": 10397,
    "n30": 1,
    "n90": 1
   }
