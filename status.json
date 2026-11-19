@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-19T22:17:07Z",
+ "attempted_at": "2026-11-20T10:43:48Z",
  "banners": [],
- "checked_at": "2026-11-19T22:17:07Z",
+ "checked_at": "2026-11-20T10:43:48Z",
  "counts": {
   "major": 0,
-  "minor": 5,
-  "ok": 70,
+  "minor": 4,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
@@ -31,7 +31,7 @@
    "title": "Disruption with some GitHub services"
   },
   {
-   "ended": "",
+   "ended": "2026-11-19T22:27:27Z",
    "level": "minor",
    "started": "2026-11-19T16:53:51Z",
    "svc": "sumup",
@@ -249,7 +249,7 @@
    "level": "ok",
    "name": "Cloudflare",
    "notes": [
-    "1 smaller notice on their status page that should not affect most people."
+    "2 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -539,7 +539,7 @@
   "sage": {
    "items": [
     {
-     "detail": "We are continuing to investigate the cause of the issue. Thank you for your patience as we work to resolve this issue.",
+     "detail": "The service is performing as expected. Avoiding a reoccurrence is our priority as we closely monitor the service.",
      "started": "2026-11-16T13:22:04Z",
      "title": "Banking Service - Partial Outage",
      "url": "https://stspg.io/9nvk6m7b6j4d"
@@ -601,18 +601,10 @@
    "source": "probe"
   },
   "sumup": {
-   "items": [
-    {
-     "detail": "The issue has been identified and a fix is being implemented.",
-     "started": "2026-11-19T16:53:51Z",
-     "title": "SumUp POS fiscal signing issues in Germany",
-     "url": "https://status.sumup.com"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "SumUp",
    "notes": [],
-   "since": "2026-11-19T16:53:51Z",
    "source": "official"
   },
   "telegram": {
@@ -648,7 +640,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "4 smaller notices on their status page that should not affect most people."
+    "2 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -712,6 +704,12 @@
   "xero": {
    "items": [
     {
+     "detail": "We’re aware that returns submitted through Xero Partner Hub are being delayed in filing to the ATO. This is due to an issue with the ATO’s systems, which they are continuing to address. Submissions will be processed when the ATO completes…",
+     "started": "2026-11-20T02:02:32Z",
+     "title": "ATO Submission Delays",
+     "url": "https://stspg.io/r7p7f9p0bhlp"
+    },
+    {
      "detail": "HMRC are continuing to investigate the issue they're experiencing with CIS verification - You can find more information on their availability page. To verify a sub contractor in the mean time you can sign in to the Construction Industry…",
      "started": "2026-11-19T09:50:38Z",
      "title": "UK: CIS - Error when verifying CIS contractors",
@@ -736,7 +734,9 @@
    "items": [],
    "level": "ok",
    "name": "Zoom",
-   "notes": [],
+   "notes": [
+    "Planned maintenance under way: Zoom Phone Maintenance (Sydney Data Center): November 20, 2026"
+   ],
    "source": "official"
   }
  },
@@ -891,8 +891,8 @@
    "n90": 1
   },
   "hmrc-cis": {
-   "m30": 1893,
-   "m90": 1893,
+   "m30": 2640,
+   "m90": 2640,
    "n30": 1,
    "n90": 1
   },
@@ -909,14 +909,14 @@
    "n90": 2
   },
   "sage": {
-   "m30": 4855,
-   "m90": 4855,
+   "m30": 5601,
+   "m90": 5601,
    "n30": 1,
    "n90": 1
   },
   "sumup": {
-   "m30": 323,
-   "m90": 323,
+   "m30": 333,
+   "m90": 333,
    "n30": 1,
    "n90": 1
   },
@@ -927,14 +927,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 249,
-   "m90": 249,
+   "m30": 996,
+   "m90": 996,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 10825,
-   "m90": 10825,
+   "m30": 11572,
+   "m90": 11572,
    "n30": 1,
    "n90": 1
   }
