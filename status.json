@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-19T18:17:52Z",
+ "attempted_at": "2026-11-19T21:36:16Z",
  "banners": [],
- "checked_at": "2026-11-19T18:17:52Z",
+ "checked_at": "2026-11-19T21:36:16Z",
  "counts": {
   "major": 0,
-  "minor": 6,
-  "ok": 69,
+  "minor": 5,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
@@ -17,7 +17,7 @@
    "title": "Delayed transfers to COP"
   },
   {
-   "ended": "",
+   "ended": "2026-11-19T18:30:59Z",
    "level": "minor",
    "started": "2026-11-19T17:06:26Z",
    "svc": "github",
@@ -303,18 +303,10 @@
    "source": "official"
   },
   "github": {
-   "items": [
-    {
-     "detail": "The degradation has been mitigated. We are monitoring to ensure stability.",
-     "started": "2026-11-19T17:06:26Z",
-     "title": "Disruption with some GitHub services",
-     "url": "https://stspg.io/pvjz2g01trc7"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "GitHub",
    "notes": [],
-   "since": "2026-11-19T17:06:26Z",
    "source": "official"
   },
   "gocardless": {
@@ -677,7 +669,7 @@
   "wise": {
    "items": [
     {
-     "detail": "Terrapay payments to COP are currently delayed due to an ongoing issue. Our team is working hard to fix. We’ll update this page as soon as transfers are back to normal.",
+     "detail": "Some payments to COP are currently delayed due to an ongoing issue. Our team is working hard to fix this. We’ll update this page as soon as transfers are back to normal.",
      "started": "2026-11-19T18:07:27Z",
      "title": "Delayed transfers to COP",
      "url": "https://stspg.io/2k7qjwf7gp7t"
@@ -880,14 +872,14 @@
    "n90": 1
   },
   "github": {
-   "m30": 148,
-   "m90": 148,
+   "m30": 161,
+   "m90": 161,
    "n30": 3,
    "n90": 3
   },
   "hmrc-cis": {
-   "m30": 1654,
-   "m90": 1654,
+   "m30": 1853,
+   "m90": 1853,
    "n30": 1,
    "n90": 1
   },
@@ -904,14 +896,14 @@
    "n90": 2
   },
   "sage": {
-   "m30": 4615,
-   "m90": 4615,
+   "m30": 4814,
+   "m90": 4814,
    "n30": 1,
    "n90": 1
   },
   "sumup": {
-   "m30": 84,
-   "m90": 84,
+   "m30": 282,
+   "m90": 282,
    "n30": 1,
    "n90": 1
   },
@@ -922,14 +914,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 10,
-   "m90": 10,
+   "m30": 208,
+   "m90": 208,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 10586,
-   "m90": 10586,
+   "m30": 10785,
+   "m90": 10785,
    "n30": 1,
    "n90": 1
   }
