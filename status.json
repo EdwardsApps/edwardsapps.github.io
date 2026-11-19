@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-19T09:26:34Z",
+ "attempted_at": "2026-11-19T15:05:55Z",
  "banners": [],
- "checked_at": "2026-11-19T09:26:34Z",
+ "checked_at": "2026-11-19T15:05:55Z",
  "counts": {
   "major": 0,
-  "minor": 3,
-  "ok": 72,
+  "minor": 2,
+  "ok": 73,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-19T09:38:15Z",
    "level": "minor",
    "started": "2026-11-19T09:10:24Z",
    "svc": "claude",
@@ -189,18 +189,10 @@
    "source": "official"
   },
   "claude": {
-   "items": [
-    {
-     "detail": "A fix has been deployed for other Claude models and we are monitoring for recovery.",
-     "started": "2026-11-19T09:10:24Z",
-     "title": "Elevated errors for Claude Mythos 5.2 and Claude Fable 5.2",
-     "url": "https://stspg.io/nlb5fptv28h5"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "Claude (Anthropic)",
    "notes": [],
-   "since": "2026-11-19T09:10:24Z",
    "source": "official"
   },
   "cloudflare": {
@@ -541,7 +533,9 @@
    "items": [],
    "level": "ok",
    "name": "Squarespace",
-   "notes": [],
+   "notes": [
+    "Planned maintenance under way: Acuity Scheduling: Possible Emergency Maintenance"
+   ],
    "source": "official"
   },
   "stripe": {
@@ -591,7 +585,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "5 smaller notices on their status page that should not affect most people."
+    "4 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -647,8 +641,8 @@
   "xero": {
    "items": [
     {
-     "detail": "HMRC have confirmed there are currently known issues with the CIS verification service and you can find more information on their website…",
-     "started": "2026-11-12T09:51:10Z",
+     "detail": "HMRC are continuing to investigate the issue they're experiencing with CIS verification - You can find more information on their availability page . To verify a sub contractor in the mean time you can sign in to the Construction Industry…",
+     "started": "2026-11-19T09:50:38Z",
      "title": "UK: CIS - Error when verifying CIS contractors",
      "url": "https://stspg.io/38lr0j3n9n8c"
     }
@@ -796,8 +790,8 @@
    "n90": 1
   },
   "claude": {
-   "m30": 3564,
-   "m90": 3564,
+   "m30": 3575,
+   "m90": 3575,
    "n30": 2,
    "n90": 2
   },
@@ -832,8 +826,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 4084,
-   "m90": 4084,
+   "m30": 4423,
+   "m90": 4423,
    "n30": 1,
    "n90": 1
   },
@@ -844,8 +838,8 @@
    "n90": 1
   },
   "xero": {
-   "m30": 10055,
-   "m90": 10055,
+   "m30": 10394,
+   "m90": 10394,
    "n30": 1,
    "n90": 1
   }
