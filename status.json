@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-19T15:46:55Z",
+ "attempted_at": "2026-11-19T15:57:08Z",
  "banners": [],
- "checked_at": "2026-11-19T15:46:55Z",
+ "checked_at": "2026-11-19T15:57:08Z",
  "counts": {
   "major": 0,
-  "minor": 3,
-  "ok": 72,
+  "minor": 4,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-19T15:56:02Z",
+   "svc": "github",
+   "title": "Degraded availability for GPT-6 Luna in Copilot"
+  },
   {
    "ended": "2026-11-19T09:38:15Z",
    "level": "minor",
@@ -268,10 +275,18 @@
    "source": "official"
   },
   "github": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "We are investigating reports of degraded performance for Copilot AI Model Providers",
+     "started": "2026-11-19T15:56:02Z",
+     "title": "Degraded availability for GPT-6 Luna in Copilot",
+     "url": "https://stspg.io/vv0kzmyd9wqs"
+    }
+   ],
+   "level": "minor",
    "name": "GitHub",
    "notes": [],
+   "since": "2026-11-19T15:56:02Z",
    "source": "official"
   },
   "gocardless": {
@@ -821,14 +836,14 @@
    "n90": 1
   },
   "github": {
-   "m30": 35,
-   "m90": 35,
-   "n30": 1,
-   "n90": 1
+   "m30": 36,
+   "m90": 36,
+   "n30": 2,
+   "n90": 2
   },
   "hmrc-cis": {
-   "m30": 1503,
-   "m90": 1503,
+   "m30": 1514,
+   "m90": 1514,
    "n30": 1,
    "n90": 1
   },
@@ -845,8 +860,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 4464,
-   "m90": 4464,
+   "m30": 4475,
+   "m90": 4475,
    "n30": 1,
    "n90": 1
   },
@@ -857,8 +872,8 @@
    "n90": 1
   },
   "xero": {
-   "m30": 10435,
-   "m90": 10435,
+   "m30": 10445,
+   "m90": 10445,
    "n30": 1,
    "n90": 1
   }

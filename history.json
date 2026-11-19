@@ -104,6 +104,13 @@
    "started": "2026-11-18T14:43:08Z",
    "svc": "hmrc-cis",
    "title": "CIS subcontractor verification delays"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-19T15:56:02Z",
+   "svc": "github",
+   "title": "Degraded availability for GPT-6 Luna in Copilot"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
