@@ -132,6 +132,13 @@
    "started": "2026-11-19T17:06:26Z",
    "svc": "github",
    "title": "Disruption with some GitHub services"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-19T18:07:27Z",
+   "svc": "wise",
+   "title": "Delayed transfers to COP"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
