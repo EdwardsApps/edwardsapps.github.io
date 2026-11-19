@@ -87,6 +87,10 @@ def clean(text, limit: int = 240) -> str:
     text = html.unescape(text)
     text = re.sub(r"\*\*|__|^#+\s*", "", text, flags=re.M)
     text = re.sub(r"\s+", " ", text).strip()
+    # Taking tags out leaves gaps such as "Scheme ( CIS ) service ."
+    text = re.sub(r"\(\s+", "(", text)
+    text = re.sub(r"\s+([,;)])", r"\1", text)
+    text = re.sub(r"\s+\.(?=\s|$)", ".", text)
     if len(text) > limit:
         text = text[: limit - 1].rsplit(" ", 1)[0].rstrip(",;:. ") + "…"
     return text
@@ -421,6 +425,23 @@ def read_hmrc_overall(svc: dict, fetch: Fetcher) -> dict:
     return result("major", [item(title, downtime, svc["page"])])
 
 
+# How HMRC words a fault it is working on, as opposed to standing advice about a service.
+HMRC_LIVE = re.compile(r"\bwe(?: are|’re|'re)(?: currently)? aware (?:of|that)\b|\bunder investigation\b|\b(?:are|is) investigating\b", re.I)
+HMRC_LIVE_DAYS = 30
+
+
+def _hmrc_issue_news(svc: dict, fetch: Fetcher) -> tuple[dt.datetime | None, bool]:
+    """When HMRC last said it changed this page's service issues, and whether that was to close one."""
+    parent = svc["path"].rsplit("/", 1)[0]
+    details = fetch.get_json("https://www.gov.uk/api/content" + parent).get("details") or {}
+    news = [(parse_time(note.get("public_timestamp")), note.get("note") or "") for note in details.get("change_history") or []]
+    news = sorted((when, text) for when, text in news if when and re.search(r"\bissues?\b", text, re.I))
+    if not news:
+        return None, False
+    when, text = news[-1]
+    return when, bool(re.search(r"\b(resolved|removed|fixed)\b", text, re.I))
+
+
 def read_hmrc_service(svc: dict, fetch: Fetcher) -> dict:
     page = "https://www.gov.uk" + svc["path"]
     sections = _gov_sections(_gov_body(fetch.get_json("https://www.gov.uk/api/content" + svc["path"])))
@@ -443,7 +464,20 @@ def read_hmrc_service(svc: dict, fetch: Fetcher) -> dict:
         notes.append("Planned downtime: " + text + ("" if text.endswith(("…", ".")) else "."))
     issues = sections.get("service-issues", "")
     if not _is_none(issues):
-        names = [clean(name, 70) for name in re.findall(r"<h3[^>]*>(.*?)</h3>", issues, re.S)]
+        parts = re.split(r"<h3[^>]*>(.*?)</h3>", issues, flags=re.S)
+        entries = [(clean(parts[index], 160), clean(parts[index + 1], 4000)) for index in range(1, len(parts) - 1, 2)]
+        entries = [(name, text) for name, text in entries if name and name.lower() != "other issues"]
+        live = [(name, text) for name, text in entries if HMRC_LIVE.search(text)]
+        if live:
+            # HMRC leaves some "under investigation" notes up for years, so its own change notes decide what is new.
+            when, closed = _hmrc_issue_news(svc, fetch)
+            if when and not closed and now_utc() - when <= dt.timedelta(days=HMRC_LIVE_DAYS):
+                level = worst([level, "minor"])
+                items += [item(name, text, page, iso(when)) for name, text in live]
+            else:
+                live = []
+        shown = {name for name, _ in live}
+        names = [clean(name, 70) for name, _ in entries if name not in shown]
         if names:
             notes.append(f"HMRC lists {len(names)} known issue{'s' if len(names) != 1 else ''}, starting with “{names[0]}”.")
     return result(level, items, notes)
