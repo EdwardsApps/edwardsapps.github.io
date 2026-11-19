@@ -139,6 +139,13 @@
    "started": "2026-11-19T18:07:27Z",
    "svc": "wise",
    "title": "Delayed transfers to COP"
+  },
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-19T21:39:24Z",
+   "svc": "godaddy",
+   "title": "Account Login Degraded"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"

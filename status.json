@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-19T21:36:16Z",
+ "attempted_at": "2026-11-19T21:46:33Z",
  "banners": [],
- "checked_at": "2026-11-19T21:36:16Z",
+ "checked_at": "2026-11-19T21:46:33Z",
  "counts": {
-  "major": 0,
+  "major": 1,
   "minor": 5,
-  "ok": 70,
+  "ok": 69,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-19T21:39:24Z",
+   "svc": "godaddy",
+   "title": "Account Login Degraded"
+  },
   {
    "ended": "",
    "level": "minor",
@@ -317,10 +324,18 @@
    "source": "official"
   },
   "godaddy": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "We are aware of an issue affecting the ability to log into GoDaddy accounts. Thank you for your patience.",
+     "started": "2026-11-19T21:39:24Z",
+     "title": "Account Login Degraded",
+     "url": "https://stspg.io/33xvgprskv87"
+    }
+   ],
+   "level": "major",
    "name": "GoDaddy",
    "notes": [],
+   "since": "2026-11-19T21:39:24Z",
    "source": "official"
   },
   "google-cloud": {
@@ -877,9 +892,15 @@
    "n30": 3,
    "n90": 3
   },
+  "godaddy": {
+   "m30": 7,
+   "m90": 7,
+   "n30": 1,
+   "n90": 1
+  },
   "hmrc-cis": {
-   "m30": 1853,
-   "m90": 1853,
+   "m30": 1863,
+   "m90": 1863,
    "n30": 1,
    "n90": 1
   },
@@ -896,14 +917,14 @@
    "n90": 2
   },
   "sage": {
-   "m30": 4814,
-   "m90": 4814,
+   "m30": 4824,
+   "m90": 4824,
    "n30": 1,
    "n90": 1
   },
   "sumup": {
-   "m30": 282,
-   "m90": 282,
+   "m30": 292,
+   "m90": 292,
    "n30": 1,
    "n90": 1
   },
@@ -914,14 +935,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 208,
-   "m90": 208,
+   "m30": 219,
+   "m90": 219,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 10785,
-   "m90": 10785,
+   "m30": 10795,
+   "m90": 10795,
    "n30": 1,
    "n90": 1
   }
