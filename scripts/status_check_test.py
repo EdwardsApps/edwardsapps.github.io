@@ -188,6 +188,44 @@ class Readers(unittest.TestCase):
         slow = body("<p>Some users may see errors when submitting returns.</p>")
         self.assertEqual(sc.read_hmrc_service(svc, FakeFetcher({url: slow}))["level"], "minor")
 
+    def test_clean_closes_gaps_left_by_tags(self):
+        self.assertEqual(sc.clean("the <abbr>Scheme</abbr> (<abbr>CIS</abbr>) service, contact the <a>Helpdesk</a>."),
+                         "the Scheme (CIS) service, contact the Helpdesk.")
+        self.assertEqual(sc.clean("Apps built on .NET are slow"), "Apps built on .NET are slow")
+
+    def test_hmrc_service_live_issue(self):
+        svc = {"path": "/pub/page"}
+        url, parent = "https://www.gov.uk/api/content/pub/page", "https://www.gov.uk/api/content/pub"
+        page = self.gov('<h2 id="service-availability">Service availability</h2><p>Full service available.</p>'
+                        '<h2 id="planned-downtime">Planned downtime</h2><p>None.</p>'
+                        '<h2 id="service-issues">Service issues</h2>'
+                        '<h3 id="a">Verification delays</h3><p>We are aware of an issue. Our teams are investigating.</p>'
+                        '<h3 id="b">Issue 1: telephone verifications</h3><p>We have recently become aware of this. Action to take: call us.</p>'
+                        '<h3 id="c">Other issues</h3><p>Contact the helpdesk.</p>'
+                        '<h2 id="other-services">Other</h2><p>x</p>')
+        def notes(*entries):
+            return {"details": {"change_history": [{"public_timestamp": sc.iso(when), "note": text} for when, text in entries]}}
+        now = sc.now_utc()
+        recent, old = now - dt.timedelta(days=2), now - dt.timedelta(days=300)
+
+        new = notes((old, "A service issue has been added."), (recent, "Service issues have been updated to include delays."),
+                    (now, "Planned downtime on Sunday has been added."))
+        out = sc.read_hmrc_service(svc, FakeFetcher({url: page, parent: new}))
+        self.assertEqual((out["level"], len(out["items"])), ("minor", 1))
+        self.assertEqual((out["items"][0]["title"], out["items"][0]["started"]), ("Verification delays", sc.iso(recent)))
+        self.assertEqual(out["notes"], ["HMRC lists 1 known issue, starting with “Issue 1: telephone verifications”."])
+
+        # A note that has sat on the page for months is standing advice, not news.
+        out = sc.read_hmrc_service(svc, FakeFetcher({url: page, parent: notes((old, "A service issue has been added."))}))
+        self.assertEqual((out["level"], out["items"]), ("ok", []))
+        self.assertEqual(out["notes"], ["HMRC lists 2 known issues, starting with “Verification delays”."])
+
+        closed = notes((old, "A service issue has been added."), (recent, "The service issue has been resolved."))
+        self.assertEqual(sc.read_hmrc_service(svc, FakeFetcher({url: page, parent: closed}))["level"], "ok")
+        self.assertEqual(sc.read_hmrc_service(svc, FakeFetcher({url: page, parent: notes()}))["level"], "ok")
+        with self.assertRaises(OSError):    # the last good reading is kept rather than guessing
+            sc.read_hmrc_service(svc, FakeFetcher({url: page}))
+
     def test_playstation_and_xbox(self):
         psn = {"countries": [{"countryCode": "GB", "status": []}]}
         svc = {"feed": "f", "page": "https://status.playstation.com/en-gb/"}
