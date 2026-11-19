@@ -12,7 +12,7 @@
   {
    "ended": "",
    "level": "minor",
-   "started": "2026-11-19T15:08:50Z",
+   "started": "2026-11-18T14:43:08Z",
    "svc": "hmrc-cis",
    "title": "CIS subcontractor verification delays"
   },
@@ -337,7 +337,7 @@
    "notes": [
     "HMRC lists 6 known issues, starting with “CIS online service verification issues”."
    ],
-   "since": "2026-11-19T15:08:50Z",
+   "since": "2026-11-18T14:43:08Z",
    "source": "official"
   },
   "hmrc-ct": {
