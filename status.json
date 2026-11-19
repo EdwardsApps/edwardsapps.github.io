@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-19T16:58:36Z",
+ "attempted_at": "2026-11-19T18:00:10Z",
  "banners": [],
- "checked_at": "2026-11-19T16:58:36Z",
+ "checked_at": "2026-11-19T18:00:10Z",
  "counts": {
   "major": 0,
-  "minor": 4,
-  "ok": 71,
+  "minor": 5,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-19T17:06:26Z",
+   "svc": "github",
+   "title": "Disruption with some GitHub services"
+  },
   {
    "ended": "",
    "level": "minor",
@@ -289,10 +296,18 @@
    "source": "official"
   },
   "github": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "Starting around 18:02 UTC on November 5, GitHub web sessions stopped being renewed based on recent activity, so users were signed out when their sessions expired due to inactivity. These sign-outs were caused by a bug in session renewal…",
+     "started": "2026-11-19T17:06:26Z",
+     "title": "Disruption with some GitHub services",
+     "url": "https://stspg.io/pvjz2g01trc7"
+    }
+   ],
+   "level": "minor",
    "name": "GitHub",
    "notes": [],
+   "since": "2026-11-19T17:06:26Z",
    "source": "official"
   },
   "gocardless": {
@@ -582,7 +597,7 @@
   "sumup": {
    "items": [
     {
-     "detail": "We’ve escalated this issue to our fiscalization provider and are continuing to investigate the fiscal signing failures affecting SumUp POS transactions in Germany.",
+     "detail": "The issue has been identified and a fix is being implemented.",
      "started": "2026-11-19T16:53:51Z",
      "title": "SumUp POS fiscal signing issues in Germany",
      "url": "https://status.sumup.com"
@@ -850,14 +865,14 @@
    "n90": 1
   },
   "github": {
-   "m30": 77,
-   "m90": 77,
-   "n30": 2,
-   "n90": 2
+   "m30": 130,
+   "m90": 130,
+   "n30": 3,
+   "n90": 3
   },
   "hmrc-cis": {
-   "m30": 1575,
-   "m90": 1575,
+   "m30": 1637,
+   "m90": 1637,
    "n30": 1,
    "n90": 1
   },
@@ -874,14 +889,14 @@
    "n90": 2
   },
   "sage": {
-   "m30": 4536,
-   "m90": 4536,
+   "m30": 4598,
+   "m90": 4598,
    "n30": 1,
    "n90": 1
   },
   "sumup": {
-   "m30": 4,
-   "m90": 4,
+   "m30": 66,
+   "m90": 66,
    "n30": 1,
    "n90": 1
   },
@@ -892,8 +907,8 @@
    "n90": 1
   },
   "xero": {
-   "m30": 10507,
-   "m90": 10507,
+   "m30": 10569,
+   "m90": 10569,
    "n30": 1,
    "n90": 1
   }

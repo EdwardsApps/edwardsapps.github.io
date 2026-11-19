@@ -125,6 +125,13 @@
    "started": "2026-11-19T16:53:51Z",
    "svc": "sumup",
    "title": "SumUp POS fiscal signing issues in Germany"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-19T17:06:26Z",
+   "svc": "github",
+   "title": "Disruption with some GitHub services"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
