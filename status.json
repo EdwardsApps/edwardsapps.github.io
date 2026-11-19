@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-19T00:36:36Z",
+ "attempted_at": "2026-11-19T02:08:41Z",
  "banners": [],
- "checked_at": "2026-11-19T00:36:36Z",
+ "checked_at": "2026-11-19T02:08:41Z",
  "counts": {
   "major": 0,
-  "minor": 4,
-  "ok": 71,
+  "minor": 3,
+  "ok": 72,
   "unknown": 0
  },
  "recent": [
@@ -31,7 +31,7 @@
    "title": "Fortnite Login and Matchmaking Issues"
   },
   {
-   "ended": "",
+   "ended": "2026-11-19T00:46:47Z",
    "level": "minor",
    "started": "2026-11-18T15:52:00Z",
    "svc": "apple",
@@ -103,18 +103,10 @@
    "source": "probe"
   },
   "apple": {
-   "items": [
-    {
-     "detail": "Users are experiencing issues with Stocks. Some users are affected.",
-     "started": "2026-11-18T15:52:00Z",
-     "title": "Stocks: outage",
-     "url": "https://www.apple.com/uk/support/systemstatus/"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "Apple",
    "notes": [],
-   "since": "2026-11-18T15:52:00Z",
    "source": "official"
   },
   "asana": {
@@ -780,8 +772,8 @@
  },
  "stats": {
   "apple": {
-   "m30": 869,
-   "m90": 869,
+   "m30": 879,
+   "m90": 879,
    "n30": 2,
    "n90": 2
   },
@@ -792,8 +784,8 @@
    "n90": 1
   },
   "claude": {
-   "m30": 3446,
-   "m90": 3446,
+   "m30": 3538,
+   "m90": 3538,
    "n30": 1,
    "n90": 1
   },
@@ -828,8 +820,8 @@
    "n90": 1
   },
   "sage": {
-   "m30": 3554,
-   "m90": 3554,
+   "m30": 3646,
+   "m90": 3646,
    "n30": 1,
    "n90": 1
   },
@@ -840,8 +832,8 @@
    "n90": 1
   },
   "xero": {
-   "m30": 9525,
-   "m90": 9525,
+   "m30": 9617,
+   "m90": 9617,
    "n30": 1,
    "n90": 1
   }
