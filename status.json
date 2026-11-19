@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-19T05:32:50Z",
+ "attempted_at": "2026-11-19T05:53:15Z",
  "banners": [],
- "checked_at": "2026-11-19T05:32:50Z",
+ "checked_at": "2026-11-19T05:53:15Z",
  "counts": {
   "major": 0,
-  "minor": 2,
-  "ok": 73,
+  "minor": 3,
+  "ok": 72,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-19T05:33:10Z",
+   "svc": "playstation",
+   "title": "Gaming and social: degraded"
+  },
   {
    "ended": "2026-11-18T23:55:32Z",
    "level": "major",
@@ -445,10 +452,18 @@
    "source": "official"
   },
   "playstation": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "You might have difficulty launching games, apps or network features. We're working to resolve the issue as soon as possible. Thank you for your patience.",
+     "started": "2026-11-19T05:33:10Z",
+     "title": "Gaming and social: degraded",
+     "url": "https://status.playstation.com/en-gb/"
+    }
+   ],
+   "level": "minor",
    "name": "PlayStation Network",
    "notes": [],
+   "since": "2026-11-19T05:33:10Z",
    "source": "official"
   },
   "quickbooks": {
@@ -804,14 +819,14 @@
    "n90": 1
   },
   "playstation": {
-   "m30": 31,
-   "m90": 31,
-   "n30": 1,
-   "n90": 1
+   "m30": 51,
+   "m90": 51,
+   "n30": 2,
+   "n90": 2
   },
   "sage": {
-   "m30": 3850,
-   "m90": 3850,
+   "m30": 3871,
+   "m90": 3871,
    "n30": 1,
    "n90": 1
   },
@@ -822,8 +837,8 @@
    "n90": 1
   },
   "xero": {
-   "m30": 9821,
-   "m90": 9821,
+   "m30": 9842,
+   "m90": 9842,
    "n30": 1,
    "n90": 1
   }
