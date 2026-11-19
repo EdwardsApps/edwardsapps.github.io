@@ -111,6 +111,13 @@
    "started": "2026-11-19T15:56:02Z",
    "svc": "github",
    "title": "Degraded availability for GPT-6 Luna in Copilot"
+  },
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-19T16:01:12Z",
+   "svc": "chatgpt",
+   "title": "Elevated error rates for gpt-6 Luna API requests"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
