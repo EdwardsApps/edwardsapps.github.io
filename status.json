@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-19T09:07:24Z",
+ "attempted_at": "2026-11-19T09:26:34Z",
  "banners": [],
- "checked_at": "2026-11-19T09:07:24Z",
+ "checked_at": "2026-11-19T09:26:34Z",
  "counts": {
   "major": 0,
-  "minor": 2,
-  "ok": 73,
+  "minor": 3,
+  "ok": 72,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-19T09:10:24Z",
+   "svc": "claude",
+   "title": "Elevated errors for Claude Mythos 5.2 and Claude Fable 5.2"
+  },
   {
    "ended": "2026-11-19T06:03:27Z",
    "level": "minor",
@@ -182,10 +189,18 @@
    "source": "official"
   },
   "claude": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "A fix has been deployed for other Claude models and we are monitoring for recovery.",
+     "started": "2026-11-19T09:10:24Z",
+     "title": "Elevated errors for Claude Mythos 5.2 and Claude Fable 5.2",
+     "url": "https://stspg.io/nlb5fptv28h5"
+    }
+   ],
+   "level": "minor",
    "name": "Claude (Anthropic)",
    "notes": [],
+   "since": "2026-11-19T09:10:24Z",
    "source": "official"
   },
   "cloudflare": {
@@ -781,10 +796,10 @@
    "n90": 1
   },
   "claude": {
-   "m30": 3548,
-   "m90": 3548,
-   "n30": 1,
-   "n90": 1
+   "m30": 3564,
+   "m90": 3564,
+   "n30": 2,
+   "n90": 2
   },
   "dropbox": {
    "m30": 173,
@@ -817,8 +832,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 4065,
-   "m90": 4065,
+   "m30": 4084,
+   "m90": 4084,
    "n30": 1,
    "n90": 1
   },
@@ -829,8 +844,8 @@
    "n90": 1
   },
   "xero": {
-   "m30": 10036,
-   "m90": 10036,
+   "m30": 10055,
+   "m90": 10055,
    "n30": 1,
    "n90": 1
   }
