@@ -99,7 +99,7 @@
    "title": "Elevated errors for Claude Mythos 5.2 and Claude Fable 5.2"
   },
   {
-   "ended": "2026-11-19T15:16:13Z",
+   "ended": "",
    "level": "minor",
    "started": "2026-11-18T14:43:08Z",
    "svc": "hmrc-cis",
