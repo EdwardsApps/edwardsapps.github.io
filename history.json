@@ -146,6 +146,13 @@
    "started": "2026-11-19T21:39:24Z",
    "svc": "godaddy",
    "title": "Account Login Degraded"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-20T10:52:23Z",
+   "svc": "godaddy",
+   "title": "Voice Support Services Degraded"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"

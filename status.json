@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-20T10:43:48Z",
+ "attempted_at": "2026-11-20T11:04:11Z",
  "banners": [],
- "checked_at": "2026-11-20T10:43:48Z",
+ "checked_at": "2026-11-20T11:04:11Z",
  "counts": {
   "major": 0,
-  "minor": 4,
-  "ok": 71,
+  "minor": 5,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-20T10:52:23Z",
+   "svc": "godaddy",
+   "title": "Voice Support Services Degraded"
+  },
   {
    "ended": "2026-11-19T21:56:43Z",
    "level": "major",
@@ -324,10 +331,18 @@
    "source": "official"
   },
   "godaddy": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "We are currently investigating an issue affecting our customer service phone support. Please use our messaging support to contact customer service.",
+     "started": "2026-11-20T10:52:23Z",
+     "title": "Voice Support Services Degraded",
+     "url": "https://stspg.io/s3qtys6cf2sf"
+    }
+   ],
+   "level": "minor",
    "name": "GoDaddy",
    "notes": [],
+   "since": "2026-11-20T10:52:23Z",
    "source": "official"
   },
   "google-cloud": {
@@ -885,14 +900,14 @@
    "n90": 3
   },
   "godaddy": {
-   "m30": 17,
-   "m90": 17,
-   "n30": 1,
-   "n90": 1
+   "m30": 28,
+   "m90": 28,
+   "n30": 2,
+   "n90": 2
   },
   "hmrc-cis": {
-   "m30": 2640,
-   "m90": 2640,
+   "m30": 2661,
+   "m90": 2661,
    "n30": 1,
    "n90": 1
   },
@@ -909,8 +924,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 5601,
-   "m90": 5601,
+   "m30": 5622,
+   "m90": 5622,
    "n30": 1,
    "n90": 1
   },
@@ -927,14 +942,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 996,
-   "m90": 996,
+   "m30": 1016,
+   "m90": 1016,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 11572,
-   "m90": 11572,
+   "m30": 11593,
+   "m90": 11593,
    "n30": 1,
    "n90": 1
   }
