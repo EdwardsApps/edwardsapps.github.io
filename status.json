@@ -1,22 +1,23 @@
 {
- "attempted_at": "2026-11-20T18:44:41Z",
- "banners": [
-  {
-   "kind": "plumbing",
-   "svc": "cloudflare",
-   "text": "Cloudflare is reporting major problems. A great many unrelated websites and apps run on it, so other things may be slow or failing too. It is very unlikely to be your wifi."
-  }
- ],
- "checked_at": "2026-11-20T18:44:41Z",
+ "attempted_at": "2026-11-20T19:25:49Z",
+ "banners": [],
+ "checked_at": "2026-11-20T19:25:49Z",
  "counts": {
-  "major": 1,
-  "minor": 3,
+  "major": 0,
+  "minor": 4,
   "ok": 71,
   "unknown": 0
  },
  "recent": [
   {
    "ended": "",
+   "level": "minor",
+   "started": "2026-11-20T18:48:22Z",
+   "svc": "box",
+   "title": "[Medium] Issue with Box Forms, File Request, and Box Doc Gen"
+  },
+  {
+   "ended": "2026-11-20T18:55:10Z",
    "level": "major",
    "started": "2026-11-20T18:24:29Z",
    "svc": "cloudflare",
@@ -237,10 +238,18 @@
    "source": "probe"
   },
   "box": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "A fix has been implemented and we are monitoring the results.",
+     "started": "2026-11-20T18:48:22Z",
+     "title": "[Medium] Issue with Box Forms, File Request, and Box Doc Gen",
+     "url": "https://stspg.io/4m7nwt0yqdq9"
+    }
+   ],
+   "level": "minor",
    "name": "Box",
    "notes": [],
+   "since": "2026-11-20T18:48:22Z",
    "source": "official"
   },
   "calendly": {
@@ -272,20 +281,12 @@
    "source": "official"
   },
   "cloudflare": {
-   "items": [
-    {
-     "detail": "A fix has been implemented and we are monitoring the results.",
-     "started": "2026-11-20T18:24:29Z",
-     "title": "Cloudflare Dashboard and Cloudflare API service issues in EU region",
-     "url": "https://www.cloudflarestatus.com/incidents/iysf3fasf7wn"
-    }
-   ],
-   "level": "major",
+   "items": [],
+   "level": "ok",
    "name": "Cloudflare",
    "notes": [
     "2 smaller notices on their status page that should not affect most people."
    ],
-   "since": "2026-11-20T18:24:29Z",
    "source": "official"
   },
   "companies-house": {
@@ -881,6 +882,12 @@
    "n30": 2,
    "n90": 2
   },
+  "box": {
+   "m30": 37,
+   "m90": 37,
+   "n30": 1,
+   "n90": 1
+  },
   "chatgpt": {
    "m30": 1467,
    "m90": 1467,
@@ -894,8 +901,8 @@
    "n90": 2
   },
   "cloudflare": {
-   "m30": 20,
-   "m90": 20,
+   "m30": 30,
+   "m90": 30,
    "n30": 1,
    "n90": 1
   },
@@ -924,8 +931,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 3121,
-   "m90": 3121,
+   "m30": 3162,
+   "m90": 3162,
    "n30": 1,
    "n90": 1
   },
@@ -966,14 +973,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 1477,
-   "m90": 1477,
+   "m30": 1518,
+   "m90": 1518,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 12053,
-   "m90": 12053,
+   "m30": 12094,
+   "m90": 12094,
    "n30": 1,
    "n90": 1
   }

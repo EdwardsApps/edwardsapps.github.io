@@ -162,11 +162,18 @@
    "title": "Affected: 📨 SMS Outbound"
   },
   {
-   "ended": "",
+   "ended": "2026-11-20T18:55:10Z",
    "level": "major",
    "started": "2026-11-20T18:24:29Z",
    "svc": "cloudflare",
    "title": "Cloudflare Dashboard and Cloudflare API service issues in EU region"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-20T18:48:22Z",
+   "svc": "box",
+   "title": "[Medium] Issue with Box Forms, File Request, and Box Doc Gen"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
