@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-20T20:07:04Z",
+ "attempted_at": "2026-11-22T23:02:16Z",
  "banners": [],
- "checked_at": "2026-11-20T20:07:04Z",
+ "checked_at": "2026-11-22T23:02:16Z",
  "counts": {
-  "major": 1,
+  "major": 0,
   "minor": 3,
-  "ok": 71,
+  "ok": 72,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-20T20:17:15Z",
    "level": "major",
    "started": "2026-11-20T19:28:42Z",
    "svc": "dropbox",
@@ -303,18 +303,10 @@
    "source": "official"
   },
   "dropbox": {
-   "items": [
-    {
-     "detail": "A fix has been implemented and we are monitoring the results.",
-     "started": "2026-11-20T19:28:42Z",
-     "title": "Dropbox is not working as expected for some users",
-     "url": "https://stspg.io/njzlzrzr1yyh"
-    }
-   ],
-   "level": "major",
+   "items": [],
+   "level": "ok",
    "name": "Dropbox",
    "notes": [],
-   "since": "2026-11-20T19:28:42Z",
    "source": "official"
   },
   "ebay": {
@@ -675,7 +667,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "3 smaller notices on their status page that should not affect most people."
+    "4 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -769,9 +761,7 @@
    "items": [],
    "level": "ok",
    "name": "Zoom",
-   "notes": [
-    "Planned maintenance under way: Zoom Phone India Maintenance (Hyderabad Data Center): November 20, 2026"
-   ],
+   "notes": [],
    "source": "official"
   }
  },
@@ -914,8 +904,8 @@
    "n90": 1
   },
   "dropbox": {
-   "m30": 211,
-   "m90": 211,
+   "m30": 221,
+   "m90": 221,
    "n30": 2,
    "n90": 2
   },
@@ -938,8 +928,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 3203,
-   "m90": 3203,
+   "m30": 6259,
+   "m90": 6259,
    "n30": 1,
    "n90": 1
   },
@@ -980,14 +970,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 1559,
-   "m90": 1559,
+   "m30": 4614,
+   "m90": 4614,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 12135,
-   "m90": 12135,
+   "m30": 15191,
+   "m90": 15191,
    "n30": 1,
    "n90": 1
   }
