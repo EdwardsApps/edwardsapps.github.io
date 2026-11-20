@@ -160,6 +160,13 @@
    "started": "2026-11-20T17:22:51Z",
    "svc": "monzo",
    "title": "Affected: 📨 SMS Outbound"
+  },
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-20T18:24:29Z",
+   "svc": "cloudflare",
+   "title": "Cloudflare Dashboard and Cloudflare API service issues in EU region"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
