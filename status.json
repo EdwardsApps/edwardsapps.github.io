@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-20T17:32:58Z",
+ "attempted_at": "2026-11-20T18:19:38Z",
  "banners": [],
- "checked_at": "2026-11-20T17:32:58Z",
+ "checked_at": "2026-11-20T18:19:38Z",
  "counts": {
   "major": 0,
-  "minor": 4,
-  "ok": 71,
+  "minor": 3,
+  "ok": 72,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-20T17:43:10Z",
    "level": "minor",
    "started": "2026-11-20T17:22:51Z",
    "svc": "monzo",
@@ -263,7 +263,7 @@
    "level": "ok",
    "name": "Cloudflare",
    "notes": [
-    "1 smaller notice on their status page that should not affect most people."
+    "2 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -481,18 +481,10 @@
    "source": "official"
   },
   "monzo": {
-   "items": [
-    {
-     "detail": "",
-     "started": "",
-     "title": "Affected: 📨 SMS Outbound",
-     "url": "https://monzo.statuspage.io"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "Monzo",
    "notes": [],
-   "since": "2026-11-20T17:22:51Z",
    "source": "official"
   },
   "netflix": {
@@ -654,7 +646,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "4 smaller notices on their status page that should not affect most people."
+    "3 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -905,14 +897,14 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 3049,
-   "m90": 3049,
+   "m30": 3096,
+   "m90": 3096,
    "n30": 1,
    "n90": 1
   },
   "monzo": {
-   "m30": 10,
-   "m90": 10,
+   "m30": 20,
+   "m90": 20,
    "n30": 1,
    "n90": 1
   },
@@ -947,14 +939,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 1405,
-   "m90": 1405,
+   "m30": 1452,
+   "m90": 1452,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 11981,
-   "m90": 11981,
+   "m30": 12028,
+   "m90": 12028,
    "n30": 1,
    "n90": 1
   }
