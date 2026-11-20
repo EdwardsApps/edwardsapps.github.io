@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-20T19:25:49Z",
+ "attempted_at": "2026-11-20T19:36:02Z",
  "banners": [],
- "checked_at": "2026-11-20T19:25:49Z",
+ "checked_at": "2026-11-20T19:36:02Z",
  "counts": {
-  "major": 0,
+  "major": 1,
   "minor": 4,
-  "ok": 71,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-20T19:28:42Z",
+   "svc": "dropbox",
+   "title": "Dropbox is not working as expected for some users"
+  },
   {
    "ended": "",
    "level": "minor",
@@ -304,10 +311,18 @@
    "source": "official"
   },
   "dropbox": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "We are currently investigating this issue.",
+     "started": "2026-11-20T19:28:42Z",
+     "title": "Dropbox is not working as expected for some users",
+     "url": "https://stspg.io/njzlzrzr1yyh"
+    }
+   ],
+   "level": "major",
    "name": "Dropbox",
    "notes": [],
+   "since": "2026-11-20T19:28:42Z",
    "source": "official"
   },
   "ebay": {
@@ -883,8 +898,8 @@
    "n90": 2
   },
   "box": {
-   "m30": 37,
-   "m90": 37,
+   "m30": 47,
+   "m90": 47,
    "n30": 1,
    "n90": 1
   },
@@ -907,10 +922,10 @@
    "n90": 1
   },
   "dropbox": {
-   "m30": 173,
-   "m90": 173,
-   "n30": 1,
-   "n90": 1
+   "m30": 180,
+   "m90": 180,
+   "n30": 2,
+   "n90": 2
   },
   "epic": {
    "m30": 38,
@@ -931,8 +946,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 3162,
-   "m90": 3162,
+   "m30": 3172,
+   "m90": 3172,
    "n30": 1,
    "n90": 1
   },
@@ -973,14 +988,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 1518,
-   "m90": 1518,
+   "m30": 1528,
+   "m90": 1528,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 12094,
-   "m90": 12094,
+   "m30": 12104,
+   "m90": 12104,
    "n30": 1,
    "n90": 1
   }
