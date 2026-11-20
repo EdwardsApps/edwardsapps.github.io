@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-20T19:36:02Z",
+ "attempted_at": "2026-11-20T20:07:04Z",
  "banners": [],
- "checked_at": "2026-11-20T19:36:02Z",
+ "checked_at": "2026-11-20T20:07:04Z",
  "counts": {
   "major": 1,
-  "minor": 4,
-  "ok": 70,
+  "minor": 3,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
@@ -17,7 +17,7 @@
    "title": "Dropbox is not working as expected for some users"
   },
   {
-   "ended": "",
+   "ended": "2026-11-20T19:46:30Z",
    "level": "minor",
    "started": "2026-11-20T18:48:22Z",
    "svc": "box",
@@ -245,18 +245,10 @@
    "source": "probe"
   },
   "box": {
-   "items": [
-    {
-     "detail": "A fix has been implemented and we are monitoring the results.",
-     "started": "2026-11-20T18:48:22Z",
-     "title": "[Medium] Issue with Box Forms, File Request, and Box Doc Gen",
-     "url": "https://stspg.io/4m7nwt0yqdq9"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "Box",
    "notes": [],
-   "since": "2026-11-20T18:48:22Z",
    "source": "official"
   },
   "calendly": {
@@ -292,7 +284,7 @@
    "level": "ok",
    "name": "Cloudflare",
    "notes": [
-    "2 smaller notices on their status page that should not affect most people."
+    "1 smaller notice on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -313,7 +305,7 @@
   "dropbox": {
    "items": [
     {
-     "detail": "We are currently investigating this issue.",
+     "detail": "A fix has been implemented and we are monitoring the results.",
      "started": "2026-11-20T19:28:42Z",
      "title": "Dropbox is not working as expected for some users",
      "url": "https://stspg.io/njzlzrzr1yyh"
@@ -898,8 +890,8 @@
    "n90": 2
   },
   "box": {
-   "m30": 47,
-   "m90": 47,
+   "m30": 58,
+   "m90": 58,
    "n30": 1,
    "n90": 1
   },
@@ -922,8 +914,8 @@
    "n90": 1
   },
   "dropbox": {
-   "m30": 180,
-   "m90": 180,
+   "m30": 211,
+   "m90": 211,
    "n30": 2,
    "n90": 2
   },
@@ -946,8 +938,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 3172,
-   "m90": 3172,
+   "m30": 3203,
+   "m90": 3203,
    "n30": 1,
    "n90": 1
   },
@@ -988,14 +980,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 1528,
-   "m90": 1528,
+   "m30": 1559,
+   "m90": 1559,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 12104,
-   "m90": 12104,
+   "m30": 12135,
+   "m90": 12135,
    "n30": 1,
    "n90": 1
   }
