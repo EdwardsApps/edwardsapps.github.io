@@ -148,7 +148,7 @@
    "title": "Account Login Degraded"
   },
   {
-   "ended": "",
+   "ended": "2026-11-20T11:14:23Z",
    "level": "minor",
    "started": "2026-11-20T10:52:23Z",
    "svc": "godaddy",

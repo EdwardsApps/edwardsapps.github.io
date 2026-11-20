@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-20T11:04:11Z",
+ "attempted_at": "2026-11-20T14:18:22Z",
  "banners": [],
- "checked_at": "2026-11-20T11:04:11Z",
+ "checked_at": "2026-11-20T14:18:22Z",
  "counts": {
   "major": 0,
-  "minor": 5,
-  "ok": 70,
+  "minor": 4,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-20T11:14:23Z",
    "level": "minor",
    "started": "2026-11-20T10:52:23Z",
    "svc": "godaddy",
@@ -331,18 +331,10 @@
    "source": "official"
   },
   "godaddy": {
-   "items": [
-    {
-     "detail": "We are currently investigating an issue affecting our customer service phone support. Please use our messaging support to contact customer service.",
-     "started": "2026-11-20T10:52:23Z",
-     "title": "Voice Support Services Degraded",
-     "url": "https://stspg.io/s3qtys6cf2sf"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "GoDaddy",
    "notes": [],
-   "since": "2026-11-20T10:52:23Z",
    "source": "official"
   },
   "google-cloud": {
@@ -655,7 +647,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "2 smaller notices on their status page that should not affect most people."
+    "3 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -750,7 +742,7 @@
    "level": "ok",
    "name": "Zoom",
    "notes": [
-    "Planned maintenance under way: Zoom Phone Maintenance (Sydney Data Center): November 20, 2026"
+    "Planned maintenance under way: Zoom Phone India Maintenance (Hyderabad Data Center): November 20, 2026"
    ],
    "source": "official"
   }
@@ -900,14 +892,14 @@
    "n90": 3
   },
   "godaddy": {
-   "m30": 28,
-   "m90": 28,
+   "m30": 39,
+   "m90": 39,
    "n30": 2,
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 2661,
-   "m90": 2661,
+   "m30": 2855,
+   "m90": 2855,
    "n30": 1,
    "n90": 1
   },
@@ -924,8 +916,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 5622,
-   "m90": 5622,
+   "m30": 5816,
+   "m90": 5816,
    "n30": 1,
    "n90": 1
   },
@@ -942,14 +934,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 1016,
-   "m90": 1016,
+   "m30": 1210,
+   "m90": 1210,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 11593,
-   "m90": 11593,
+   "m30": 11787,
+   "m90": 11787,
    "n30": 1,
    "n90": 1
   }
