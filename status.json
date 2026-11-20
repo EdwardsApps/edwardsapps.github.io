@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-20T14:18:22Z",
+ "attempted_at": "2026-11-20T17:12:24Z",
  "banners": [],
- "checked_at": "2026-11-20T14:18:22Z",
+ "checked_at": "2026-11-20T17:12:24Z",
  "counts": {
   "major": 0,
-  "minor": 4,
-  "ok": 71,
+  "minor": 3,
+  "ok": 72,
   "unknown": 0
  },
  "recent": [
@@ -150,7 +150,7 @@
    "title": "Claude unable to join meetings"
   },
   {
-   "ended": "",
+   "ended": "2026-11-20T14:28:34Z",
    "level": "minor",
    "started": "2026-11-16T13:22:04Z",
    "svc": "sage",
@@ -256,7 +256,7 @@
    "level": "ok",
    "name": "Cloudflare",
    "notes": [
-    "2 smaller notices on their status page that should not affect most people."
+    "1 smaller notice on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -544,18 +544,10 @@
    "source": "official"
   },
   "sage": {
-   "items": [
-    {
-     "detail": "The service is performing as expected. Avoiding a reoccurrence is our priority as we closely monitor the service.",
-     "started": "2026-11-16T13:22:04Z",
-     "title": "Banking Service - Partial Outage",
-     "url": "https://stspg.io/9nvk6m7b6j4d"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "Sage",
    "notes": [],
-   "since": "2026-11-16T13:22:04Z",
    "source": "official"
   },
   "shopify": {
@@ -647,7 +639,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "3 smaller notices on their status page that should not affect most people."
+    "4 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -898,8 +890,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 2855,
-   "m90": 2855,
+   "m30": 3029,
+   "m90": 3029,
    "n30": 1,
    "n90": 1
   },
@@ -916,8 +908,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 5816,
-   "m90": 5816,
+   "m30": 5826,
+   "m90": 5826,
    "n30": 1,
    "n90": 1
   },
@@ -934,14 +926,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 1210,
-   "m90": 1210,
+   "m30": 1384,
+   "m90": 1384,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 11787,
-   "m90": 11787,
+   "m30": 11961,
+   "m90": 11961,
    "n30": 1,
    "n90": 1
   }
