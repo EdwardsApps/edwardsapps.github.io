@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-20T17:12:24Z",
+ "attempted_at": "2026-11-20T17:32:58Z",
  "banners": [],
- "checked_at": "2026-11-20T17:12:24Z",
+ "checked_at": "2026-11-20T17:32:58Z",
  "counts": {
   "major": 0,
-  "minor": 3,
-  "ok": 72,
+  "minor": 4,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-20T17:22:51Z",
+   "svc": "monzo",
+   "title": "Affected: 📨 SMS Outbound"
+  },
   {
    "ended": "2026-11-20T11:14:23Z",
    "level": "minor",
@@ -474,10 +481,18 @@
    "source": "official"
   },
   "monzo": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "",
+     "started": "",
+     "title": "Affected: 📨 SMS Outbound",
+     "url": "https://monzo.statuspage.io"
+    }
+   ],
+   "level": "minor",
    "name": "Monzo",
    "notes": [],
+   "since": "2026-11-20T17:22:51Z",
    "source": "official"
   },
   "netflix": {
@@ -890,8 +905,14 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 3029,
-   "m90": 3029,
+   "m30": 3049,
+   "m90": 3049,
+   "n30": 1,
+   "n90": 1
+  },
+  "monzo": {
+   "m30": 10,
+   "m90": 10,
    "n30": 1,
    "n90": 1
   },
@@ -926,14 +947,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 1384,
-   "m90": 1384,
+   "m30": 1405,
+   "m90": 1405,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 11961,
-   "m90": 11961,
+   "m30": 11981,
+   "m90": 11981,
    "n30": 1,
    "n90": 1
   }
