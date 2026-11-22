@@ -181,6 +181,13 @@
    "started": "2026-11-20T19:28:42Z",
    "svc": "dropbox",
    "title": "Dropbox is not working as expected for some users"
+  },
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-22T23:05:00Z",
+   "svc": "canva",
+   "title": "Users may experience issues managing their subscriptions in Canva"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
