@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-22T23:12:29Z",
+ "attempted_at": "2026-11-23T00:13:48Z",
  "banners": [],
- "checked_at": "2026-11-22T23:12:29Z",
+ "checked_at": "2026-11-23T00:13:48Z",
  "counts": {
-  "major": 1,
+  "major": 0,
   "minor": 3,
-  "ok": 71,
+  "ok": 72,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-22T23:22:40Z",
    "level": "major",
    "started": "2026-11-22T23:05:00Z",
    "svc": "canva",
@@ -266,18 +266,10 @@
    "source": "official"
   },
   "canva": {
-   "items": [
-    {
-     "detail": "Some users may experience issues managing their subscriptions in Canva. Our teams are urgently looking into this and we will provide an update soon.",
-     "started": "2026-11-22T23:05:00Z",
-     "title": "Users may experience issues managing their subscriptions in Canva",
-     "url": "https://stspg.io/bbjygfb1bp5r"
-    }
-   ],
-   "level": "major",
+   "items": [],
+   "level": "ok",
    "name": "Canva",
    "notes": [],
-   "since": "2026-11-22T23:05:00Z",
    "source": "official"
   },
   "chatgpt": {
@@ -901,8 +893,8 @@
    "n90": 1
   },
   "canva": {
-   "m30": 7,
-   "m90": 7,
+   "m30": 17,
+   "m90": 17,
    "n30": 1,
    "n90": 1
   },
@@ -949,8 +941,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 6269,
-   "m90": 6269,
+   "m30": 6330,
+   "m90": 6330,
    "n30": 1,
    "n90": 1
   },
@@ -991,14 +983,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 4625,
-   "m90": 4625,
+   "m30": 4686,
+   "m90": 4686,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 15201,
-   "m90": 15201,
+   "m30": 15262,
+   "m90": 15262,
    "n30": 1,
    "n90": 1
   }
