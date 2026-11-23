@@ -195,6 +195,13 @@
    "started": "2026-11-23T00:22:55Z",
    "svc": "zoom",
    "title": "Service Degradation Affecting Zoom Phone tab on desktop clients"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-23T09:49:22Z",
+   "svc": "claude",
+   "title": "Elevated errors for multiple models"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"

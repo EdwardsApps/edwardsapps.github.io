@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-23T09:45:55Z",
+ "attempted_at": "2026-11-23T09:56:10Z",
  "banners": [],
- "checked_at": "2026-11-23T09:45:55Z",
+ "checked_at": "2026-11-23T09:56:10Z",
  "counts": {
   "major": 0,
-  "minor": 4,
-  "ok": 71,
+  "minor": 5,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-23T09:49:22Z",
+   "svc": "claude",
+   "title": "Elevated errors for multiple models"
+  },
   {
    "ended": "",
    "level": "minor",
@@ -287,10 +294,18 @@
    "source": "official"
   },
   "claude": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "We are investigating elevated errors on requests to Claude Fable 5.2, Sonnet 5.5, Opus 5.5, Mythos 5.2, Haiku 5.5 and other Claude models. We will provide an update as soon as possible.",
+     "started": "2026-11-23T09:49:22Z",
+     "title": "Elevated errors for multiple models",
+     "url": "https://stspg.io/q2ptbwdjx31m"
+    }
+   ],
+   "level": "minor",
    "name": "Claude (Anthropic)",
    "notes": [],
+   "since": "2026-11-23T09:49:22Z",
    "source": "official"
   },
   "cloudflare": {
@@ -914,10 +929,10 @@
    "n90": 2
   },
   "claude": {
-   "m30": 3575,
-   "m90": 3575,
-   "n30": 2,
-   "n90": 2
+   "m30": 3581,
+   "m90": 3581,
+   "n30": 3,
+   "n90": 3
   },
   "cloudflare": {
    "m30": 30,
@@ -950,8 +965,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 6902,
-   "m90": 6902,
+   "m30": 6913,
+   "m90": 6913,
    "n30": 1,
    "n90": 1
   },
@@ -992,20 +1007,20 @@
    "n90": 1
   },
   "wise": {
-   "m30": 5258,
-   "m90": 5258,
+   "m30": 5268,
+   "m90": 5268,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 15834,
-   "m90": 15834,
+   "m30": 15845,
+   "m90": 15845,
    "n30": 1,
    "n90": 1
   },
   "zoom": {
-   "m30": 563,
-   "m90": 563,
+   "m30": 573,
+   "m90": 573,
    "n30": 1,
    "n90": 1
   }
