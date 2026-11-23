@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-23T22:24:36Z",
+ "attempted_at": "2026-11-24T00:06:53Z",
  "banners": [],
- "checked_at": "2026-11-23T22:24:36Z",
+ "checked_at": "2026-11-24T00:06:53Z",
  "counts": {
-  "major": 1,
+  "major": 0,
   "minor": 4,
-  "ok": 70,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-23T22:34:49Z",
    "level": "major",
    "started": "2026-11-23T22:20:18Z",
    "svc": "netlify",
@@ -586,18 +586,10 @@
    "source": "probe"
   },
   "netlify": {
-   "items": [
-    {
-     "detail": "We are investigating elevated errors affecting production builds. Some builds are failing during the build step, and affected deploys will show a failed status. Sites that are already deployed are not known to be affected. Our engineering…",
-     "started": "2026-11-23T22:20:18Z",
-     "title": "Elevated errors for builds",
-     "url": "https://stspg.io/5t1xrtx1x9d9"
-    }
-   ],
-   "level": "major",
+   "items": [],
+   "level": "ok",
    "name": "Netlify",
    "notes": [],
-   "since": "2026-11-23T22:20:18Z",
    "source": "official"
   },
   "notion": {
@@ -753,7 +745,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "6 smaller notices on their status page that should not affect most people."
+    "7 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -1014,8 +1006,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 7661,
-   "m90": 7661,
+   "m30": 7763,
+   "m90": 7763,
    "n30": 1,
    "n90": 1
   },
@@ -1026,8 +1018,8 @@
    "n90": 1
   },
   "netlify": {
-   "m30": 4,
-   "m90": 4,
+   "m30": 14,
+   "m90": 14,
    "n30": 1,
    "n90": 1
   },
@@ -1044,8 +1036,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 6247,
-   "m90": 6247,
+   "m30": 6349,
+   "m90": 6349,
    "n30": 2,
    "n90": 2
   },
@@ -1074,14 +1066,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 6017,
-   "m90": 6017,
+   "m30": 6119,
+   "m90": 6119,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 16593,
-   "m90": 16593,
+   "m30": 16695,
+   "m90": 16695,
    "n30": 1,
    "n90": 1
   },
