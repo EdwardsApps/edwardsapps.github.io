@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-23T11:07:46Z",
+ "attempted_at": "2026-11-23T12:09:10Z",
  "banners": [],
- "checked_at": "2026-11-23T11:07:46Z",
+ "checked_at": "2026-11-23T12:09:10Z",
  "counts": {
   "major": 0,
-  "minor": 4,
-  "ok": 71,
+  "minor": 3,
+  "ok": 72,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-23T11:17:58Z",
    "level": "minor",
    "started": "2026-11-23T09:49:22Z",
    "svc": "claude",
@@ -294,18 +294,10 @@
    "source": "official"
   },
   "claude": {
-   "items": [
-    {
-     "detail": "A fix has been deployed for the issue affecting Claude services and we are monitoring for recovery.",
-     "started": "2026-11-23T09:49:22Z",
-     "title": "Elevated errors for multiple models",
-     "url": "https://stspg.io/q2ptbwdjx31m"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "Claude (Anthropic)",
    "notes": [],
-   "since": "2026-11-23T09:49:22Z",
    "source": "official"
   },
   "cloudflare": {
@@ -921,8 +913,8 @@
    "n90": 2
   },
   "claude": {
-   "m30": 3653,
-   "m90": 3653,
+   "m30": 3663,
+   "m90": 3663,
    "n30": 3,
    "n90": 3
   },
@@ -957,8 +949,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 6984,
-   "m90": 6984,
+   "m30": 7046,
+   "m90": 7046,
    "n30": 1,
    "n90": 1
   },
@@ -999,14 +991,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 5340,
-   "m90": 5340,
+   "m30": 5401,
+   "m90": 5401,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 15916,
-   "m90": 15916,
+   "m30": 15978,
+   "m90": 15978,
    "n30": 1,
    "n90": 1
   },

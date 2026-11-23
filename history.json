@@ -197,7 +197,7 @@
    "title": "Service Degradation Affecting Zoom Phone tab on desktop clients"
   },
   {
-   "ended": "",
+   "ended": "2026-11-23T11:17:58Z",
    "level": "minor",
    "started": "2026-11-23T09:49:22Z",
    "svc": "claude",
