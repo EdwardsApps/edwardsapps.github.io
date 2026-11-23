@@ -223,6 +223,13 @@
    "started": "2026-11-23T15:50:14Z",
    "svc": "chatgpt",
    "title": "Elevated errors with GPT-6 conversations on paid ChatGPT plans"
+  },
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-23T16:08:23Z",
+   "svc": "trello",
+   "title": "Authentication service degraded."
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"

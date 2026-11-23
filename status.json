@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-23T16:04:55Z",
+ "attempted_at": "2026-11-23T16:35:46Z",
  "banners": [],
- "checked_at": "2026-11-23T16:04:55Z",
+ "checked_at": "2026-11-23T16:35:46Z",
  "counts": {
-  "major": 0,
+  "major": 1,
   "minor": 5,
-  "ok": 70,
+  "ok": 69,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-23T16:08:23Z",
+   "svc": "trello",
+   "title": "Authentication service degraded."
+  },
   {
    "ended": "",
    "level": "minor",
@@ -310,7 +317,7 @@
   "chatgpt": {
    "items": [
     {
-     "detail": "We’ve identified the issue causing intermittent errors in GPT-6 conversations on paid ChatGPT plans. We are working on implementing a mitigation.",
+     "detail": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery.",
      "started": "2026-11-23T15:50:14Z",
      "title": "Elevated errors with GPT-6 conversations on paid ChatGPT plans",
      "url": "https://status.openai.com"
@@ -714,10 +721,18 @@
    "source": "probe"
   },
   "trello": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "We have applied a mitigation and are seeing signs of recovery across affected services. Some users may continue to experience authentication errors, failed requests, or timeouts during recovery. Our teams are monitoring service recovery…",
+     "started": "2026-11-23T16:08:23Z",
+     "title": "Authentication service degraded.",
+     "url": "https://stspg.io/s5sj4jzkykn6"
+    }
+   ],
+   "level": "major",
    "name": "Trello",
    "notes": [],
+   "since": "2026-11-23T16:08:23Z",
    "source": "official"
   },
   "twilio": {
@@ -725,7 +740,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "3 smaller notices on their status page that should not affect most people."
+    "4 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -944,8 +959,8 @@
    "n90": 1
   },
   "chatgpt": {
-   "m30": 1481,
-   "m90": 1481,
+   "m30": 1512,
+   "m90": 1512,
    "n30": 3,
    "n90": 3
   },
@@ -986,8 +1001,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 7281,
-   "m90": 7281,
+   "m30": 7312,
+   "m90": 7312,
    "n30": 1,
    "n90": 1
   },
@@ -1010,8 +1025,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 5867,
-   "m90": 5867,
+   "m30": 5898,
+   "m90": 5898,
    "n30": 2,
    "n90": 2
   },
@@ -1021,6 +1036,12 @@
    "n30": 2,
    "n90": 2
   },
+  "trello": {
+   "m30": 27,
+   "m90": 27,
+   "n30": 1,
+   "n90": 1
+  },
   "vercel": {
    "m30": 190,
    "m90": 190,
@@ -1028,14 +1049,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 5637,
-   "m90": 5637,
+   "m30": 5668,
+   "m90": 5668,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 16213,
-   "m90": 16213,
+   "m30": 16244,
+   "m90": 16244,
    "n30": 1,
    "n90": 1
   },
