@@ -202,6 +202,13 @@
    "started": "2026-11-23T09:49:22Z",
    "svc": "claude",
    "title": "Elevated errors for multiple models"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-23T12:14:28Z",
+   "svc": "sumup",
+   "title": "We are having issues with instant Euro payment processing. Transfers will be delayed."
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
