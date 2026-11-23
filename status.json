@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-23T09:56:10Z",
+ "attempted_at": "2026-11-23T11:07:46Z",
  "banners": [],
- "checked_at": "2026-11-23T09:56:10Z",
+ "checked_at": "2026-11-23T11:07:46Z",
  "counts": {
   "major": 0,
-  "minor": 5,
-  "ok": 70,
+  "minor": 4,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
@@ -17,7 +17,7 @@
    "title": "Elevated errors for multiple models"
   },
   {
-   "ended": "",
+   "ended": "2026-11-23T10:06:38Z",
    "level": "minor",
    "started": "2026-11-23T00:22:55Z",
    "svc": "zoom",
@@ -296,7 +296,7 @@
   "claude": {
    "items": [
     {
-     "detail": "We are investigating elevated errors on requests to Claude Fable 5.2, Sonnet 5.5, Opus 5.5, Mythos 5.2, Haiku 5.5 and other Claude models. We will provide an update as soon as possible.",
+     "detail": "A fix has been deployed for the issue affecting Claude services and we are monitoring for recovery.",
      "started": "2026-11-23T09:49:22Z",
      "title": "Elevated errors for multiple models",
      "url": "https://stspg.io/q2ptbwdjx31m"
@@ -781,18 +781,10 @@
    "source": "probe"
   },
   "zoom": {
-   "items": [
-    {
-     "detail": "",
-     "started": "",
-     "title": "Affected: Zoom Phone",
-     "url": "https://www.zoomstatus.com"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "Zoom",
    "notes": [],
-   "since": "2026-11-23T00:22:55Z",
    "source": "official"
   }
  },
@@ -929,8 +921,8 @@
    "n90": 2
   },
   "claude": {
-   "m30": 3581,
-   "m90": 3581,
+   "m30": 3653,
+   "m90": 3653,
    "n30": 3,
    "n90": 3
   },
@@ -965,8 +957,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 6913,
-   "m90": 6913,
+   "m30": 6984,
+   "m90": 6984,
    "n30": 1,
    "n90": 1
   },
@@ -1007,20 +999,20 @@
    "n90": 1
   },
   "wise": {
-   "m30": 5268,
-   "m90": 5268,
+   "m30": 5340,
+   "m90": 5340,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 15845,
-   "m90": 15845,
+   "m30": 15916,
+   "m90": 15916,
    "n30": 1,
    "n90": 1
   },
   "zoom": {
-   "m30": 573,
-   "m90": 573,
+   "m30": 583,
+   "m90": 583,
    "n30": 1,
    "n90": 1
   }
