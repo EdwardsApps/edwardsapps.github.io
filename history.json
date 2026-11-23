@@ -209,6 +209,13 @@
    "started": "2026-11-23T12:14:28Z",
    "svc": "sumup",
    "title": "We are having issues with instant Euro payment processing. Transfers will be delayed."
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-23T15:23:22Z",
+   "svc": "sage",
+   "title": "Banking Service - Partial Outage"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
