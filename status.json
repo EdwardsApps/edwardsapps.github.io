@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-23T16:35:46Z",
+ "attempted_at": "2026-11-23T17:47:12Z",
  "banners": [],
- "checked_at": "2026-11-23T16:35:46Z",
+ "checked_at": "2026-11-23T17:47:12Z",
  "counts": {
   "major": 1,
-  "minor": 5,
-  "ok": 69,
+  "minor": 4,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
@@ -17,7 +17,7 @@
    "title": "Authentication service degraded."
   },
   {
-   "ended": "",
+   "ended": "2026-11-23T16:45:57Z",
    "level": "minor",
    "started": "2026-11-23T15:50:14Z",
    "svc": "chatgpt",
@@ -315,18 +315,10 @@
    "source": "official"
   },
   "chatgpt": {
-   "items": [
-    {
-     "detail": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery.",
-     "started": "2026-11-23T15:50:14Z",
-     "title": "Elevated errors with GPT-6 conversations on paid ChatGPT plans",
-     "url": "https://status.openai.com"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "ChatGPT (OpenAI)",
    "notes": [],
-   "since": "2026-11-23T15:50:14Z",
    "source": "official"
   },
   "claude": {
@@ -723,7 +715,7 @@
   "trello": {
    "items": [
     {
-     "detail": "We have applied a mitigation and are seeing signs of recovery across affected services. Some users may continue to experience authentication errors, failed requests, or timeouts during recovery. Our teams are monitoring service recovery…",
+     "detail": "We have applied a mitigation and are seeing signs of recovery across affected services. Some users may continue to experience authentication errors, failed requests, or timeouts while recovery continues. Our teams are monitoring service…",
      "started": "2026-11-23T16:08:23Z",
      "title": "Authentication service degraded.",
      "url": "https://stspg.io/s5sj4jzkykn6"
@@ -740,7 +732,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "4 smaller notices on their status page that should not affect most people."
+    "5 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -959,8 +951,8 @@
    "n90": 1
   },
   "chatgpt": {
-   "m30": 1512,
-   "m90": 1512,
+   "m30": 1522,
+   "m90": 1522,
    "n30": 3,
    "n90": 3
   },
@@ -1001,8 +993,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 7312,
-   "m90": 7312,
+   "m30": 7384,
+   "m90": 7384,
    "n30": 1,
    "n90": 1
   },
@@ -1025,8 +1017,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 5898,
-   "m90": 5898,
+   "m30": 5969,
+   "m90": 5969,
    "n30": 2,
    "n90": 2
   },
@@ -1037,8 +1029,8 @@
    "n90": 2
   },
   "trello": {
-   "m30": 27,
-   "m90": 27,
+   "m30": 98,
+   "m90": 98,
    "n30": 1,
    "n90": 1
   },
@@ -1049,14 +1041,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 5668,
-   "m90": 5668,
+   "m30": 5739,
+   "m90": 5739,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 16244,
-   "m90": 16244,
+   "m30": 16316,
+   "m90": 16316,
    "n30": 1,
    "n90": 1
   },

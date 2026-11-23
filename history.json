@@ -218,7 +218,7 @@
    "title": "Banking Service - Partial Outage"
   },
   {
-   "ended": "",
+   "ended": "2026-11-23T16:45:57Z",
    "level": "minor",
    "started": "2026-11-23T15:50:14Z",
    "svc": "chatgpt",
