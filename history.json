@@ -232,7 +232,7 @@
    "title": "Authentication service degraded."
   },
   {
-   "ended": "",
+   "ended": "2026-11-23T18:18:03Z",
    "level": "major",
    "started": "2026-11-23T17:54:00Z",
    "svc": "shopify",

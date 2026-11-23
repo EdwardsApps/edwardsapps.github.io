@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-23T18:07:46Z",
+ "attempted_at": "2026-11-23T18:18:03Z",
  "banners": [],
- "checked_at": "2026-11-23T18:07:46Z",
+ "checked_at": "2026-11-23T18:18:03Z",
  "counts": {
-  "major": 2,
+  "major": 1,
   "minor": 4,
-  "ok": 69,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-23T18:18:03Z",
    "level": "major",
    "started": "2026-11-23T17:54:00Z",
    "svc": "shopify",
@@ -643,18 +643,10 @@
    "source": "official"
   },
   "shopify": {
-   "items": [
-    {
-     "detail": "This issue has been resolved and is being monitored.",
-     "started": "2026-11-23T17:54:00Z",
-     "title": "Errors at Checkout and Point Of Sale",
-     "url": "https://stspg.io/4ppc7pqmn6xv"
-    }
-   ],
-   "level": "major",
+   "items": [],
+   "level": "ok",
    "name": "Shopify",
    "notes": [],
-   "since": "2026-11-23T17:54:00Z",
    "source": "official"
   },
   "slack": {
@@ -1008,8 +1000,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 7404,
-   "m90": 7404,
+   "m30": 7414,
+   "m90": 7414,
    "n30": 1,
    "n90": 1
   },
@@ -1032,14 +1024,14 @@
    "n90": 2
   },
   "sage": {
-   "m30": 5990,
-   "m90": 5990,
+   "m30": 6000,
+   "m90": 6000,
    "n30": 2,
    "n90": 2
   },
   "shopify": {
-   "m30": 13,
-   "m90": 13,
+   "m30": 24,
+   "m90": 24,
    "n30": 1,
    "n90": 1
   },
@@ -1050,8 +1042,8 @@
    "n90": 2
   },
   "trello": {
-   "m30": 119,
-   "m90": 119,
+   "m30": 129,
+   "m90": 129,
    "n30": 1,
    "n90": 1
   },
@@ -1062,14 +1054,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 5760,
-   "m90": 5760,
+   "m30": 5770,
+   "m90": 5770,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 16336,
-   "m90": 16336,
+   "m30": 16346,
+   "m90": 16346,
    "n30": 1,
    "n90": 1
   },
