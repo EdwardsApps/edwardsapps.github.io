@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-23T20:42:18Z",
+ "attempted_at": "2026-11-23T22:14:26Z",
  "banners": [],
- "checked_at": "2026-11-23T20:42:18Z",
+ "checked_at": "2026-11-23T22:14:26Z",
  "counts": {
-  "major": 1,
+  "major": 0,
   "minor": 4,
-  "ok": 70,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
@@ -24,7 +24,7 @@
    "title": "Errors at Checkout and Point Of Sale"
   },
   {
-   "ended": "",
+   "ended": "2026-11-23T20:52:24Z",
    "level": "major",
    "started": "2026-11-23T16:08:23Z",
    "svc": "trello",
@@ -727,18 +727,10 @@
    "source": "probe"
   },
   "trello": {
-   "items": [
-    {
-     "detail": "We have applied a mitigation and are seeing signs of recovery across affected services. Some users may continue to experience authentication errors, failed requests, or timeouts while recovery continues. Our teams are monitoring service…",
-     "started": "2026-11-23T16:08:23Z",
-     "title": "Authentication service degraded.",
-     "url": "https://stspg.io/s5sj4jzkykn6"
-    }
-   ],
-   "level": "major",
+   "items": [],
+   "level": "ok",
    "name": "Trello",
    "notes": [],
-   "since": "2026-11-23T16:08:23Z",
    "source": "official"
   },
   "twilio": {
@@ -746,7 +738,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "6 smaller notices on their status page that should not affect most people."
+    "5 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -1007,8 +999,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 7559,
-   "m90": 7559,
+   "m30": 7651,
+   "m90": 7651,
    "n30": 1,
    "n90": 1
   },
@@ -1031,8 +1023,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 6144,
-   "m90": 6144,
+   "m30": 6237,
+   "m90": 6237,
    "n30": 2,
    "n90": 2
   },
@@ -1049,8 +1041,8 @@
    "n90": 2
   },
   "trello": {
-   "m30": 273,
-   "m90": 273,
+   "m30": 284,
+   "m90": 284,
    "n30": 1,
    "n90": 1
   },
@@ -1061,14 +1053,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 5914,
-   "m90": 5914,
+   "m30": 6006,
+   "m90": 6006,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 16491,
-   "m90": 16491,
+   "m30": 16583,
+   "m90": 16583,
    "n30": 1,
    "n90": 1
   },
