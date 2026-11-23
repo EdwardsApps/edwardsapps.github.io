@@ -244,6 +244,13 @@
    "started": "2026-11-23T17:54:00Z",
    "svc": "shopify",
    "title": "Errors at Checkout and Point Of Sale"
+  },
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-23T22:20:18Z",
+   "svc": "netlify",
+   "title": "Elevated errors for builds"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
