@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-23T12:50:16Z",
+ "attempted_at": "2026-11-23T15:13:37Z",
  "banners": [],
- "checked_at": "2026-11-23T12:50:16Z",
+ "checked_at": "2026-11-23T15:13:37Z",
  "counts": {
   "major": 0,
-  "minor": 4,
-  "ok": 71,
+  "minor": 3,
+  "ok": 72,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-23T13:00:21Z",
    "level": "minor",
    "started": "2026-11-23T12:14:28Z",
    "svc": "sumup",
@@ -312,7 +312,7 @@
    "level": "ok",
    "name": "Cloudflare",
    "notes": [
-    "1 smaller notice on their status page that should not affect most people."
+    "2 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -656,18 +656,10 @@
    "source": "probe"
   },
   "sumup": {
-   "items": [
-    {
-     "detail": "Due to SEPA scheme issues, we are experiencing Euro payment processing problems. We are currently looking into the issue.",
-     "started": "2026-11-23T12:14:28Z",
-     "title": "We are having issues with instant Euro payment processing. Transfers will be delayed.",
-     "url": "https://status.sumup.com"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "SumUp",
    "notes": [],
-   "since": "2026-11-23T12:14:28Z",
    "source": "official"
   },
   "telegram": {
@@ -703,7 +695,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "4 smaller notices on their status page that should not affect most people."
+    "3 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -964,8 +956,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 7087,
-   "m90": 7087,
+   "m30": 7230,
+   "m90": 7230,
    "n30": 1,
    "n90": 1
   },
@@ -994,8 +986,8 @@
    "n90": 1
   },
   "sumup": {
-   "m30": 368,
-   "m90": 368,
+   "m30": 378,
+   "m90": 378,
    "n30": 2,
    "n90": 2
   },
@@ -1006,14 +998,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 5442,
-   "m90": 5442,
+   "m30": 5586,
+   "m90": 5586,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 16019,
-   "m90": 16019,
+   "m30": 16162,
+   "m90": 16162,
    "n30": 1,
    "n90": 1
   },
