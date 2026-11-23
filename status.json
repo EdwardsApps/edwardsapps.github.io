@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-23T00:13:48Z",
+ "attempted_at": "2026-11-23T09:45:55Z",
  "banners": [],
- "checked_at": "2026-11-23T00:13:48Z",
+ "checked_at": "2026-11-23T09:45:55Z",
  "counts": {
   "major": 0,
-  "minor": 3,
-  "ok": 72,
+  "minor": 4,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-23T00:22:55Z",
+   "svc": "zoom",
+   "title": "Service Degradation Affecting Zoom Phone tab on desktop clients"
+  },
   {
    "ended": "2026-11-22T23:22:40Z",
    "level": "major",
@@ -738,12 +745,6 @@
   "xero": {
    "items": [
     {
-     "detail": "We’re aware that returns submitted through Xero Partner Hub are being delayed in filing to the ATO. This is due to an issue with the ATO’s systems, which they are continuing to address. Submissions will be processed when the ATO completes…",
-     "started": "2026-11-20T02:02:32Z",
-     "title": "ATO Submission Delays",
-     "url": "https://stspg.io/r7p7f9p0bhlp"
-    },
-    {
      "detail": "HMRC are continuing to investigate the issue they're experiencing with CIS verification - You can find more information on their availability page. To verify a sub contractor in the mean time you can sign in to the Construction Industry…",
      "started": "2026-11-19T09:50:38Z",
      "title": "UK: CIS - Error when verifying CIS contractors",
@@ -765,10 +766,18 @@
    "source": "probe"
   },
   "zoom": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "",
+     "started": "",
+     "title": "Affected: Zoom Phone",
+     "url": "https://www.zoomstatus.com"
+    }
+   ],
+   "level": "minor",
    "name": "Zoom",
    "notes": [],
+   "since": "2026-11-23T00:22:55Z",
    "source": "official"
   }
  },
@@ -941,8 +950,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 6330,
-   "m90": 6330,
+   "m30": 6902,
+   "m90": 6902,
    "n30": 1,
    "n90": 1
   },
@@ -983,14 +992,20 @@
    "n90": 1
   },
   "wise": {
-   "m30": 4686,
-   "m90": 4686,
+   "m30": 5258,
+   "m90": 5258,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 15262,
-   "m90": 15262,
+   "m30": 15834,
+   "m90": 15834,
+   "n30": 1,
+   "n90": 1
+  },
+  "zoom": {
+   "m30": 563,
+   "m90": 563,
    "n30": 1,
    "n90": 1
   }

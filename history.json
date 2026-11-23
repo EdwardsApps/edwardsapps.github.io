@@ -188,6 +188,13 @@
    "started": "2026-11-22T23:05:00Z",
    "svc": "canva",
    "title": "Users may experience issues managing their subscriptions in Canva"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-23T00:22:55Z",
+   "svc": "zoom",
+   "title": "Service Degradation Affecting Zoom Phone tab on desktop clients"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
