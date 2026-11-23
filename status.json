@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-23T15:44:36Z",
+ "attempted_at": "2026-11-23T16:04:55Z",
  "banners": [],
- "checked_at": "2026-11-23T15:44:36Z",
+ "checked_at": "2026-11-23T16:04:55Z",
  "counts": {
   "major": 0,
-  "minor": 4,
-  "ok": 71,
+  "minor": 5,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-23T15:50:14Z",
+   "svc": "chatgpt",
+   "title": "Elevated errors with GPT-6 conversations on paid ChatGPT plans"
+  },
   {
    "ended": "",
    "level": "minor",
@@ -301,10 +308,18 @@
    "source": "official"
   },
   "chatgpt": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "We’ve identified the issue causing intermittent errors in GPT-6 conversations on paid ChatGPT plans. We are working on implementing a mitigation.",
+     "started": "2026-11-23T15:50:14Z",
+     "title": "Elevated errors with GPT-6 conversations on paid ChatGPT plans",
+     "url": "https://status.openai.com"
+    }
+   ],
+   "level": "minor",
    "name": "ChatGPT (OpenAI)",
    "notes": [],
+   "since": "2026-11-23T15:50:14Z",
    "source": "official"
   },
   "claude": {
@@ -929,10 +944,10 @@
    "n90": 1
   },
   "chatgpt": {
-   "m30": 1467,
-   "m90": 1467,
-   "n30": 2,
-   "n90": 2
+   "m30": 1481,
+   "m90": 1481,
+   "n30": 3,
+   "n90": 3
   },
   "claude": {
    "m30": 3663,
@@ -971,8 +986,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 7261,
-   "m90": 7261,
+   "m30": 7281,
+   "m90": 7281,
    "n30": 1,
    "n90": 1
   },
@@ -995,8 +1010,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 5847,
-   "m90": 5847,
+   "m30": 5867,
+   "m90": 5867,
    "n30": 2,
    "n90": 2
   },
@@ -1013,14 +1028,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 5617,
-   "m90": 5617,
+   "m30": 5637,
+   "m90": 5637,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 16193,
-   "m90": 16193,
+   "m30": 16213,
+   "m90": 16213,
    "n30": 1,
    "n90": 1
   },

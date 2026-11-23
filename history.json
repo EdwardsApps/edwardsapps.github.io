@@ -216,6 +216,13 @@
    "started": "2026-11-23T15:23:22Z",
    "svc": "sage",
    "title": "Banking Service - Partial Outage"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-23T15:50:14Z",
+   "svc": "chatgpt",
+   "title": "Elevated errors with GPT-6 conversations on paid ChatGPT plans"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
