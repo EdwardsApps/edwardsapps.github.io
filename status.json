@@ -1,5 +1,5 @@
 {
- "attempted_at": "2026-11-24T14:06:14Z",
+ "attempted_at": "2026-11-24T16:19:37Z",
  "banners": [
   {
    "kind": "plumbing",
@@ -7,16 +7,16 @@
    "text": "Cloudflare is reporting major problems. A great many unrelated websites and apps run on it, so other things may be slow or failing too. It is very unlikely to be your wifi."
   }
  ],
- "checked_at": "2026-11-24T14:06:14Z",
+ "checked_at": "2026-11-24T16:19:37Z",
  "counts": {
   "major": 1,
-  "minor": 6,
-  "ok": 68,
+  "minor": 5,
+  "ok": 69,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-24T14:16:26Z",
    "level": "minor",
    "started": "2026-11-24T13:44:07Z",
    "svc": "github",
@@ -459,18 +459,10 @@
    "source": "official"
   },
   "github": {
-   "items": [
-    {
-     "detail": "The issues with our upstream model provider have been resolved, and MAI Code 2 is once again available in Copilot products and IDE surfaces. We will continue monitoring to ensure stability, but mitigation is complete.",
-     "started": "2026-11-24T13:44:07Z",
-     "title": "Degraded Availability for MAI Code 2 in Copilot",
-     "url": "https://stspg.io/d5wbprv122kh"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "GitHub",
    "notes": [],
-   "since": "2026-11-24T13:44:07Z",
    "source": "official"
   },
   "gocardless": {
@@ -797,7 +789,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "6 smaller notices on their status page that should not affect most people."
+    "4 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -1022,14 +1014,14 @@
    "n90": 3
   },
   "claude": {
-   "m30": 4498,
-   "m90": 4498,
+   "m30": 4631,
+   "m90": 4631,
    "n30": 4,
    "n90": 4
   },
   "cloudflare": {
-   "m30": 186,
-   "m90": 186,
+   "m30": 320,
+   "m90": 320,
    "n30": 2,
    "n90": 2
   },
@@ -1046,8 +1038,8 @@
    "n90": 1
   },
   "github": {
-   "m30": 183,
-   "m90": 183,
+   "m30": 193,
+   "m90": 193,
    "n30": 4,
    "n90": 4
   },
@@ -1058,8 +1050,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 8603,
-   "m90": 8603,
+   "m30": 8736,
+   "m90": 8736,
    "n30": 1,
    "n90": 1
   },
@@ -1088,8 +1080,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 7188,
-   "m90": 7188,
+   "m30": 7322,
+   "m90": 7322,
    "n30": 2,
    "n90": 2
   },
@@ -1118,14 +1110,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 6958,
-   "m90": 6958,
+   "m30": 7092,
+   "m90": 7092,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 17535,
-   "m90": 17535,
+   "m30": 17668,
+   "m90": 17668,
    "n30": 1,
    "n90": 1
   },
