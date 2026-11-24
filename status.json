@@ -1,5 +1,5 @@
 {
- "attempted_at": "2026-11-24T16:19:37Z",
+ "attempted_at": "2026-11-25T00:01:12Z",
  "banners": [
   {
    "kind": "plumbing",
@@ -7,10 +7,10 @@
    "text": "Cloudflare is reporting major problems. A great many unrelated websites and apps run on it, so other things may be slow or failing too. It is very unlikely to be your wifi."
   }
  ],
- "checked_at": "2026-11-24T16:19:37Z",
+ "checked_at": "2026-11-25T00:01:12Z",
  "counts": {
-  "major": 1,
-  "minor": 5,
+  "major": 2,
+  "minor": 4,
   "ok": 69,
   "unknown": 0
  },
@@ -283,7 +283,7 @@
   },
   {
    "ended": "",
-   "level": "minor",
+   "level": "major",
    "started": "2026-11-12T09:51:10Z",
    "svc": "xero",
    "title": "UK: CIS - Error when verifying CIS contractors"
@@ -397,7 +397,7 @@
    "level": "major",
    "name": "Cloudflare",
    "notes": [
-    "3 smaller notices on their status page that should not affect most people."
+    "2 smaller notices on their status page that should not affect most people."
    ],
    "since": "2026-11-24T11:29:22Z",
    "source": "official"
@@ -789,7 +789,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "4 smaller notices on their status page that should not affect most people."
+    "5 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -817,7 +817,7 @@
   "wise": {
    "items": [
     {
-     "detail": "Some payments to COP are currently delayed due to an ongoing issue. Our team is working hard to fix this. We’ll update this page as soon as transfers are back to normal.",
+     "detail": "Some payments to COP are still delayed due to an ongoing issue. Payments up to 9,500,000 COP made to personal recipients with a Bancocolombia account are working as normal. Our team is working to resolve the issue and we’ll update this…",
      "started": "2026-11-19T18:07:27Z",
      "title": "Delayed transfers to COP",
      "url": "https://stspg.io/2k7qjwf7gp7t"
@@ -859,7 +859,7 @@
      "url": "https://stspg.io/38lr0j3n9n8c"
     }
    ],
-   "level": "minor",
+   "level": "major",
    "link": "HMRC",
    "name": "Xero",
    "notes": [],
@@ -1014,14 +1014,14 @@
    "n90": 3
   },
   "claude": {
-   "m30": 4631,
-   "m90": 4631,
+   "m30": 5093,
+   "m90": 5093,
    "n30": 4,
    "n90": 4
   },
   "cloudflare": {
-   "m30": 320,
-   "m90": 320,
+   "m30": 781,
+   "m90": 781,
    "n30": 2,
    "n90": 2
   },
@@ -1050,8 +1050,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 8736,
-   "m90": 8736,
+   "m30": 9198,
+   "m90": 9198,
    "n30": 1,
    "n90": 1
   },
@@ -1080,8 +1080,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 7322,
-   "m90": 7322,
+   "m30": 7783,
+   "m90": 7783,
    "n30": 2,
    "n90": 2
   },
@@ -1110,14 +1110,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 7092,
-   "m90": 7092,
+   "m30": 7553,
+   "m90": 7553,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 17668,
-   "m90": 17668,
+   "m30": 18130,
+   "m90": 18130,
    "n30": 1,
    "n90": 1
   },
