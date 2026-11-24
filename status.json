@@ -1,14 +1,27 @@
 {
- "attempted_at": "2026-11-24T11:22:22Z",
- "banners": [],
- "checked_at": "2026-11-24T11:22:22Z",
+ "attempted_at": "2026-11-24T13:35:25Z",
+ "banners": [
+  {
+   "kind": "plumbing",
+   "svc": "cloudflare",
+   "text": "Cloudflare is reporting major problems. A great many unrelated websites and apps run on it, so other things may be slow or failing too. It is very unlikely to be your wifi."
+  }
+ ],
+ "checked_at": "2026-11-24T13:35:25Z",
  "counts": {
-  "major": 0,
+  "major": 1,
   "minor": 5,
-  "ok": 70,
+  "ok": 69,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-24T11:29:22Z",
+   "svc": "cloudflare",
+   "title": "Magic Transit Degraded Performance"
+  },
   {
    "ended": "",
    "level": "minor",
@@ -366,12 +379,20 @@
    "source": "official"
   },
   "cloudflare": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "The issue has been identified and a fix is being implemented.",
+     "started": "2026-11-24T11:29:22Z",
+     "title": "Magic Transit Degraded Performance",
+     "url": "https://www.cloudflarestatus.com/incidents/no721jcnlrbh"
+    }
+   ],
+   "level": "major",
    "name": "Cloudflare",
    "notes": [
     "2 smaller notices on their status page that should not affect most people."
    ],
+   "since": "2026-11-24T11:29:22Z",
    "source": "official"
   },
   "companies-house": {
@@ -986,16 +1007,16 @@
    "n90": 3
   },
   "claude": {
-   "m30": 4334,
-   "m90": 4334,
+   "m30": 4467,
+   "m90": 4467,
    "n30": 4,
    "n90": 4
   },
   "cloudflare": {
-   "m30": 30,
-   "m90": 30,
-   "n30": 1,
-   "n90": 1
+   "m30": 156,
+   "m90": 156,
+   "n30": 2,
+   "n90": 2
   },
   "dropbox": {
    "m30": 221,
@@ -1022,8 +1043,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 8439,
-   "m90": 8439,
+   "m30": 8572,
+   "m90": 8572,
    "n30": 1,
    "n90": 1
   },
@@ -1052,8 +1073,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 7025,
-   "m90": 7025,
+   "m30": 7158,
+   "m90": 7158,
    "n30": 2,
    "n90": 2
   },
@@ -1082,14 +1103,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 6794,
-   "m90": 6794,
+   "m30": 6927,
+   "m90": 6927,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 17371,
-   "m90": 17371,
+   "m30": 17504,
+   "m90": 17504,
    "n30": 1,
    "n90": 1
   },

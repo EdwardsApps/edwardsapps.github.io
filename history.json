@@ -258,6 +258,13 @@
    "started": "2026-11-24T00:10:40Z",
    "svc": "claude",
    "title": "Claude for Microsoft 365 add-in missing for some users"
+  },
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-24T11:29:22Z",
+   "svc": "cloudflare",
+   "title": "Magic Transit Degraded Performance"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
