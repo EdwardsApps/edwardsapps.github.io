@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-24T00:06:53Z",
+ "attempted_at": "2026-11-24T11:22:22Z",
  "banners": [],
- "checked_at": "2026-11-24T00:06:53Z",
+ "checked_at": "2026-11-24T11:22:22Z",
  "counts": {
   "major": 0,
-  "minor": 4,
-  "ok": 71,
+  "minor": 5,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-24T00:10:40Z",
+   "svc": "claude",
+   "title": "Claude for Microsoft 365 add-in missing for some users"
+  },
   {
    "ended": "2026-11-23T22:34:49Z",
    "level": "major",
@@ -343,10 +350,19 @@
    "source": "official"
   },
   "claude": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "We are continuing to investigate an issue causing the Claude add-in to disappear from Excel, Word, and PowerPoint on Mac for users signed in to Microsoft Office with a personal Microsoft account. In the meantime, we recommend using the…",
+     "started": "2026-11-24T00:10:40Z",
+     "title": "Claude for Microsoft 365 add-in missing for some users",
+     "url": "https://stspg.io/ffdq2qfv8frk"
+    }
+   ],
+   "level": "minor",
+   "link": "Microsoft",
    "name": "Claude (Anthropic)",
    "notes": [],
+   "since": "2026-11-24T00:10:40Z",
    "source": "official"
   },
   "cloudflare": {
@@ -745,7 +761,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "7 smaller notices on their status page that should not affect most people."
+    "6 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -970,10 +986,10 @@
    "n90": 3
   },
   "claude": {
-   "m30": 3663,
-   "m90": 3663,
-   "n30": 3,
-   "n90": 3
+   "m30": 4334,
+   "m90": 4334,
+   "n30": 4,
+   "n90": 4
   },
   "cloudflare": {
    "m30": 30,
@@ -1006,8 +1022,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 7763,
-   "m90": 7763,
+   "m30": 8439,
+   "m90": 8439,
    "n30": 1,
    "n90": 1
   },
@@ -1036,8 +1052,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 6349,
-   "m90": 6349,
+   "m30": 7025,
+   "m90": 7025,
    "n30": 2,
    "n90": 2
   },
@@ -1066,14 +1082,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 6119,
-   "m90": 6119,
+   "m30": 6794,
+   "m90": 6794,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 16695,
-   "m90": 16695,
+   "m30": 17371,
+   "m90": 17371,
    "n30": 1,
    "n90": 1
   },

@@ -251,6 +251,13 @@
    "started": "2026-11-23T22:20:18Z",
    "svc": "netlify",
    "title": "Elevated errors for builds"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-24T00:10:40Z",
+   "svc": "claude",
+   "title": "Claude for Microsoft 365 add-in missing for some users"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
