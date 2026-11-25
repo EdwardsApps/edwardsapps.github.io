@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-25T16:03:54Z",
+ "attempted_at": "2026-11-25T16:25:28Z",
  "banners": [],
- "checked_at": "2026-11-25T16:03:54Z",
+ "checked_at": "2026-11-25T16:25:28Z",
  "counts": {
   "major": 2,
-  "minor": 5,
-  "ok": 69,
+  "minor": 4,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
@@ -24,7 +24,7 @@
    "title": "We are experiencing issues with card transactions in Europe"
   },
   {
-   "ended": "",
+   "ended": "2026-11-25T16:14:53Z",
    "level": "minor",
    "started": "2026-11-25T11:48:13Z",
    "svc": "chatgpt",
@@ -399,18 +399,10 @@
    "source": "official"
   },
   "chatgpt": {
-   "items": [
-    {
-     "detail": "We have applied mitigations and are seeing recovery across ChatGPT, ChatGPT Work, and Codex cloud threads. We are monitoring the affected services to ensure continued stability. Our investigation into the underlying cause remains ongoing.",
-     "started": "2026-11-25T11:48:13Z",
-     "title": "ChatGPT, ChatGPT Work, and Codex Cloud are experiencing elevated conversation errors",
-     "url": "https://status.openai.com"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "ChatGPT (OpenAI)",
    "notes": [],
-   "since": "2026-11-25T11:48:13Z",
    "source": "official"
   },
   "claude": {
@@ -518,7 +510,7 @@
   "github": {
    "items": [
     {
-     "detail": "Issues is experiencing degraded performance. We are continuing to investigate.",
+     "detail": "API Requests is experiencing degraded performance. We are continuing to investigate.",
      "started": "2026-11-25T15:55:19Z",
      "title": "Investigating degraded experiences across GitHub products",
      "url": "https://stspg.io/5qj9j0p5g4cr"
@@ -763,7 +755,9 @@
    ],
    "level": "minor",
    "name": "Sage",
-   "notes": [],
+   "notes": [
+    "1 smaller notice on their status page that should not affect most people."
+   ],
    "since": "2026-11-23T15:23:22Z",
    "source": "official"
   },
@@ -1067,14 +1061,14 @@
    "n90": 1
   },
   "chatgpt": {
-   "m30": 1777,
-   "m90": 1777,
+   "m30": 1788,
+   "m90": 1788,
    "n30": 4,
    "n90": 4
   },
   "claude": {
-   "m30": 6056,
-   "m90": 6056,
+   "m30": 6077,
+   "m90": 6077,
    "n30": 4,
    "n90": 4
   },
@@ -1085,8 +1079,8 @@
    "n90": 2
   },
   "creditsafe": {
-   "m30": 1528,
-   "m90": 1528,
+   "m30": 1549,
+   "m90": 1549,
    "n30": 1,
    "n90": 1
   },
@@ -1103,8 +1097,8 @@
    "n90": 1
   },
   "github": {
-   "m30": 275,
-   "m90": 275,
+   "m30": 297,
+   "m90": 297,
    "n30": 6,
    "n90": 6
   },
@@ -1115,8 +1109,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 10160,
-   "m90": 10160,
+   "m30": 10182,
+   "m90": 10182,
    "n30": 1,
    "n90": 1
   },
@@ -1145,8 +1139,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 8746,
-   "m90": 8746,
+   "m30": 8768,
+   "m90": 8768,
    "n30": 2,
    "n90": 2
   },
@@ -1175,8 +1169,8 @@
    "n90": 1
   },
   "wise": {
-   "m30": 8516,
-   "m90": 8516,
+   "m30": 8538,
+   "m90": 8538,
    "n30": 1,
    "n90": 1
   },
