@@ -249,6 +249,11 @@
     {"id": "wise", "name": "Wise", "cat": "money", "kind": "statuspage",
      "tip": "Don't keep retrying a payment or transfer. Wait until the service is back, then check your balance to make sure nothing has gone through twice.",
      "about": "Wise money transfers and accounts.", "base": "https://status.wise.com", "search": "bank transferwise"},
+    {"id": "creditsafe", "name": "Creditsafe", "cat": "money", "kind": "hund",
+     "tip": "There is nothing to fix at your end. If you need a credit check before agreeing terms, wait for the service to return rather than going ahead without one.",
+     "about": "Business credit reports, company checks and monitoring.", "base": "https://status.creditsafe.com",
+     "ignore": "^(Belgium|Denmark|Deutschland|France|Italia|Japan|Nederland|Norway|Sweden|United States|Canada|Swedish|Norwegian|ftp\\.)",
+     "search": "credit check credit report credit score kyc company check"},
 
     {"id": "shopify", "name": "Shopify", "cat": "web", "kind": "statuspage",
      "about": "Shopify online shops, checkout and tills.", "base": "https://www.shopifystatus.com"},

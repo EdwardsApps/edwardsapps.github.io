@@ -483,6 +483,51 @@ def read_hmrc_service(svc: dict, fetch: Fetcher) -> dict:
     return result(level, items, notes)
 
 
+def read_hund(svc: dict, fetch: Fetcher) -> dict:
+    """A status page hosted by Hund, which offers no feed, so the page itself is read."""
+    base = svc["base"].rstrip("/")
+    page = fetch.get(base + "/").decode("utf-8", "replace")
+    if not re.search(r"<aside class='[a-z]+ state-bar'", page):
+        raise ValueError("Hund page layout changed: no state bar")
+    ignore = re.compile(svc["ignore"]) if svc.get("ignore") else None
+    severity = {"outage": "major", "degraded": "minor"}
+    states = {clean(name, 120): state for name, state in re.findall(
+        r"<span class='name'><a href=\"[^\"]+\">([^<]+)</a></span>[\s\S]*?<span class='([a-z]+) state icon'", page)}
+    began = dict(re.findall(r"<span class='title'><a href=\"(/issues/\w+)\">[^<]*</a></span>\s*<time datetime='([^']+)'", page))
+
+    items, levels, notes = [], [], []
+    notices = page.split("<section class='groups", 1)[0].split("<div class='issue-notice--wrapper'>")[1:]
+    for block in notices:
+        head = re.search(r"issue-notice--header ([^']*)'>\s*<div class='issue-notice--header__title'><a href=\"([^\"]+)\">(.*?)</a>", block, re.S)
+        if not head:
+            continue
+        kinds, link, title = head.group(1), head.group(2), clean(head.group(3), 160)
+        label = re.search(r"issue-notice--header__label'>(.*?)</div>", block, re.S)
+        kinds += " " + (clean(label.group(1), 40) if label else "")
+        if re.search(r"resolved|completed|closed", kinds, re.I):
+            continue
+        affected = [clean(name, 120) for name in re.findall(r"<li>.*?<a href=\"/components/[^\"]+\">(.*?)</a></li>", block, re.S)]
+        mine = [name for name in affected if not (ignore and ignore.search(name))]
+        if affected and not mine:
+            continue        # only places this service's UK users never touch
+        if re.search(r"maintenance|scheduled|informational", kinds, re.I):
+            notes.append(clean(title, 140))
+            continue
+        body = re.search(r"issue-notice--content__body'>(.*?)</div>", block, re.S)
+        lines = [clean(text, 400) for text in re.findall(r"<p>(.*?)</p>", body.group(1) if body else "", re.S)]
+        lines = [text for text in lines if text and not re.match(r"(dear|hi|hello)\b.{0,30}$", text, re.I)]
+        updated = re.search(r"issue-notice--content__date'><time datetime='([^']+)'", block)
+        items.append(item(title, " ".join(lines), base + link, began.get(link) or (updated.group(1) if updated else None)))
+        levels.append(worst([severity.get(states.get(name, ""), "minor") for name in mine] or ["minor"]))
+    if not items:
+        down = [(name, state) for name, state in states.items()
+                if state in severity and not (ignore and ignore.search(name))]
+        if down:
+            items.append(item("Affected: " + join_names([name for name, _ in down]), "", base + "/"))
+            levels.append(worst([severity[state] for _, state in down]))
+    return result(worst(levels), items, notes)
+
+
 def read_psn(svc: dict, fetch: Fetcher) -> dict:
     data = fetch.get_json(svc["feed"])
     uk = next((country for country in data.get("countries") or [] if country.get("countryCode") == "GB"), None)
@@ -560,6 +605,7 @@ READERS = {
     "paypal": read_paypal,
     "hmrc_overall": read_hmrc_overall,
     "hmrc_service": read_hmrc_service,
+    "hund": read_hund,
     "psn": read_psn,
     "xbox": read_xbox,
     "meta": read_meta,
@@ -677,7 +723,7 @@ def update_history(history: dict, services: dict, previous: dict, now: dt.dateti
     """Record each spell of trouble: when we first saw it and when it cleared."""
     episodes = history.setdefault("episodes", [])
     open_by_service = {episode["svc"]: episode for episode in episodes if not episode.get("ended")}
-    first_run = not previous.get("services")
+    seen_before = previous.get("services") or {}
     for sid, entry in services.items():
         level = entry.get("level")
         if level == "unknown" or entry.get("stale"):
@@ -688,7 +734,8 @@ def update_history(history: dict, services: dict, previous: dict, now: dt.dateti
             if current is None:
                 started = now
                 reported = parse_time((entry.get("items") or [{}])[0].get("started"))
-                if reported and (first_run or now - reported < dt.timedelta(hours=24)) and reported < now:
+                # A service we have never read before (the first run, or one just added) is dated by its own notice.
+                if reported and (sid not in seen_before or now - reported < dt.timedelta(hours=24)) and reported < now:
                     started = reported
                 episodes.append({"svc": sid, "level": level, "title": title, "started": iso(started), "ended": ""})
             else:
