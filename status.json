@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-25T15:42:08Z",
+ "attempted_at": "2026-11-25T15:53:04Z",
  "banners": [],
- "checked_at": "2026-11-25T15:42:08Z",
+ "checked_at": "2026-11-25T15:53:04Z",
  "counts": {
-  "major": 2,
+  "major": 1,
   "minor": 5,
-  "ok": 69,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-25T15:53:04Z",
    "level": "major",
    "started": "2026-11-25T14:19:10Z",
    "svc": "sumup",
@@ -802,18 +802,10 @@
    "source": "probe"
   },
   "sumup": {
-   "items": [
-    {
-     "detail": "The card transactions functionalities are back to normal. Our teams are monitoring the situation.",
-     "started": "2026-11-25T14:19:10Z",
-     "title": "We are experiencing issues with card transactions in Europe",
-     "url": "https://status.sumup.com"
-    }
-   ],
-   "level": "major",
+   "items": [],
+   "level": "ok",
    "name": "SumUp",
    "notes": [],
-   "since": "2026-11-25T14:19:10Z",
    "source": "official"
   },
   "telegram": {
@@ -1060,14 +1052,14 @@
    "n90": 1
   },
   "chatgpt": {
-   "m30": 1755,
-   "m90": 1755,
+   "m30": 1766,
+   "m90": 1766,
    "n30": 4,
    "n90": 4
   },
   "claude": {
-   "m30": 6034,
-   "m90": 6034,
+   "m30": 6045,
+   "m90": 6045,
    "n30": 4,
    "n90": 4
   },
@@ -1078,8 +1070,8 @@
    "n90": 2
   },
   "creditsafe": {
-   "m30": 1506,
-   "m90": 1506,
+   "m30": 1517,
+   "m90": 1517,
    "n30": 1,
    "n90": 1
   },
@@ -1108,8 +1100,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 10139,
-   "m90": 10139,
+   "m30": 10149,
+   "m90": 10149,
    "n30": 1,
    "n90": 1
   },
@@ -1138,8 +1130,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 8724,
-   "m90": 8724,
+   "m30": 8735,
+   "m90": 8735,
    "n30": 2,
    "n90": 2
   },
@@ -1150,8 +1142,8 @@
    "n90": 2
   },
   "sumup": {
-   "m30": 460,
-   "m90": 460,
+   "m30": 471,
+   "m90": 471,
    "n30": 3,
    "n90": 3
   },
@@ -1168,8 +1160,8 @@
    "n90": 1
   },
   "wise": {
-   "m30": 8494,
-   "m90": 8494,
+   "m30": 8505,
+   "m90": 8505,
    "n30": 1,
    "n90": 1
   },

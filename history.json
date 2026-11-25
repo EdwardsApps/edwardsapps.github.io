@@ -302,7 +302,7 @@
    "title": "KYC Protect Downtime"
   },
   {
-   "ended": "",
+   "ended": "2026-11-25T15:53:04Z",
    "level": "major",
    "started": "2026-11-25T14:19:10Z",
    "svc": "sumup",
