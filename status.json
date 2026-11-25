@@ -1,5 +1,5 @@
 {
- "attempted_at": "2026-11-25T00:42:09Z",
+ "attempted_at": "2026-11-25T01:12:48Z",
  "banners": [
   {
    "kind": "plumbing",
@@ -7,17 +7,17 @@
    "text": "Cloudflare is reporting major problems. A great many unrelated websites and apps run on it, so other things may be slow or failing too. It is very unlikely to be your wifi."
   }
  ],
- "checked_at": "2026-11-25T00:42:09Z",
+ "checked_at": "2026-11-25T01:12:48Z",
  "counts": {
-  "major": 2,
-  "minor": 5,
+  "major": 3,
+  "minor": 4,
   "ok": 68,
   "unknown": 0
  },
  "recent": [
   {
    "ended": "",
-   "level": "minor",
+   "level": "major",
    "started": "2026-11-25T00:08:17Z",
    "svc": "github",
    "title": "Disruption with some GitHub services"
@@ -468,13 +468,13 @@
   "github": {
    "items": [
     {
-     "detail": "We are investigating reports of impacted performance for some GitHub services.",
+     "detail": "We've applied a mitigation to fix the issues with Code Completion and Next Edit Suggestions. We are seeing improvements in telemetry and are monitoring for full recovery.",
      "started": "2026-11-25T00:08:17Z",
-     "title": "Disruption with some GitHub services",
+     "title": "Disruption with Code Completions and Next Edit Suggestions",
      "url": "https://stspg.io/bk5200jsb13k"
     }
    ],
-   "level": "minor",
+   "level": "major",
    "name": "GitHub",
    "notes": [],
    "since": "2026-11-25T00:08:17Z",
@@ -1029,14 +1029,14 @@
    "n90": 3
   },
   "claude": {
-   "m30": 5134,
-   "m90": 5134,
+   "m30": 5165,
+   "m90": 5165,
    "n30": 4,
    "n90": 4
   },
   "cloudflare": {
-   "m30": 822,
-   "m90": 822,
+   "m30": 853,
+   "m90": 853,
    "n30": 2,
    "n90": 2
   },
@@ -1053,8 +1053,8 @@
    "n90": 1
   },
   "github": {
-   "m30": 226,
-   "m90": 226,
+   "m30": 257,
+   "m90": 257,
    "n30": 5,
    "n90": 5
   },
@@ -1065,8 +1065,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 9239,
-   "m90": 9239,
+   "m30": 9269,
+   "m90": 9269,
    "n30": 1,
    "n90": 1
   },
@@ -1095,8 +1095,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 7824,
-   "m90": 7824,
+   "m30": 7855,
+   "m90": 7855,
    "n30": 2,
    "n90": 2
   },
@@ -1125,14 +1125,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 7594,
-   "m90": 7594,
+   "m30": 7625,
+   "m90": 7625,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 18170,
-   "m90": 18170,
+   "m30": 18201,
+   "m90": 18201,
    "n30": 1,
    "n90": 1
   },
