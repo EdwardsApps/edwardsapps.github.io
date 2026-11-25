@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-25T23:05:26Z",
+ "attempted_at": "2026-11-26T00:37:23Z",
  "banners": [],
- "checked_at": "2026-11-25T23:05:26Z",
+ "checked_at": "2026-11-26T00:37:23Z",
  "counts": {
   "major": 1,
-  "minor": 5,
-  "ok": 70,
+  "minor": 6,
+  "ok": 69,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-25T23:06:54Z",
+   "svc": "github",
+   "title": "LFS degradation for some customers"
+  },
   {
    "ended": "",
    "level": "minor",
@@ -441,7 +448,7 @@
    "level": "ok",
    "name": "Cloudflare",
    "notes": [
-    "2 smaller notices on their status page that should not affect most people."
+    "1 smaller notice on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -523,10 +530,18 @@
    "source": "official"
   },
   "github": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "We've applied a mitigation to fix the issues in Git LFS. We are seeing improvements in telemetry and are monitoring for full recovery.",
+     "started": "2026-11-25T23:06:54Z",
+     "title": "LFS degradation for some customers",
+     "url": "https://stspg.io/ywpzwl4yl621"
+    }
+   ],
+   "level": "minor",
    "name": "GitHub",
    "notes": [],
+   "since": "2026-11-25T23:06:54Z",
    "source": "official"
   },
   "gocardless": {
@@ -1072,14 +1087,14 @@
    "n90": 1
   },
   "chatgpt": {
-   "m30": 2186,
-   "m90": 2186,
+   "m30": 2278,
+   "m90": 2278,
    "n30": 5,
    "n90": 5
   },
   "claude": {
-   "m30": 6477,
-   "m90": 6477,
+   "m30": 6569,
+   "m90": 6569,
    "n30": 4,
    "n90": 4
   },
@@ -1090,8 +1105,8 @@
    "n90": 2
   },
   "creditsafe": {
-   "m30": 1949,
-   "m90": 1949,
+   "m30": 2041,
+   "m90": 2041,
    "n30": 1,
    "n90": 1
   },
@@ -1108,10 +1123,10 @@
    "n90": 1
   },
   "github": {
-   "m30": 328,
-   "m90": 328,
-   "n30": 6,
-   "n90": 6
+   "m30": 418,
+   "m90": 418,
+   "n30": 7,
+   "n90": 7
   },
   "godaddy": {
    "m30": 39,
@@ -1120,8 +1135,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 10582,
-   "m90": 10582,
+   "m30": 10674,
+   "m90": 10674,
    "n30": 1,
    "n90": 1
   },
@@ -1150,8 +1165,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 9168,
-   "m90": 9168,
+   "m30": 9260,
+   "m90": 9260,
    "n30": 2,
    "n90": 2
   },
@@ -1180,8 +1195,8 @@
    "n90": 1
   },
   "wise": {
-   "m30": 8937,
-   "m90": 8937,
+   "m30": 9029,
+   "m90": 9029,
    "n30": 1,
    "n90": 1
   },
