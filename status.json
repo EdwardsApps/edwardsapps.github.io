@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-25T16:46:07Z",
+ "attempted_at": "2026-11-25T23:05:26Z",
  "banners": [],
- "checked_at": "2026-11-25T16:46:07Z",
+ "checked_at": "2026-11-25T23:05:26Z",
  "counts": {
-  "major": 2,
+  "major": 1,
   "minor": 5,
-  "ok": 69,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
@@ -17,7 +17,7 @@
    "title": "Elevated errors with Codex GitHub reviews and pull request merges"
   },
   {
-   "ended": "",
+   "ended": "2026-11-25T16:56:21Z",
    "level": "major",
    "started": "2026-11-25T15:55:19Z",
    "svc": "github",
@@ -408,7 +408,7 @@
   "chatgpt": {
    "items": [
     {
-     "detail": "Some Codex users may not receive automated reviews on GitHub pull requests or may encounter errors when merging pull requests from Codex. We have identified these failures as related to a GitHub service disruption. We will provide further…",
+     "detail": "GitHub reports that the service disruption affecting pull requests and webhooks has been mitigated. We are monitoring Codex automated pull request reviews and merge operations to confirm recovery and stability.",
      "started": "2026-11-25T16:27:02Z",
      "title": "Elevated errors with Codex GitHub reviews and pull request merges",
      "url": "https://status.openai.com"
@@ -423,7 +423,7 @@
   "claude": {
    "items": [
     {
-     "detail": "We are continuing to investigate an issue causing the Claude add-in to disappear from Excel, Word, and PowerPoint on Mac for users signed in to Microsoft Office with a personal Microsoft account. In the meantime, we recommend using the…",
+     "detail": "We have identified an issue with an upstream provider that is causing the Claude add-in to disappear from Excel, Word, and PowerPoint on Mac for users signed in to Microsoft Office with a personal Microsoft account. We are in contact with…",
      "started": "2026-11-24T00:10:40Z",
      "title": "Claude for Microsoft 365 add-in missing for some users",
      "url": "https://stspg.io/ffdq2qfv8frk"
@@ -523,18 +523,10 @@
    "source": "official"
   },
   "github": {
-   "items": [
-    {
-     "detail": "The degradation has been mitigated. We are monitoring to ensure stability.",
-     "started": "2026-11-25T15:55:19Z",
-     "title": "Investigating degraded experiences across GitHub products",
-     "url": "https://stspg.io/5qj9j0p5g4cr"
-    }
-   ],
-   "level": "major",
+   "items": [],
+   "level": "ok",
    "name": "GitHub",
    "notes": [],
-   "since": "2026-11-25T15:55:19Z",
    "source": "official"
   },
   "gocardless": {
@@ -762,6 +754,12 @@
   "sage": {
    "items": [
     {
+     "detail": "The service is performing as expected. Avoiding a reoccurrence is our priority as we closely monitor the service.",
+     "started": "2026-11-25T18:46:59Z",
+     "title": "Sage Intacct - Partial Outage",
+     "url": "https://stspg.io/mvs8kc9tplwg"
+    },
+    {
      "detail": "We continue to investigate the issue related to Sole Trader customers unable to onboard or reauthenticate with Barclays Bank. We have identified that customers in the UK using Sage 200 Professional or Sage 200 Professional SPC (UKI) are…",
      "started": "2026-11-23T15:43:57Z",
      "title": "Banking Service - Partial Outage",
@@ -770,9 +768,7 @@
    ],
    "level": "minor",
    "name": "Sage",
-   "notes": [
-    "1 smaller notice on their status page that should not affect most people."
-   ],
+   "notes": [],
    "since": "2026-11-23T15:23:22Z",
    "source": "official"
   },
@@ -865,7 +861,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "7 smaller notices on their status page that should not affect most people."
+    "5 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -1076,14 +1072,14 @@
    "n90": 1
   },
   "chatgpt": {
-   "m30": 1807,
-   "m90": 1807,
+   "m30": 2186,
+   "m90": 2186,
    "n30": 5,
    "n90": 5
   },
   "claude": {
-   "m30": 6098,
-   "m90": 6098,
+   "m30": 6477,
+   "m90": 6477,
    "n30": 4,
    "n90": 4
   },
@@ -1094,8 +1090,8 @@
    "n90": 2
   },
   "creditsafe": {
-   "m30": 1570,
-   "m90": 1570,
+   "m30": 1949,
+   "m90": 1949,
    "n30": 1,
    "n90": 1
   },
@@ -1112,8 +1108,8 @@
    "n90": 1
   },
   "github": {
-   "m30": 317,
-   "m90": 317,
+   "m30": 328,
+   "m90": 328,
    "n30": 6,
    "n90": 6
   },
@@ -1124,8 +1120,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 10202,
-   "m90": 10202,
+   "m30": 10582,
+   "m90": 10582,
    "n30": 1,
    "n90": 1
   },
@@ -1154,8 +1150,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 8788,
-   "m90": 8788,
+   "m30": 9168,
+   "m90": 9168,
    "n30": 2,
    "n90": 2
   },
@@ -1184,8 +1180,8 @@
    "n90": 1
   },
   "wise": {
-   "m30": 8558,
-   "m90": 8558,
+   "m30": 8937,
+   "m90": 8937,
    "n30": 1,
    "n90": 1
   },
