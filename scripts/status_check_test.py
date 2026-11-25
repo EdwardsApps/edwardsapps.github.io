@@ -226,6 +226,48 @@ class Readers(unittest.TestCase):
         with self.assertRaises(OSError):    # the last good reading is kept rather than guessing
             sc.read_hmrc_service(svc, FakeFetcher({url: page}))
 
+    def test_hund_page(self):
+        svc = {"base": "https://status.example.com", "ignore": "^(Belgium|Sweden)"}
+        url = "https://status.example.com/"
+        def notice(link, title, label, affected, kinds="issue investigating", body="<p>Dear Customer,</p><p>The product is suspended.</p>"):
+            rows = "".join(f'<li>Websites / <a href="/components/c{n}">{name}</a></li>' for n, name in enumerate(affected))
+            return (f"<div class='issue-notice--wrapper'>\n<div class='issue-notice--header {kinds}'>\n"
+                    f"<div class='issue-notice--header__title'><a href=\"{link}\">{title}</a></div>\n"
+                    f"<div class='issue-notice--header__label'>{label}</div>\n</div>\n<div class='issue-notice--content'>\n"
+                    f"<div class='issue-notice--content__date'><time datetime='2026-11-25T10:23:02Z'>x</time>\n</div>\n"
+                    f"<div class='issue-notice--content__body'>{body}</div>\n<ul>{rows}</ul></div></div>")
+        def page(notices, states, started=""):
+            rows = "".join(f"<div class='item clickable'><span class='name'><a href=\"/components/c\">{name}</a></span>"
+                           f"<div class='status'><span class='{state} state icon' title='x'></span></div>{started}</div>"
+                           for name, state in states.items())
+            return f"<aside class='outage state-bar'><span class='status'>x</span></aside>{notices}<section class='groups collapsed'>{rows}</section>".encode()
+        burst = ("<span class='title'><a href=\"/issues/abc1\">KYC Downtime</a></span>\n<time datetime='2026-11-24T14:35:53Z'>x</time>")
+        down = page(notice("/issues/abc1", "KYC Downtime", "Investigating", ["Belgium (be)", "UK &amp; Ireland (uk)"]),
+                    {"Belgium (be)": "outage", "UK &amp; Ireland (uk)": "outage"}, burst)
+        out = sc.read_hund(svc, FakeFetcher({url: down}))
+        self.assertEqual((out["level"], len(out["items"])), ("major", 1))
+        first = out["items"][0]
+        self.assertEqual((first["title"], first["detail"], first["url"], first["started"]),
+                         ("KYC Downtime", "The product is suspended.", "https://status.example.com/issues/abc1", "2026-11-24T14:35:53Z"))
+
+        slow = page(notice("/issues/abc2", "Slow reports", "Monitoring", ["UK &amp; Ireland (uk)"]), {"UK &amp; Ireland (uk)": "degraded"})
+        out = sc.read_hund(svc, FakeFetcher({url: slow}))
+        self.assertEqual((out["level"], out["items"][0]["started"]), ("minor", "2026-11-25T10:23:02Z"))
+
+        abroad = page(notice("/issues/abc3", "Swedish site down", "Investigating", ["Sweden (se)"]), {"Sweden (se)": "outage", "UK &amp; Ireland (uk)": "operational"})
+        self.assertEqual(sc.read_hund(svc, FakeFetcher({url: abroad}))["level"], "ok")
+        over = page(notice("/issues/abc4", "Fixed", "Resolved", ["UK &amp; Ireland (uk)"], kinds="issue resolved"), {"UK &amp; Ireland (uk)": "operational"})
+        self.assertEqual(sc.read_hund(svc, FakeFetcher({url: over}))["level"], "ok")
+        planned = page(notice("/issues/abc5", "Planned work on Sunday", "Scheduled", ["UK &amp; Ireland (uk)"]), {"UK &amp; Ireland (uk)": "operational"})
+        out = sc.read_hund(svc, FakeFetcher({url: planned}))
+        self.assertEqual((out["level"], out["notes"]), ("ok", ["Planned work on Sunday"]))
+        unexplained = page("", {"UK &amp; Ireland (uk)": "outage", "Sweden (se)": "outage"})
+        out = sc.read_hund(svc, FakeFetcher({url: unexplained}))
+        self.assertEqual((out["level"], out["items"][0]["title"]), ("major", "Affected: UK & Ireland (uk)"))
+        self.assertEqual(sc.read_hund(svc, FakeFetcher({url: page("", {"UK &amp; Ireland (uk)": "operational"})}))["level"], "ok")
+        with self.assertRaises(ValueError):
+            sc.read_hund(svc, FakeFetcher({url: b"<html>New layout</html>"}))
+
     def test_playstation_and_xbox(self):
         psn = {"countries": [{"countryCode": "GB", "status": []}]}
         svc = {"feed": "f", "page": "https://status.playstation.com/en-gb/"}
@@ -337,13 +379,21 @@ class Run(unittest.TestCase):
         sc.update_history(history, {"a": entry}, {"services": {"a": {}}}, NOW)
         self.assertEqual(history["episodes"][0]["started"], "2026-11-17T10:30:00Z")
 
+    def test_history_dates_an_old_problem_by_when_we_saw_it_unless_the_service_is_new(self):
+        entry = dict(sc.result("minor", [sc.item("Slow", "", "", "2026-11-10T10:30:00Z")]), name="Alpha")
+        known, added = {}, {}
+        sc.update_history(known, {"a": dict(entry)}, {"services": {"a": {}}}, NOW)
+        self.assertEqual(known["episodes"][0]["started"], sc.iso(NOW))
+        sc.update_history(added, {"a": dict(entry)}, {"services": {"b": {}}}, NOW)
+        self.assertEqual(added["episodes"][0]["started"], "2026-11-10T10:30:00Z")
+
 
 class Page(unittest.TestCase):
     def test_config_and_page_agree(self):
         self.assertEqual(sc.render(check=True), 0)
 
     def test_every_service_has_what_its_reader_needs(self):
-        needs = {"statuspage": ["base"], "probe": ["probe"], "meta": ["probe", "orgs"], "hmrc_service": ["path"],
+        needs = {"statuspage": ["base"], "hund": ["base"], "probe": ["probe"], "meta": ["probe", "orgs"], "hmrc_service": ["path"],
                  "microsoft365": ["feed", "admin", "page"]}
         for svc in sc.load_config()["services"]:
             for key in needs.get(svc["kind"], ["feed", "page"]) + ["about", "name"]:
