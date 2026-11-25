@@ -314,6 +314,13 @@
    "started": "2026-11-25T15:55:19Z",
    "svc": "github",
    "title": "Investigating degraded experiences across GitHub products"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-25T16:27:02Z",
+   "svc": "chatgpt",
+   "title": "Elevated errors with Codex GitHub reviews and pull request merges"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
