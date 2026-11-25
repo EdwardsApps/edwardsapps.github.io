@@ -272,6 +272,13 @@
    "started": "2026-11-24T13:44:07Z",
    "svc": "github",
    "title": "Degraded Availability for MAI Code 2 in Copilot"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-25T00:08:17Z",
+   "svc": "github",
+   "title": "Disruption with some GitHub services"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
