@@ -293,6 +293,13 @@
    "started": "2026-11-25T11:48:13Z",
    "svc": "chatgpt",
    "title": "ChatGPT is experiencing elevated conversation errors affecting Education, Team, Business, Pro, and Plus plans"
+  },
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-24T14:35:53Z",
+   "svc": "creditsafe",
+   "title": "KYC Protect Downtime"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
