@@ -300,6 +300,13 @@
    "started": "2026-11-24T14:35:53Z",
    "svc": "creditsafe",
    "title": "KYC Protect Downtime"
+  },
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-25T14:19:10Z",
+   "svc": "sumup",
+   "title": "We are experiencing issues with card transactions in Europe"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"

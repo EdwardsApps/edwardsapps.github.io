@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-25T14:09:51Z",
+ "attempted_at": "2026-11-25T15:42:08Z",
  "banners": [],
- "checked_at": "2026-11-25T14:09:51Z",
+ "checked_at": "2026-11-25T15:42:08Z",
  "counts": {
-  "major": 1,
+  "major": 2,
   "minor": 5,
-  "ok": 70,
+  "ok": 69,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-25T14:19:10Z",
+   "svc": "sumup",
+   "title": "We are experiencing issues with card transactions in Europe"
+  },
   {
    "ended": "",
    "level": "minor",
@@ -603,7 +610,9 @@
    "items": [],
    "level": "ok",
    "name": "HMRC: Self Assessment",
-   "notes": [],
+   "notes": [
+    "Planned downtime: Friday 27 November 2026 3pm to 9am on Monday 30 November 2026."
+   ],
    "source": "official"
   },
   "hmrc-vat": {
@@ -793,10 +802,18 @@
    "source": "probe"
   },
   "sumup": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "The card transactions functionalities are back to normal. Our teams are monitoring the situation.",
+     "started": "2026-11-25T14:19:10Z",
+     "title": "We are experiencing issues with card transactions in Europe",
+     "url": "https://status.sumup.com"
+    }
+   ],
+   "level": "major",
    "name": "SumUp",
    "notes": [],
+   "since": "2026-11-25T14:19:10Z",
    "source": "official"
   },
   "telegram": {
@@ -832,7 +849,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "6 smaller notices on their status page that should not affect most people."
+    "7 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -1043,14 +1060,14 @@
    "n90": 1
   },
   "chatgpt": {
-   "m30": 1663,
-   "m90": 1663,
+   "m30": 1755,
+   "m90": 1755,
    "n30": 4,
    "n90": 4
   },
   "claude": {
-   "m30": 5942,
-   "m90": 5942,
+   "m30": 6034,
+   "m90": 6034,
    "n30": 4,
    "n90": 4
   },
@@ -1061,8 +1078,8 @@
    "n90": 2
   },
   "creditsafe": {
-   "m30": 1413,
-   "m90": 1413,
+   "m30": 1506,
+   "m90": 1506,
    "n30": 1,
    "n90": 1
   },
@@ -1091,8 +1108,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 10046,
-   "m90": 10046,
+   "m30": 10139,
+   "m90": 10139,
    "n30": 1,
    "n90": 1
   },
@@ -1121,8 +1138,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 8632,
-   "m90": 8632,
+   "m30": 8724,
+   "m90": 8724,
    "n30": 2,
    "n90": 2
   },
@@ -1133,10 +1150,10 @@
    "n90": 2
   },
   "sumup": {
-   "m30": 378,
-   "m90": 378,
-   "n30": 2,
-   "n90": 2
+   "m30": 460,
+   "m90": 460,
+   "n30": 3,
+   "n90": 3
   },
   "trello": {
    "m30": 284,
@@ -1151,8 +1168,8 @@
    "n90": 1
   },
   "wise": {
-   "m30": 8402,
-   "m90": 8402,
+   "m30": 8494,
+   "m90": 8494,
    "n30": 1,
    "n90": 1
   },
