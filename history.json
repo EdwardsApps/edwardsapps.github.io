@@ -279,6 +279,13 @@
    "started": "2026-11-25T00:08:17Z",
    "svc": "github",
    "title": "Disruption with some GitHub services"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-25T07:31:08Z",
+   "svc": "zoom",
+   "title": "Service Degradation Affecting Zoom Phone Inbound Calls for Subset of Jio subscribers in India"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"

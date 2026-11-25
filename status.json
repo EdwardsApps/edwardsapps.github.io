@@ -1,5 +1,5 @@
 {
- "attempted_at": "2026-11-25T07:21:39Z",
+ "attempted_at": "2026-11-25T08:12:51Z",
  "banners": [
   {
    "kind": "plumbing",
@@ -7,14 +7,21 @@
    "text": "Cloudflare is reporting major problems. A great many unrelated websites and apps run on it, so other things may be slow or failing too. It is very unlikely to be your wifi."
   }
  ],
- "checked_at": "2026-11-25T07:21:39Z",
+ "checked_at": "2026-11-25T08:12:51Z",
  "counts": {
   "major": 2,
-  "minor": 4,
-  "ok": 69,
+  "minor": 5,
+  "ok": 68,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-25T07:31:08Z",
+   "svc": "zoom",
+   "title": "Service Degradation Affecting Zoom Phone Inbound Calls for Subset of Jio subscribers in India"
+  },
   {
    "ended": "2026-11-25T01:23:02Z",
    "level": "major",
@@ -404,7 +411,7 @@
    "level": "major",
    "name": "Cloudflare",
    "notes": [
-    "1 smaller notice on their status page that should not affect most people."
+    "2 smaller notices on their status page that should not affect most people."
    ],
    "since": "2026-11-24T11:29:22Z",
    "source": "official"
@@ -881,10 +888,18 @@
    "source": "probe"
   },
   "zoom": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "We have successfully identified the root cause affecting Zoom Phone Inbound Calls for subset of Jio subscribers in India. Our team is actively working with our partner on a resolution, and we will keep you informed with timely updates as…",
+     "started": "2026-11-25T07:31:08Z",
+     "title": "Service Degradation Affecting Zoom Phone Inbound Calls for Subset of Jio subscribers in India",
+     "url": "https://stspg.io/0ksyj3jq48yb"
+    }
+   ],
+   "level": "minor",
    "name": "Zoom",
    "notes": [],
+   "since": "2026-11-25T07:31:08Z",
    "source": "official"
   }
  },
@@ -946,7 +961,7 @@
   "monday": {},
   "monzo": {},
   "netflix": {
-   "fails": 0
+   "fails": 1
   },
   "netlify": {},
   "notion": {},
@@ -1021,14 +1036,14 @@
    "n90": 3
   },
   "claude": {
-   "m30": 5533,
-   "m90": 5533,
+   "m30": 5585,
+   "m90": 5585,
    "n30": 4,
    "n90": 4
   },
   "cloudflare": {
-   "m30": 1222,
-   "m90": 1222,
+   "m30": 1273,
+   "m90": 1273,
    "n30": 2,
    "n90": 2
   },
@@ -1057,8 +1072,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 9638,
-   "m90": 9638,
+   "m30": 9689,
+   "m90": 9689,
    "n30": 1,
    "n90": 1
   },
@@ -1087,8 +1102,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 8224,
-   "m90": 8224,
+   "m30": 8275,
+   "m90": 8275,
    "n30": 2,
    "n90": 2
   },
@@ -1117,22 +1132,22 @@
    "n90": 1
   },
   "wise": {
-   "m30": 7994,
-   "m90": 7994,
+   "m30": 8045,
+   "m90": 8045,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 18570,
-   "m90": 18570,
+   "m30": 18621,
+   "m90": 18621,
    "n30": 1,
    "n90": 1
   },
   "zoom": {
-   "m30": 583,
-   "m90": 583,
-   "n30": 1,
-   "n90": 1
+   "m30": 624,
+   "m90": 624,
+   "n30": 2,
+   "n90": 2
   }
  },
  "tracking_since": "2026-11-17T20:55:16Z",
