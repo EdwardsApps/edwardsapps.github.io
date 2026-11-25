@@ -286,6 +286,13 @@
    "started": "2026-11-25T07:31:08Z",
    "svc": "zoom",
    "title": "Service Degradation Affecting Zoom Phone Inbound Calls for Subset of Jio subscribers in India"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-25T11:48:13Z",
+   "svc": "chatgpt",
+   "title": "ChatGPT is experiencing elevated conversation errors affecting Education, Team, Business, Pro, and Plus plans"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"

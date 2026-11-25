@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-25T11:48:10Z",
+ "attempted_at": "2026-11-25T13:20:16Z",
  "banners": [],
- "checked_at": "2026-11-25T11:48:10Z",
+ "checked_at": "2026-11-25T13:20:16Z",
  "counts": {
   "major": 0,
-  "minor": 4,
-  "ok": 71,
+  "minor": 5,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-25T11:48:13Z",
+   "svc": "chatgpt",
+   "title": "ChatGPT is experiencing elevated conversation errors affecting Education, Team, Business, Pro, and Plus plans"
+  },
   {
    "ended": "2026-11-25T08:33:19Z",
    "level": "minor",
@@ -371,10 +378,18 @@
    "source": "official"
   },
   "chatgpt": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "We are seeing improvements following our mitigations. Some users may continue to experience elevated errors across ChatGPT, ChatGPT Work, and Codex cloud threads. We are continuing to work toward full recovery.",
+     "started": "2026-11-25T11:48:13Z",
+     "title": "ChatGPT, ChatGPT Work, and Codex Cloud are experiencing elevated conversation errors",
+     "url": "https://status.openai.com"
+    }
+   ],
+   "level": "minor",
    "name": "ChatGPT (OpenAI)",
    "notes": [],
+   "since": "2026-11-25T11:48:13Z",
    "source": "official"
   },
   "claude": {
@@ -688,8 +703,8 @@
   "sage": {
    "items": [
     {
-     "detail": "We have identified that customers in the UK are unable to onboard or reauthenticate with Barclays Bank. 5 customers have reported the issue so far. We have identified the cause and are working on a fix.",
-     "started": "2026-11-23T15:23:22Z",
+     "detail": "We continue to investigate the issue related to Sole Trader customers unable to onboard or reauthenticate with Barclays Bank. We have identified that customers in the UK using Sage 200 Professional or Sage 200 Professional SPC (UKI) are…",
+     "started": "2026-11-23T15:43:57Z",
      "title": "Banking Service - Partial Outage",
      "url": "https://stspg.io/jmpww7gt96ht"
     }
@@ -999,14 +1014,14 @@
    "n90": 1
   },
   "chatgpt": {
-   "m30": 1522,
-   "m90": 1522,
-   "n30": 3,
-   "n90": 3
+   "m30": 1614,
+   "m90": 1614,
+   "n30": 4,
+   "n90": 4
   },
   "claude": {
-   "m30": 5800,
-   "m90": 5800,
+   "m30": 5892,
+   "m90": 5892,
    "n30": 4,
    "n90": 4
   },
@@ -1041,8 +1056,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 9905,
-   "m90": 9905,
+   "m30": 9997,
+   "m90": 9997,
    "n30": 1,
    "n90": 1
   },
@@ -1071,8 +1086,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 8490,
-   "m90": 8490,
+   "m30": 8582,
+   "m90": 8582,
    "n30": 2,
    "n90": 2
   },
@@ -1101,8 +1116,8 @@
    "n90": 1
   },
   "wise": {
-   "m30": 8260,
-   "m90": 8260,
+   "m30": 8352,
+   "m90": 8352,
    "n30": 1,
    "n90": 1
   },
