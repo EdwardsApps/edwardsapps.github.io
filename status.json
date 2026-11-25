@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-25T08:23:03Z",
+ "attempted_at": "2026-11-25T11:27:44Z",
  "banners": [],
- "checked_at": "2026-11-25T08:23:03Z",
+ "checked_at": "2026-11-25T11:27:44Z",
  "counts": {
   "major": 1,
-  "minor": 5,
-  "ok": 69,
+  "minor": 4,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-25T08:33:19Z",
    "level": "minor",
    "started": "2026-11-25T07:31:08Z",
    "svc": "zoom",
@@ -398,7 +398,7 @@
    "level": "ok",
    "name": "Cloudflare",
    "notes": [
-    "2 smaller notices on their status page that should not affect most people."
+    "1 smaller notice on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -789,7 +789,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "5 smaller notices on their status page that should not affect most people."
+    "6 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -874,18 +874,10 @@
    "source": "probe"
   },
   "zoom": {
-   "items": [
-    {
-     "detail": "The issue affecting Zoom Phone Inbound Calls for subset of Jio subscribers in India has been successfully resolved. Our team will continue to monitor the situation closely and keep you informed of any further developments.",
-     "started": "2026-11-25T07:31:08Z",
-     "title": "Service Degradation Affecting Zoom Phone Inbound Calls for Subset of Jio subscribers in India",
-     "url": "https://stspg.io/0ksyj3jq48yb"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "Zoom",
    "notes": [],
-   "since": "2026-11-25T07:31:08Z",
    "source": "official"
   }
  },
@@ -1022,8 +1014,8 @@
    "n90": 3
   },
   "claude": {
-   "m30": 5595,
-   "m90": 5595,
+   "m30": 5780,
+   "m90": 5780,
    "n30": 4,
    "n90": 4
   },
@@ -1058,8 +1050,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 9699,
-   "m90": 9699,
+   "m30": 9884,
+   "m90": 9884,
    "n30": 1,
    "n90": 1
   },
@@ -1088,8 +1080,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 8285,
-   "m90": 8285,
+   "m30": 8470,
+   "m90": 8470,
    "n30": 2,
    "n90": 2
   },
@@ -1118,20 +1110,20 @@
    "n90": 1
   },
   "wise": {
-   "m30": 8055,
-   "m90": 8055,
+   "m30": 8240,
+   "m90": 8240,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 18631,
-   "m90": 18631,
+   "m30": 18816,
+   "m90": 18816,
    "n30": 1,
    "n90": 1
   },
   "zoom": {
-   "m30": 634,
-   "m90": 634,
+   "m30": 645,
+   "m90": 645,
    "n30": 2,
    "n90": 2
   }
