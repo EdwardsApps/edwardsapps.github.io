@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-25T11:27:44Z",
+ "attempted_at": "2026-11-25T11:48:10Z",
  "banners": [],
- "checked_at": "2026-11-25T11:27:44Z",
+ "checked_at": "2026-11-25T11:48:10Z",
  "counts": {
-  "major": 1,
+  "major": 0,
   "minor": 4,
-  "ok": 70,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
@@ -290,7 +290,7 @@
    "title": "Banking Service - Partial Outage"
   },
   {
-   "ended": "",
+   "ended": "2026-11-25T11:37:53Z",
    "level": "major",
    "started": "2026-11-12T09:51:10Z",
    "svc": "xero",
@@ -851,19 +851,10 @@
    "source": "official"
   },
   "xero": {
-   "items": [
-    {
-     "detail": "HMRC are continuing to investigate the issue they're experiencing with CIS verification - You can find more information on their availability page. To verify a sub contractor in the mean time you can sign in to the Construction Industry…",
-     "started": "2026-11-19T09:50:38Z",
-     "title": "UK: CIS - Error when verifying CIS contractors",
-     "url": "https://stspg.io/38lr0j3n9n8c"
-    }
-   ],
-   "level": "major",
-   "link": "HMRC",
+   "items": [],
+   "level": "ok",
    "name": "Xero",
    "notes": [],
-   "since": "2026-11-12T09:51:10Z",
    "source": "official"
   },
   "youtube": {
@@ -1014,8 +1005,8 @@
    "n90": 3
   },
   "claude": {
-   "m30": 5780,
-   "m90": 5780,
+   "m30": 5800,
+   "m90": 5800,
    "n30": 4,
    "n90": 4
   },
@@ -1050,8 +1041,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 9884,
-   "m90": 9884,
+   "m30": 9905,
+   "m90": 9905,
    "n30": 1,
    "n90": 1
   },
@@ -1080,8 +1071,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 8470,
-   "m90": 8470,
+   "m30": 8490,
+   "m90": 8490,
    "n30": 2,
    "n90": 2
   },
@@ -1110,14 +1101,14 @@
    "n90": 1
   },
   "wise": {
-   "m30": 8240,
-   "m90": 8240,
+   "m30": 8260,
+   "m90": 8260,
    "n30": 1,
    "n90": 1
   },
   "xero": {
-   "m30": 18816,
-   "m90": 18816,
+   "m30": 18826,
+   "m90": 18826,
    "n30": 1,
    "n90": 1
   },
