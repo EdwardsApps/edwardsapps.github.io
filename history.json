@@ -342,6 +342,13 @@
    "started": "2026-11-26T13:15:50Z",
    "svc": "monday",
    "title": "Degraded performance for 3rd party Apps"
+  },
+  {
+   "ended": "",
+   "level": "major",
+   "started": "2026-11-26T16:03:50Z",
+   "svc": "cloudflare",
+   "title": "Cloudflare Dashboard and Cloudflare API service issues"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
