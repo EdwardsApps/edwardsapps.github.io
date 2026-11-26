@@ -335,6 +335,13 @@
    "started": "2026-11-26T10:45:45Z",
    "svc": "govpay",
    "title": "Ongoing issue with payments timing out"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-26T13:15:50Z",
+   "svc": "monday",
+   "title": "Degraded performance for 3rd party Apps"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
