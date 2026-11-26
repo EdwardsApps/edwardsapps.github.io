@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-26T00:37:23Z",
+ "attempted_at": "2026-11-26T10:41:27Z",
  "banners": [],
- "checked_at": "2026-11-26T00:37:23Z",
+ "checked_at": "2026-11-26T10:41:27Z",
  "counts": {
   "major": 1,
-  "minor": 6,
-  "ok": 69,
+  "minor": 5,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-26T00:47:36Z",
    "level": "minor",
    "started": "2026-11-25T23:06:54Z",
    "svc": "github",
@@ -530,18 +530,10 @@
    "source": "official"
   },
   "github": {
-   "items": [
-    {
-     "detail": "We've applied a mitigation to fix the issues in Git LFS. We are seeing improvements in telemetry and are monitoring for full recovery.",
-     "started": "2026-11-25T23:06:54Z",
-     "title": "LFS degradation for some customers",
-     "url": "https://stspg.io/ywpzwl4yl621"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "GitHub",
    "notes": [],
-   "since": "2026-11-25T23:06:54Z",
    "source": "official"
   },
   "gocardless": {
@@ -876,7 +868,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "5 smaller notices on their status page that should not affect most people."
+    "7 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -1087,14 +1079,14 @@
    "n90": 1
   },
   "chatgpt": {
-   "m30": 2278,
-   "m90": 2278,
+   "m30": 2882,
+   "m90": 2882,
    "n30": 5,
    "n90": 5
   },
   "claude": {
-   "m30": 6569,
-   "m90": 6569,
+   "m30": 7173,
+   "m90": 7173,
    "n30": 4,
    "n90": 4
   },
@@ -1105,8 +1097,8 @@
    "n90": 2
   },
   "creditsafe": {
-   "m30": 2041,
-   "m90": 2041,
+   "m30": 2645,
+   "m90": 2645,
    "n30": 1,
    "n90": 1
   },
@@ -1123,8 +1115,8 @@
    "n90": 1
   },
   "github": {
-   "m30": 418,
-   "m90": 418,
+   "m30": 428,
+   "m90": 428,
    "n30": 7,
    "n90": 7
   },
@@ -1135,8 +1127,8 @@
    "n90": 2
   },
   "hmrc-cis": {
-   "m30": 10674,
-   "m90": 10674,
+   "m30": 11278,
+   "m90": 11278,
    "n30": 1,
    "n90": 1
   },
@@ -1165,8 +1157,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 9260,
-   "m90": 9260,
+   "m30": 9864,
+   "m90": 9864,
    "n30": 2,
    "n90": 2
   },
@@ -1195,8 +1187,8 @@
    "n90": 1
   },
   "wise": {
-   "m30": 9029,
-   "m90": 9029,
+   "m30": 9634,
+   "m90": 9634,
    "n30": 1,
    "n90": 1
   },
