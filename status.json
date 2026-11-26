@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-26T14:06:29Z",
+ "attempted_at": "2026-11-26T15:59:19Z",
  "banners": [],
- "checked_at": "2026-11-26T14:06:29Z",
+ "checked_at": "2026-11-26T15:59:19Z",
  "counts": {
-  "major": 1,
-  "minor": 6,
-  "ok": 69,
+  "major": 2,
+  "minor": 4,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
@@ -31,7 +31,7 @@
    "title": "LFS degradation for some customers"
   },
   {
-   "ended": "",
+   "ended": "2026-11-26T14:16:48Z",
    "level": "minor",
    "started": "2026-11-25T16:27:02Z",
    "svc": "chatgpt",
@@ -427,18 +427,10 @@
    "source": "official"
   },
   "chatgpt": {
-   "items": [
-    {
-     "detail": "GitHub reports that the service disruption affecting pull requests and webhooks has been mitigated. We are monitoring Codex automated pull request reviews and merge operations to confirm recovery and stability.",
-     "started": "2026-11-25T16:27:02Z",
-     "title": "Elevated errors with Codex GitHub reviews and pull request merges",
-     "url": "https://status.openai.com"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "ChatGPT (OpenAI)",
    "notes": [],
-   "since": "2026-11-25T16:27:02Z",
    "source": "official"
   },
   "claude": {
@@ -462,7 +454,7 @@
    "level": "ok",
    "name": "Cloudflare",
    "notes": [
-    "1 smaller notice on their status page that should not affect most people."
+    "2 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -777,6 +769,18 @@
   "sage": {
    "items": [
     {
+     "detail": "We have identified an issue preventing UKI customers from seeing created sales invoices in the invoice list. No errors are presented, invoices are simply not available. All other product functionality is working as expected. We are…",
+     "started": "2026-11-26T15:33:48Z",
+     "title": "Sage Business Cloud Accounting (UKI) - Partial Outage",
+     "url": "https://stspg.io/z7lyx6r18vkj"
+    },
+    {
+     "detail": "We have identified that customers are unable to access the following sites: - https://my.sage.co.uk/cases. - https://communityhub.sage.com. - https://signon.sage.co.uk/. We are currently investigating",
+     "started": "2026-11-26T15:04:07Z",
+     "title": "My Sage UK & Community Hub - Major Outage",
+     "url": "https://stspg.io/6yp0s42bzsdr"
+    },
+    {
      "detail": "The service is performing as expected. Avoiding a reoccurrence is our priority as we closely monitor the service.",
      "started": "2026-11-25T18:46:59Z",
      "title": "Sage Intacct - Partial Outage",
@@ -789,7 +793,7 @@
      "url": "https://stspg.io/jmpww7gt96ht"
     }
    ],
-   "level": "minor",
+   "level": "major",
    "name": "Sage",
    "notes": [],
    "since": "2026-11-23T15:23:22Z",
@@ -884,7 +888,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "7 smaller notices on their status page that should not affect most people."
+    "8 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -1095,14 +1099,14 @@
    "n90": 1
   },
   "chatgpt": {
-   "m30": 3087,
-   "m90": 3087,
+   "m30": 3097,
+   "m90": 3097,
    "n30": 5,
    "n90": 5
   },
   "claude": {
-   "m30": 7378,
-   "m90": 7378,
+   "m30": 7491,
+   "m90": 7491,
    "n30": 4,
    "n90": 4
   },
@@ -1113,8 +1117,8 @@
    "n90": 2
   },
   "creditsafe": {
-   "m30": 2850,
-   "m90": 2850,
+   "m30": 2963,
+   "m90": 2963,
    "n30": 1,
    "n90": 1
   },
@@ -1143,14 +1147,14 @@
    "n90": 2
   },
   "govpay": {
-   "m30": 200,
-   "m90": 200,
+   "m30": 313,
+   "m90": 313,
    "n30": 1,
    "n90": 1
   },
   "hmrc-cis": {
-   "m30": 11483,
-   "m90": 11483,
+   "m30": 11596,
+   "m90": 11596,
    "n30": 1,
    "n90": 1
   },
@@ -1185,8 +1189,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 10069,
-   "m90": 10069,
+   "m30": 10181,
+   "m90": 10181,
    "n30": 2,
    "n90": 2
   },
@@ -1215,8 +1219,8 @@
    "n90": 1
   },
   "wise": {
-   "m30": 9839,
-   "m90": 9839,
+   "m30": 9951,
+   "m90": 9951,
    "n30": 1,
    "n90": 1
   },
