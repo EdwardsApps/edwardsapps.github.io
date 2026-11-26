@@ -1,22 +1,16 @@
 {
- "attempted_at": "2026-11-26T18:12:31Z",
- "banners": [
-  {
-   "kind": "plumbing",
-   "svc": "cloudflare",
-   "text": "Cloudflare is reporting major problems. A great many unrelated websites and apps run on it, so other things may be slow or failing too. It is very unlikely to be your wifi."
-  }
- ],
- "checked_at": "2026-11-26T18:12:31Z",
+ "attempted_at": "2026-11-27T10:44:35Z",
+ "banners": [],
+ "checked_at": "2026-11-27T10:44:35Z",
  "counts": {
-  "major": 2,
+  "major": 1,
   "minor": 4,
-  "ok": 70,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-26T18:22:42Z",
    "level": "major",
    "started": "2026-11-26T16:03:50Z",
    "svc": "cloudflare",
@@ -449,6 +443,12 @@
   "claude": {
    "items": [
     {
+     "detail": "A fix has been deployed for the issue affecting Claude services and we are monitoring for recovery.",
+     "started": "2026-11-27T10:34:01Z",
+     "title": "Degraded performance for Claude Fable 5.2",
+     "url": "https://stspg.io/n4l14k7m49zw"
+    },
+    {
      "detail": "We have identified an issue with an upstream provider that is causing the Claude add-in to disappear from Excel, Word, and PowerPoint on Mac for users signed in to Microsoft Office with a personal Microsoft account. We are in contact with…",
      "started": "2026-11-24T00:10:40Z",
      "title": "Claude for Microsoft 365 add-in missing for some users",
@@ -463,20 +463,12 @@
    "source": "official"
   },
   "cloudflare": {
-   "items": [
-    {
-     "detail": "A fix has been implemented and we are monitoring the results.",
-     "started": "2026-11-26T16:03:50Z",
-     "title": "Cloudflare Dashboard and Cloudflare API service issues",
-     "url": "https://www.cloudflarestatus.com/incidents/xiqj67vl5pqm"
-    }
-   ],
-   "level": "major",
+   "items": [],
+   "level": "ok",
    "name": "Cloudflare",
    "notes": [
     "1 smaller notice on their status page that should not affect most people."
    ],
-   "since": "2026-11-26T16:03:50Z",
    "source": "official"
   },
   "companies-house": {
@@ -489,7 +481,7 @@
   "creditsafe": {
    "items": [
     {
-     "detail": "Dear Customer, We apologise for the ongoing unavailability of KYC Protect, Our investigation is making good progress with the support of independent third-party cyber forensic specialists. KYC Protect remains suspended while we complete…",
+     "detail": "Dear Customer, We apologise for the ongoing unavailability of KYC Protect. Our investigation with the independent third-party cyber forensic specialists continues to make progress. KYC Protect remains suspended as a precautionary measure…",
      "started": "2026-11-24T14:35:53Z",
      "title": "KYC Protect Downtime",
      "url": "https://status.creditsafe.com/issues/6b05a0c99b5a6c603c911d0e"
@@ -589,7 +581,9 @@
    "items": [],
    "level": "ok",
    "name": "GOV.UK Notify",
-   "notes": [],
+   "notes": [
+    "1 smaller notice on their status page that should not affect most people."
+   ],
    "source": "official"
   },
   "govpay": {
@@ -889,7 +883,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "8 smaller notices on their status page that should not affect most people."
+    "6 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -1106,20 +1100,20 @@
    "n90": 5
   },
   "claude": {
-   "m30": 7624,
-   "m90": 7624,
+   "m30": 8616,
+   "m90": 8616,
    "n30": 4,
    "n90": 4
   },
   "cloudflare": {
-   "m30": 1411,
-   "m90": 1411,
+   "m30": 1421,
+   "m90": 1421,
    "n30": 3,
    "n90": 3
   },
   "creditsafe": {
-   "m30": 3096,
-   "m90": 3096,
+   "m30": 4088,
+   "m90": 4088,
    "n30": 1,
    "n90": 1
   },
@@ -1154,8 +1148,8 @@
    "n90": 1
   },
   "hmrc-cis": {
-   "m30": 11729,
-   "m90": 11729,
+   "m30": 12721,
+   "m90": 12721,
    "n30": 1,
    "n90": 1
   },
@@ -1190,8 +1184,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 10315,
-   "m90": 10315,
+   "m30": 11307,
+   "m90": 11307,
    "n30": 2,
    "n90": 2
   },
@@ -1220,8 +1214,8 @@
    "n90": 1
   },
   "wise": {
-   "m30": 10085,
-   "m90": 10085,
+   "m30": 11077,
+   "m90": 11077,
    "n30": 1,
    "n90": 1
   },
