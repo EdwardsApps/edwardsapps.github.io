@@ -212,7 +212,7 @@
   },
   {
    "ended": "",
-   "level": "minor",
+   "level": "major",
    "started": "2026-11-23T15:23:22Z",
    "svc": "sage",
    "title": "Banking Service - Partial Outage"
@@ -328,6 +328,13 @@
    "started": "2026-11-25T23:06:54Z",
    "svc": "github",
    "title": "LFS degradation for some customers"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-26T10:45:45Z",
+   "svc": "govpay",
+   "title": "Ongoing issue with payments timing out"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"
