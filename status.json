@@ -1,5 +1,5 @@
 {
- "attempted_at": "2026-11-26T16:09:40Z",
+ "attempted_at": "2026-11-26T18:12:31Z",
  "banners": [
   {
    "kind": "plumbing",
@@ -7,11 +7,11 @@
    "text": "Cloudflare is reporting major problems. A great many unrelated websites and apps run on it, so other things may be slow or failing too. It is very unlikely to be your wifi."
   }
  ],
- "checked_at": "2026-11-26T16:09:40Z",
+ "checked_at": "2026-11-26T18:12:31Z",
  "counts": {
-  "major": 3,
+  "major": 2,
   "minor": 4,
-  "ok": 69,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
@@ -30,7 +30,7 @@
    "title": "Degraded performance for 3rd party Apps"
   },
   {
-   "ended": "",
+   "ended": "2026-11-26T16:19:50Z",
    "level": "minor",
    "started": "2026-11-26T10:45:45Z",
    "svc": "govpay",
@@ -465,7 +465,7 @@
   "cloudflare": {
    "items": [
     {
-     "detail": "Cloudflare is investigating issues with Cloudflare Dashboard and related APIs. These issues do not affect the serving of cached files via the Cloudflare CDN or other security features at the Cloudflare Edge. Customers using the Dashboard…",
+     "detail": "A fix has been implemented and we are monitoring the results.",
      "started": "2026-11-26T16:03:50Z",
      "title": "Cloudflare Dashboard and Cloudflare API service issues",
      "url": "https://www.cloudflarestatus.com/incidents/xiqj67vl5pqm"
@@ -474,7 +474,7 @@
    "level": "major",
    "name": "Cloudflare",
    "notes": [
-    "2 smaller notices on their status page that should not affect most people."
+    "1 smaller notice on their status page that should not affect most people."
    ],
    "since": "2026-11-26T16:03:50Z",
    "source": "official"
@@ -489,7 +489,7 @@
   "creditsafe": {
    "items": [
     {
-     "detail": "We apologise for the continued issues you may have been experiencing when attempting to access our KYC protect product. KYC Protect remains temporarily suspended following the identification of suspicious requests passing through the KYC…",
+     "detail": "Dear Customer, We apologise for the ongoing unavailability of KYC Protect, Our investigation is making good progress with the support of independent third-party cyber forensic specialists. KYC Protect remains suspended while we complete…",
      "started": "2026-11-24T14:35:53Z",
      "title": "KYC Protect Downtime",
      "url": "https://status.creditsafe.com/issues/6b05a0c99b5a6c603c911d0e"
@@ -593,18 +593,10 @@
    "source": "official"
   },
   "govpay": {
-   "items": [
-    {
-     "detail": "We have implemented a fix for the issue that was causing payments to time out on GOV.UK Pay. We will continue to monitor this fix during the afternoon. We will provide a further update once we consider the issue fully resolved.",
-     "started": "2026-11-26T10:45:45Z",
-     "title": "Ongoing issue with payments timing out",
-     "url": "https://stspg.io/t374gy6j6ck9"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "GOV.UK Pay",
    "notes": [],
-   "since": "2026-11-26T10:45:45Z",
    "source": "official"
   },
   "hmrc": {
@@ -790,22 +782,10 @@
   "sage": {
    "items": [
     {
-     "detail": "We have identified that customers in Canada are unable to retrieve service plans. We are currently investigating.",
-     "started": "2026-11-26T15:59:35Z",
-     "title": "Sage Token Service - Partial Outage",
-     "url": "https://stspg.io/y68pz0jlp950"
-    },
-    {
-     "detail": "We have identified an issue preventing UKI customers from seeing created sales invoices in the invoice list. No errors are presented, invoices are simply not available. All other product functionality is working as expected. We are…",
-     "started": "2026-11-26T15:33:48Z",
-     "title": "Sage Business Cloud Accounting (UKI) - Partial Outage",
-     "url": "https://stspg.io/z7lyx6r18vkj"
-    },
-    {
-     "detail": "We have identified that customers are unable to access the following sites: - https://my.sage.co.uk/cases. - https://communityhub.sage.com. - https://signon.sage.co.uk/. We are currently investigating",
-     "started": "2026-11-26T15:04:07Z",
-     "title": "My Sage UK & Community Hub - Major Outage",
-     "url": "https://stspg.io/6yp0s42bzsdr"
+     "detail": "The issue for the Sage 200 Professional or Sage 200 Professional SPC (UKI) is now resolved and all customers should be able to re-authenticate. Please reach out to customer services if you experience any other issues. We continue to…",
+     "started": "2026-11-23T15:43:57Z",
+     "title": "Banking Service - Partial Outage",
+     "url": "https://stspg.io/jmpww7gt96ht"
     },
     {
      "detail": "The service is performing as expected. Avoiding a reoccurrence is our priority as we closely monitor the service.",
@@ -814,7 +794,7 @@
      "url": "https://stspg.io/mvs8kc9tplwg"
     }
    ],
-   "level": "major",
+   "level": "minor",
    "name": "Sage",
    "notes": [],
    "since": "2026-11-23T15:23:22Z",
@@ -1126,20 +1106,20 @@
    "n90": 5
   },
   "claude": {
-   "m30": 7502,
-   "m90": 7502,
+   "m30": 7624,
+   "m90": 7624,
    "n30": 4,
    "n90": 4
   },
   "cloudflare": {
-   "m30": 1288,
-   "m90": 1288,
+   "m30": 1411,
+   "m90": 1411,
    "n30": 3,
    "n90": 3
   },
   "creditsafe": {
-   "m30": 2973,
-   "m90": 2973,
+   "m30": 3096,
+   "m90": 3096,
    "n30": 1,
    "n90": 1
   },
@@ -1168,14 +1148,14 @@
    "n90": 2
   },
   "govpay": {
-   "m30": 323,
-   "m90": 323,
+   "m30": 334,
+   "m90": 334,
    "n30": 1,
    "n90": 1
   },
   "hmrc-cis": {
-   "m30": 11606,
-   "m90": 11606,
+   "m30": 11729,
+   "m90": 11729,
    "n30": 1,
    "n90": 1
   },
@@ -1210,8 +1190,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 10192,
-   "m90": 10192,
+   "m30": 10315,
+   "m90": 10315,
    "n30": 2,
    "n90": 2
   },
@@ -1240,8 +1220,8 @@
    "n90": 1
   },
   "wise": {
-   "m30": 9962,
-   "m90": 9962,
+   "m30": 10085,
+   "m90": 10085,
    "n30": 1,
    "n90": 1
   },

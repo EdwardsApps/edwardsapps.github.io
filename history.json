@@ -330,7 +330,7 @@
    "title": "LFS degradation for some customers"
   },
   {
-   "ended": "",
+   "ended": "2026-11-26T16:19:50Z",
    "level": "minor",
    "started": "2026-11-26T10:45:45Z",
    "svc": "govpay",
