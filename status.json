@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-27T16:22:43Z",
+ "attempted_at": "2026-11-28T07:12:34Z",
  "banners": [],
- "checked_at": "2026-11-27T16:22:43Z",
+ "checked_at": "2026-11-28T07:12:34Z",
  "counts": {
   "major": 0,
-  "minor": 5,
-  "ok": 71,
+  "minor": 4,
+  "ok": 72,
   "unknown": 0
  },
  "recent": [
@@ -17,7 +17,7 @@
    "title": "GOV.UK One Login - Degraded Text Message"
   },
   {
-   "ended": "",
+   "ended": "2026-11-27T16:32:56Z",
    "level": "minor",
    "started": "2026-11-27T10:32:16Z",
    "svc": "govnotify",
@@ -457,7 +457,7 @@
   "claude": {
    "items": [
     {
-     "detail": "We have identified an issue with an upstream provider that is causing the Claude add-in to disappear from Excel, Word, and PowerPoint on Mac for users signed in to Microsoft Office with a personal Microsoft account. We are in contact with…",
+     "detail": "Our upstream provider has applied a mitigation for the issue that caused the Claude add-in to disappear from Excel, Word, and PowerPoint on Mac for users signed in to Microsoft Office with a personal Microsoft account, and we are…",
      "started": "2026-11-24T00:10:40Z",
      "title": "Claude for Microsoft 365 add-in missing for some users",
      "url": "https://stspg.io/ffdq2qfv8frk"
@@ -578,18 +578,10 @@
    "source": "official"
   },
   "govnotify": {
-   "items": [
-    {
-     "detail": "Delivery times have returned to normal. We are continuing to monitor.",
-     "started": "2026-11-27T10:32:16Z",
-     "title": "SMS delivery delays",
-     "url": "https://stspg.io/vjgggmb3zmlv"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "GOV.UK Notify",
    "notes": [],
-   "since": "2026-11-27T10:32:16Z",
    "source": "official"
   },
   "govpay": {
@@ -889,7 +881,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "5 smaller notices on their status page that should not affect most people."
+    "4 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -917,7 +909,7 @@
   "wise": {
    "items": [
     {
-     "detail": "Some payments to COP are still delayed due to an ongoing issue. Payments up to 9,500,000 COP made to personal recipients with a Bancocolombia account are working as normal. Our team is working to resolve the issue and we’ll update this…",
+     "detail": "Some payments to COP are still delayed due to an ongoing technical issue with one of our banking partners. We’re working closely with our partner to resolve this. Payments up to 9,500,000 COP made to personal recipients with a Bancolombia…",
      "started": "2026-11-19T18:07:27Z",
      "title": "Delayed transfers to COP",
      "url": "https://stspg.io/2k7qjwf7gp7t"
@@ -1106,8 +1098,8 @@
    "n90": 5
   },
   "claude": {
-   "m30": 8955,
-   "m90": 8955,
+   "m30": 9844,
+   "m90": 9844,
    "n30": 4,
    "n90": 4
   },
@@ -1148,8 +1140,8 @@
    "n90": 2
   },
   "govnotify": {
-   "m30": 350,
-   "m90": 350,
+   "m30": 360,
+   "m90": 360,
    "n30": 1,
    "n90": 1
   },
@@ -1160,8 +1152,8 @@
    "n90": 1
   },
   "hmrc-cis": {
-   "m30": 13059,
-   "m90": 13059,
+   "m30": 13949,
+   "m90": 13949,
    "n30": 1,
    "n90": 1
   },
@@ -1202,8 +1194,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 11645,
-   "m90": 11645,
+   "m30": 12535,
+   "m90": 12535,
    "n30": 2,
    "n90": 2
   },
@@ -1232,8 +1224,8 @@
    "n90": 1
   },
   "wise": {
-   "m30": 11415,
-   "m90": 11415,
+   "m30": 12305,
+   "m90": 12305,
    "n30": 1,
    "n90": 1
   },

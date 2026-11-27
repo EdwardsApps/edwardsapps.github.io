@@ -351,7 +351,7 @@
    "title": "Cloudflare Dashboard and Cloudflare API service issues"
   },
   {
-   "ended": "",
+   "ended": "2026-11-27T16:32:56Z",
    "level": "minor",
    "started": "2026-11-27T10:32:16Z",
    "svc": "govnotify",
