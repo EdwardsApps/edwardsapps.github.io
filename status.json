@@ -1,16 +1,16 @@
 {
- "attempted_at": "2026-11-27T15:41:29Z",
+ "attempted_at": "2026-11-27T16:22:43Z",
  "banners": [],
- "checked_at": "2026-11-27T15:41:29Z",
+ "checked_at": "2026-11-27T16:22:43Z",
  "counts": {
   "major": 0,
-  "minor": 6,
-  "ok": 70,
+  "minor": 5,
+  "ok": 71,
   "unknown": 0
  },
  "recent": [
   {
-   "ended": "",
+   "ended": "2026-11-27T15:51:42Z",
    "level": "minor",
    "started": "2026-11-27T12:02:17Z",
    "svc": "onelogin",
@@ -738,18 +738,10 @@
    "source": "official"
   },
   "onelogin": {
-   "items": [
-    {
-     "detail": "We are continuing to investigate this issue.",
-     "started": "2026-11-27T12:02:17Z",
-     "title": "GOV.UK One Login - Degraded Text Message",
-     "url": "https://stspg.io/xxskpmbs830y"
-    }
-   ],
-   "level": "minor",
+   "items": [],
+   "level": "ok",
    "name": "GOV.UK One Login",
    "notes": [],
-   "since": "2026-11-27T12:02:17Z",
    "source": "official"
   },
   "onepassword": {
@@ -1114,8 +1106,8 @@
    "n90": 5
   },
   "claude": {
-   "m30": 8913,
-   "m90": 8913,
+   "m30": 8955,
+   "m90": 8955,
    "n30": 4,
    "n90": 4
   },
@@ -1156,8 +1148,8 @@
    "n90": 2
   },
   "govnotify": {
-   "m30": 309,
-   "m90": 309,
+   "m30": 350,
+   "m90": 350,
    "n30": 1,
    "n90": 1
   },
@@ -1168,8 +1160,8 @@
    "n90": 1
   },
   "hmrc-cis": {
-   "m30": 13018,
-   "m90": 13018,
+   "m30": 13059,
+   "m90": 13059,
    "n30": 1,
    "n90": 1
   },
@@ -1198,8 +1190,8 @@
    "n90": 1
   },
   "onelogin": {
-   "m30": 219,
-   "m90": 219,
+   "m30": 229,
+   "m90": 229,
    "n30": 1,
    "n90": 1
   },
@@ -1210,8 +1202,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 11604,
-   "m90": 11604,
+   "m30": 11645,
+   "m90": 11645,
    "n30": 2,
    "n90": 2
   },
@@ -1240,8 +1232,8 @@
    "n90": 1
   },
   "wise": {
-   "m30": 11374,
-   "m90": 11374,
+   "m30": 11415,
+   "m90": 11415,
    "n30": 1,
    "n90": 1
   },
