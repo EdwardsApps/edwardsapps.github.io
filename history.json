@@ -356,6 +356,13 @@
    "started": "2026-11-27T10:32:16Z",
    "svc": "govnotify",
    "title": "SMS delivery delays"
+  },
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-27T12:02:17Z",
+   "svc": "onelogin",
+   "title": "GOV.UK One Login - Degraded Text Message"
   }
  ],
  "tracking_since": "2026-11-17T20:55:16Z"

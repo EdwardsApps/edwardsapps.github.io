@@ -1,14 +1,21 @@
 {
- "attempted_at": "2026-11-27T11:56:18Z",
+ "attempted_at": "2026-11-27T13:18:09Z",
  "banners": [],
- "checked_at": "2026-11-27T11:56:18Z",
+ "checked_at": "2026-11-27T13:18:09Z",
  "counts": {
   "major": 1,
-  "minor": 5,
-  "ok": 70,
+  "minor": 6,
+  "ok": 69,
   "unknown": 0
  },
  "recent": [
+  {
+   "ended": "",
+   "level": "minor",
+   "started": "2026-11-27T12:02:17Z",
+   "svc": "onelogin",
+   "title": "GOV.UK One Login - Degraded Text Message"
+  },
   {
    "ended": "",
    "level": "minor",
@@ -739,10 +746,18 @@
    "source": "official"
   },
   "onelogin": {
-   "items": [],
-   "level": "ok",
+   "items": [
+    {
+     "detail": "We are continuing to investigate this issue.",
+     "started": "2026-11-27T12:02:17Z",
+     "title": "GOV.UK One Login - Degraded Text Message",
+     "url": "https://stspg.io/xxskpmbs830y"
+    }
+   ],
+   "level": "minor",
    "name": "GOV.UK One Login",
    "notes": [],
+   "since": "2026-11-27T12:02:17Z",
    "source": "official"
   },
   "onepassword": {
@@ -890,7 +905,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "6 smaller notices on their status page that should not affect most people."
+    "8 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -1107,8 +1122,8 @@
    "n90": 5
   },
   "claude": {
-   "m30": 8688,
-   "m90": 8688,
+   "m30": 8770,
+   "m90": 8770,
    "n30": 4,
    "n90": 4
   },
@@ -1119,8 +1134,8 @@
    "n90": 3
   },
   "creditsafe": {
-   "m30": 4160,
-   "m90": 4160,
+   "m30": 4242,
+   "m90": 4242,
    "n30": 1,
    "n90": 1
   },
@@ -1149,8 +1164,8 @@
    "n90": 2
   },
   "govnotify": {
-   "m30": 84,
-   "m90": 84,
+   "m30": 165,
+   "m90": 165,
    "n30": 1,
    "n90": 1
   },
@@ -1161,8 +1176,8 @@
    "n90": 1
   },
   "hmrc-cis": {
-   "m30": 12793,
-   "m90": 12793,
+   "m30": 12875,
+   "m90": 12875,
    "n30": 1,
    "n90": 1
   },
@@ -1190,6 +1205,12 @@
    "n30": 1,
    "n90": 1
   },
+  "onelogin": {
+   "m30": 75,
+   "m90": 75,
+   "n30": 1,
+   "n90": 1
+  },
   "playstation": {
    "m30": 61,
    "m90": 61,
@@ -1197,8 +1218,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 11378,
-   "m90": 11378,
+   "m30": 11460,
+   "m90": 11460,
    "n30": 2,
    "n90": 2
   },
@@ -1227,8 +1248,8 @@
    "n90": 1
   },
   "wise": {
-   "m30": 11148,
-   "m90": 11148,
+   "m30": 11230,
+   "m90": 11230,
    "n30": 1,
    "n90": 1
   },
