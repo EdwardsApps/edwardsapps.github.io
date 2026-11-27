@@ -1,11 +1,11 @@
 {
- "attempted_at": "2026-11-27T13:18:09Z",
+ "attempted_at": "2026-11-27T15:41:29Z",
  "banners": [],
- "checked_at": "2026-11-27T13:18:09Z",
+ "checked_at": "2026-11-27T15:41:29Z",
  "counts": {
-  "major": 1,
+  "major": 0,
   "minor": 6,
-  "ok": 69,
+  "ok": 70,
   "unknown": 0
  },
  "recent": [
@@ -94,7 +94,7 @@
    "title": "Disruption with some GitHub services"
   },
   {
-   "ended": "",
+   "ended": "2026-11-27T13:28:23Z",
    "level": "major",
    "started": "2026-11-24T14:35:53Z",
    "svc": "creditsafe",
@@ -487,18 +487,10 @@
    "source": "probe"
   },
   "creditsafe": {
-   "items": [
-    {
-     "detail": "Dear Customer, We apologise for the ongoing unavailability of KYC Protect. Our investigation with the independent third-party cyber forensic specialists continues to make progress. KYC Protect remains suspended as a precautionary measure…",
-     "started": "2026-11-24T14:35:53Z",
-     "title": "KYC Protect Downtime",
-     "url": "https://status.creditsafe.com/issues/6b05a0c99b5a6c603c911d0e"
-    }
-   ],
-   "level": "major",
+   "items": [],
+   "level": "ok",
    "name": "Creditsafe",
    "notes": [],
-   "since": "2026-11-24T14:35:53Z",
    "source": "official"
   },
   "discord": {
@@ -588,7 +580,7 @@
   "govnotify": {
    "items": [
     {
-     "detail": "We are continuing to investigate this issue.",
+     "detail": "Delivery times have returned to normal. We are continuing to monitor.",
      "started": "2026-11-27T10:32:16Z",
      "title": "SMS delivery delays",
      "url": "https://stspg.io/vjgggmb3zmlv"
@@ -905,7 +897,7 @@
    "level": "ok",
    "name": "Twilio",
    "notes": [
-    "8 smaller notices on their status page that should not affect most people."
+    "5 smaller notices on their status page that should not affect most people."
    ],
    "source": "official"
   },
@@ -1122,8 +1114,8 @@
    "n90": 5
   },
   "claude": {
-   "m30": 8770,
-   "m90": 8770,
+   "m30": 8913,
+   "m90": 8913,
    "n30": 4,
    "n90": 4
   },
@@ -1134,8 +1126,8 @@
    "n90": 3
   },
   "creditsafe": {
-   "m30": 4242,
-   "m90": 4242,
+   "m30": 4252,
+   "m90": 4252,
    "n30": 1,
    "n90": 1
   },
@@ -1164,8 +1156,8 @@
    "n90": 2
   },
   "govnotify": {
-   "m30": 165,
-   "m90": 165,
+   "m30": 309,
+   "m90": 309,
    "n30": 1,
    "n90": 1
   },
@@ -1176,8 +1168,8 @@
    "n90": 1
   },
   "hmrc-cis": {
-   "m30": 12875,
-   "m90": 12875,
+   "m30": 13018,
+   "m90": 13018,
    "n30": 1,
    "n90": 1
   },
@@ -1206,8 +1198,8 @@
    "n90": 1
   },
   "onelogin": {
-   "m30": 75,
-   "m90": 75,
+   "m30": 219,
+   "m90": 219,
    "n30": 1,
    "n90": 1
   },
@@ -1218,8 +1210,8 @@
    "n90": 2
   },
   "sage": {
-   "m30": 11460,
-   "m90": 11460,
+   "m30": 11604,
+   "m90": 11604,
    "n30": 2,
    "n90": 2
   },
@@ -1248,8 +1240,8 @@
    "n90": 1
   },
   "wise": {
-   "m30": 11230,
-   "m90": 11230,
+   "m30": 11374,
+   "m90": 11374,
    "n30": 1,
    "n90": 1
   },
