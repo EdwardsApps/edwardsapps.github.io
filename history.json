@@ -365,7 +365,7 @@
    "title": "GOV.UK One Login - Degraded Text Message"
   },
   {
-   "ended": "",
+   "ended": "2026-11-28T09:25:33Z",
    "level": "major",
    "started": "2026-11-28T07:21:21Z",
    "svc": "cloudflare",
